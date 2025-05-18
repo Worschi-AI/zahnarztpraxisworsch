@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
+import ServiceCard from '@/components/ServiceCard';
 import { services } from '@/data/services';
 import { 
   Accordion, 
