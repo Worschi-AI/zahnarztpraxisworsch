@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
@@ -10,37 +10,11 @@ import { Button } from '@/components/ui/button';
 import { services } from '@/data/services';
 import { testimonials } from '@/data/testimonials';
 import { team } from '@/data/team';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const Index = () => {
-  // Animation on scroll effect with proper cleanup
-  useEffect(() => {
-    // Define the IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          // Once the element is animated, stop observing it to ensure it stays visible
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    // Select all elements to animate
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    
-    // Start observing each element
-    elementsToAnimate.forEach(el => {
-      observer.observe(el);
-    });
-
-    // Clean up function
-    return () => {
-      elementsToAnimate.forEach(el => {
-        observer.unobserve(el);
-      });
-      observer.disconnect();
-    };
-  }, []);
+  // Use the scroll animation hook
+  useScrollAnimation();
 
   // Featured services (top 3)
   const featuredServices = services.slice(0, 3);
