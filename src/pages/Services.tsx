@@ -15,6 +15,8 @@ const ServicesPage = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animated');
+          // Once element is animated, stop observing it so it stays visible
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
