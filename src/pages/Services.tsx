@@ -21,7 +21,7 @@ const ServicesPage = () => {
       <HeroSection 
         title="Unsere Leistungen" 
         subtitle="Entdecken Sie unser umfassendes Angebot für Ihre Zahngesundheit" 
-        backgroundImage="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1932&auto=format&fit=crop"
+        backgroundImage="/lovable-uploads/2321cb5b-9485-4578-852b-b8525853d92e.png"
       />
 
       {/* Services Introduction */}
@@ -72,9 +72,13 @@ const ServicesPage = () => {
             <div className="md:w-1/2 animate-on-scroll">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1579684453377-caffcf3af611?q=80&w=1771&auto=format&fit=crop" 
+                  src="/lovable-uploads/2321cb5b-9485-4578-852b-b8525853d92e.png" 
                   alt="Zahnärztin bei der Arbeit" 
                   className="w-full h-auto"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop";
+                    console.log("Image failed to load, fallback applied");
+                  }}
                 />
               </div>
             </div>
@@ -92,11 +96,24 @@ const ServicesPage = () => {
               Wir besprechen Ihre Wünsche und erstellen einen individuellen Behandlungsplan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
-                <Link to="/appointment">Termin vereinbaren</Link>
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-white text-dental-blue hover:bg-dental-beige flex items-center justify-center"
+              >
+                <Link to="/appointment">
+                  <span className="block">Termin vereinbaren</span>
+                </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
-                <a href="tel:+49123456789">Telefonisch anfragen</a>
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="border-white hover:bg-white hover:text-dental-blue flex items-center justify-center"
+              >
+                <a href="tel:+49123456789">
+                  <span className="block">Telefonisch anfragen</span>
+                </a>
               </Button>
             </div>
           </div>
