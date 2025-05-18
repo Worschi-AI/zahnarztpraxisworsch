@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -13,12 +14,12 @@ import { team } from '@/data/team';
 const Index = () => {
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
+    // Define the IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Add animated class and keep it there permanently
           entry.target.classList.add('animated');
-          // Once element is animated, stop observing it
+          // Once the element is animated, stop observing it to ensure it stays visible
           observer.unobserve(entry.target);
         }
       });
@@ -32,7 +33,7 @@ const Index = () => {
       observer.observe(el);
     });
 
-    // Clean up function to prevent memory leaks
+    // Clean up function
     return () => {
       elementsToAnimate.forEach(el => {
         observer.unobserve(el);
@@ -55,6 +56,7 @@ const Index = () => {
       <HeroSection 
         title="Zahnarztpraxis Worsch" 
         subtitle="Ihre Experten für gesunde und schöne Zähne in [Stadt]" 
+        backgroundImage="/lovable-uploads/54d00c7e-3bf4-4351-86f1-b8a4b54f9239.png"
       />
 
       {/* Intro Section */}

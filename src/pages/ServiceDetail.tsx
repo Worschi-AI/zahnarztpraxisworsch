@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -32,6 +33,7 @@ const ServiceDetail = () => {
 
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
+    // Define the IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

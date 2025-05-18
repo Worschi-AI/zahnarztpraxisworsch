@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -8,6 +9,7 @@ import { Button } from '@/components/ui/button';
 const AboutPage = () => {
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
+    // Define the IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
@@ -10,6 +11,7 @@ import { team } from '@/data/team';
 const TeamPage = () => {
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
+    // Define the IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
