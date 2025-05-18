@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -7,38 +7,11 @@ import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { services } from '@/data/services';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const ServicesPage = () => {
-  // Animation on scroll effect with proper cleanup
-  useEffect(() => {
-    // Define the IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Add animated class and keep it there permanently
-          entry.target.classList.add('animated');
-          // Once element is animated, stop observing it
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    // Select all elements to animate
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    
-    // Start observing each element
-    elementsToAnimate.forEach(el => {
-      observer.observe(el);
-    });
-
-    // Clean up function to prevent memory leaks
-    return () => {
-      elementsToAnimate.forEach(el => {
-        observer.unobserve(el);
-      });
-      observer.disconnect();
-    };
-  }, []);
+  // Use the scroll animation hook
+  useScrollAnimation();
 
   return (
     <div className="min-h-screen">
