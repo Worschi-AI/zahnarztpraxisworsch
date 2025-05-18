@@ -1,0 +1,144 @@
+
+import React, { useEffect } from 'react';
+import HeroSection from '@/components/HeroSection';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import TeamMember from '@/components/TeamMember';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { team } from '@/data/team';
+
+const TeamPage = () => {
+  // Animation on scroll effect
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    return () => {
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <HeroSection 
+        title="Unser Team" 
+        subtitle="Lernen Sie unsere Zahnärzte und unser Praxisteam kennen" 
+        backgroundImage="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop"
+      />
+
+      {/* Team Introduction */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+            <h2 className="mb-6 text-dental-blue">Ihr kompetentes Praxisteam</h2>
+            <p className="text-lg text-dental-gray">
+              In unserer Praxis erwartet Sie ein engagiertes Team aus erfahrenen Zahnärzten und qualifizierten 
+              Fachkräften. Gemeinsam setzen wir uns für Ihre Zahngesundheit und Ihr Wohlbefinden ein. Wir legen 
+              großen Wert auf kontinuierliche Fortbildung, um Ihnen stets die beste Versorgung nach aktuellen 
+              wissenschaftlichen Standards zu bieten.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {team.map((member, index) => (
+              <div key={member.id} className="animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
+                <TeamMember
+                  name={member.name}
+                  role={member.role}
+                  bio={member.bio}
+                  imageUrl={member.imageUrl}
+                  specializations={member.specializations}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Values */}
+      <section className="py-20 bg-dental-beige">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12 animate-on-scroll">
+              <h2 className="mb-6 text-dental-blue">Unsere Teamwerte</h2>
+              <p className="text-lg text-dental-gray">
+                Als Team verbinden uns gemeinsame Werte, die unsere tägliche Arbeit prägen und die Grundlage 
+                für unseren Umgang mit Patienten bilden.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll">
+                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Einfühlungsvermögen</h3>
+                <p className="text-dental-gray">
+                  Wir nehmen Ihre Anliegen und Ängste ernst und gehen individuell auf Ihre Bedürfnisse ein.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style={{ animationDelay: "100ms" }}>
+                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Fachkompetenz</h3>
+                <p className="text-dental-gray">
+                  Regelmäßige Fortbildungen gewährleisten, dass wir stets auf dem neuesten wissenschaftlichen Stand sind.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style={{ animationDelay: "200ms" }}>
+                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Vertrauen</h3>
+                <p className="text-dental-gray">
+                  Eine offene und ehrliche Kommunikation ist die Basis für eine vertrauensvolle Zusammenarbeit.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style={{ animationDelay: "300ms" }}>
+                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Qualität</h3>
+                <p className="text-dental-gray">
+                  Wir arbeiten mit hochwertigsten Materialien und modernsten Techniken für langlebige Ergebnisse.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto animate-on-scroll">
+            <h2 className="mb-4">Lernen Sie uns persönlich kennen</h2>
+            <p className="text-lg mb-8">
+              Vereinbaren Sie einen Termin für ein erstes Kennenlerngespräch oder eine Beratung 
+              in unserer Praxis. Wir freuen uns auf Sie!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
+                <Link to="/appointment">Termin vereinbaren</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
+                <Link to="/contact">Kontakt & Anfahrt</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default TeamPage;
