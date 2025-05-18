@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
@@ -9,26 +8,33 @@ import { Link } from 'react-router-dom';
 import { team } from '@/data/team';
 
 const TeamPage = () => {
-  // Animation on scroll effect
+  // Animation on scroll effect with proper cleanup
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          // Add animated class and keep it there permanently
           entry.target.classList.add('animated');
-          // Once element is animated, stop observing it so it stays visible
+          // Once element is animated, stop observing it
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    // Select all elements to animate
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+    
+    // Start observing each element
+    elementsToAnimate.forEach(el => {
       observer.observe(el);
     });
 
+    // Clean up function to prevent memory leaks
     return () => {
-      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      elementsToAnimate.forEach(el => {
         observer.unobserve(el);
       });
+      observer.disconnect();
     };
   }, []);
 
