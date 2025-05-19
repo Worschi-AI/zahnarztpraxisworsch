@@ -10,7 +10,7 @@ const LocationMap = () => {
       {/* Google Maps Embed */}
       <div className="rounded-lg h-96 mb-6 overflow-hidden">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.676150654196!2d13.82136837704312!3d51.02483317200493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf7a221d4919%3A0xc3bfeb4989337d32!2s%C3%96sterreicher%20Str.%2038%2C%2001279%20Dresden%2C%20Germany!5e0!3m2!1sen!2sus!4v1716143269998!5m2!1sen!2sus" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.676150654196!2d13.82136837704312!3d51.02483317200493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf7a221d4919%3A0xc3bfeb4989337d32!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sen!2sus!4v1716143269998!5m2!1sen!2sus" 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
