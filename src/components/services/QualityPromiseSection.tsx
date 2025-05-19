@@ -40,15 +40,7 @@ const QualityPromiseSection = () => {
           </div>
           <div className="md:w-1/2 animate-on-scroll">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src="/lovable-uploads/2321cb5b-9485-4578-852b-b8525853d92e.png" 
-                alt="Zahnärztin bei der Arbeit" 
-                className="w-full h-auto"
-                onError={(e) => {
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop";
-                  console.log("Image failed to load, fallback applied");
-                }}
-              />
+              {/* Image removed as requested */}
             </div>
           </div>
         </div>
