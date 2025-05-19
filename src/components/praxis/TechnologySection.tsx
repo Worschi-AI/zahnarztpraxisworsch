@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Scanner, Microscope, Tablet, Zap } from 'lucide-react';
+import { Camera, ScanSearch, Microscope, Tablet, Zap } from 'lucide-react';
 
 const technologies = [
   {
@@ -31,7 +31,7 @@ const technologies = [
   {
     name: "3D-Implantatplanung",
     description: "Hochpräzise Planung für sichere und optimale Positionierung Ihrer Zahnimplantate in Dresden.",
-    icon: <Scanner className="h-8 w-8 text-dental-turquoise" />,
+    icon: <ScanSearch className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services/implantologie"
   }
 ];
