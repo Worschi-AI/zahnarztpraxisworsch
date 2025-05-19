@@ -15,9 +15,6 @@ const BookingOptions = () => {
             Vereinbaren Sie einen Termin in unserer <strong>Zahnarztpraxis in Dresden</strong>. 
             Zahnarzt Worsch und sein Team freuen sich auf Ihren Besuch!
           </p>
-          <p className="text-md text-dental-gray bg-dental-beige p-4 rounded-lg inline-block">
-            Wählen Sie, wie Sie Ihren Termin buchen möchten: Bequem online über Doctolib oder telefonisch unter 0351 2522709. Wir freuen uns auf Ihren Besuch!
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

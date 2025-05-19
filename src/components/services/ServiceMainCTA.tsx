@@ -17,7 +17,7 @@ const ServiceMainCTA: React.FC = () => {
             <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
               <Link to="/appointment">Termin vereinbaren</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
+            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-dental-blue">
               <Link to="/contact">Kontakt aufnehmen</Link>
             </Button>
           </div>
