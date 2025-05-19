@@ -159,7 +159,7 @@ const ContactPage = () => {
                 </div>
                 
                 <Button asChild variant="outline" className="w-full border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white">
-                  <a href="https://www.google.com/maps/place/%C3%96sterreicher+Str.+38,+01279+Dresden,+Germany" target="_blank" rel="noopener noreferrer">
+                  <a href="https://g.co/kgs/8A24h8o" target="_blank" rel="noopener noreferrer">
                     In Google Maps öffnen
                   </a>
                 </Button>
