@@ -7,7 +7,7 @@ const PracticeInfo = () => {
       <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Worsch</h3>
       <p className="mb-2">
         <a 
-          href="https://g.co/kgs/8A24h8o" 
+          href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" 
           target="_blank" 
           rel="noopener noreferrer"
           className="hover:underline"

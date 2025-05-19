@@ -23,7 +23,7 @@ const LocationMap = () => {
       </div>
       
       <Button asChild variant="outline" className="w-full border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white">
-        <a href="https://g.co/kgs/8A24h8o" target="_blank" rel="noopener noreferrer">
+        <a href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" target="_blank" rel="noopener noreferrer">
           In Google Maps öffnen
         </a>
       </Button>
