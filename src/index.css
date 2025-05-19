@@ -75,15 +75,19 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
   }
   h1 {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold font-sans;
+    font-family: 'Poppins', sans-serif;
   }
   h2 {
     @apply text-2xl md:text-3xl lg:text-4xl font-bold font-sans;
+    font-family: 'Poppins', sans-serif;
   }
   h3 {
     @apply text-xl md:text-2xl lg:text-3xl font-medium font-sans;
+    font-family: 'Poppins', sans-serif;
   }
 }
 

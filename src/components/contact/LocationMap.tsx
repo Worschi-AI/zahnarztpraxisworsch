@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { MapPin, Car, Train } from 'lucide-react';
 
 const LocationMap = () => {
   return (
@@ -8,7 +9,7 @@ const LocationMap = () => {
       <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Anfahrt</h2>
       
       {/* Google Maps Embed */}
-      <div className="rounded-lg h-96 mb-6 overflow-hidden">
+      <div className="rounded-lg h-[400px] mb-6 overflow-hidden shadow-md">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.676150654196!2d13.82136837704312!3d51.02483317200493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf7a221d4919%3A0xc3bfeb4989337d32!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sen!2sus!4v1716143269998!5m2!1sen!2sus" 
           width="100%" 
@@ -17,34 +18,54 @@ const LocationMap = () => {
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Praxisstandort"
+          title="Zahnarztpraxis Worsch Dresden"
           className="rounded-lg"
         ></iframe>
       </div>
       
       <Button asChild variant="outline" className="w-full border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white">
         <a href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" target="_blank" rel="noopener noreferrer">
-          In Google Maps öffnen
+          <MapPin className="mr-2 h-4 w-4" /> In Google Maps öffnen
         </a>
       </Button>
       
       <div className="mt-8 space-y-6">
-        <div>
-          <h3 className="text-lg font-medium mb-2">Mit öffentlichen Verkehrsmitteln</h3>
-          <p className="text-dental-gray">
-            Unsere Praxis erreichen Sie gut mit öffentlichen Verkehrsmitteln:
-            <ul className="list-disc pl-5 mt-2">
+        <div className="flex items-start">
+          <Train className="h-6 w-6 mr-3 text-dental-turquoise flex-shrink-0 mt-1" />
+          <div>
+            <h3 className="text-lg font-medium mb-2">Mit öffentlichen Verkehrsmitteln</h3>
+            <p className="text-dental-gray">
+              Unsere <strong>Zahnarztpraxis in Dresden</strong> erreichen Sie gut mit öffentlichen Verkehrsmitteln:
+            </p>
+            <ul className="list-disc pl-5 mt-2 text-dental-gray">
               <li>Straßenbahnhaltestelle: Linie 4, 10 (Haltestelle Altenberger Straße)</li>
               <li>Bushaltestelle: Linie 64, 66 (Haltestelle Österreicher Straße)</li>
             </ul>
-          </p>
+          </div>
         </div>
         
-        <div>
-          <h3 className="text-lg font-medium mb-2">Mit dem Auto</h3>
-          <p className="text-dental-gray">
-            Parkplätze finden Sie direkt vor der Praxis und in den umliegenden Straßen.
-            Von der Autobahn A4 nehmen Sie die Ausfahrt Dresden-Altstadt und folgen den Schildern Richtung Leuben/Niedersedlitz.
+        <div className="flex items-start">
+          <Car className="h-6 w-6 mr-3 text-dental-turquoise flex-shrink-0 mt-1" />
+          <div>
+            <h3 className="text-lg font-medium mb-2">Mit dem Auto</h3>
+            <p className="text-dental-gray">
+              Parkplätze finden Sie direkt vor der Praxis und in den umliegenden Straßen.
+              Von der Autobahn A4 nehmen Sie die Ausfahrt Dresden-Altstadt und folgen den Schildern Richtung Leuben/Niedersedlitz.
+            </p>
+            <p className="mt-2 text-dental-gray">
+              <strong>Parkmöglichkeiten:</strong>
+            </p>
+            <ul className="list-disc pl-5 mt-1 text-dental-gray">
+              <li>Praxiseigene Parkplätze direkt vor dem Eingang (begrenzte Anzahl)</li>
+              <li>Öffentliche Parkplätze in den angrenzenden Straßen</li>
+              <li>Parkhaus "Center Niedersedlitz" in 5 Minuten Fußweg</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="mt-4 p-3 bg-dental-turquoise/10 rounded-md text-center">
+          <p className="text-dental-blue font-medium">
+            Unsere Praxisräume sind vollständig barrierefrei zugänglich
           </p>
         </div>
       </div>
