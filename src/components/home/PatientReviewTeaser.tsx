@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-// Link von react-router-dom wird hier nicht mehr benötigt, wenn es ein externer Link ist.
-// Stattdessen verwenden wir ein normales <a> Tag.
+// Link von react-router-dom wird hier nicht mehr benötigt, da es ein externer Link ist.
 // import { Link } from 'react-router-dom'; 
 import { Star } from 'lucide-react';
 
 const PatientReviewTeaser = () => {
-  const googleReviewsLink = "https://maps.app.goo.gl/DnBXcjLJpxxcPdx473";
+  // Der von Ihnen bereitgestellte, funktionierende Google Search Link für Rezensionen
+  const googleReviewsLink = "https://www.google.de/search?sa=X&sca_esv=0f5634cd6d611d2d&hl=de&tbm=lcl&sxsrf=AHTn8zpKmIM_p5H2P7IjMfI_FExXbifTgw:1747668575187&q=Zahnarztpraxis+Dipl.med+dent.+Ute+Worsch+%26+Peik+Worsch+Rezensionen&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDO0sDQ1MTMzszQ3szC2NDA1M9zAyPiK0SkqMSMvsaiqpKAosSKzWMElsyBHLzc1RSElNa9ETyG0JFUhPL-oODlDQU0hIDUzG8YLSq1KzSvOzM9LzVvESgVDAKEE2vOlAAAA&rldimm=16189546669768390561&ved=2ahUKEwjQxO_k7K-NAxVFh_0HHcYpLDIQ9fQKegQIRBAF&biw=1536&bih=742&dpr=1.25";
 
   return (
     <section className="py-8 bg-dental-beige">
@@ -19,13 +19,6 @@ const PatientReviewTeaser = () => {
               <p className="text-dental-gray">Unsere Patienten in Dresden vertrauen uns seit Jahren.</p>
             </div>
           </div>
-          {/* Button wird jetzt als <a> Tag gerendert, da es ein externer Link ist.
-            'asChild' wird hier nicht benötigt, wenn wir direkt ein <a> Tag stylen oder der Button ein <a> sein kann.
-            Wenn Ihre Button-Komponente ein 'href'-Prop direkt unterstützt und als <a> rendert, 
-            können Sie das beibehalten. Andernfalls ist ein einfaches <a>-Tag mit Button-Styling besser.
-            Ich gehe davon aus, dass Ihre Button-Komponente ein `href` verarbeiten kann oder wir ein `<a>` stylen.
-            Die einfachste Lösung für externe Links ist oft ein direktes <a>-Tag.
-          */}
           <Button asChild variant="outline" className="border-dental-blue text-dental-blue hover:bg-dental-blue hover:text-white whitespace-nowrap">
             <a href={googleReviewsLink} target="_blank" rel="noopener noreferrer">
               Erfahrungsberichte lesen
