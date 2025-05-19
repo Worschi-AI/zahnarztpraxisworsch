@@ -1,8 +1,10 @@
 
 import React from 'react';
 import ServiceCard from '@/components/ServiceCard';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Service } from '@/data/services';
+import { ArrowRight } from 'lucide-react';
 
 interface StandardServiceSectionProps {
   standardServices: Service[];
@@ -12,18 +14,20 @@ const StandardServiceSection: React.FC<StandardServiceSectionProps> = ({ standar
   // Helper function to get an enhanced description for each service
   const getEnhancedDescription = (service: Service): string => {
     switch(service.id) {
-      case 'zahnersatz':
-        return 'Hochwertige Kronen, Brücken und Prothesen für perfekte Funktion und natürliche Ästhetik in Dresden.';
+      case 'prophylaxe':
+        return 'Professionelle Zahnreinigung und Vorsorgeuntersuchungen in Dresden – für langfristigen Erhalt gesunder Zähne und Zahnfleisch.';
+      case 'zahnerhaltung':
+        return 'Moderne Füllungstherapie und Zahnerhaltung in Dresden – schonende Behandlung von Karies mit ästhetischen Materialien.';
       case 'parodontologie':
-        return 'Effektive Behandlung von Zahnfleischerkrankungen für langfristige Mundgesundheit und Zahnerhalt.';
+        return 'Effektive Behandlung von Zahnfleischerkrankungen in Dresden – für langfristige Mundgesundheit und sicheren Zahnerhalt.';
       case 'kinderzahnheilkunde':
-        return 'Einfühlsame und altersgerechte Zahnbehandlung für Ihre Kleinen in entspannter Atmosphäre.';
+        return 'Einfühlsame und altersgerechte Zahnbehandlung für Kinder in Dresden – in entspannter Atmosphäre ohne Angst zum Zahnarzt.';
       case 'endodontie':
-        return 'Schmerzfreie Wurzelbehandlungen mit modernster Technik zum Erhalt Ihrer natürlichen Zähne.';
+        return 'Schmerzfreie Wurzelbehandlungen mit modernster Technik in Dresden – für den sicheren Erhalt Ihrer natürlichen Zähne.';
       case 'funktionstherapie':
-        return 'Wirksame Behandlung von CMD und Kiefergelenkbeschwerden für schmerzfreies Wohlbefinden.';
+        return 'Wirksame CMD-Behandlung und Kiefergelenktherapie in Dresden – für ein schmerzfreies Wohlbefinden ohne Verspannungen.';
       case 'chirurgie':
-        return 'Schonende Entfernung nicht erhaltungswürdiger Zähne und sichere Weisheitszahnentfernung.';
+        return 'Schonende Zahnentfernung und sichere Weisheitszahnentfernung in Dresden – mit minimalem Aufwand und kurzen Heilungszeiten.';
       default:
         return service.shortDescription;
     }
@@ -35,7 +39,7 @@ const StandardServiceSection: React.FC<StandardServiceSectionProps> = ({ standar
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
           <h2 className="mb-4 text-dental-blue">Weitere Zahnmedizinische Leistungen in Dresden</h2>
           <p className="text-lg text-dental-gray">
-            Wir bieten Ihnen das gesamte Spektrum der modernen Zahnheilkunde unter einem Dach.
+            Wir bieten Ihnen das gesamte Spektrum der modernen Zahnheilkunde unter einem Dach – von der Vorsorge bis zur Schmerzbehandlung.
           </p>
         </div>
         
@@ -49,12 +53,11 @@ const StandardServiceSection: React.FC<StandardServiceSectionProps> = ({ standar
                 imageUrl={service.imageUrl}
               />
               <div className="mt-4 text-center">
-                <Link 
-                  to={`/services/${service.id}`}
-                  className="inline-block text-dental-turquoise hover:text-dental-blue font-medium"
-                >
-                  Details ansehen
-                </Link>
+                <Button asChild variant="outline" className="border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white transition-colors flex items-center gap-2">
+                  <Link to={`/services/${service.id}`}>
+                    Details ansehen <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
           ))}

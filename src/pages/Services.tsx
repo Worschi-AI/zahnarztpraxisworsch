@@ -11,6 +11,8 @@ import QualityPromiseSection from '@/components/services/QualityPromiseSection';
 import TestimonialSection from '@/components/services/TestimonialSection';
 import CallToActionSection from '@/components/services/CallToActionSection';
 import FAQSection from '@/components/services/FAQSection';
+import ServicesPageMeta from '@/components/services/ServicesPageMeta';
+import CallToActionPhone from '@/components/appointment/CallToActionPhone';
 
 const ServicesPage = () => {
   // Use the scroll animation hook
@@ -28,13 +30,15 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen">
+      <ServicesPageMeta />
       <Navbar />
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Zahnmedizinische Leistungen in Dresden - Zahnarztpraxis Worsch" 
-        subtitle="Hochwertige Behandlungen für Ihr strahlendes Lächeln - Von der Prophylaxe bis zur Implantologie" 
+        title="Zahnärztliche Leistungen in Dresden | Praxis Worsch" 
+        subtitle="Von der Prophylaxe bis zur Implantologie - Umfassende zahnmedizinische Versorgung für Ihr strahlendes Lächeln"
         backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
+        introText="Willkommen im Leistungsbereich der Zahnarztpraxis Worsch. Wir bieten Ihnen das gesamte Spektrum moderner Zahnheilkunde unter einem Dach - mit besonderem Fokus auf Qualität, Ästhetik und Langlebigkeit. Entdecken Sie unser umfassendes Angebot."
       />
 
       {/* Premium Services Section */}
@@ -48,6 +52,9 @@ const ServicesPage = () => {
 
       {/* Testimonial Section */}
       <TestimonialSection />
+
+      {/* Phone Call to Action */}
+      <CallToActionPhone />
 
       {/* Call to Action Section */}
       <CallToActionSection />

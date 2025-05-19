@@ -11,6 +11,20 @@ interface PremiumServiceSectionProps {
 }
 
 const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumServices }) => {
+  // Helper function to get an enhanced premium description for each service
+  const getEnhancedPremiumDescription = (service: Service): string => {
+    switch(service.id) {
+      case 'implantologie':
+        return 'Natürliche und fest verankerte Zahnimplantate in Dresden – für dauerhaft schöne Zähne und ein sicheres Gefühl beim Kauen und Lachen.';
+      case 'aesthetische-zahnheilkunde':
+        return 'Perfekte Ästhetik für Ihr Lächeln durch Veneers, Bleaching und Zahnformkorrekturen – Zahnästhetik auf höchstem Niveau in Dresden.';
+      case 'zahnersatz':
+        return 'Hochwertiger individueller Zahnersatz in Dresden – präzise gefertigte Kronen, Brücken und Prothesen für natürliche Funktion und Ästhetik.';
+      default:
+        return service.shortDescription;
+    }
+  };
+  
   return (
     <section className="py-20 bg-white" id="premium-services">
       <div className="container mx-auto px-4">
@@ -38,7 +52,7 @@ const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumSe
               <ServiceCard
                 id={service.id}
                 title={service.title}
-                description={service.shortDescription}
+                description={getEnhancedPremiumDescription(service)}
                 imageUrl={service.imageUrl}
               />
               <div className="mt-4 text-center">

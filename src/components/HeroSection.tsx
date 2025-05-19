@@ -11,6 +11,7 @@ interface HeroSectionProps {
   useSolidBackground?: boolean;
   ctaText?: string;
   secondaryCtaText?: string;
+  introText?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
@@ -19,7 +20,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
   useSolidBackground = false,
   ctaText = "Termin online buchen",
-  secondaryCtaText = "Unsere Leistungen"
+  secondaryCtaText = "Unsere Leistungen",
+  introText
 }) => {
   return (
     <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
@@ -45,11 +47,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl text-white animate-fade-in">
-          <h1 className="mb-4 flex items-center">
-            <Stethoscope className="mr-3 hidden sm:inline-block" size={36} strokeWidth={1.5} aria-hidden="true" />
+          <h1 className="mb-4">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8">{subtitle}</p>
+          <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
+          
+          {/* New intro text */}
+          {introText && (
+            <p className="text-lg mb-8 bg-dental-blue/30 backdrop-blur-sm p-4 rounded-lg">
+              {introText}
+            </p>
+          )}
+          
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
