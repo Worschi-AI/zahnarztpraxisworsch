@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { MapPin, Phone, Clock } from 'lucide-react';
 
 const ContactPage = () => {
   // Animation on scroll effect
@@ -51,16 +52,13 @@ const ContactPage = () => {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-dental-beige p-3 rounded-full mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-dental-turquoise" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                      <MapPin className="h-6 w-6 text-dental-turquoise" />
                     </div>
                     <div>
                       <h3 className="text-lg font-medium mb-1">Adresse</h3>
                       <p className="text-dental-gray">
-                        [Straßenadresse]<br />
-                        [PLZ] [Stadt]<br />
+                        Österreicher Str. 38<br />
+                        01279 Dresden<br />
                         Deutschland
                       </p>
                     </div>
@@ -68,15 +66,13 @@ const ContactPage = () => {
                   
                   <div className="flex items-start">
                     <div className="bg-dental-beige p-3 rounded-full mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-dental-turquoise" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                      <Phone className="h-6 w-6 text-dental-turquoise" />
                     </div>
                     <div>
                       <h3 className="text-lg font-medium mb-1">Telefon</h3>
                       <p className="text-dental-gray">
-                        <a href="tel:+49123456789" className="hover:text-dental-turquoise transition-colors">
-                          +49 123 456789
+                        <a href="tel:+4935125227099" className="hover:text-dental-turquoise transition-colors">
+                          0351 2522709
                         </a>
                       </p>
                     </div>
@@ -100,21 +96,31 @@ const ContactPage = () => {
                   
                   <div className="flex items-start">
                     <div className="bg-dental-beige p-3 rounded-full mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-dental-turquoise" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <Clock className="h-6 w-6 text-dental-turquoise" />
                     </div>
                     <div>
                       <h3 className="text-lg font-medium mb-1">Öffnungszeiten</h3>
                       <div className="text-dental-gray">
                         <div className="grid grid-cols-2 gap-2">
-                          <span>Montag - Donnerstag:</span>
-                          <span>08:00 - 18:00 Uhr</span>
+                          <span>Montag:</span>
+                          <span>07:30 - 13:00 Uhr</span>
+                          
+                          <span>Dienstag:</span>
+                          <span>08:00 - 12:00, 14:00 - 18:00 Uhr</span>
+                          
+                          <span>Mittwoch:</span>
+                          <span>07:30 - 12:00, 14:00 - 18:00 Uhr</span>
+                          
+                          <span>Donnerstag:</span>
+                          <span>07:30 - 12:00, 14:00 - 18:00 Uhr</span>
                           
                           <span>Freitag:</span>
-                          <span>08:00 - 14:00 Uhr</span>
+                          <span>07:30 - 13:00 Uhr</span>
                           
-                          <span>Samstag, Sonntag:</span>
+                          <span>Samstag:</span>
+                          <span>Geschlossen</span>
+                          
+                          <span>Sonntag:</span>
                           <span>Geschlossen</span>
                         </div>
                       </div>
@@ -128,7 +134,7 @@ const ContactPage = () => {
                     Für dringende Schmerzen außerhalb unserer regulären Öffnungszeiten:
                   </p>
                   <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
-                    <a href="tel:+49123456789">+49 123 456789</a>
+                    <a href="tel:+4935125227099">0351 2522709</a>
                   </Button>
                 </div>
               </div>
@@ -137,16 +143,23 @@ const ContactPage = () => {
               <div className="md:w-1/2 animate-on-scroll">
                 <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Anfahrt</h2>
                 
-                {/* Placeholder for Google Maps */}
-                <div className="bg-gray-200 rounded-lg h-96 mb-6 flex items-center justify-center">
-                  <p className="text-dental-gray text-center p-4">
-                    [Hier wird die Google Maps Karte eingebunden]<br />
-                    Für eine interaktive Karte und Routenplanung klicken Sie bitte auf den Button unten.
-                  </p>
+                {/* Google Maps Embed */}
+                <div className="rounded-lg h-96 mb-6 overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.676150654196!2d13.82136837704312!3d51.02483317200493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709cf7a221d4919%3A0xc3bfeb4989337d32!2s%C3%96sterreicher%20Str.%2038%2C%2001279%20Dresden%2C%20Germany!5e0!3m2!1sen!2sus!4v1716143269998!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Praxisstandort"
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
                 
                 <Button asChild variant="outline" className="w-full border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white">
-                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.google.com/maps/place/%C3%96sterreicher+Str.+38,+01279+Dresden,+Germany" target="_blank" rel="noopener noreferrer">
                     In Google Maps öffnen
                   </a>
                 </Button>
@@ -155,16 +168,19 @@ const ContactPage = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-2">Mit öffentlichen Verkehrsmitteln</h3>
                     <p className="text-dental-gray">
-                      [Hier Informationen über nahegelegene Bus- und Bahnhaltestellen, 
-                      Linien und ungefähre Gehzeiten von den Haltestellen zur Praxis einfügen]
+                      Unsere Praxis erreichen Sie gut mit öffentlichen Verkehrsmitteln:
+                      <ul className="list-disc pl-5 mt-2">
+                        <li>Straßenbahnhaltestelle: Linie 4, 10 (Haltestelle Altenberger Straße)</li>
+                        <li>Bushaltestelle: Linie 64, 66 (Haltestelle Österreicher Straße)</li>
+                      </ul>
                     </p>
                   </div>
                   
                   <div>
                     <h3 className="text-lg font-medium mb-2">Mit dem Auto</h3>
                     <p className="text-dental-gray">
-                      [Hier Informationen über Anfahrt mit dem Auto, ggf. wichtige Straßen 
-                      oder Orientierungspunkte sowie Parkmöglichkeiten einfügen]
+                      Parkplätze finden Sie direkt vor der Praxis und in den umliegenden Straßen.
+                      Von der Autobahn A4 nehmen Sie die Ausfahrt Dresden-Altstadt und folgen den Schildern Richtung Leuben/Niedersedlitz.
                     </p>
                   </div>
                 </div>
