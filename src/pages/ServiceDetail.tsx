@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -15,7 +14,7 @@ import {
   AccordionTrigger 
 } from '@/components/ui/accordion';
 import FAQSection from '@/components/services/FAQSection';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Star, Smile, Droplet } from 'lucide-react';
 
 const ServiceDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -34,10 +33,13 @@ const ServiceDetail = () => {
     );
   }
 
-  // Customize page title and description for Implantologie
+  // Customize page title and description for specific services
   const getMetaTitle = () => {
     if (id === 'implantologie') {
       return "Zahnimplantate Dresden | Experte für Implantologie | Zahnarztpraxis Worsch";
+    }
+    if (id === 'aesthetische-zahnheilkunde') {
+      return "Ästhetische Zahnheilkunde Dresden | Veneers, Bleaching | Zahnarztpraxis Worsch";
     }
     return `${service.title} | Zahnarztpraxis Worsch Dresden`;
   };
@@ -46,13 +48,19 @@ const ServiceDetail = () => {
     if (id === 'implantologie') {
       return "Zahnarztpraxis Worsch in Dresden: Ihr Spezialist für hochwertige Zahnimplantate. Feste Zähne & natürliches Lächeln dank moderner Implantologie. Jetzt beraten lassen!";
     }
+    if (id === 'aesthetische-zahnheilkunde') {
+      return "Zahnarztpraxis Worsch in Dresden: Ihr Experte für ästhetische Zahnheilkunde. Von Veneers über Bleaching bis zum Smile Makeover – für Ihr strahlendstes Lächeln. Jetzt beraten lassen!";
+    }
     return service.shortDescription;
   };
 
-  // Customize hero section title for Implantologie
+  // Customize hero section title for specific services
   const getHeroTitle = () => {
     if (id === 'implantologie') {
       return "Zahnimplantate Dresden: Feste Zähne von Ihrem Spezialisten";
+    }
+    if (id === 'aesthetische-zahnheilkunde') {
+      return "Ästhetische Zahnheilkunde in Dresden | Für Ihr perfektes Lächeln";
     }
     return service.title;
   };
@@ -88,8 +96,9 @@ const ServiceDetail = () => {
     };
   }, []);
 
-  // Check if the current page is Implantologie
+  // Check if the current page is Implantologie or Ästhetische Zahnheilkunde
   const isImplantologiePage = id === 'implantologie';
+  const isAestheticPage = id === 'aesthetische-zahnheilkunde';
 
   return (
     <div className="min-h-screen">
@@ -166,7 +175,133 @@ const ServiceDetail = () => {
                     </div>
                   </div>
                 </>
+              ) : isAestheticPage ? (
+                <>
+                  <h2 className="mb-6 text-dental-blue">Ästhetische Zahnmedizin in Dresden: Ihr Weg zum strahlenden Lächeln</h2>
+                  <div className="prose prose-lg max-w-none text-dental-gray">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+                      <div>
+                        <p>
+                          <strong>Ästhetische Zahnheilkunde in Dresden</strong> verbindet moderne Zahnmedizin mit höchsten ästhetischen Ansprüchen. In der Zahnarztpraxis Worsch bieten wir Ihnen ein umfassendes Spektrum an Behandlungen, um Ihnen zu einem natürlich schönen Lächeln zu verhelfen.
+                        </p>
+                        <p>
+                          Unser erfahrenes Team für <strong>Zahnästhetik in Dresden</strong> setzt auf hochwertige Materialien und innovative Verfahren, um selbst kleinste Unregelmäßigkeiten zu korrigieren und Ihr strahlendstes Lächeln zum Vorschein zu bringen.
+                        </p>
+                      </div>
+                      <div className="rounded-lg overflow-hidden shadow-lg">
+                        <img 
+                          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+                          alt="Ästhetische Zahnbehandlung Beratung - Zahnarztpraxis Worsch Dresden"
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-medium mt-10 mb-6 text-dental-blue">Unsere ästhetischen Behandlungen in Dresden</h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
+                      <div className="bg-dental-beige p-5 rounded-lg">
+                        <div className="flex items-center mb-3">
+                          <Droplet className="h-6 w-6 text-dental-turquoise mr-2" />
+                          <h4 className="text-xl font-medium text-dental-blue">Veneers Dresden</h4>
+                        </div>
+                        <p className="text-base">
+                          Hauchdünne Keramikschalen, die auf die Zahnoberfläche geklebt werden, um Verfärbungen, kleine Zahnlücken oder Formkorrekturen ästhetisch perfekt zu lösen.
+                        </p>
+                        <Button variant="link" asChild className="mt-2 p-0 text-dental-turquoise hover:text-dental-blue">
+                          <Link to="#veneers">Mehr zu Veneers erfahren</Link>
+                        </Button>
+                      </div>
+                      
+                      <div className="bg-dental-beige p-5 rounded-lg">
+                        <div className="flex items-center mb-3">
+                          <Smile className="h-6 w-6 text-dental-turquoise mr-2" />
+                          <h4 className="text-xl font-medium text-dental-blue">Bleaching Dresden</h4>
+                        </div>
+                        <p className="text-base">
+                          Professionelle Zahnaufhellung für ein strahlendes, weißes Lächeln. Wirksam gegen Verfärbungen durch Kaffee, Tee, Nikotin oder altersbedingte Eintrübungen.
+                        </p>
+                        <Button variant="link" asChild className="mt-2 p-0 text-dental-turquoise hover:text-dental-blue">
+                          <Link to="#bleaching">Mehr zum Bleaching erfahren</Link>
+                        </Button>
+                      </div>
+                      
+                      <div className="bg-dental-beige p-5 rounded-lg">
+                        <div className="flex items-center mb-3">
+                          <Star className="h-6 w-6 text-dental-turquoise mr-2" />
+                          <h4 className="text-xl font-medium text-dental-blue">Zahnformkorrekturen</h4>
+                        </div>
+                        <p className="text-base">
+                          Sanfte Korrektur von abgebrochenen Ecken, unregelmäßigen Zahnkanten oder zu kleinen Zähnen mit hochästhetischen Kompositmaterialien.
+                        </p>
+                      </div>
+                      
+                      <div className="bg-dental-beige p-5 rounded-lg">
+                        <div className="flex items-center mb-3">
+                          <Star className="h-6 w-6 text-dental-turquoise mr-2" />
+                          <h4 className="text-xl font-medium text-dental-blue">Smile Design</h4>
+                        </div>
+                        <p className="text-base">
+                          Ganzheitliche Planung Ihres perfekten Lächelns mit digitaler Vorschau - für harmonische Proportionen und ein natürliches Erscheinungsbild.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div id="veneers" className="mt-12 pt-4">
+                      <h3 className="text-2xl font-medium mb-4 text-dental-blue">Veneers: Perfektion für Ihre Frontzähne</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+                        <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
+                          <img 
+                            src="https://images.unsplash.com/photo-1581701244939-bf25b2f7b691?q=80&w=1770&auto=format&fit=crop" 
+                            alt="Keramik Veneers für perfekte Frontzähne - Zahnarztpraxis Worsch Dresden"
+                            className="w-full h-auto"
+                          />
+                        </div>
+                        <div className="order-1 md:order-2">
+                          <p className="mb-4">
+                            <strong>Veneers in Dresden</strong> sind die Königsdisziplin der ästhetischen Zahnheilkunde. Diese hauchdünnen Keramikschalen werden individuell für Sie angefertigt und dauerhaft auf die Zahnoberfläche geklebt.
+                          </p>
+                          <p>
+                            Mit Veneers lassen sich Verfärbungen, kleine Zahnlücken, leichte Fehlstellungen und Formunregelmäßigkeiten korrigieren. Das Ergebnis: Ein makelloses, natürliches Lächeln.
+                          </p>
+                          <ul className="list-disc list-inside space-y-2 mt-4">
+                            <li>Minimale Präparation der Zahnsubstanz</li>
+                            <li>Hervorragende Langlebigkeit (10-15 Jahre)</li>
+                            <li>Natürliches Aussehen und Lichtreflexion</li>
+                            <li>Flecken- und verfärbungsresistent</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div id="bleaching" className="mt-12 pt-4">
+                      <h3 className="text-2xl font-medium mb-4 text-dental-blue">Professionelles Bleaching: Strahlend weiße Zähne</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+                        <div>
+                          <p className="mb-4">
+                            Mit unserem <strong>professionellen Bleaching in Dresden</strong> bieten wir Ihnen eine effektive und sichere Methode zur Zahnaufhellung. Unser schonender Aufhellungsprozess entfernt selbst hartnäckige Verfärbungen.
+                          </p>
+                          <p>
+                            Je nach Ihren Wünschen bieten wir Ihnen zwei Varianten an:
+                          </p>
+                          <ul className="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>In-Office-Bleaching:</strong> Professionelle Zahnaufhellung in nur einer Sitzung in unserer Praxis</li>
+                            <li><strong>Home-Bleaching:</strong> Individuell angefertigte Schienen für die Anwendung zuhause unter unserer Anleitung</li>
+                          </ul>
+                        </div>
+                        <div className="rounded-lg overflow-hidden shadow-lg">
+                          <img 
+                            src="https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=1770&auto=format&fit=crop" 
+                            alt="Professionelles Bleaching für weiße Zähne - Zahnarztpraxis Worsch Dresden"
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
               ) : (
+                // Default service content display
                 <>
                   <h2 className="mb-6 text-dental-blue">Über {service.title}</h2>
                   <div className="prose prose-lg max-w-none text-dental-gray">
@@ -187,12 +322,16 @@ const ServiceDetail = () => {
             {service.benefits && service.benefits.length > 0 && (
               <div className="mb-12 animate-on-scroll">
                 <h3 className="text-2xl font-medium mb-6 text-dental-blue">
-                  {isImplantologiePage ? 'Die Vorteile von Implantaten bei Praxis Worsch' : 'Ihre Vorteile'}
+                  {isImplantologiePage ? 'Die Vorteile von Implantaten bei Praxis Worsch' : 
+                   isAestheticPage ? 'Vorteile ästhetischer Zahnbehandlungen bei Praxis Worsch' : 
+                   'Ihre Vorteile'}
                 </h3>
                 <div className="bg-dental-beige rounded-lg p-6">
                   <ul className="space-y-4">
                     {isImplantologiePage ? (
-                      // Custom benefits for Implantologie
+                      // ... keep existing code (Implantologie benefits)
+                    ) : isAestheticPage ? (
+                      // Custom benefits for Ästhetische Zahnheilkunde
                       <>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 mt-1 mr-2">
@@ -200,7 +339,7 @@ const ServiceDetail = () => {
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-dental-gray"><strong>Natürliches Aussehen und Gefühl</strong> - Zahnimplantate sehen aus und fühlen sich an wie Ihre eigenen Zähne</span>
+                          <span className="text-dental-gray"><strong>Natürliche Ästhetik</strong> - Unsichtbare Verbesserungen für ein authentisches, strahlendes Lächeln</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 mt-1 mr-2">
@@ -208,7 +347,7 @@ const ServiceDetail = () => {
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-dental-gray"><strong>Hoher Kaukomfort und Sicherheit</strong> - Essen Sie wieder all Ihre Lieblingsspeisen ohne Einschränkungen</span>
+                          <span className="text-dental-gray"><strong>Stärkeres Selbstbewusstsein</strong> - Lächeln Sie wieder unbeschwert in jeder Situation</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 mt-1 mr-2">
@@ -216,7 +355,7 @@ const ServiceDetail = () => {
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-dental-gray"><strong>Erhalt des Kieferknochens</strong> - Verhinderung von Knochenschwund und Veränderungen der Gesichtsstruktur</span>
+                          <span className="text-dental-gray"><strong>Hochwertige Materialien</strong> - Langlebige Ergebnisse mit erstklassigen Keramik- und Kompositmaterialien</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 mt-1 mr-2">
@@ -224,7 +363,7 @@ const ServiceDetail = () => {
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-dental-gray"><strong>Hervorragende Langzeitprognose</strong> - Bei guter Pflege halten Implantate oft ein Leben lang</span>
+                          <span className="text-dental-gray"><strong>Minimal-invasive Verfahren</strong> - Maximale Schonung Ihrer natürlichen Zahnsubstanz</span>
                         </li>
                         <li className="flex items-start">
                           <div className="flex-shrink-0 mt-1 mr-2">
@@ -232,7 +371,7 @@ const ServiceDetail = () => {
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                           </div>
-                          <span className="text-dental-gray"><strong>Praktisch in der Pflege</strong> - Einfache Reinigung wie bei natürlichen Zähnen</span>
+                          <span className="text-dental-gray"><strong>Individuelle Planung</strong> - Maßgeschneiderte Lösungen für Ihr persönliches Traum-Lächeln</span>
                         </li>
                       </>
                     ) : (
@@ -253,6 +392,47 @@ const ServiceDetail = () => {
               </div>
             )}
             
+            {/* Custom FAQ Section for Aesthetic Dentistry */}
+            {isAestheticPage && (
+              <div className="mb-12 animate-on-scroll">
+                <h3 className="text-2xl font-medium mb-6 text-dental-blue">Häufig gestellte Fragen zur ästhetischen Zahnheilkunde</h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="faq-1">
+                    <AccordionTrigger className="text-left text-lg font-medium">
+                      Wie lange halten Veneers?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dental-gray">
+                      Hochwertige Keramikveneers haben eine durchschnittliche Haltbarkeit von 10-15 Jahren, bei guter Pflege können sie sogar deutlich länger halten. Die exakte Lebensdauer hängt von verschiedenen Faktoren ab, wie Ihrer Mundhygiene, Ihren Essgewohnheiten und ob Sie beispielsweise unter Zähneknirschen leiden.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-2">
+                    <AccordionTrigger className="text-left text-lg font-medium">
+                      Ist das Bleaching schädlich für meine Zähne?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dental-gray">
+                      Ein professionelles Bleaching unter zahnärztlicher Aufsicht ist für gesunde Zähne unbedenklich. Wir verwenden moderne Aufhellungssysteme mit pH-neutralen Gelen, die den Zahnschmelz nicht angreifen. Vor jeder Behandlung prüfen wir den Zustand Ihrer Zähne und empfehlen die für Sie geeignete Methode und Intensität.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-3">
+                    <AccordionTrigger className="text-left text-lg font-medium">
+                      Übernimmt die Krankenkasse die Kosten für ästhetische Behandlungen?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dental-gray">
+                      Da es sich bei ästhetischen Behandlungen in der Regel um Wunschleistungen handelt, werden die Kosten von den gesetzlichen Krankenkassen nicht übernommen. Private Versicherungen erstatten je nach Tarif einen Teil oder die gesamten Kosten. Wir erstellen Ihnen vorab einen detaillierten Kostenplan und beraten Sie gerne zu Finanzierungsmöglichkeiten.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="faq-4">
+                    <AccordionTrigger className="text-left text-lg font-medium">
+                      Wie kann ich vorab sehen, wie mein neues Lächeln aussehen wird?
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dental-gray">
+                      Mit unserer digitalen Smile-Design-Technologie können wir Ihnen bereits vor Behandlungsbeginn eine Vorschau Ihres neuen Lächelns zeigen. Bei Veneers erstellen wir zudem ein Wax-up (Wachsmodell) und ein Mock-up, das Sie probeweise im Mund tragen können, um das Ergebnis zu visualisieren und bei Bedarf anzupassen.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            )}
+
             {/* Custom FAQ Section for Implantologie */}
             {isImplantologiePage && (
               <div className="mb-12 animate-on-scroll">
@@ -295,7 +475,7 @@ const ServiceDetail = () => {
             )}
 
             {/* Standard FAQs for other services */}
-            {!isImplantologiePage && service.faqs && service.faqs.length > 0 && (
+            {!isImplantologiePage && !isAestheticPage && service.faqs && service.faqs.length > 0 && (
               <div className="animate-on-scroll">
                 <h3 className="text-2xl font-medium mb-6 text-dental-blue">Häufig gestellte Fragen</h3>
                 <Accordion type="single" collapsible className="w-full">
@@ -310,6 +490,16 @@ const ServiceDetail = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
+              </div>
+            )}
+
+            {/* Custom CTA for Aesthetic Dentistry */}
+            {isAestheticPage && (
+              <div className="mt-12 text-center animate-on-scroll">
+                <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue text-white px-8 py-6 text-lg">
+                  <Link to="/appointment">Termin für ästhetische Beratung vereinbaren <ChevronRight className="ml-2 h-5 w-5" /></Link>
+                </Button>
+                <p className="mt-4 text-dental-gray">Entdecken Sie Ihr schönstes Lächeln – Wir zeigen Ihnen die Möglichkeiten</p>
               </div>
             )}
 
