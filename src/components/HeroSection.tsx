@@ -9,13 +9,17 @@ interface HeroSectionProps {
   subtitle?: string;
   backgroundImage?: string;
   useSolidBackground?: boolean;
+  ctaText?: string;
+  secondaryCtaText?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
   title, 
   subtitle = "Ihre Experten für gesunde und schöne Zähne", 
   backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
-  useSolidBackground = false
+  useSolidBackground = false,
+  ctaText = "Termin online buchen",
+  secondaryCtaText = "Unsere Leistungen"
 }) => {
   return (
     <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
@@ -27,28 +31,31 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             backgroundImage: `url(${backgroundImage})`,
             filter: "brightness(0.8)"
           }}
+          aria-hidden="true"
+          role="img"
+          aria-label="Zahnarztpraxis Worsch Dresden - moderne Behandlungsräume"
         />
       ) : (
-        <div className="absolute inset-0 z-0 bg-dental-blue/90" />
+        <div className="absolute inset-0 z-0 bg-dental-blue/90" aria-hidden="true" />
       )}
       
       {/* Only gradient overlay, no additional images */}
-      <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" aria-hidden="true" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl text-white animate-fade-in">
           <h1 className="mb-4 flex items-center">
-            <Stethoscope className="mr-3 hidden sm:inline-block" size={36} strokeWidth={1.5} />
+            <Stethoscope className="mr-3 hidden sm:inline-block" size={36} strokeWidth={1.5} aria-hidden="true" />
             {title}
           </h1>
           <p className="text-xl md:text-2xl mb-8">{subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
-              <Link to="/appointment">Termin online buchen</Link>
+              <Link to="/appointment">{ctaText}</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-dental-blue transition-all">
-              <Link to="/services">Unsere Leistungen</Link>
+              <Link to="/services">{secondaryCtaText}</Link>
             </Button>
           </div>
         </div>

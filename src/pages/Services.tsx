@@ -32,8 +32,8 @@ const ServicesPage = () => {
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Hochwertige Zahnmedizin für Ihr strahlendes Lächeln" 
-        subtitle="Unsere Premium-Leistungen für höchste Ansprüche - Jetzt Termin vereinbaren!" 
+        title="Zahnmedizinische Leistungen in Dresden - Zahnarztpraxis Worsch" 
+        subtitle="Hochwertige Behandlungen für Ihr strahlendes Lächeln - Von der Prophylaxe bis zur Implantologie" 
         backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
       />
 

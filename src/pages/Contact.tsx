@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -17,8 +17,8 @@ const ContactPage = () => {
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Kontakt & Anfahrt" 
-        subtitle="So erreichen Sie unsere Praxis" 
+        title="Kontakt & Anfahrt zur Zahnarztpraxis Worsch Dresden" 
+        subtitle="So erreichen Sie unsere Praxis in Dresden einfach und schnell" 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
       />
 
