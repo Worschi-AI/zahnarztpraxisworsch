@@ -15,11 +15,11 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Hero Section with dental-specific image */}
       <HeroSection 
         title="Kontakt & Anfahrt" 
         subtitle="So erreichen Sie unsere Praxis" 
-        backgroundImage="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1770&auto=format&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
       />
 
       {/* Contact Content */}

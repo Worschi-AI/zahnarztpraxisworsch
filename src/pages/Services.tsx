@@ -30,11 +30,11 @@ const ServicesPage = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section - Use solid color background instead of image */}
+      {/* Hero Section with dental-specific image */}
       <HeroSection 
         title="Hochwertige Zahnmedizin für Ihr strahlendes Lächeln" 
         subtitle="Unsere Premium-Leistungen für höchste Ansprüche - Jetzt Termin vereinbaren!" 
-        backgroundImage="/lovable-uploads/2321cb5b-9485-4578-852b-b8525853d92e.png"
+        backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
       />
 
       {/* Premium Services Section */}

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -26,11 +25,11 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Hero Section with dental-specific image */}
       <HeroSection 
         title="Zahnarztpraxis Worsch" 
         subtitle="Ihre Experten für gesunde und schöne Zähne in [Stadt]" 
-        backgroundImage="/lovable-uploads/54d00c7e-3bf4-4351-86f1-b8a4b54f9239.png"
+        backgroundImage="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop"
       />
 
       {/* Intro Section */}
