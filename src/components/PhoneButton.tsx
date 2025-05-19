@@ -30,14 +30,14 @@ const PhoneButton = ({
       asChild
       variant={variant}
       size={size}
-      className={cn(className)}
+      className={cn("text-white", className)}
       {...props}
     >
       <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">
         {showIcon && iconPosition === 'left' && (
           <Phone className="h-4 w-4" />
         )}
-        <span className={showIcon ? '' : 'underline'}>{buttonText}</span>
+        <span>{buttonText}</span>
         {showIcon && iconPosition === 'right' && (
           <Phone className="h-4 w-4" />
         )}
