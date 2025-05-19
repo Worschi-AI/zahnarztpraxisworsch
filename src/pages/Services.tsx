@@ -38,8 +38,18 @@ const ServicesPage = () => {
         title="Zahnärztliche Leistungen in Dresden | Praxis Worsch" 
         subtitle="Von der Prophylaxe bis zur Implantologie - Umfassende zahnmedizinische Versorgung für Ihr strahlendes Lächeln"
         backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
-        introText="Willkommen im Leistungsbereich der Zahnarztpraxis Worsch. Wir bieten Ihnen das gesamte Spektrum moderner Zahnheilkunde unter einem Dach - mit besonderem Fokus auf Qualität, Ästhetik und Langlebigkeit. Entdecken Sie unser umfassendes Angebot."
       />
+
+      {/* Introduction section with the welcome text */}
+      <section className="py-10 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center animate-on-scroll">
+            <p className="text-lg text-dental-gray bg-dental-beige p-5 rounded-lg">
+              Willkommen im Leistungsbereich der Zahnarztpraxis Worsch. Wir bieten Ihnen das gesamte Spektrum moderner Zahnheilkunde unter einem Dach - mit besonderem Fokus auf Qualität, Ästhetik und Langlebigkeit. Entdecken Sie unser umfassendes Angebot.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Premium Services Section */}
       <PremiumServiceSection premiumServices={premiumServices} />

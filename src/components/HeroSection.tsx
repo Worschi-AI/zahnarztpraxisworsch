@@ -52,13 +52,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </h1>
           <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
           
-          {/* New intro text */}
-          {introText && (
-            <p className="text-lg mb-8 bg-dental-blue/30 backdrop-blur-sm p-4 rounded-lg">
-              {introText}
-            </p>
-          )}
-          
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
