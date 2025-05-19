@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Check, Crown, Cog, Tool, Smile } from 'lucide-react';
+import { Check, Crown, Cog, PenTool, Smile } from 'lucide-react';
 
 const ServiceContentZahnersatz = () => {
   return (
@@ -58,7 +57,7 @@ const ServiceContentZahnersatz = () => {
           
           <div className="bg-dental-beige p-5 rounded-lg">
             <div className="flex items-center mb-3">
-              <Tool className="h-6 w-6 text-dental-turquoise mr-2" />
+              <PenTool className="h-6 w-6 text-dental-turquoise mr-2" />
               <h4 className="text-xl font-medium text-dental-blue">Teilprothesen & Vollprothesen</h4>
             </div>
             <p className="text-base">
