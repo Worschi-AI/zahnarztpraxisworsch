@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -15,8 +16,12 @@ import {
 } from '@/components/ui/accordion';
 import FAQSection from '@/components/services/FAQSection';
 import { ChevronRight, Star, Smile, Droplet } from 'lucide-react';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const ServiceDetail = () => {
+  // Use the custom scroll animation hook
+  useScrollAnimation();
+  
   const { id } = useParams<{ id: string }>();
   const service = services.find(s => s.id === id);
 
@@ -64,37 +69,6 @@ const ServiceDetail = () => {
     }
     return service.title;
   };
-
-  // Animation on scroll effect with proper cleanup
-  useEffect(() => {
-    // Define the IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Add animated class and keep it there permanently
-          entry.target.classList.add('animated');
-          // Once element is animated, stop observing it
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    // Select all elements to animate
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    
-    // Start observing each element
-    elementsToAnimate.forEach(el => {
-      observer.observe(el);
-    });
-
-    // Clean up function to prevent memory leaks
-    return () => {
-      elementsToAnimate.forEach(el => {
-        observer.unobserve(el);
-      });
-      observer.disconnect();
-    };
-  }, []);
 
   // Check if the current page is Implantologie or Ästhetische Zahnheilkunde
   const isImplantologiePage = id === 'implantologie';
@@ -329,7 +303,49 @@ const ServiceDetail = () => {
                 <div className="bg-dental-beige rounded-lg p-6">
                   <ul className="space-y-4">
                     {isImplantologiePage ? (
-                      // ... keep existing code (Implantologie benefits)
+                      // Custom benefits for Implantologie
+                      <>
+                        <li className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-dental-turquoise" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-dental-gray"><strong>Langlebig und stabil</strong> - Über 95% Erfolgsrate nach 10 Jahren bei guter Pflege</span>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-dental-turquoise" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-dental-gray"><strong>Natürlich schön</strong> - Kaum von echten Zähnen zu unterscheiden</span>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-dental-turquoise" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-dental-gray"><strong>Erhaltung der Kiefersubstanz</strong> - Verhindert Knochenschwund und hält Gesichtskonturen</span>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-dental-turquoise" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-dental-gray"><strong>Fester Biss</strong> - Sichere Verankerung und volle Kaufunktion</span>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="flex-shrink-0 mt-1 mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-dental-turquoise" viewBox="0 0 20 20" fill="currentColor">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-dental-gray"><strong>Kein Beschleifen gesunder Nachbarzähne</strong> - Schonung Ihrer natürlichen Zahnsubstanz</span>
+                        </li>
+                      </>
                     ) : isAestheticPage ? (
                       // Custom benefits for Ästhetische Zahnheilkunde
                       <>
