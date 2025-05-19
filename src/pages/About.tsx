@@ -6,6 +6,9 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
+import PraxisGallery from '@/components/praxis/PraxisGallery';
+import TechnologySection from '@/components/praxis/TechnologySection';
+import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   // Use the scroll animation hook
@@ -13,12 +16,20 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Zahnarztpraxis Worsch Dresden | Unsere Praxis: Moderne Ausstattung & Philosophie</title>
+        <meta 
+          name="description" 
+          content="Lernen Sie die Zahnarztpraxis Worsch in Dresden kennen! Erfahren Sie mehr über unsere patientenorientierte Philosophie, moderne Ausstattung und innovative Technologien." 
+        />
+      </Helmet>
+
       <Navbar />
       
       {/* Hero Section */}
       <HeroSection 
-        title="Unsere Praxis" 
-        subtitle="Lernen Sie unsere moderne Zahnarztpraxis kennen" 
+        title="Moderne Zahnarztpraxis Worsch in Dresden: Philosophie & Technologie" 
+        subtitle="Lernen Sie unsere patientenorientierte Praxis mit modernster Ausstattung kennen" 
         backgroundImage="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1887&auto=format&fit=crop"
       />
 
@@ -29,14 +40,22 @@ const AboutPage = () => {
             <div className="animate-on-scroll">
               <h2 className="mb-6 text-center text-dental-blue">Unsere Philosophie</h2>
               <div className="prose prose-lg max-w-none text-dental-gray">
+                <h3 className="text-xl font-semibold text-dental-turquoise mb-4">Der Mensch im Mittelpunkt</h3>
                 <p>
-                  In unserer Zahnarztpraxis steht der Mensch im Mittelpunkt. Wir verstehen, dass jeder Patient 
+                  In unserer <strong>Zahnarztpraxis in Dresden</strong> steht der Mensch im Mittelpunkt. Wir verstehen, dass jeder Patient 
                   individuelle Bedürfnisse und manchmal auch Ängste hat. Daher nehmen wir uns Zeit für eine 
                   ausführliche Beratung und entwickeln gemeinsam mit Ihnen einen maßgeschneiderten Behandlungsplan.
                 </p>
                 
+                <blockquote className="border-l-4 border-dental-turquoise pl-4 italic my-6">
+                  Unsere Mission ist es, Ihnen eine entspannte und angenehme Behandlung zu ermöglichen – 
+                  mit modernsten Methoden und persönlicher Betreuung.
+                </blockquote>
+
+                <h3 className="text-xl font-semibold text-dental-turquoise mb-4">Unsere Kernwerte</h3>
+
                 <p>
-                  Unsere Behandlungsphilosophie basiert auf drei Grundsätzen:
+                  Unsere Behandlungsphilosophie in der <strong>Zahnarztpraxis Worsch Dresden</strong> basiert auf drei Grundsätzen:
                 </p>
 
                 <ul>
@@ -55,7 +74,7 @@ const AboutPage = () => {
                 </ul>
 
                 <p>
-                  Unser Ziel ist es, Ihnen zu einem strahlenden Lächeln zu verhelfen und Ihre natürlichen 
+                  Unser Ziel in der <strong>modernen Zahnmedizin Dresden</strong> ist es, Ihnen zu einem strahlenden Lächeln zu verhelfen und Ihre natürlichen 
                   Zähne so lange wie möglich zu erhalten. Dabei legen wir größten Wert auf eine vertrauensvolle 
                   Zahnarzt-Patienten-Beziehung und eine angenehme Atmosphäre in unserer Praxis.
                 </p>
@@ -71,114 +90,17 @@ const AboutPage = () => {
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="mb-4 text-dental-blue">Unsere Praxisräume</h2>
             <p className="text-lg max-w-2xl mx-auto text-dental-gray">
-              In unseren modernen und hellen Räumlichkeiten möchten wir Ihnen eine angenehme Atmosphäre bieten. 
+              In unseren modernen und hellen Räumlichkeiten in <strong>Dresden</strong> möchten wir Ihnen eine angenehme Atmosphäre bieten. 
               Entdecken Sie unsere Praxis in Bildern:
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="animate-on-scroll">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
-                <img 
-                  src="https://images.unsplash.com/photo-1629909615957-f11847120b5c?q=80&w=1932&auto=format&fit=crop" 
-                  alt="Empfangsbereich" 
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Empfangsbereich</h3>
-                  <p className="text-dental-gray">
-                    Unser freundliches Team empfängt Sie in angenehmer Atmosphäre.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="animate-on-scroll" style={{ animationDelay: "100ms" }}>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
-                <img 
-                  src="https://images.unsplash.com/photo-1631815588090-d4bfec5b9589?q=80&w=1972&auto=format&fit=crop" 
-                  alt="Wartezimmer" 
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Wartezimmer</h3>
-                  <p className="text-dental-gray">
-                    Entspannen Sie in unserem komfortablen Wartebereich.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="animate-on-scroll" style={{ animationDelay: "200ms" }}>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover-scale">
-                <img 
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop" 
-                  alt="Behandlungsraum" 
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Behandlungsraum</h3>
-                  <p className="text-dental-gray">
-                    Modernste Technik für Ihre optimale Versorgung.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PraxisGallery />
         </div>
       </section>
 
       {/* Technische Ausstattung */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 animate-on-scroll">
-              <img 
-                src="https://images.unsplash.com/photo-1605098293544-25f4c32344c8?q=80&w=1774&auto=format&fit=crop" 
-                alt="Moderne Zahnarztausstattung" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
-            </div>
-            <div className="md:w-1/2 animate-on-scroll">
-              <h2 className="mb-6 text-dental-blue">Moderne Technologie</h2>
-              <p className="text-lg mb-6 text-dental-gray">
-                Für Ihre optimale Versorgung setzen wir auf modernste technische Ausstattung. So können wir 
-                präzise diagnostizieren und Sie schonend behandeln.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="bg-dental-beige p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-1">Digitales Röntgen</h3>
-                  <p className="text-dental-gray">
-                    Strahlungsreduzierte Aufnahmen für eine genaue Diagnose.
-                  </p>
-                </div>
-                
-                <div className="bg-dental-beige p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-1">Intraorale Kamera</h3>
-                  <p className="text-dental-gray">
-                    Sehen Sie Ihren Zahn aus der Perspektive des Zahnarztes.
-                  </p>
-                </div>
-                
-                <div className="bg-dental-beige p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-1">CAD/CAM-Technologie</h3>
-                  <p className="text-dental-gray">
-                    Digitale Planung und präzise Fertigung von Zahnersatz.
-                  </p>
-                </div>
-                
-                <div className="bg-dental-beige p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-1">Laser-Behandlung</h3>
-                  <p className="text-dental-gray">
-                    Schonende Therapie für verschiedene Anwendungen.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TechnologySection />
 
       {/* CTA */}
       <section className="py-16 bg-dental-blue text-white">
@@ -186,12 +108,12 @@ const AboutPage = () => {
           <div className="max-w-2xl mx-auto animate-on-scroll">
             <h2 className="mb-4">Lernen Sie uns kennen</h2>
             <p className="text-lg mb-8">
-              Wir freuen uns darauf, Sie in unserer Praxis begrüßen zu dürfen. Vereinbaren Sie einen 
+              Wir freuen uns darauf, Sie in unserer Praxis in Dresden begrüßen zu dürfen. Vereinbaren Sie einen 
               Termin für ein persönliches Kennenlerngespräch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
-                <Link to="/appointment">Termin vereinbaren</Link>
+                <Link to="/appointment">Wunschtermin finden</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
                 <Link to="/team">Unser Team kennenlernen</Link>
