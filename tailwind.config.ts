@@ -131,8 +131,8 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 			},
 			fontFamily: {
-				'sans': ['Roboto', 'sans-serif'],
-				'heading': ['Montserrat', 'sans-serif'],
+				'sans': ['"Open Sans"', 'sans-serif'],
+				'heading': ['"Open Sans"', 'sans-serif'],
 			}
 		}
 	},
