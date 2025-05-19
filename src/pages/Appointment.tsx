@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import ServiceMetaData from '@/components/services/ServiceMetaData';
 import AppointmentHero from '@/components/appointment/AppointmentHero';
-import PhoneBooking from '@/components/appointment/PhoneBooking';
+import BookingOptions from '@/components/appointment/BookingOptions';
 import BookingInstructions from '@/components/appointment/BookingInstructions';
 import AdditionalInfo from '@/components/appointment/AdditionalInfo';
 import CallToActionPhone from '@/components/appointment/CallToActionPhone';
@@ -67,7 +67,7 @@ const AppointmentPage = () => {
     <div className="min-h-screen">
       <ServiceMetaData 
         title="Termin vereinbaren | Zahnarztpraxis Worsch Dresden"
-        description="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach telefonisch erreichbar unter 0351 2522709."
+        description="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach online über Doctolib oder telefonisch erreichbar unter 0351 2522709."
         schema={doctolibSchema}
       />
       
@@ -75,7 +75,7 @@ const AppointmentPage = () => {
       
       <AppointmentHero />
 
-      <PhoneBooking />
+      <BookingOptions />
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
