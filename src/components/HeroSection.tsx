@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Tooth } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 interface HeroSectionProps {
   title: string;
@@ -39,7 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl text-white animate-fade-in">
           <h1 className="mb-4 flex items-center">
-            <Tooth className="mr-3 hidden sm:inline-block" size={36} strokeWidth={1.5} />
+            <Stethoscope className="mr-3 hidden sm:inline-block" size={36} strokeWidth={1.5} />
             {title}
           </h1>
           <p className="text-xl md:text-2xl mb-8">{subtitle}</p>
