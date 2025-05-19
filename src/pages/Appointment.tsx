@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Check, Users } from 'lucide-react';
 import ServiceMetaData from '@/components/services/ServiceMetaData';
@@ -15,14 +14,14 @@ const AppointmentPage = () => {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Zahnarztpraxis Worsch Dresden",
-    "description": "Zahnarztpraxis in Dresden mit Online-Terminbuchung über Doctolib",
+    "description": "Zahnarztpraxis in Dresden mit Terminvereinbarung",
     "url": "https://zahnarztpraxis-worsch.de/appointment",
-    "telephone": "+49123456789",
+    "telephone": "+4935125227099",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Musterstraße 123",
+      "streetAddress": "Österreicher Str. 38",
       "addressLocality": "Dresden",
-      "postalCode": "01067",
+      "postalCode": "01279",
       "addressCountry": "DE"
     },
     "geo": {
@@ -33,15 +32,27 @@ const AppointmentPage = () => {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        "opens": "08:00",
+        "dayOfWeek": ["Monday"],
+        "opens": "07:30",
+        "closes": "13:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:30",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "opens": "14:00",
         "closes": "18:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Friday"],
-        "opens": "08:00",
-        "closes": "14:00"
+        "opens": "07:30",
+        "closes": "13:00"
       }
     ]
   };
@@ -70,8 +81,8 @@ const AppointmentPage = () => {
   return (
     <div className="min-h-screen">
       <ServiceMetaData 
-        title="Online Termin buchen | Zahnarztpraxis Worsch Dresden | Doctolib"
-        description="Buchen Sie Ihren Zahnarzttermin bei der Praxis Worsch in Dresden bequem online über Doctolib. Schnell, einfach & rund um die Uhr verfügbar. Jetzt Wunschtermin finden!"
+        title="Termin vereinbaren | Zahnarztpraxis Worsch Dresden"
+        description="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach telefonisch erreichbar unter 0351 2522709."
         schema={doctolibSchema}
       />
       
@@ -79,8 +90,8 @@ const AppointmentPage = () => {
       
       {/* Hero Section with updated title */}
       <HeroSection 
-        title="Online Termin buchen bei Zahnarzt Worsch in Dresden" 
-        subtitle="Einfach und bequem online Termine in unserer Praxis vereinbaren" 
+        title="Termin vereinbaren bei Zahnarzt Worsch in Dresden" 
+        subtitle="Einfach und bequem telefonisch einen Termin in unserer Praxis vereinbaren" 
         backgroundImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=3000&auto=format&fit=crop"
       />
 
@@ -88,41 +99,25 @@ const AppointmentPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Online-Terminbuchung mit Doctolib</h2>
+            <h2 className="mb-6 text-dental-blue">Telefonische Terminbuchung</h2>
             <p className="text-lg text-dental-gray">
-              Mit unserem Online-Buchungssystem können Sie jederzeit und bequem von zu Hause aus 
-              Termine in unserer <strong>Zahnarztpraxis in Dresden</strong> vereinbaren. Wählen Sie einfach den passenden Termin 
-              und die gewünschte Behandlung aus. Zahnarzt Worsch und sein Team freuen sich auf Ihren Besuch!
+              Vereinbaren Sie telefonisch einen Termin in unserer <strong>Zahnarztpraxis in Dresden</strong>. 
+              Zahnarzt Worsch und sein Team freuen sich auf Ihren Besuch!
             </p>
           </div>
 
           <div className="bg-dental-beige p-8 rounded-lg shadow-md mb-12 max-w-3xl mx-auto animate-on-scroll">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium mb-4 text-dental-blue">Unser Doctolib-Buchungssystem</h3>
+              <h3 className="text-2xl font-medium mb-4 text-dental-blue">Rufen Sie uns an</h3>
               <p className="text-dental-gray mb-8">
-                Klicken Sie auf den Button, um zur Terminbuchung bei Doctolib zu gelangen. 
-                Dort können Sie direkt einen <strong>Zahnarzttermin in Dresden</strong> bei uns auswählen.
+                Um einen <strong>Zahnarzttermin in Dresden</strong> zu vereinbaren, 
+                kontaktieren Sie uns bitte telefonisch während unserer Öffnungszeiten.
               </p>
               <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105">
-                <a href="https://www.doctolib.de" target="_blank" rel="noopener noreferrer">
-                  <Calendar className="mr-2 h-5 w-5" /> Jetzt Termin bei Doctolib buchen
+                <a href="tel:+4935125227099">
+                  <Calendar className="mr-2 h-5 w-5" /> 0351 2522709
                 </a>
               </Button>
-            </div>
-
-            {/* Doctolib Widget iframe */}
-            <div className="mt-8 rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.doctolib.de/widget"
-                title="Doctolib Terminbuchung Zahnarztpraxis Worsch Dresden"
-                className="w-full h-[450px] border-0"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                loading="lazy"
-              ></iframe>
-              <p className="text-sm text-dental-gray mt-2 text-center">
-                Falls das Buchungswidget nicht lädt, besuchen Sie bitte direkt <a href="https://www.doctolib.de" className="underline text-dental-turquoise" target="_blank" rel="noopener noreferrer">Doctolib</a>
-              </p>
             </div>
           </div>
 
@@ -134,13 +129,13 @@ const AppointmentPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <span className="bg-dental-turquoise text-white w-8 h-8 rounded-full flex items-center justify-center">1</span>
-                    <span>Auswählen</span>
+                    <span>Anrufen</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
                     <Calendar className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                    Wählen Sie den gewünschten Behandlungstyp und einen passenden Termin aus den verfügbaren Optionen.
+                    Rufen Sie uns unter der Telefonnummer 0351 2522709 an, um einen Termin zu vereinbaren.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -149,13 +144,13 @@ const AppointmentPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <span className="bg-dental-turquoise text-white w-8 h-8 rounded-full flex items-center justify-center">2</span>
-                    <span>Bestätigen</span>
+                    <span>Besprechen</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
                     <Users className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                    Geben Sie Ihre Kontaktdaten ein und bestätigen Sie Ihren Termin mit einem Klick.
+                    Teilen Sie uns mit, welche Art von Behandlung Sie benötigen und wann Sie Zeit haben.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -170,7 +165,7 @@ const AppointmentPage = () => {
                 <CardContent>
                   <CardDescription>
                     <Check className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                    Sie erhalten eine Bestätigung per E-Mail und optional eine Erinnerung vor Ihrem Termin.
+                    Wir finden einen passenden Termin für Sie und bestätigen diesen direkt am Telefon.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -222,22 +217,15 @@ const AppointmentPage = () => {
       <section className="py-16 bg-dental-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-on-scroll">
-            <h2 className="mb-4">Lieber persönlich?</h2>
+            <h2 className="mb-4">Rufen Sie uns an</h2>
             <p className="text-lg mb-8">
-              Sie können Ihren <strong>Zahnarzttermin in Dresden</strong> natürlich auch telefonisch oder per E-Mail vereinbaren.
+              Sie können Ihren <strong>Zahnarzttermin in Dresden</strong> telefonisch vereinbaren.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
-                <a href="tel:+49123456789" className="flex items-center justify-center gap-2 text-lg font-medium">
-                  <span className="underline">+49 123 456789</span>
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue transition-all hover:scale-105">
-                <a href="mailto:termin@zahnarzt-worsch.de" className="flex items-center justify-center gap-2 text-lg font-medium">
-                  <span className="underline">termin@zahnarzt-worsch.de</span>
-                </a>
-              </Button>
-            </div>
+            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
+              <a href="tel:+4935125227099" className="flex items-center justify-center gap-2 text-lg font-medium">
+                <span className="underline">0351 2522709</span>
+              </a>
+            </Button>
           </div>
         </div>
       </section>
