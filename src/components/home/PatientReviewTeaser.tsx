@@ -1,10 +1,13 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+// Link von react-router-dom wird hier nicht mehr benötigt, wenn es ein externer Link ist.
+// Stattdessen verwenden wir ein normales <a> Tag.
+// import { Link } from 'react-router-dom'; 
 import { Star } from 'lucide-react';
 
 const PatientReviewTeaser = () => {
+  const googleReviewsLink = "https://maps.app.goo.gl/DnBXcjLJpxxcPdx473";
+
   return (
     <section className="py-8 bg-dental-beige">
       <div className="container mx-auto px-4">
@@ -16,8 +19,17 @@ const PatientReviewTeaser = () => {
               <p className="text-dental-gray">Unsere Patienten in Dresden vertrauen uns seit Jahren.</p>
             </div>
           </div>
+          {/* Button wird jetzt als <a> Tag gerendert, da es ein externer Link ist.
+            'asChild' wird hier nicht benötigt, wenn wir direkt ein <a> Tag stylen oder der Button ein <a> sein kann.
+            Wenn Ihre Button-Komponente ein 'href'-Prop direkt unterstützt und als <a> rendert, 
+            können Sie das beibehalten. Andernfalls ist ein einfaches <a>-Tag mit Button-Styling besser.
+            Ich gehe davon aus, dass Ihre Button-Komponente ein `href` verarbeiten kann oder wir ein `<a>` stylen.
+            Die einfachste Lösung für externe Links ist oft ein direktes <a>-Tag.
+          */}
           <Button asChild variant="outline" className="border-dental-blue text-dental-blue hover:bg-dental-blue hover:text-white whitespace-nowrap">
-            <Link to="/about#testimonials">Erfahrungsberichte lesen</Link>
+            <a href={googleReviewsLink} target="_blank" rel="noopener noreferrer">
+              Erfahrungsberichte lesen
+            </a>
           </Button>
         </div>
       </div>
