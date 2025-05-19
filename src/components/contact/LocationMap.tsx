@@ -1,17 +1,19 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; // Annahme: UI-Komponenten-Pfad
 import { MapPin, Car, Train } from 'lucide-react';
 
 const LocationMap = () => {
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.476298522233!2d13.836413999999998!3d51.0258232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709c7d96d21fce9%3A0xe0acd2eb962737a1!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sde!2sde!4v1747662579748!5m2!1sde!2sde"; // Die src aus Ihrem iframe-Code
+  const googleMapsShareLink = "https://maps.app.goo.gl/zYMPy4MjAHRvKtti7"; // Ihr aktuellster Link zum Teilen
+
   return (
-    <div className="md:w-1/2 animate-on-scroll">
+    <div className="md:w-1/2 animate-on-scroll"> {/* Annahme: Tailwind-Klassen oder äquivalent */}
       <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Anfahrt</h2>
       
       {/* Google Maps Embed */}
       <div className="rounded-lg h-[400px] mb-6 overflow-hidden shadow-md">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2509.780573326115!2d13.7989226!3d51.0043052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s2RGP%2B8H%20Dresden%2C%20Germany!5e0!3m2!1sen!2sus!4v1716509292708!5m2!1sen!2sus" 
+          src={googleMapsEmbedUrl} 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
@@ -24,7 +26,7 @@ const LocationMap = () => {
       </div>
       
       <Button asChild variant="outline" className="w-full border-dental-turquoise text-dental-turquoise hover:bg-dental-turquoise hover:text-white">
-        <a href="https://maps.app.goo.gl/DnBXcjLJpxxcPdx47" target="_blank" rel="noopener noreferrer">
+        <a href={googleMapsShareLink} target="_blank" rel="noopener noreferrer">
           <MapPin className="mr-2 h-4 w-4" /> In Google Maps öffnen
         </a>
       </Button>
@@ -63,7 +65,7 @@ const LocationMap = () => {
           </div>
         </div>
         
-        <div className="mt-4 p-3 bg-dental-turquoise/10 rounded-md text-center">
+        <div className="mt-4 p-3 bg-dental-turquoise/10 rounded-md text-center"> {/* Annahme: Tailwind-Klassen für Styling */}
           <p className="text-dental-blue font-medium">
             Unsere Praxisräume sind vollständig barrierefrei zugänglich
           </p>
