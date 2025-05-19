@@ -1,0 +1,25 @@
+
+import React from 'react';
+
+const PracticeInfo = () => {
+  return (
+    <div>
+      <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Worsch</h3>
+      <p className="mb-2">
+        <a 
+          href="https://g.co/kgs/8A24h8o" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+          Österreicher Str. 38
+          <br />01279 Dresden
+        </a>
+      </p>
+      <p className="mb-1">Tel: <a href="tel:+4935125227099" className="hover:underline">0351 2522709</a></p>
+      <p>Email: <a href="mailto:info@zahnarzt-worsch.de" className="hover:underline">info@zahnarzt-worsch.de</a></p>
+    </div>
+  );
+};
+
+export default PracticeInfo;
