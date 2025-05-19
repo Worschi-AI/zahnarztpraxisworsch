@@ -23,7 +23,7 @@ const Index = () => {
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Zahnarztpraxis Worsch Dresden: Ihr Experte für Implantologie & Ästhetische Zahnmedizin" 
+        title="Ihr Experte für Implantologie & Ästhetische Zahnmedizin" 
         subtitle="Modernste Zahnheilkunde und individuelle Betreuung für Ihr strahlendes Lächeln" 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"

@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-dental-blue transition-all">
+            <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue transition-all">
               <Link to="/services">{secondaryCtaText}</Link>
             </Button>
           </div>

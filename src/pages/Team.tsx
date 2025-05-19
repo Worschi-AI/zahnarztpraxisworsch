@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import HeroSection from '@/components/HeroSection';
@@ -56,7 +55,7 @@ const TeamPage = () => {
       
       {/* Hero Section */}
       <HeroSection 
-        title="Ihr Zahnarzt-Team in Dresden: Lernen Sie uns kennen" 
+        title="Lernen Sie uns kennen" 
         subtitle="Lernen Sie unsere Zahnärzte und unser Praxisteam kennen" 
         backgroundImage="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop"
       />

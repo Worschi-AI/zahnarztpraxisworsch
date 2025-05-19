@@ -35,7 +35,7 @@ const ServicesPage = () => {
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Zahnärztliche Leistungen in Dresden | Praxis Worsch" 
+        title="Unser Leistungsspektrum für Ihre Zahngesundheit" 
         subtitle="Von der Prophylaxe bis zur Implantologie - Umfassende zahnmedizinische Versorgung für Ihr strahlendes Lächeln"
         backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
       />
