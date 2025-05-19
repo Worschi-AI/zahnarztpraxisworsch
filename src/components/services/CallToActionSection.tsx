@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, Phone } from 'lucide-react';
+import PhoneButton from '@/components/PhoneButton';
 
 const CallToActionSection = () => {
   return (
@@ -13,7 +14,7 @@ const CallToActionSection = () => {
           <p className="text-xl mb-4">Jetzt Termin vereinbaren und 10% Rabatt auf Ihre erste Privatbehandlung sichern!</p>
           <p className="text-lg mb-8">
             Wir nehmen uns Zeit für Ihre Wünsche und erstellen einen individuellen Behandlungsplan.
-            Vereinbaren Sie einen Termin - bequem online oder telefonisch.
+            Vereinbaren Sie einen Termin - bequem telefonisch.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
@@ -39,16 +40,12 @@ const CallToActionSection = () => {
                 <h3 className="text-xl font-bold mb-2">Telefonisch anfragen</h3>
                 <p className="mb-4 opacity-90">Persönliche Beratung zu unseren Öffnungszeiten</p>
               </div>
-              <Button 
-                asChild 
+              <PhoneButton 
                 size="lg" 
-                className="border-2 border-white hover:bg-white hover:text-dental-blue w-full flex items-center justify-center"
+                className="border-2 border-white hover:bg-white hover:text-dental-blue w-full"
                 variant="outline"
-              >
-                <a href="tel:+49123456789">
-                  <span className="block">+49 123 456789</span>
-                </a>
-              </Button>
+                iconPosition="right"
+              />
             </div>
           </div>
         </div>

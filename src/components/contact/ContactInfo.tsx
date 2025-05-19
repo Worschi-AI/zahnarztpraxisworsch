@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Clock } from 'lucide-react';
+import PhoneButton from '@/components/PhoneButton';
 
 const ContactInfo = () => {
   return (
@@ -30,25 +31,11 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-lg font-medium mb-1">Telefon</h3>
             <p className="text-dental-gray">
-              <a href="tel:+4935125227099" className="hover:text-dental-turquoise transition-colors">
-                0351 2522709
-              </a>
-            </p>
-          </div>
-        </div>
-        
-        <div className="flex items-start">
-          <div className="bg-dental-beige p-3 rounded-full mr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-dental-turquoise" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="text-lg font-medium mb-1">E-Mail</h3>
-            <p className="text-dental-gray">
-              <a href="mailto:info@zahnarzt-worsch.de" className="hover:text-dental-turquoise transition-colors">
-                info@zahnarzt-worsch.de
-              </a>
+              <PhoneButton 
+                variant="link" 
+                className="p-0 h-auto text-dental-gray hover:text-dental-turquoise" 
+                showIcon={false}
+              />
             </p>
           </div>
         </div>
@@ -85,16 +72,6 @@ const ContactInfo = () => {
             </div>
           </div>
         </div>
-      </div>
-      
-      <div className="mt-10">
-        <h3 className="text-lg font-medium mb-3">Notfallnummer außerhalb der Öffnungszeiten</h3>
-        <p className="text-dental-gray mb-4">
-          Für dringende Schmerzen außerhalb unserer regulären Öffnungszeiten:
-        </p>
-        <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
-          <a href="tel:+4935125227099">0351 2522709</a>
-        </Button>
       </div>
     </div>
   );

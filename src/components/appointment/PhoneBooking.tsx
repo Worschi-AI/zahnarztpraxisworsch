@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import PhoneButton from '@/components/PhoneButton';
 import { Calendar } from 'lucide-react';
 
 const PhoneBooking = () => {
@@ -22,11 +22,14 @@ const PhoneBooking = () => {
               Um einen <strong>Zahnarzttermin in Dresden</strong> zu vereinbaren, 
               kontaktieren Sie uns bitte telefonisch während unserer Öffnungszeiten.
             </p>
-            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105">
-              <a href="tel:+4935125227099">
-                <Calendar className="mr-2 h-5 w-5" /> 0351 2522709
-              </a>
-            </Button>
+            <PhoneButton 
+              size="lg" 
+              className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105"
+              buttonText="0351 2522709"
+              iconPosition="left"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+            </PhoneButton>
           </div>
         </div>
       </div>

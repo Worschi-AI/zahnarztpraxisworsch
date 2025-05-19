@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PhoneButton from '@/components/PhoneButton';
 
 const PracticeInfo = () => {
   return (
@@ -16,7 +17,11 @@ const PracticeInfo = () => {
           <br />01279 Dresden
         </a>
       </p>
-      <p>Tel: <a href="tel:+4935125227099" className="hover:underline">0351 2522709</a></p>
+      <p>Tel: <PhoneButton 
+        variant="link" 
+        showIcon={false} 
+        className="p-0 h-auto text-white hover:text-dental-beige" 
+      /></p>
     </div>
   );
 };

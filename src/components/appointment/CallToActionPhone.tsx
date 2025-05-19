@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import PhoneButton from '@/components/PhoneButton';
 
 const CallToActionPhone = () => {
   return (
@@ -11,11 +11,12 @@ const CallToActionPhone = () => {
           <p className="text-lg mb-8">
             Sie können Ihren <strong>Zahnarzttermin in Dresden</strong> telefonisch vereinbaren.
           </p>
-          <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
-            <a href="tel:+4935125227099" className="flex items-center justify-center gap-2 text-lg font-medium">
-              <span className="underline">0351 2522709</span>
-            </a>
-          </Button>
+          <PhoneButton 
+            size="lg" 
+            className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105"
+            buttonText="0351 2522709"
+            showIcon={false}
+          />
         </div>
       </div>
     </section>
