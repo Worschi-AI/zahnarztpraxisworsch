@@ -19,7 +19,7 @@ const Index = () => {
 
   // Featured services (top 3) - selecting premium services
   const featuredServices = services.filter(service => 
-    ['implantologie', 'aesthetische-zahnheilkunde', 'prophylaxe'].includes(service.id)
+    ['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
   ).slice(0, 3);
   
   // Featured testimonials (top 3)
@@ -95,7 +95,7 @@ const Index = () => {
             <h2 className="mb-4 text-dental-blue">Unsere Premium-Leistungen in Dresden</h2>
             <p className="text-lg max-w-2xl mx-auto text-dental-gray">
               Wir bieten Ihnen hochwertige <strong>zahnmedizinische Leistungen in Dresden</strong> - von 
-              erstklassigen Implantatlösungen über ästhetische Zahnmedizin bis hin zu umfassender Prophylaxe.
+              erstklassigen Implantatlösungen über ästhetische Zahnmedizin bis hin zu hochwertigem Zahnersatz.
             </p>
           </div>
           
@@ -110,14 +110,14 @@ const Index = () => {
                       ? `Fester Zahnersatz für ein natürliches Lächeln und höchste Lebensqualität. Dank modernster 3D-Planung und hochwertiger Implantate sind Sie bei uns in Dresden in besten Händen.` 
                       : service.id === 'aesthetische-zahnheilkunde'
                       ? `Perfekte Ästhetik für strahlend schöne Zähne. Mit Veneers, Bleaching und hochwertigen Füllungen sorgen wir für Ihr traumhaftes Lächeln – schonend und individuell angepasst.`
-                      : `Professionelle Zahnreinigung und umfassende Vorsorge für langfristig gesunde Zähne. Unser Expertenteam in Dresden nutzt modernste Methoden für optimale Ergebnisse.`
+                      : `Hochwertige Kronen, Brücken und Prothesen für perfekte Funktion und natürliche Ästhetik. Qualität und Langlebigkeit stehen bei uns an erster Stelle.`
                   }
                   imageUrl={
                     service.id === 'implantologie' 
                       ? "https://images.unsplash.com/photo-1601986413153-05c2466c26e4?q=80&w=1770&auto=format&fit=crop" 
                       : service.id === 'aesthetische-zahnheilkunde'
                       ? "https://images.unsplash.com/photo-1581585095152-9f21db44503c?q=80&w=1770&auto=format&fit=crop"
-                      : "https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?q=80&w=1770&auto=format&fit=crop"
+                      : "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop"
                   }
                 />
                 <div className="mt-4 text-center">
@@ -233,13 +233,13 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             {services.filter(service => 
-              !['implantologie', 'aesthetische-zahnheilkunde', 'prophylaxe'].includes(service.id)
+              !['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
             ).slice(0, 6).map((service, index) => (
               <div key={service.id} className="animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
                   <h3 className="font-semibold text-dental-blue mb-2">{service.title}</h3>
                   <p className="text-dental-gray text-sm mb-4">
-                    {service.id === 'zahnersatz' ? 'Hochwertige Kronen, Brücken und Prothesen für perfekte Funktion und natürliche Ästhetik in Dresden.' :
+                    {service.id === 'prophylaxe' ? 'Professionelle Zahnreinigung und umfassende Vorsorge für langfristig gesunde Zähne. Unser Expertenteam in Dresden nutzt modernste Methoden für optimale Ergebnisse.' :
                      service.id === 'parodontologie' ? 'Effektive Behandlung von Zahnfleischerkrankungen für langfristige Mundgesundheit.' :
                      service.id === 'kinderzahnheilkunde' ? 'Einfühlsame und altersgerechte Zahnbehandlung für Ihre Kleinen in entspannter Atmosphäre.' :
                      service.id === 'endodontie' ? 'Schmerzfreie Wurzelbehandlungen mit modernster Technik zum Erhalt Ihrer natürlichen Zähne.' :
