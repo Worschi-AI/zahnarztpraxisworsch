@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         }}
       />
       
-      {/* Gradient Overlay */}
+      {/* Gradient Overlay - Removed additional background image */}
       <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" />
 
       {/* Content */}
