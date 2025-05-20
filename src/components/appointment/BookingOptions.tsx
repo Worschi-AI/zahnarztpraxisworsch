@@ -18,7 +18,7 @@ const BookingOptions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Online-Buchung über Doctolib */}
+          {/* Online-Buchung über Doctolib - now first */}
           <div className="bg-dental-blue p-8 rounded-lg shadow-md animate-on-scroll">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-medium mb-4 text-white">Online-Termin buchen</h3>
