@@ -1,75 +1,65 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { CalendarClock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Stethoscope } from "lucide-react";
 
 interface HeroSectionProps {
   title: string;
-  subtitle: string;
-  backgroundImage: string;
-  showButtons?: boolean;
-  leftButtonText?: string;
-  leftButtonLink?: string;
-  leftButtonIcon?: React.ReactNode;
-  rightButtonText?: string;
-  rightButtonLink?: string;
-  rightButtonIcon?: React.ReactNode;
+  subtitle?: string;
+  backgroundImage?: string;
+  useSolidBackground?: boolean;
   ctaText?: string;
+  secondaryCtaText?: string;
+  introText?: string;
 }
 
-const HeroSection = ({
-  title,
-  subtitle,
-  backgroundImage,
-  showButtons = true,
-  leftButtonText = "Online-Termin buchen",
-  leftButtonLink = "/appointment",
-  leftButtonIcon = <CalendarClock className="mr-2 h-5 w-5" />,
-  rightButtonText = "Unsere Leistungen",
-  rightButtonLink = "/services",
-  rightButtonIcon = null,
-  ctaText
-}: HeroSectionProps) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ 
+  title, 
+  subtitle = "Ihre Experten für gesunde und schöne Zähne", 
+  backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
+  useSolidBackground = false,
+  ctaText = "Termin online buchen",
+  secondaryCtaText = "Unsere Leistungen",
+  introText
+}) => {
   return (
-    <div
-      className="pt-32 pb-20 md:pt-40 md:pb-28 bg-cover bg-center relative"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${backgroundImage}')`
-      }}
-    >
-      <div className="absolute inset-0 bg-black opacity-40" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white animate-fade-in">
-          <h1 className="mb-4">{title}</h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90">{subtitle}</p>
+    <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
+      {/* Background Image with Overlay or Solid Background */}
+      {!useSolidBackground ? (
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${backgroundImage})`,
+            filter: "brightness(0.8)"
+          }}
+          aria-hidden="true"
+          role="img"
+          aria-label="Zahnarztpraxis Worsch Dresden - moderne Behandlungsräume"
+        />
+      ) : (
+        <div className="absolute inset-0 z-0 bg-dental-blue/90" aria-hidden="true" />
+      )}
+      
+      {/* Only gradient overlay, no additional images */}
+      <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" aria-hidden="true" />
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-20">
+        <div className="max-w-2xl text-white animate-fade-in">
+          <h1 className="mb-4">
+            {title}
+          </h1>
+          <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
           
-          {showButtons && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue">
-                <Link to={leftButtonLink} className="flex items-center">
-                  {leftButtonIcon}
-                  <span>{ctaText || leftButtonText}</span>
-                </Link>
-              </Button>
-              
-              {rightButtonLink.startsWith('tel:') ? (
-                <Button asChild size="lg" variant="outline" className="border-white hover:bg-white hover:text-dental-blue">
-                  <a href={rightButtonLink} className="flex items-center">
-                    {rightButtonIcon}
-                    <span>{rightButtonText}</span>
-                  </a>
-                </Button>
-              ) : (
-                <Button asChild size="lg" variant="outline" className="border-white hover:bg-white hover:text-dental-blue">
-                  <Link to={rightButtonLink} className="flex items-center">
-                    {rightButtonIcon}
-                    <span>{rightButtonText}</span>
-                  </Link>
-                </Button>
-              )}
-            </div>
-          )}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
+              <Link to="/appointment">{ctaText}</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue transition-all">
+              <Link to="/services">{secondaryCtaText}</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const AboutPage = () => {
       
       {/* Hero Section */}
       <HeroSection 
-        title="Philosophie & Technologie" 
+        title="Moderne Zahnarztpraxis Worsch in Dresden: Philosophie & Technologie" 
         subtitle="Lernen Sie unsere patientenorientierte Praxis mit modernster Ausstattung kennen" 
         backgroundImage="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1887&auto=format&fit=crop"
       />
@@ -102,8 +102,8 @@ const AboutPage = () => {
       {/* Technische Ausstattung */}
       <TechnologySection />
 
-      {/* CTA - updated background to match AppointmentCTA from homepage */}
-      <section className="py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
+      {/* CTA */}
+      <section className="py-16 bg-dental-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-on-scroll">
             <h2 className="mb-4">Lernen Sie uns kennen</h2>

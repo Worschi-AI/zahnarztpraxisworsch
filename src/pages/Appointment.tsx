@@ -7,6 +7,7 @@ import AppointmentHero from '@/components/appointment/AppointmentHero';
 import BookingOptions from '@/components/appointment/BookingOptions';
 import BookingInstructions from '@/components/appointment/BookingInstructions';
 import AdditionalInfo from '@/components/appointment/AdditionalInfo';
+import CallToActionPhone from '@/components/appointment/CallToActionPhone';
 import { AppointmentSchemaData, type DoctolibSchema } from '@/components/appointment/AppointmentSchemaData';
 import useScrollAnimation from '@/components/appointment/ScrollAnimation';
 
@@ -76,9 +77,15 @@ const AppointmentPage = () => {
 
       <BookingOptions />
 
-      <BookingInstructions />
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <BookingInstructions />
+        </div>
+      </section>
 
       <AdditionalInfo />
+
+      <CallToActionPhone />
 
       <Footer />
     </div>
