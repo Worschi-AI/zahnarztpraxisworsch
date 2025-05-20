@@ -103,7 +103,7 @@ const AboutPage = () => {
       <TechnologySection />
 
       {/* CTA */}
-      <section className="py-16 bg-dental-blue text-white">
+      <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-on-scroll">
             <h2 className="mb-4">Lernen Sie uns kennen</h2>
