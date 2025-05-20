@@ -15,6 +15,7 @@ interface HeroSectionProps {
   rightButtonText?: string;
   rightButtonLink?: string;
   rightButtonIcon?: React.ReactNode;
+  ctaText?: string;
 }
 
 const HeroSection = ({
@@ -27,7 +28,8 @@ const HeroSection = ({
   leftButtonIcon = <CalendarClock className="mr-2 h-5 w-5" />,
   rightButtonText = "Unsere Leistungen",
   rightButtonLink = "/services",
-  rightButtonIcon = null
+  rightButtonIcon = null,
+  ctaText
 }: HeroSectionProps) => {
   return (
     <div
@@ -47,7 +49,7 @@ const HeroSection = ({
               <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue">
                 <Link to={leftButtonLink} className="flex items-center">
                   {leftButtonIcon}
-                  <span>{leftButtonText}</span>
+                  <span>{ctaText || leftButtonText}</span>
                 </Link>
               </Button>
               
