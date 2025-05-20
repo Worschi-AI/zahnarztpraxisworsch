@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Stethoscope } from "lucide-react";
+import { PhoneCall } from "lucide-react";
+import PhoneButton from '@/components/PhoneButton';
 
 interface HeroSectionProps {
   title: string;
@@ -20,7 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
   useSolidBackground = false,
   ctaText = "Termin online buchen",
-  secondaryCtaText = "Unsere Leistungen",
+  secondaryCtaText = "Termin telefonisch buchen",
   introText
 }) => {
   return (
@@ -56,9 +57,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue transition-all">
-              <Link to="/services">{secondaryCtaText}</Link>
-            </Button>
+            <PhoneButton 
+              phoneNumber="0351 2522709" 
+              variant="outline"
+              size="lg"
+              className="border-white hover:bg-white hover:text-dental-blue transition-all"
+              buttonText={secondaryCtaText}
+              iconPosition="left"
+            />
           </div>
         </div>
       </div>
