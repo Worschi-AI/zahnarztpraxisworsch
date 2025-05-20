@@ -12,7 +12,6 @@ import TestimonialSection from '@/components/services/TestimonialSection';
 import CallToActionSection from '@/components/services/CallToActionSection';
 import FAQSection from '@/components/services/FAQSection';
 import ServicesPageMeta from '@/components/services/ServicesPageMeta';
-import CallToActionPhone from '@/components/appointment/CallToActionPhone';
 
 const ServicesPage = () => {
   // Use the scroll animation hook
@@ -51,9 +50,6 @@ const ServicesPage = () => {
 
       {/* Testimonial Section */}
       <TestimonialSection />
-
-      {/* Phone Call to Action */}
-      <CallToActionPhone />
 
       {/* Call to Action Section */}
       <CallToActionSection />
