@@ -27,9 +27,6 @@ const FooterNavigation = () => {
           <Link to="/contact" className="hover:underline">Kontakt & Anfahrt</Link>
         </li>
       </ul>
-      <Button asChild className="mt-4 bg-white text-dental-blue hover:bg-dental-beige hover:scale-105 transition-all">
-        <Link to="/appointment">Termin buchen</Link>
-      </Button>
     </div>
   );
 };

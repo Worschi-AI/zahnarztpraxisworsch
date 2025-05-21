@@ -52,7 +52,7 @@ const Navbar = () => {
           <Link to="/contact" className="font-medium hover:text-dental-blue transition-colors">
             Kontakt
           </Link>
-          <Button asChild className="bg-white text-dental-blue hover:bg-dental-beige hover:scale-105 transition-all">
+          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue text-white">
             <Link to="/appointment">Termin buchen</Link>
           </Button>
         </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
             >
               Kontakt
             </Link>
-            <Button asChild className="w-full bg-white text-dental-blue hover:bg-dental-beige hover:scale-105 transition-all">
+            <Button asChild className="w-full bg-dental-turquoise hover:bg-dental-blue text-white">
               <Link to="/appointment" onClick={() => setIsMobileMenuOpen(false)}>Termin buchen</Link>
             </Button>
           </div>

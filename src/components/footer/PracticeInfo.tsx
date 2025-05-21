@@ -5,7 +5,7 @@ import PhoneButton from '@/components/PhoneButton';
 const PracticeInfo = () => {
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Dipl.med dent. Ute Worsch & Peik Worsch</h3>
+      <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Worsch</h3>
       <p className="mb-2">
         <a 
           href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" 
@@ -17,16 +17,11 @@ const PracticeInfo = () => {
           <br />01279 Dresden
         </a>
       </p>
-      <p className="mb-4">Tel: <PhoneButton 
+      <p>Tel: <PhoneButton 
         variant="link" 
         showIcon={false} 
         className="p-0 h-auto text-white hover:text-dental-beige" 
       /></p>
-      <PhoneButton 
-        className="bg-white text-dental-blue hover:bg-dental-beige hover:scale-105 transition-all"
-        buttonText="0351 2522709"
-        showIcon={true}
-      />
     </div>
   );
 };
