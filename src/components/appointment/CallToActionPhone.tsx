@@ -24,8 +24,7 @@ const CallToActionPhone = () => {
             </Button>
             <PhoneButton 
               size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-dental-blue transition-all"
+              className="bg-dental-beige text-dental-blue hover:bg-white transition-all hover:scale-105"
               buttonText="0351 2522709"
               showIcon={true}
             />

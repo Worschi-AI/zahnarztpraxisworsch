@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Calendar } from 'lucide-react';
+import PhoneButton from '@/components/PhoneButton';
 
 const AppointmentCTA = () => {
   return (
@@ -15,15 +16,18 @@ const AppointmentCTA = () => {
             über das Doctolib-Portal oder kontaktieren Sie uns telefonisch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige flex items-center">
+            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
               <Link to="/appointment">
                 <Calendar className="w-5 h-5 mr-2" aria-hidden="true" />
                 <span>Online-Termin sichern</span>
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-dental-blue">
-              <a href="tel:+49123456789">+49 123 456789</a>
-            </Button>
+            <PhoneButton
+              size="lg"
+              className="bg-dental-beige text-dental-blue hover:bg-white transition-all hover:scale-105"
+              buttonText="+49 123 456789"
+              showIcon={true}
+            />
           </div>
         </div>
       </div>

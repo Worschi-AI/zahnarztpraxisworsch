@@ -112,10 +112,10 @@ const AboutPage = () => {
               Termin für ein persönliches Kennenlerngespräch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
+              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
                 <Link to="/appointment">Wunschtermin finden</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
+              <Button asChild size="lg" className="bg-dental-beige text-dental-blue hover:bg-white transition-all hover:scale-105">
                 <Link to="/team">Unser Team kennenlernen</Link>
               </Button>
             </div>
