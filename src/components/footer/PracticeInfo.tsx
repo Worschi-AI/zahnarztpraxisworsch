@@ -5,7 +5,10 @@ import PhoneButton from '@/components/PhoneButton';
 const PracticeInfo = () => {
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Dipl.med dent. Ute Worsch & Peik Worsch</h3>
+      <h3 className="text-xl font-bold mb-4">
+        Zahnarztpraxis Dipl.med dent.<br />
+        Ute Worsch & Peik Worsch
+      </h3>
       <p className="mb-2">
         <a 
           href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" 
