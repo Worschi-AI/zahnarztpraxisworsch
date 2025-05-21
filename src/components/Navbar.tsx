@@ -37,29 +37,29 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="font-medium hover:text-dental-blue transition-colors">
+          <Link to="/" className="font-medium hover:text-dental-blue transition-colors hover:scale-105 transform transition-all duration-300">
             Startseite
           </Link>
-          <Link to="/about" className="font-medium hover:text-dental-blue transition-colors">
+          <Link to="/about" className="font-medium hover:text-dental-blue transition-colors hover:scale-105 transform transition-all duration-300">
             Praxis
           </Link>
-          <Link to="/team" className="font-medium hover:text-dental-blue transition-colors">
+          <Link to="/team" className="font-medium hover:text-dental-blue transition-colors hover:scale-105 transform transition-all duration-300">
             Team
           </Link>
-          <Link to="/services" className="font-medium hover:text-dental-blue transition-colors">
+          <Link to="/services" className="font-medium hover:text-dental-blue transition-colors hover:scale-105 transform transition-all duration-300">
             Leistungen
           </Link>
-          <Link to="/contact" className="font-medium hover:text-dental-blue transition-colors">
+          <Link to="/contact" className="font-medium hover:text-dental-blue transition-colors hover:scale-105 transform transition-all duration-300">
             Kontakt
           </Link>
-          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue text-white">
+          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue text-white hover:scale-105 transform transition-all duration-300">
             <Link to="/appointment">Termin buchen</Link>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-dental-gray hover:text-dental-blue"
+          className="md:hidden text-dental-gray hover:text-dental-blue hover:scale-105 transform transition-all duration-300"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -80,40 +80,40 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="font-medium hover:text-dental-blue transition-colors py-2"
+              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Startseite
             </Link>
             <Link 
               to="/about" 
-              className="font-medium hover:text-dental-blue transition-colors py-2"
+              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Praxis
             </Link>
             <Link 
               to="/team" 
-              className="font-medium hover:text-dental-blue transition-colors py-2"
+              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Team
             </Link>
             <Link 
               to="/services" 
-              className="font-medium hover:text-dental-blue transition-colors py-2"
+              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Leistungen
             </Link>
             <Link 
               to="/contact" 
-              className="font-medium hover:text-dental-blue transition-colors py-2"
+              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Kontakt
             </Link>
-            <Button asChild className="w-full bg-dental-turquoise hover:bg-dental-blue text-white">
+            <Button asChild className="w-full bg-dental-turquoise hover:bg-dental-blue text-white hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment" onClick={() => setIsMobileMenuOpen(false)}>Termin buchen</Link>
             </Button>
           </div>
