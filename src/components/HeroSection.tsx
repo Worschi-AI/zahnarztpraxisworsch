@@ -54,14 +54,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
+            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
             </Button>
             <PhoneButton 
               phoneNumber="0351 2522709" 
               variant="outline"
               size="lg"
-              className="border-white hover:bg-white hover:text-dental-blue transition-all"
+              className="bg-white text-dental-blue hover:bg-dental-beige transform transition-all duration-300"
               buttonText={secondaryCtaText}
               iconPosition="left"
             />

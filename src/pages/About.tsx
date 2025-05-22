@@ -115,7 +115,7 @@ const AboutPage = () => {
               <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
                 <Link to="/appointment">Wunschtermin finden</Link>
               </Button>
-              <Button asChild size="lg" className="bg-dental-beige text-dental-blue hover:bg-white transition-all hover:scale-105">
+              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
                 <Link to="/team">Unser Team kennenlernen</Link>
               </Button>
             </div>

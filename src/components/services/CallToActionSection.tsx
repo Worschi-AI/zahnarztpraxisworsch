@@ -42,8 +42,8 @@ const CallToActionSection = () => {
               </div>
               <PhoneButton 
                 size="lg" 
-                className="border-2 border-white text-white hover:bg-white hover:text-dental-blue w-full"
-                variant="outline"
+                className="bg-white text-dental-blue hover:bg-dental-beige w-full"
+                variant="default"
                 iconPosition="right"
               />
             </div>

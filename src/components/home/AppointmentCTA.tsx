@@ -24,7 +24,7 @@ const AppointmentCTA = () => {
             </Button>
             <PhoneButton
               size="lg"
-              className="bg-dental-beige text-dental-blue hover:bg-white transition-all hover:scale-105"
+              className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105"
               buttonText="+49 123 456789"
               showIcon={true}
             />
