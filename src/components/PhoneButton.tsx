@@ -3,6 +3,7 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button, ButtonProps } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useLocation } from 'react-router-dom';
 
 interface PhoneButtonProps extends Omit<ButtonProps, 'asChild'> {
   phoneNumber?: string;
@@ -25,12 +26,23 @@ const PhoneButton = ({
   // Format the phone number for the href attribute
   const formattedPhoneNumber = phoneNumber.replace(/\s/g, '');
   
+  // Get current location to determine if we're on a main page
+  const location = useLocation();
+  const path = location.pathname;
+  const isMainPage = ['/', '/about', '/team', '/services', '/contact'].includes(path);
+  
+  // Apply white color for buttons on main pages
+  const buttonClass = cn(
+    isMainPage ? "bg-white text-dental-blue hover:bg-dental-beige" : "",
+    className
+  );
+  
   return (
     <Button
       asChild
       variant={variant}
       size={size}
-      className={className}
+      className={buttonClass}
       {...props}
     >
       <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">
