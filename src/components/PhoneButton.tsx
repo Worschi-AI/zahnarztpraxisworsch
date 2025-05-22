@@ -26,14 +26,17 @@ const PhoneButton = ({
   // Format the phone number for the href attribute
   const formattedPhoneNumber = phoneNumber.replace(/\s/g, '');
   
-  // Get current location to determine if we're on a main page
+  // Get current location to determine if we're on a main page or service detail page
   const location = useLocation();
   const path = location.pathname;
-  const isMainPage = ['/', '/about', '/team', '/services', '/contact'].includes(path);
   
-  // Apply white color for buttons on main pages
+  // Check if we're on a main page or on a service detail page
+  const isMainPage = ['/', '/about', '/team', '/services', '/contact'].includes(path);
+  const isServiceDetailPage = path.startsWith('/services/');
+  
+  // Apply white color for buttons on main pages and service detail pages
   const buttonClass = cn(
-    isMainPage ? "bg-white text-dental-blue hover:bg-dental-beige" : "",
+    (isMainPage || isServiceDetailPage) ? "bg-white text-dental-blue hover:bg-dental-beige" : "",
     className
   );
   
