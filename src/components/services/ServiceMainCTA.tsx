@@ -14,7 +14,7 @@ const ServiceMainCTA: React.FC = () => {
             Wir beraten Sie gerne ausführlich in unserer Praxis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">Termin vereinbaren</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="bg-white text-dental-blue hover:bg-dental-beige border-white">
