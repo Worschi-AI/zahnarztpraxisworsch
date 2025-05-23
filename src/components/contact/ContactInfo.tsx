@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { MapPin, Phone, Clock } from 'lucide-react';
-import PhoneButton from '@/components/PhoneButton'; // Annahme: Korrekter Pfad
 
 const ContactInfo = () => {
+  const phoneNumber = "0351 2522709";
+  
   return (
     <div className="md:w-1/2 animate-on-scroll">
       <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Kontaktinformationen</h2>
@@ -31,11 +33,12 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-lg font-medium mb-1 text-dental-blue">Telefon</h3>
             <p className="text-dental-gray">
-              <PhoneButton 
-                variant="link" 
-                className="p-0 h-auto text-lg text-dental-gray hover:text-dental-turquoise"
-                showIcon={false}
-              />
+              <a 
+                href={`tel:+49${phoneNumber.replace(/\s/g, '')}`}
+                className="text-dental-gray hover:text-dental-turquoise hover:underline"
+              >
+                {phoneNumber}
+              </a>
             </p>
           </div>
         </div>

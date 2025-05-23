@@ -1,8 +1,9 @@
 
 import React from 'react';
-import PhoneButton from '@/components/PhoneButton';
 
 const PracticeInfo = () => {
+  const phoneNumber = "0351 2522709";
+  
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">Zahnarztpraxis Dipl.med dent. Ute Worsch & Peik Worsch</h3>
@@ -17,11 +18,13 @@ const PracticeInfo = () => {
           <br />01279 Dresden
         </a>
       </p>
-      <p>Tel: <PhoneButton 
-        variant="link" 
-        showIcon={false} 
-        className="p-0 h-auto text-white hover:text-dental-beige hover:scale-105 transform transition-all duration-300" 
-      /></p>
+      <p>Tel: <a 
+            href={`tel:+49${phoneNumber.replace(/\s/g, '')}`}
+            className="text-white hover:text-dental-beige hover:underline"
+          >
+            {phoneNumber}
+          </a>
+      </p>
     </div>
   );
 };
