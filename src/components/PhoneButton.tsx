@@ -18,7 +18,7 @@ const PhoneButton = ({
   showIcon = true,
   iconPosition = 'left',
   className,
-  buttonText = phoneNumber,
+  buttonText,
   variant = 'default',
   size = 'default',
   ...props
@@ -32,6 +32,9 @@ const PhoneButton = ({
     className
   );
   
+  // Use the phoneNumber as the button text if buttonText is not provided
+  const displayText = buttonText || phoneNumber;
+  
   return (
     <Button
       asChild
@@ -44,7 +47,7 @@ const PhoneButton = ({
         {showIcon && iconPosition === 'left' && (
           <Phone className="h-4 w-4" />
         )}
-        <span>{buttonText}</span>
+        <span>{displayText}</span>
         {showIcon && iconPosition === 'right' && (
           <Phone className="h-4 w-4" />
         )}
