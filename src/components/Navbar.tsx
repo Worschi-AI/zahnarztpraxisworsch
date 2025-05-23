@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { X, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,68 +58,52 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-dental-gray hover:text-dental-blue hover:scale-105 transform transition-all duration-300"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
-        </button>
+        {/* Mobile Menu with Sheet Component */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <button className="md:hidden p-2 rounded-md hover:bg-dental-beige hover:scale-105 transform transition-all duration-300">
+              <Menu className="h-6 w-6 text-dental-blue" />
+            </button>
+          </SheetTrigger>
+          <SheetContent className="w-full pt-16 bg-white">
+            <div className="flex flex-col space-y-6 px-2">
+              <Link 
+                to="/" 
+                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
+              >
+                Startseite
+              </Link>
+              <Link 
+                to="/about" 
+                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
+              >
+                Praxis
+              </Link>
+              <Link 
+                to="/team" 
+                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
+              >
+                Team
+              </Link>
+              <Link 
+                to="/services" 
+                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
+              >
+                Leistungen
+              </Link>
+              <Link 
+                to="/contact" 
+                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
+              >
+                Kontakt
+              </Link>
+              <Button asChild className="mt-4 w-full bg-dental-turquoise hover:bg-dental-blue text-white">
+                <Link to="/appointment">Termin buchen</Link>
+              </Button>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link 
-              to="/" 
-              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Startseite
-            </Link>
-            <Link 
-              to="/about" 
-              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Praxis
-            </Link>
-            <Link 
-              to="/team" 
-              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Team
-            </Link>
-            <Link 
-              to="/services" 
-              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Leistungen
-            </Link>
-            <Link 
-              to="/contact" 
-              className="font-medium hover:text-dental-blue transition-colors py-2 hover:scale-105 transform transition-all duration-300"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Kontakt
-            </Link>
-            <Button asChild className="w-full bg-dental-turquoise hover:bg-dental-blue text-white hover:scale-105 transform transition-all duration-300">
-              <Link to="/appointment" onClick={() => setIsMobileMenuOpen(false)}>Termin buchen</Link>
-            </Button>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
