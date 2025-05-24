@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Heart, Shield, Users, Clock, CheckCircle, Star } from 'lucide-react';
 
 interface ServiceContentDefaultProps {
   title: string;
@@ -21,36 +22,147 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
   if (isProphylaxe) {
     return (
       <div className="prose max-w-none">
-        <h2 className="text-3xl font-medium mb-6 text-dental-blue">Professionelle Zahnreinigung & Prophylaxe in Dresden – Mehr als nur Putzen</h2>
-        <p className="text-lg text-dental-gray mb-6">
-          Ein strahlendes Lächeln beginnt mit gesunden Zähnen. Die Prophylaxe bildet das Fundament für Ihre langfristige Mundgesundheit und ist ein zentraler Bestandteil unseres Angebots in der Zahnarztpraxis Worsch in Dresden Laubegast. Mit einer regelmäßigen professionellen Zahnreinigung (PZR) und maßgeschneiderten Vorsorgekonzepten helfen wir Ihnen, Karies und Parodontitis effektiv vorzubeugen und die natürliche Schönheit Ihrer Zähne zu bewahren.
-        </p>
+        <h2 className="text-3xl font-medium mb-6 text-dental-blue">Professionelle Zahnreinigung & Prophylaxe in Dresden</h2>
+        
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-dental-beige to-white rounded-lg p-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="bg-dental-turquoise/10 border-l-4 border-dental-turquoise p-4 rounded-r-lg mb-4">
+                <p className="font-medium text-dental-blue">
+                  ✨ Ein strahlendes Lächeln beginnt mit gesunden Zähnen
+                </p>
+              </div>
+              <p className="mb-4">
+                Die Prophylaxe bildet das Fundament für Ihre langfristige Mundgesundheit und ist ein zentraler Bestandteil unseres Angebots in der Zahnarztpraxis Worsch.
+              </p>
+              <p>
+                Mit einer regelmäßigen <strong>professionellen Zahnreinigung (PZR)</strong> helfen wir Ihnen, Karies und Parodontitis effektiv vorzubeugen.
+              </p>
+            </div>
+            <div className="flex justify-center space-x-8">
+              <div className="text-center">
+                <Shield className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Kariesschutz</p>
+              </div>
+              <div className="text-center">
+                <Heart className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Zahnfleischgesundheit</p>
+              </div>
+              <div className="text-center">
+                <Star className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Strahlende Zähne</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Warum ist professionelle Zahnprophylaxe in Dresden so wichtig?</h3>
-        <p className="text-dental-gray mb-4">
-          Selbst bei sorgfältigster häuslicher Mundhygiene bleiben oft Beläge in schwer zugänglichen Bereichen wie Zahnzwischenräumen oder am Zahnfleischrand zurück. Diese bakteriellen Beläge (Plaque) sind die Hauptursache für Karies und Zahnfleischentzündungen (Gingivitis), die unbehandelt zu Parodontitis und Zahnverlust führen können.
-        </p>
-        <p className="text-dental-gray mb-6">
-          Eine professionelle Zahnreinigung in unserer Praxis in Dresden geht weit über das hinaus, was Sie zu Hause erreichen können:
-        </p>
+        <h3 className="text-2xl font-medium mb-6 text-dental-blue">Warum ist professionelle Zahnprophylaxe so wichtig?</h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div>
+            <p className="mb-4">
+              Selbst bei sorgfältigster häuslicher Mundhygiene bleiben oft Beläge in schwer zugänglichen Bereichen zurück.
+            </p>
+            <p className="mb-4">
+              Diese bakteriellen Beläge (Plaque) sind die Hauptursache für:
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-dental-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                <span>Karies (Löcher in den Zähnen)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-dental-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                <span>Zahnfleischentzündungen (Gingivitis)</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-dental-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                <span>Parodontitis und Zahnverlust</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <h4 className="font-medium text-dental-blue mb-4">Was erreichen wir mit der PZR?</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start">
+                <Star className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                <span><strong>Gründliche Entfernung</strong> aller Beläge und Verfärbungen</span>
+              </li>
+              <li className="flex items-start">
+                <Star className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                <span><strong>Politur</strong> für glatte, widerstandsfähige Oberflächen</span>
+              </li>
+              <li className="flex items-start">
+                <Star className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                <span><strong>Fluoridierung</strong> zur Stärkung des Zahnschmelzes</span>
+              </li>
+              <li className="flex items-start">
+                <Star className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                <span><strong>Individuelle Beratung</strong> zur optimalen Mundpflege</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        <ul className="list-disc pl-6 mb-6 text-dental-gray space-y-2">
-          <li><strong>Gründliche Entfernung aller Beläge:</strong> Wir entfernen harten Zahnstein und weiche Beläge auch an schwer erreichbaren Stellen.</li>
-          <li><strong>Beseitigung von Verfärbungen:</strong> Kaffee, Tee, Rotwein oder Nikotin hinterlassen oft unschöne Verfärbungen, die wir sanft entfernen für ein helleres Lächeln.</li>
-          <li><strong>Politur der Zahnoberflächen:</strong> Glatte Oberflächen erschweren neuen Bakterien das Anhaften.</li>
-          <li><strong>Fluoridierung:</strong> Stärkt den Zahnschmelz und schützt vor Karies.</li>
-          <li><strong>Individuelle Beratung:</strong> Wir geben Ihnen wertvolle Tipps zur Optimierung Ihrer täglichen Mundpflege und zur Auswahl der richtigen Hilfsmittel.</li>
-        </ul>
-
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Ablauf Ihrer professionellen Zahnreinigung in Dresden Laubegast</h3>
-        <ol className="list-decimal pl-6 mb-6 text-dental-gray space-y-2">
-          <li><strong>Untersuchung und Beratung:</strong> Zunächst beurteilen wir den Zustand Ihrer Zähne und Ihres Zahnfleisches.</li>
-          <li><strong>Entfernung harter und weicher Beläge:</strong> Mit speziellen Instrumenten (z.B. Ultraschall) und Handinstrumenten werden Zahnstein und Plaque schonend entfernt.</li>
-          <li><strong>Reinigung mit Pulverstrahlgerät (Airflow):</strong> Bei Bedarf werden hartnäckige Verfärbungen und Beläge mit einem sanften Pulver-Wasserstrahl entfernt.</li>
-          <li><strong>Politur:</strong> Die Zahnoberflächen werden geglättet und poliert, um sie widerstandsfähiger gegen neue Ablagerungen zu machen.</li>
-          <li><strong>Fluoridierung:</strong> Ein hochkonzentrierter Fluoridlack wird aufgetragen, um den Zahnschmelz zu stärken.</li>
-          <li><strong>Individuelle Mundhygieneinstruktion:</strong> Wir zeigen Ihnen, wie Sie Ihre Zähne optimal pflegen können.</li>
-        </ol>
+        <h3 className="text-2xl font-medium mb-6 text-dental-blue">Ablauf Ihrer professionellen Zahnreinigung</h3>
+        
+        <div className="bg-white border border-dental-turquoise/20 rounded-lg p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">1</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Untersuchung</h4>
+                  <p className="text-sm">Beurteilung von Zähnen und Zahnfleisch</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">2</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Belagsentfernung</h4>
+                  <p className="text-sm">Ultraschall & Handinstrumente</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">3</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Airflow-Reinigung</h4>
+                  <p className="text-sm">Entfernung hartnäckiger Verfärbungen</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">4</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Politur</h4>
+                  <p className="text-sm">Glättung aller Zahnoberflächen</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">5</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Fluoridierung</h4>
+                  <p className="text-sm">Schutz und Stärkung des Zahnschmelzes</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-dental-turquoise text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0 mt-1">6</div>
+                <div>
+                  <h4 className="font-medium text-dental-blue mb-1">Beratung</h4>
+                  <p className="text-sm">Tipps für optimale Mundpflege</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -58,41 +170,119 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
   if (isZahnerhaltung) {
     return (
       <div className="prose max-w-none">
-        <h2 className="text-3xl font-medium mb-6 text-dental-blue">Moderne Zahnerhaltung in Dresden – Für den langfristigen Erhalt Ihrer Zähne</h2>
-        <p className="text-lg text-dental-gray mb-6">
-          Das oberste Ziel unserer Zahnarztpraxis in Dresden Laubegast ist es, Ihre natürlichen Zähne so lange wie möglich gesund und funktionsfähig zu erhalten. Die moderne Zahnerhaltung bietet heute eine Vielzahl schonender und effektiver Methoden, um Zähne, die von Karies oder anderen Erkrankungen betroffen sind, zu reparieren und zu bewahren. Wir setzen dabei auf minimalinvasive Techniken und hochwertige, biokompatible Materialien für ästhetisch ansprechende und langlebige Ergebnisse.
-        </p>
-
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Unsere Leistungen im Bereich Zahnerhaltung in Dresden</h3>
+        <h2 className="text-3xl font-medium mb-6 text-dental-blue">Moderne Zahnerhaltung in Dresden</h2>
         
-        <h4 className="text-xl font-medium mb-3 text-dental-blue">Hochwertige Zahnfüllungen (Kompositfüllungen):</h4>
-        <p className="text-dental-gray mb-4">
-          Bei Kariesdefekten sind moderne, zahnfarbene Kompositfüllungen die erste Wahl. Diese Hightech-Kunststoffe werden schichtweise aufgetragen und mit Speziallicht gehärtet. Sie verbinden sich fest mit der Zahnsubstanz, sind sehr gut verträglich und ermöglichen eine nahezu unsichtbare Wiederherstellung Ihres Zahnes. Wir beraten Sie in unserer Praxis in Dresden ausführlich zu den Vorteilen dieser ästhetischen Füllungstherapie.
-        </p>
+        {/* Hero Quote */}
+        <div className="bg-dental-turquoise/10 border-l-4 border-dental-turquoise p-6 rounded-r-lg mb-8">
+          <p className="text-lg font-medium text-dental-blue mb-2">
+            "Ihre natürlichen Zähne sind durch nichts zu ersetzen"
+          </p>
+          <p className="text-sm">
+            Unser obererstes Ziel ist es, Ihre eigenen Zähne so lange wie möglich gesund und funktionsfähig zu erhalten.
+          </p>
+        </div>
 
-        <h4 className="text-xl font-medium mb-3 text-dental-blue">Keramikinlays und -onlays:</h4>
-        <p className="text-dental-gray mb-4">
-          Für größere Defekte im Seitenzahnbereich bieten Keramikinlays oder -onlays eine extrem stabile und langlebige Alternative. Sie werden im zahntechnischen Labor individuell gefertigt und präzise eingesetzt. Keramik ist dem natürlichen Zahnschmelz in Aussehen und Eigenschaften sehr ähnlich.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
+          <div>
+            <p className="mb-4">
+              Die moderne Zahnerhaltung bietet heute eine Vielzahl schonender und effektiver Methoden, um Zähne zu reparieren und zu bewahren.
+            </p>
+            <p className="mb-4">
+              Wir setzen dabei auf <strong>minimalinvasive Techniken</strong> und hochwertige, biokompatible Materialien.
+            </p>
+          </div>
+          <div className="flex justify-center space-x-6">
+            <div className="text-center">
+              <Heart className="h-10 w-10 text-dental-turquoise mx-auto mb-2" />
+              <p className="text-xs font-medium">Schonend</p>
+            </div>
+            <div className="text-center">
+              <Shield className="h-10 w-10 text-dental-turquoise mx-auto mb-2" />
+              <p className="text-xs font-medium">Langlebig</p>
+            </div>
+            <div className="text-center">
+              <Star className="h-10 w-10 text-dental-turquoise mx-auto mb-2" />
+              <p className="text-xs font-medium">Ästhetisch</p>
+            </div>
+          </div>
+        </div>
 
-        <h4 className="text-xl font-medium mb-3 text-dental-blue">Moderne Wurzelkanalbehandlung (Endodontie) in Dresden:</h4>
-        <p className="text-dental-gray mb-4">
-          Wenn das Innere eines Zahnes (der Zahnnerv) entzündet oder abgestorben ist, ist eine Wurzelkanalbehandlung in Dresden oft die einzige Möglichkeit, den Zahn zu erhalten. Mit modernsten Techniken (z.B. maschinelle Aufbereitung, elektronische Längenmessung, desinfizierende Spülungen) reinigen und füllen wir die Wurzelkanäle präzise ab. So kann auch ein stark geschädigter Zahn oft noch viele Jahre seine Funktion erfüllen. Unser Ziel ist eine schmerzarme und erfolgreiche Behandlung.
-        </p>
+        <h3 className="text-2xl font-medium mb-6 text-dental-blue">Unsere Leistungen im Bereich Zahnerhaltung</h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-dental-blue">Kompositfüllungen</h4>
+            <p className="text-sm mb-3">
+              Moderne, zahnfarbene Hightech-Kunststoffe für nahezu unsichtbare Reparaturen.
+            </p>
+            <ul className="text-xs space-y-1">
+              <li>• Ästhetisch ansprechend</li>
+              <li>• Sehr gut verträglich</li>
+              <li>• Feste Verbindung mit dem Zahn</li>
+              <li>• Schichtweise Aufbau möglich</li>
+            </ul>
+          </div>
 
-        <h4 className="text-xl font-medium mb-3 text-dental-blue">Parodontitisbehandlung (Zahnfleischbehandlung):</h4>
-        <p className="text-dental-gray mb-6">
-          Eine Parodontitis (Entzündung des Zahnhalteapparates) ist eine häufige Ursache für Zahnverlust. Durch eine systematische Parodontitisbehandlung in unserer Praxis in Dresden stoppen wir den Entzündungsprozess und erhalten Ihr Zahnfleisch und den Kieferknochen. Regelmäßige Nachsorge ist hier entscheidend.
-        </p>
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-dental-blue">Keramikinlays</h4>
+            <p className="text-sm mb-3">
+              Für größere Defekte: extrem stabile und langlebige Keramikrestaurationen.
+            </p>
+            <ul className="text-xs space-y-1">
+              <li>• Laborherstellung für Präzision</li>
+              <li>• Natürliche Zahnschmelz-Optik</li>
+              <li>• Sehr lange Haltbarkeit</li>
+              <li>• Biokompatible Materialien</li>
+            </ul>
+          </div>
 
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Warum Zahnerhaltung bei Zahnarzt Worsch in Dresden Laubegast?</h3>
-        <ul className="list-disc pl-6 mb-6 text-dental-gray space-y-2">
-          <li><strong>Minimalinvasive Verfahren:</strong> Wir entfernen nur so viel Zahnsubstanz wie unbedingt nötig.</li>
-          <li><strong>Ästhetische Ergebnisse:</strong> Zahnfarbene Materialien für ein natürliches Aussehen.</li>
-          <li><strong>Langlebigkeit:</strong> Verwendung hochwertiger und erprobter Materialien.</li>
-          <li><strong>Schmerzarme Behandlung:</strong> Moderne Anästhesieverfahren und einfühlsame Betreuung.</li>
-          <li><strong>Fokus auf Prävention:</strong> Wir helfen Ihnen, zukünftige Schäden zu vermeiden.</li>
-        </ul>
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-dental-blue">Wurzelkanalbehandlung</h4>
+            <p className="text-sm mb-3">
+              Moderne Endodontie rettet auch stark geschädigte Zähne.
+            </p>
+            <ul className="text-xs space-y-1">
+              <li>• Maschinelle Aufbereitung</li>
+              <li>• Elektronische Längenmessung</li>
+              <li>• Desinfizierende Spülungen</li>
+              <li>• Schmerzarme Behandlung</li>
+            </ul>
+          </div>
+
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-dental-blue">Parodontitisbehandlung</h4>
+            <p className="text-sm mb-3">
+              Systematische Behandlung von Zahnfleisch und Zahnhalteapparat.
+            </p>
+            <ul className="text-xs space-y-1">
+              <li>• Stopp des Entzündungsprozesses</li>
+              <li>• Erhalt von Zahnfleisch und Knochen</li>
+              <li>• Regelmäßige Nachsorge</li>
+              <li>• Langfristiger Zahnerhalt</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white border border-dental-turquoise/20 rounded-lg p-6">
+          <h3 className="text-xl font-medium mb-4 text-dental-blue text-center">Warum Zahnerhaltung bei uns?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <Heart className="h-8 w-8 text-dental-turquoise mx-auto mb-2" />
+              <h4 className="font-medium text-dental-blue mb-2">Minimalinvasiv</h4>
+              <p className="text-sm">Nur so viel Zahnsubstanz entfernen wie nötig</p>
+            </div>
+            <div>
+              <Star className="h-8 w-8 text-dental-turquoise mx-auto mb-2" />
+              <h4 className="font-medium text-dental-blue mb-2">Ästhetisch</h4>
+              <p className="text-sm">Zahnfarbene Materialien für natürliches Aussehen</p>
+            </div>
+            <div>
+              <Shield className="h-8 w-8 text-dental-turquoise mx-auto mb-2" />
+              <h4 className="font-medium text-dental-blue mb-2">Langlebig</h4>
+              <p className="text-sm">Hochwertige Materialien für dauerhafte Ergebnisse</p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -101,28 +291,144 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
     return (
       <div className="prose max-w-none">
         <h2 className="text-3xl font-medium mb-6 text-dental-blue">Liebevolle Kinderzahnheilkunde in Dresden Laubegast</h2>
-        <p className="text-lg text-dental-gray mb-6">
-          Gesunde Milchzähne sind die Basis für ein gesundes bleibendes Gebiss und eine positive Einstellung zur Zahnpflege. In der Zahnarztpraxis Worsch in Dresden Laubegast legen wir größten Wert auf eine kindgerechte, einfühlsame und angstfreie Behandlung unserer jüngsten Patienten. Unser Ziel als Ihr Kinderzahnarzt in Dresden ist es, den Zahnarztbesuch zu einem positiven Erlebnis zu machen und die Freude an gesunden Zähnen von klein auf zu fördern.
-        </p>
+        
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-dental-beige to-white rounded-lg p-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="bg-dental-turquoise/10 border-l-4 border-dental-turquoise p-4 rounded-r-lg mb-4">
+                <p className="font-medium text-dental-blue">
+                  🦷 Gesunde Milchzähne = gesunde bleibende Zähne
+                </p>
+              </div>
+              <p className="mb-4">
+                In der Zahnarztpraxis Worsch legen wir größten Wert auf eine <strong>kindgerechte, einfühlsame und angstfreie</strong> Behandlung unserer jüngsten Patienten.
+              </p>
+              <p>
+                Unser Ziel: Den Zahnarztbesuch zu einem positiven Erlebnis machen!
+              </p>
+            </div>
+            <div className="flex justify-center space-x-8">
+              <div className="text-center">
+                <Users className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Kinderfreundlich</p>
+              </div>
+              <div className="text-center">
+                <Heart className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Einfühlsam</p>
+              </div>
+              <div className="text-center">
+                <Shield className="h-12 w-12 text-dental-turquoise mx-auto mb-2" />
+                <p className="text-sm font-medium">Angstfrei</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Was macht einen guten Kinderzahnarzt in Dresden aus?</h3>
-        <ul className="list-disc pl-6 mb-6 text-dental-gray space-y-2">
-          <li><strong>Geduld und Einfühlungsvermögen:</strong> Wir nehmen uns viel Zeit, um eine vertrauensvolle Beziehung zu Ihrem Kind aufzubauen und auf seine individuellen Bedürfnisse einzugehen.</li>
-          <li><strong>Spielerische Herangehensweise:</strong> Wir erklären Behandlungsschritte altersgerecht und binden die Kinder spielerisch mit ein ("Zähne zählen", "Zahnteufelchen wegzaubern").</li>
-          <li><strong>Angstfreie Atmosphäre:</strong> Unsere Praxisräume sind freundlich gestaltet, und unser Team ist speziell im Umgang mit Kindern geschult.</li>
-          <li><strong>Früherkennung und Prophylaxe:</strong> Bereits ab dem ersten Milchzahn sind regelmäßige Kontrollen wichtig, um frühzeitig Risiken zu erkennen und präventive Maßnahmen zu ergreifen.</li>
-          <li><strong>Elternberatung:</strong> Wir beraten Sie umfassend zur richtigen Zahnpflege bei Kindern, zahngesunder Ernährung und Fluoridierung.</li>
-        </ul>
+        <h3 className="text-2xl font-medium mb-6 text-dental-blue">Was macht einen guten Kinderzahnarzt aus?</h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <div className="flex items-center mb-3">
+              <Clock className="h-6 w-6 text-dental-turquoise mr-3" />
+              <h4 className="font-medium text-dental-blue">Geduld & Einfühlungsvermögen</h4>
+            </div>
+            <p className="text-sm">
+              Wir nehmen uns viel Zeit für eine vertrauensvolle Beziehung zu Ihrem Kind und gehen auf individuelle Bedürfnisse ein.
+            </p>
+          </div>
 
-        <h3 className="text-2xl font-medium mb-4 text-dental-blue">Unsere Leistungen für Kinder in Dresden Laubegast</h3>
-        <ul className="list-disc pl-6 mb-6 text-dental-gray space-y-3">
-          <li><strong>Früherkennungsuntersuchungen (FU):</strong> Regelmäßige Kontrollen zur Überwachung der Zahn- und Kieferentwicklung.</li>
-          <li><strong>Individualprophylaxe für Kinder:</strong> Professionelle Zahnreinigung speziell für Milchzähne, Fluoridierung zum Schutz des Zahnschmelzes, Fissurenversiegelung der Backenzähne zur Kariesprävention.</li>
-          <li><strong>Behandlung von Milchzahnkaries:</strong> Schonende Füllungstherapie mit kindgerechten Materialien.</li>
-          <li><strong>Platzhalter für bleibende Zähne:</strong> Bei vorzeitigem Milchzahnverlust.</li>
-          <li><strong>Behandlung von Zahnunfällen:</strong> Schnelle und kompetente Hilfe.</li>
-          <li><strong>Beratung zur Kieferorthopädie:</strong> Bei Bedarf frühzeitige Erkennung von Zahn- und Kieferfehlstellungen und Überweisung zum Kieferorthopäden.</li>
-        </ul>
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <div className="flex items-center mb-3">
+              <Star className="h-6 w-6 text-dental-turquoise mr-3" />
+              <h4 className="font-medium text-dental-blue">Spielerische Herangehensweise</h4>
+            </div>
+            <p className="text-sm">
+              Altersgerechte Erklärungen und spielerische Einbindung ("Zähne zählen", "Zahnteufelchen wegzaubern").
+            </p>
+          </div>
+
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <div className="flex items-center mb-3">
+              <Heart className="h-6 w-6 text-dental-turquoise mr-3" />
+              <h4 className="font-medium text-dental-blue">Angstfreie Atmosphäre</h4>
+            </div>
+            <p className="text-sm">
+              Freundlich gestaltete Praxisräume und ein speziell geschultes Team für den Umgang mit Kindern.
+            </p>
+          </div>
+
+          <div className="bg-dental-beige p-6 rounded-lg">
+            <div className="flex items-center mb-3">
+              <Shield className="h-6 w-6 text-dental-turquoise mr-3" />
+              <h4 className="font-medium text-dental-blue">Früherkennung & Prophylaxe</h4>
+            </div>
+            <p className="text-sm">
+              Regelmäßige Kontrollen ab dem ersten Milchzahn für frühzeitige Risikenerkennung.
+            </p>
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-medium mb-6 text-dental-blue">Unsere Leistungen für Kinder in Dresden Laubegast</h3>
+        
+        <div className="bg-white border border-dental-turquoise/20 rounded-lg p-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-medium text-dental-blue mb-4">Vorsorge & Prophylaxe</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Früherkennungsuntersuchungen (FU):</strong> Überwachung der Entwicklung</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Individualprophylaxe:</strong> Professionelle Reinigung für Milchzähne</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Fissurenversiegelung:</strong> Schutz der Backenzähne</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Fluoridierung:</strong> Stärkung des Zahnschmelzes</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-medium text-dental-blue mb-4">Behandlung & Beratung</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Milchzahnkaries:</strong> Schonende Füllungstherapie</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Platzhalter:</strong> Bei vorzeitigem Milchzahnverlust</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Zahnunfälle:</strong> Schnelle, kompetente Hilfe</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-dental-turquoise mr-2 mt-1 flex-shrink-0" />
+                  <span><strong>Kieferorthopädie-Beratung:</strong> Früherkennung von Fehlstellungen</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Tipp Box */}
+        <div className="bg-dental-turquoise/10 p-6 rounded-lg">
+          <h4 className="font-medium text-dental-blue mb-3">💡 Tipp für Eltern</h4>
+          <p className="text-sm mb-2">
+            <strong>Erster Zahnarztbesuch:</strong> Wir empfehlen den ersten Kontrollbesuch mit dem Durchbruch des ersten Milchzahnes, spätestens jedoch mit einem Jahr.
+          </p>
+          <p className="text-sm">
+            So kann sich Ihr Kind früh an unsere Praxisumgebung gewöhnen und entwickelt eine positive Einstellung zur Zahnpflege.
+          </p>
+        </div>
       </div>
     );
   }
