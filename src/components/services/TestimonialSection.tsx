@@ -46,7 +46,7 @@ const TestimonialSection = () => {
       <section className="py-16 bg-dental-beige">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-on-scroll">
-            <h2 className="text-2xl font-medium mb-8 text-center text-dental-blue">Das sagen unsere Patienten</h2>
+            <h2 className="text-2xl font-medium mb-8 text-center text-dental-blue">Patientenstimmen zu unseren Zahnbehandlungen in Dresden</h2>
             
             <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
               <div className="flex items-start">

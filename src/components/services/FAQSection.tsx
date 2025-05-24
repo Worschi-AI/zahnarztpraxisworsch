@@ -6,9 +6,9 @@ const FAQSection = () => {
     <section className="py-16 bg-white" id="faq">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Häufig gestellte Fragen</h2>
+          <h2 className="mb-4 text-dental-blue">Häufige Fragen zu unseren Zahnbehandlungen</h2>
           <p className="text-lg text-dental-gray">
-            Antworten auf die wichtigsten Fragen zu unseren zahnmedizinischen Leistungen
+            Antworten auf die wichtigsten Fragen zu unseren zahnmedizinischen Leistungen in Dresden
           </p>
         </div>
         

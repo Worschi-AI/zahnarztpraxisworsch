@@ -10,7 +10,10 @@ const QualityPromiseSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Unser Qualitätsversprechen – Für Ihr schönstes Lächeln</h2>
+            <h2 className="mb-6 text-dental-blue">Qualität, der Sie vertrauen können – Ihr Zahnarzt in Dresden</h2>
+            <p className="text-lg text-dental-gray mb-8">
+              Unsere Behandlungsqualität orientiert sich an den höchsten Standards moderner Zahnmedizin. Vertrauen Sie auf unser Engagement für Ihr perfektes Lächeln.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />

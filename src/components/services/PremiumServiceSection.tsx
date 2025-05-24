@@ -15,7 +15,7 @@ const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumSe
   const getEnhancedPremiumDescription = (service: Service): string => {
     switch(service.id) {
       case 'implantologie':
-        return 'Natürliche und fest verankerte Zahnimplantate in Dresden – für dauerhaft schöne Zähne und ein sicheres Gefühl beim Kauen und Lachen.';
+        return 'Fester Zahnersatz für ein natürliches Lächeln und höchste Lebensqualität. Dank modernster 3D-Planung und hochwertiger Implantate sind Sie bei uns in Dresden Laubegast in besten Händen.';
       case 'aesthetische-zahnheilkunde':
         return 'Perfekte Ästhetik für Ihr Lächeln durch Veneers, Bleaching und Zahnformkorrekturen – Zahnästhetik auf höchstem Niveau in Dresden.';
       case 'zahnersatz':
@@ -29,9 +29,9 @@ const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumSe
     <section className="py-20 bg-white" id="premium-services">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Unsere Premium-Leistungen</h2>
+          <h2 className="mb-4 text-dental-blue">Exzellenz für Ihr Lächeln: Unsere Premium-Behandlungen in Dresden</h2>
           <p className="text-lg text-dental-gray mb-6">
-            Erleben Sie zahnmedizinische Exzellenz mit unseren hochwertigen Behandlungen für höchste ästhetische und funktionale Ansprüche.
+            Für höchste Ansprüche an Ästhetik und Funktion bieten wir Ihnen spezialisierte Leistungen, die Ihr Lächeln nachhaltig verschönern und Ihre Lebensqualität steigern.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             <span className="bg-dental-beige text-dental-blue px-3 py-1 rounded-full text-sm flex items-center">

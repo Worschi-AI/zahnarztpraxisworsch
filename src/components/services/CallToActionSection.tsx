@@ -10,11 +10,11 @@ const CallToActionSection = () => {
     <section className="py-16 bg-gradient-to-r from-dental-blue to-dental-turquoise text-white">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto animate-on-scroll">
-          <h2 className="mb-2">Bereit für Ihr neues Lächeln?</h2>
-          <p className="text-xl mb-4">Jetzt Termin vereinbaren und 10% Rabatt auf Ihre erste Privatbehandlung sichern!</p>
+          <h2 className="mb-2">Ihre Wünsche, unsere Expertise – Lassen Sie sich beraten!</h2>
+          <p className="text-xl mb-4">Entdecken Sie, welche unserer modernen Zahnbehandlungen in Dresden optimal zu Ihnen passen.</p>
           <p className="text-lg mb-8">
+            Vereinbaren Sie jetzt Ihren individuellen Beratungstermin in der Zahnarztpraxis Worsch Dresden Laubegast. 
             Wir nehmen uns Zeit für Ihre Wünsche und erstellen einen individuellen Behandlungsplan.
-            Vereinbaren Sie einen Termin - bequem telefonisch.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">

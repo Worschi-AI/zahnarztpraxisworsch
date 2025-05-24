@@ -15,13 +15,13 @@ const StandardServiceSection: React.FC<StandardServiceSectionProps> = ({ standar
   const getEnhancedDescription = (service: Service): string => {
     switch(service.id) {
       case 'prophylaxe':
-        return 'Professionelle Zahnreinigung und Vorsorgeuntersuchungen in Dresden – für langfristigen Erhalt gesunder Zähne und Zahnfleisch.';
+        return 'Professionelle Zahnreinigung in Dresden und umfassende Vorsorge für langfristig gesunde, strahlend weiße Zähne und ein frisches Mundgefühl.';
       case 'zahnerhaltung':
         return 'Moderne Füllungstherapie und Zahnerhaltung in Dresden – schonende Behandlung von Karies mit ästhetischen Materialien.';
       case 'parodontologie':
         return 'Effektive Behandlung von Zahnfleischerkrankungen in Dresden – für langfristige Mundgesundheit und sicheren Zahnerhalt.';
       case 'kinderzahnheilkunde':
-        return 'Einfühlsame und altersgerechte Zahnbehandlung für Kinder in Dresden – in entspannter Atmosphäre ohne Angst zum Zahnarzt.';
+        return 'Einfühlsame und altersgerechte Zahnbehandlung für Ihre Kleinen in unserer Praxis in Dresden Laubegast – für gesunde Zähne von Anfang an.';
       case 'endodontie':
         return 'Schmerzfreie Wurzelbehandlungen mit modernster Technik in Dresden – für den sicheren Erhalt Ihrer natürlichen Zähne.';
       case 'funktionstherapie':
@@ -37,9 +37,9 @@ const StandardServiceSection: React.FC<StandardServiceSectionProps> = ({ standar
     <section className="py-16 bg-dental-beige" id="standard-services">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Weitere Zahnmedizinische Leistungen in Dresden</h2>
+          <h2 className="mb-4 text-dental-blue">Umfassende Zahnmedizin für Ihre Gesundheit – Weitere Leistungen in Dresden</h2>
           <p className="text-lg text-dental-gray">
-            Wir bieten Ihnen das gesamte Spektrum der modernen Zahnheilkunde unter einem Dach – von der Vorsorge bis zur Schmerzbehandlung.
+            Neben unseren ästhetischen Schwerpunkten bieten wir Ihnen selbstverständlich das gesamte Spektrum moderner Zahnheilkunde für Ihre langfristige Mundgesundheit und ein unbeschwertes Lächeln.
           </p>
         </div>
         
