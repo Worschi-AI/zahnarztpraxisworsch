@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -12,6 +13,7 @@ const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
   const isAestheticPage = serviceId === 'aesthetische-zahnheilkunde';
   const isProphylaxePage = serviceId === 'prophylaxe';
   const isZahnerhaltungPage = serviceId === 'zahnerhaltung';
+  const isKinderzahnheilkundePage = serviceId === 'kinderzahnheilkunde';
 
   if (isImplantologiePage) {
     return (
@@ -69,6 +71,21 @@ const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
           <Link to="/appointment">Termin Zahnerhaltung buchen <ChevronRight className="ml-2 h-5 w-5" /></Link>
         </Button>
         <p className="mt-4 text-dental-gray">Wir kämpfen um jeden Zahn – für Ihr natürliches und gesundes Lächeln</p>
+      </div>
+    );
+  }
+
+  if (isKinderzahnheilkundePage) {
+    return (
+      <div className="mt-12 text-center animate-on-scroll">
+        <h2 className="text-2xl font-medium mb-4 text-dental-blue">Gesunde Zähne von Anfang an – Ihr Kinderzahnarzt in Dresden!</h2>
+        <p className="text-lg mb-6 text-dental-gray">
+          Vereinbaren Sie einen Termin für Ihr Kind in der Zahnarztpraxis Worsch in Dresden Laubegast. Wir freuen uns auf kleine und große Patienten!
+        </p>
+        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue text-white px-8 py-6 text-lg">
+          <Link to="/appointment">Termin Kinderzahnheilkunde buchen <ChevronRight className="ml-2 h-5 w-5" /></Link>
+        </Button>
+        <p className="mt-4 text-dental-gray">Mit viel Geduld und Einfühlungsvermögen für entspannte Zahnarztbesuche</p>
       </div>
     );
   }

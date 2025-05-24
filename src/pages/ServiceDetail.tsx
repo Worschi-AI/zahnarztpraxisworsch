@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -51,6 +52,9 @@ const ServiceDetail = () => {
     if (id === 'zahnerhaltung') {
       return "Zahnerhaltung Dresden | Füllungen & Wurzelbehandlung | Praxis Worsch";
     }
+    if (id === 'kinderzahnheilkunde') {
+      return "Kinderzahnarzt Dresden Laubegast | Sanfte Zahnheilkunde | Praxis Worsch";
+    }
     return `${service.title} | Zahnarztpraxis Worsch Dresden`;
   };
 
@@ -69,6 +73,9 @@ const ServiceDetail = () => {
     }
     if (id === 'zahnerhaltung') {
       return "Moderne Zahnerhaltung in Dresden Laubegast bei Zahnarzt Worsch: Hochwertige Füllungen, schonende Wurzelkanalbehandlungen für den Erhalt Ihrer natürlichen Zähne.";
+    }
+    if (id === 'kinderzahnheilkunde') {
+      return "Ihr einfühlsamer Kinderzahnarzt in Dresden Laubegast. Praxis Worsch bietet liebevolle Zahnbehandlung für Kinder und Prophylaxe für gesunde Milchzähne.";
     }
     return service.shortDescription;
   };
@@ -90,7 +97,18 @@ const ServiceDetail = () => {
     if (id === 'zahnerhaltung') {
       return "Zahnerhaltung in Dresden: Ihre natürlichen Zähne bewahren";
     }
+    if (id === 'kinderzahnheilkunde') {
+      return "Kinderzahnheilkunde in Dresden: Gesunde Zähne von Anfang an!";
+    }
     return service.title;
+  };
+
+  // Get appropriate subtitle for specific services
+  const getHeroSubtitle = () => {
+    if (id === 'kinderzahnheilkunde') {
+      return "Mit viel Geduld und Spaß führen wir Ihre Kinder an die Zahnpflege heran – für ein positives Erlebnis bei Ihrem Zahnarzt in Dresden Laubegast.";
+    }
+    return service.shortDescription;
   };
 
   // Get appropriate OG image for service
@@ -259,6 +277,7 @@ const ServiceDetail = () => {
   const isZahnersatzPage = id === 'zahnersatz';
   const isProphylaxePage = id === 'prophylaxe';
   const isZahnerhaltungPage = id === 'zahnerhaltung';
+  const isKinderzahnheilkundePage = id === 'kinderzahnheilkunde';
 
   return (
     <div className="min-h-screen">
@@ -276,7 +295,7 @@ const ServiceDetail = () => {
       {/* Hero Section */}
       <HeroSection 
         title={getHeroTitle()} 
-        subtitle={service.shortDescription} 
+        subtitle={getHeroSubtitle()} 
         backgroundImage={service.imageUrl}
       />
 
@@ -298,6 +317,7 @@ const ServiceDetail = () => {
                   procedure={service.procedure}
                   isProphylaxe={isProphylaxePage}
                   isZahnerhaltung={isZahnerhaltungPage}
+                  isKinderzahnheilkunde={isKinderzahnheilkundePage}
                 />
               )}
             </div>
