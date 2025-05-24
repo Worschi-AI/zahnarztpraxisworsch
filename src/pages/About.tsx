@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -8,11 +9,12 @@ import { Button } from '@/components/ui/button';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import PraxisGallery from '@/components/praxis/PraxisGallery';
 import TechnologySection from '@/components/praxis/TechnologySection';
-import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   // Use the scroll animation hook
   useScrollAnimation();
+
+  const baseUrl = "https://zahnarztpraxis-worsch.de";
 
   return (
     <div className="min-h-screen">
@@ -22,6 +24,14 @@ const AboutPage = () => {
           name="description" 
           content="Lernen Sie die Zahnarztpraxis Worsch in Dresden kennen! Erfahren Sie mehr über unsere patientenorientierte Philosophie, moderne Ausstattung und innovative Technologien." 
         />
+        <link rel="canonical" href={`${baseUrl}/about`} />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Zahnarztpraxis Worsch Dresden | Unsere Praxis: Moderne Ausstattung & Philosophie" />
+        <meta property="og:description" content="Lernen Sie die Zahnarztpraxis Worsch in Dresden kennen! Erfahren Sie mehr über unsere patientenorientierte Philosophie, moderne Ausstattung und innovative Technologien." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${baseUrl}/about`} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1887&auto=format&fit=crop" />
       </Helmet>
 
       <Navbar />

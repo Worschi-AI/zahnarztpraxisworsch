@@ -1,5 +1,6 @@
+
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -10,6 +11,8 @@ import { team } from '@/data/team';
 import { Stethoscope, Users, Clock, Award, Heart } from 'lucide-react';
 
 const TeamPage = () => {
+  const baseUrl = "https://zahnarztpraxis-worsch.de";
+
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
     // Define the IntersectionObserver
@@ -49,6 +52,14 @@ const TeamPage = () => {
           name="description" 
           content="Lernen Sie das erfahrene Zahnarzt-Team der Praxis Worsch in Dresden kennen! Unsere Zahnärzte und Fachkräfte freuen sich darauf, Sie persönlich zu betreuen."
         />
+        <link rel="canonical" href={`${baseUrl}/team`} />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Unser Zahnarzt-Team in Dresden | Zahnärzte & Experten | Praxis Worsch" />
+        <meta property="og:description" content="Lernen Sie das erfahrene Zahnarzt-Team der Praxis Worsch in Dresden kennen! Unsere Zahnärzte und Fachkräfte freuen sich darauf, Sie persönlich zu betreuen." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${baseUrl}/team`} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop" />
       </Helmet>
       
       <Navbar />

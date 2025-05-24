@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -11,6 +11,8 @@ import useScrollAnimation from '@/hooks/useScrollAnimation';
 const ContactPage = () => {
   // Use the custom hook for animation
   useScrollAnimation();
+
+  const baseUrl = "https://zahnarztpraxis-worsch.de";
 
   // Create structured data for the dental practice
   const structuredData = {
@@ -55,6 +57,15 @@ const ContactPage = () => {
       <Helmet>
         <title>Kontakt & Anfahrt | Zahnarztpraxis Worsch Dresden | Termin</title>
         <meta name="description" content="Kontaktieren Sie die Zahnarztpraxis Worsch in Dresden. Hier finden Sie Adresse, Telefon, Öffnungszeiten und Anfahrtsbeschreibung. Wir freuen uns auf Sie!" />
+        <link rel="canonical" href={`${baseUrl}/contact`} />
+        
+        {/* Open Graph tags */}
+        <meta property="og:title" content="Kontakt & Anfahrt | Zahnarztpraxis Worsch Dresden" />
+        <meta property="og:description" content="Kontaktieren Sie die Zahnarztpraxis Worsch in Dresden. Hier finden Sie Adresse, Telefon, Öffnungszeiten und Anfahrtsbeschreibung." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${baseUrl}/contact`} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop" />
+        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

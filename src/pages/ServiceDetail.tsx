@@ -28,6 +28,8 @@ const ServiceDetail = () => {
   const { id } = useParams<{ id: string }>();
   const service = services.find(s => s.id === id);
 
+  const baseUrl = "https://zahnarztpraxis-worsch.de";
+
   // Redirect if service not found
   if (!service) {
     return <ServiceNotFound />;
@@ -74,6 +76,20 @@ const ServiceDetail = () => {
     return service.title;
   };
 
+  // Get appropriate OG image for service
+  const getOGImage = () => {
+    if (id === 'implantologie') {
+      return "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1742&auto=format&fit=crop";
+    }
+    if (id === 'aesthetische-zahnheilkunde') {
+      return "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1631&auto=format&fit=crop";
+    }
+    if (id === 'zahnersatz') {
+      return "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1740&auto=format&fit=crop";
+    }
+    return service.imageUrl;
+  };
+
   // Erstellen eines strukturierten Daten-Schemas für den Zahnersatz
   const getStructuredData = () => {
     if (id === 'zahnersatz') {
@@ -116,6 +132,9 @@ const ServiceDetail = () => {
       <ServiceMetaData 
         title={getMetaTitle()} 
         description={getMetaDescription()}
+        canonicalUrl={`${baseUrl}/services/${id}`}
+        ogUrl={`${baseUrl}/services/${id}`}
+        ogImage={getOGImage()}
         schema={getStructuredData()}
       />
       

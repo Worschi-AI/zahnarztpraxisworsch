@@ -12,6 +12,8 @@ import { AppointmentSchemaData, type DoctolibSchema } from '@/components/appoint
 import useScrollAnimation from '@/components/appointment/ScrollAnimation';
 
 const AppointmentPage = () => {
+  const baseUrl = "https://zahnarztpraxis-worsch.de";
+
   // Define schema for structured data
   const doctolibSchema: DoctolibSchema = {
     "@context": "https://schema.org",
@@ -68,6 +70,9 @@ const AppointmentPage = () => {
       <ServiceMetaData 
         title="Termin vereinbaren | Zahnarztpraxis Worsch Dresden"
         description="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach online über Doctolib oder telefonisch erreichbar unter 0351 2522709."
+        canonicalUrl={`${baseUrl}/appointment`}
+        ogUrl={`${baseUrl}/appointment`}
+        ogImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1770&auto=format&fit=crop"
         schema={doctolibSchema}
       />
       
