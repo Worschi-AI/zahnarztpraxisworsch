@@ -46,6 +46,9 @@ const ServiceDetail = () => {
     if (id === 'zahnersatz') {
       return "Zahnersatz Dresden | Kronen, Brücken, Prothesen | Zahnarztpraxis Worsch";
     }
+    if (id === 'prophylaxe') {
+      return "Prophylaxe & Zahnreinigung Dresden | Zahnarztpraxis Worsch Laubegast";
+    }
     return `${service.title} | Zahnarztpraxis Worsch Dresden`;
   };
 
@@ -58,6 +61,9 @@ const ServiceDetail = () => {
     }
     if (id === 'zahnersatz') {
       return "Zahnarztpraxis Worsch Dresden: Ihr Spezialist für hochwertigen Zahnersatz. Von Kronen über Brücken bis zu Prothesen – für natürliche Ästhetik & Funktion. Jetzt beraten lassen!";
+    }
+    if (id === 'prophylaxe') {
+      return "Professionelle Zahnreinigung (PZR) und Prophylaxe in Dresden Laubegast bei Zahnarzt Worsch. Für gesunde Zähne und ein strahlendes Lächeln. Jetzt Termin!";
     }
     return service.shortDescription;
   };
@@ -72,6 +78,9 @@ const ServiceDetail = () => {
     }
     if (id === 'zahnersatz') {
       return "Hochwertiger Zahnersatz in Dresden | Kronen, Brücken & Prothesen";
+    }
+    if (id === 'prophylaxe') {
+      return "Prophylaxe in Dresden: Vorsorge für Ihr schönstes Lächeln";
     }
     return service.title;
   };
@@ -218,6 +227,7 @@ const ServiceDetail = () => {
   const isImplantologiePage = id === 'implantologie';
   const isAestheticPage = id === 'aesthetische-zahnheilkunde';
   const isZahnersatzPage = id === 'zahnersatz';
+  const isProphylaxePage = id === 'prophylaxe';
 
   return (
     <div className="min-h-screen">
@@ -255,6 +265,7 @@ const ServiceDetail = () => {
                   title={service.title}
                   fullDescription={service.fullDescription}
                   procedure={service.procedure}
+                  isProphylaxe={isProphylaxePage}
                 />
               )}
             </div>

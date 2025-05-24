@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ServiceContentDefaultProps {
@@ -6,13 +5,15 @@ interface ServiceContentDefaultProps {
   fullDescription: string;
   procedure?: string;
   isZahnersatz?: boolean;
+  isProphylaxe?: boolean;
 }
 
 const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
   title,
   fullDescription,
   procedure,
-  isZahnersatz = false
+  isZahnersatz = false,
+  isProphylaxe = false
 }) => {
   return (
     <>
@@ -125,6 +126,35 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
                     </li>
                   </ol>
                 </div>
+              </>
+            )}
+          </div>
+        </>
+      ) : isProphylaxe ? (
+        <>
+          <h2 className="mb-6 text-dental-blue">Professionelle Zahnreinigung & Prophylaxe in Dresden – Mehr als nur Putzen</h2>
+          <div className="prose prose-lg max-w-none text-dental-gray">
+            <p>{fullDescription}</p>
+            
+            <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue">Warum ist professionelle Zahnprophylaxe in Dresden so wichtig?</h3>
+            <p className="mb-4">
+              Selbst bei sorgfältigster häuslicher Mundhygiene bleiben oft Beläge in schwer zugänglichen Bereichen wie Zahnzwischenräumen oder am Zahnfleischrand zurück. Diese bakteriellen Beläge (Plaque) sind die Hauptursache für Karies und Zahnfleischentzündungen (Gingivitis), die unbehandelt zu Parodontitis und Zahnverlust führen können.
+            </p>
+            <p className="mb-4">
+              Eine professionelle Zahnreinigung in unserer Praxis in Dresden geht weit über das hinaus, was Sie zu Hause erreichen können:
+            </p>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+              <li><strong>Gründliche Entfernung aller Beläge:</strong> Wir entfernen harten Zahnstein und weiche Beläge auch an schwer erreichbaren Stellen.</li>
+              <li><strong>Beseitigung von Verfärbungen:</strong> Kaffee, Tee, Rotwein oder Nikotin hinterlassen oft unschöne Verfärbungen, die wir sanft entfernen für ein helleres Lächeln.</li>
+              <li><strong>Politur der Zahnoberflächen:</strong> Glatte Oberflächen erschweren neuen Bakterien das Anhaften.</li>
+              <li><strong>Fluoridierung:</strong> Stärkt den Zahnschmelz und schützt vor Karies.</li>
+              <li><strong>Individuelle Beratung:</strong> Wir geben Ihnen wertvolle Tipps zur Optimierung Ihrer täglichen Mundpflege und zur Auswahl der richtigen Hilfsmittel.</li>
+            </ul>
+            
+            {procedure && (
+              <>
+                <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue">Ablauf Ihrer professionellen Zahnreinigung in Dresden Laubegast</h3>
+                <p>{procedure}</p>
               </>
             )}
           </div>

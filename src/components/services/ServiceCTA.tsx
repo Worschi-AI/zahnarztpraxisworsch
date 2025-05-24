@@ -11,6 +11,7 @@ interface ServiceCTAProps {
 const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
   const isImplantologiePage = serviceId === 'implantologie';
   const isAestheticPage = serviceId === 'aesthetische-zahnheilkunde';
+  const isProphylaxePage = serviceId === 'prophylaxe';
 
   if (isImplantologiePage) {
     return (
@@ -38,6 +39,21 @@ const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
           <Link to="/appointment">Termin für ästhetische Beratung vereinbaren <ChevronRight className="ml-2 h-5 w-5" /></Link>
         </Button>
         <p className="mt-4 text-dental-gray">Entdecken Sie Ihr schönstes Lächeln – Wir zeigen Ihnen die Möglichkeiten</p>
+      </div>
+    );
+  }
+
+  if (isProphylaxePage) {
+    return (
+      <div className="mt-12 text-center animate-on-scroll">
+        <h2 className="text-2xl font-medium mb-4 text-dental-blue">Investieren Sie in Ihr Lächeln – Termin zur Prophylaxe in Dresden vereinbaren!</h2>
+        <p className="text-lg mb-6 text-dental-gray">
+          Sichern Sie sich gesunde und schöne Zähne ein Leben lang. Vereinbaren Sie jetzt Ihren Termin zur professionellen Zahnreinigung in der Zahnarztpraxis Worsch in Dresden Laubegast.
+        </p>
+        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue text-white px-8 py-6 text-lg">
+          <Link to="/appointment">Termin Prophylaxe buchen <ChevronRight className="ml-2 h-5 w-5" /></Link>
+        </Button>
+        <p className="mt-4 text-dental-gray">Für Ihre langfristige Zahngesundheit und ein strahlendes Lächeln</p>
       </div>
     );
   }
