@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dental: {
-					'blue': '#4A90E2',
-					'turquoise': '#50C6B4',
-					'beige': '#F5F1E9',
-					'gray': '#646970',
-					'white': '#FFFFFF',
+					'blue': '#2271b9',
+					'turquoise': '#41b6e6',
+					'beige': '#f5f2ed',
+					'gray': '#565656',
+					'white': '#ffffff',
 				},
 			},
 			borderRadius: {
@@ -131,8 +131,28 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 			},
 			fontFamily: {
-				'sans': ['Poppins', 'sans-serif'],
-				'heading': ['Poppins', 'sans-serif'],
+				'sans': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'heading': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'body': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+			},
+			fontSize: {
+				'hierarchy-1': ['3.5rem', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '700' }],
+				'hierarchy-2': ['2.5rem', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '600' }],
+				'hierarchy-3': ['1.875rem', { lineHeight: '1.4', letterSpacing: '-0.015em', fontWeight: '500' }],
+			},
+			lineHeight: {
+				'tight': '1.2',
+				'snug': '1.3',
+				'normal': '1.4',
+				'relaxed': '1.6',
+				'loose': '1.7',
+			},
+			letterSpacing: {
+				'tighter': '-0.025em',
+				'tight': '-0.02em',
+				'snug': '-0.015em',
+				'normal': '0',
+				'wide': '0.025em',
 			}
 		}
 	},
