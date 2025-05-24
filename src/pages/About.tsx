@@ -47,51 +47,51 @@ const AboutPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="animate-on-scroll">
-              <h2 className="mb-6 text-center text-dental-blue">Unsere Philosophie: Ihr Lächeln ist unsere Leidenschaft</h2>
-              <div className="prose prose-lg max-w-none text-dental-gray">
-                <p className="text-lg mb-6">
+            <div className="animate-slide-up">
+              <h2 className="mb-6 text-center text-dental-blue hover-text-highlight">Unsere Philosophie: Ihr Lächeln ist unsere Leidenschaft</h2>
+              <div className="prose prose-lg max-w-none text-dental-gray stagger-children">
+                <p className="text-lg mb-6 animate-on-scroll">
                   In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> verstehen wir Zahnmedizin als eine Verbindung aus höchster Präzision, modernster Technologie und einem tiefen Verständnis für die individuellen Wünsche unserer Patienten – insbesondere, wenn es um die Ästhetik Ihres Lächelns geht.
                 </p>
 
-                <h3 className="text-xl font-semibold text-dental-turquoise mb-4">Der moderne Patient im Fokus – Besonders für unsere junge Zielgruppe</h3>
-                <p className="mb-4">
+                <h3 className="text-xl font-semibold text-dental-turquoise mb-4 animate-slide-up hover-text-highlight">Der moderne Patient im Fokus – Besonders für unsere junge Zielgruppe</h3>
+                <p className="mb-4 animate-on-scroll">
                   Wir wissen, dass gerade junge Menschen hohe Ansprüche an Ästhetik und Lebensqualität stellen. Ein selbstbewusstes Lächeln spielt dabei eine entscheidende Rolle. Deshalb legen wir besonderen Wert auf:
                 </p>
 
-                <ul className="mb-6">
-                  <li>
+                <ul className="mb-6 space-y-3 stagger-children">
+                  <li className="animate-slide-left hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Individuelle Ästhetik-Beratung:</strong> Wir nehmen uns Zeit, Ihre Vorstellungen zu verstehen und gemeinsam mit Ihnen die optimale Lösung für Ihr Wunschergebnis zu finden – von dezenten Korrekturen bis zum kompletten Smile Makeover.
                   </li>
-                  <li>
+                  <li className="animate-slide-left hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Innovative Behandlungsmethoden:</strong> Wir nutzen fortschrittliche digitale Verfahren wie 3D-Planung für Implantate, CAD/CAM-gefertigten Zahnersatz und schonende Lasertherapien, um präzise, vorhersagbare und ästhetisch überzeugende Ergebnisse zu erzielen.
                   </li>
-                  <li>
+                  <li className="animate-slide-left hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Transparenz und Aufklärung:</strong> Wir erklären Ihnen jeden Behandlungsschritt verständlich und zeigen Ihnen die Möglichkeiten moderner Zahnästhetik auf.
                   </li>
-                  <li>
+                  <li className="animate-slide-left hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Angenehmes Ambiente:</strong> Unsere Praxisräume in <strong>Dresden Laubegast</strong> sind modern und hell gestaltet, um Ihnen eine entspannte Atmosphäre zu bieten, in der Sie sich von Anfang an wohlfühlen.
                   </li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-dental-turquoise mb-4">Unsere Kernwerte für Ihre Zufriedenheit</h3>
+                <h3 className="text-xl font-semibold text-dental-turquoise mb-4 animate-slide-up hover-text-highlight">Unsere Kernwerte für Ihre Zufriedenheit</h3>
 
-                <ul className="mb-6">
-                  <li>
+                <ul className="mb-6 space-y-3 stagger-children">
+                  <li className="animate-slide-right hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Ästhetische Perfektion:</strong> Wir streben nach Ergebnissen, die nicht nur gesund, sondern auch natürlich schön sind und Ihre Persönlichkeit unterstreichen.
                   </li>
-                  <li>
+                  <li className="animate-slide-right hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Innovation & Präzision:</strong> Durch kontinuierliche Fortbildung und den Einsatz neuester Technologien garantieren wir Behandlungen auf höchstem Niveau.
                   </li>
-                  <li>
+                  <li className="animate-slide-right hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Patientenorientierung:</strong> Ihre Bedürfnisse und Wünsche stehen im Mittelpunkt unserer Arbeit. Wir möchten, dass Sie sich bei uns bestens aufgehoben fühlen.
                   </li>
-                  <li>
+                  <li className="animate-slide-right hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
                     <strong>Nachhaltige Qualität:</strong> Wir verwenden ausschließlich hochwertige, biokompatible Materialien für langlebige und gesunde Ergebnisse.
                   </li>
                 </ul>
 
-                <p>
+                <p className="animate-scale-in">
                   Wir sind mehr als nur Ihr <strong>Zahnarzt in Dresden</strong> – wir sind Ihre Partner für ein gesundes und strahlend schönes Lächeln, das Ihnen Selbstvertrauen schenkt.
                 </p>
               </div>
@@ -103,33 +103,37 @@ const AboutPage = () => {
       {/* Praxisräume */}
       <section className="py-20 bg-dental-beige">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="mb-4 text-dental-blue">Ein Ambiente zum Wohlfühlen: Unsere moderne Zahnarztpraxis in Dresden Laubegast</h2>
-            <p className="text-lg max-w-2xl mx-auto text-dental-gray">
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="mb-4 text-dental-blue hover-text-highlight">Ein Ambiente zum Wohlfühlen: Unsere moderne Zahnarztpraxis in Dresden Laubegast</h2>
+            <p className="text-lg max-w-2xl mx-auto text-dental-gray animate-on-scroll">
               Treten Sie ein und überzeugen Sie sich selbst: Unsere Praxisräume sind hell, modern und mit neuester Technik ausgestattet. Wir möchten, dass Ihr Besuch bei uns so angenehm wie möglich verläuft.
             </p>
           </div>
           
-          <PraxisGallery />
+          <div className="animate-scale-in">
+            <PraxisGallery />
+          </div>
         </div>
       </section>
 
       {/* Technische Ausstattung */}
-      <TechnologySection />
+      <div className="animate-slide-up">
+        <TechnologySection />
+      </div>
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto animate-on-scroll">
-            <h2 className="mb-4">Überzeugt? Lernen Sie uns persönlich kennen!</h2>
-            <p className="text-lg mb-8">
+          <div className="max-w-2xl mx-auto animate-scale-in">
+            <h2 className="mb-4 animate-slide-down">Überzeugt? Lernen Sie uns persönlich kennen!</h2>
+            <p className="text-lg mb-8 animate-on-scroll">
               Wir freuen uns darauf, Sie in unserer modernen <strong>Zahnarztpraxis in Dresden Laubegast</strong> begrüßen zu dürfen und Ihnen die Möglichkeiten für Ihr perfektes Lächeln aufzuzeigen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center stagger-children">
+              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105 animate-slide-left">
                 <Link to="/appointment">Termin vereinbaren</Link>
               </Button>
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105">
+              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige transition-all hover:scale-105 animate-slide-right">
                 <Link to="/team">Unser Team kennenlernen</Link>
               </Button>
             </div>
