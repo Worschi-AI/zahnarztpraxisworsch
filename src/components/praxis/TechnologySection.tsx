@@ -5,32 +5,32 @@ import { Camera, ScanSearch, Microscope, Tablet, Zap } from 'lucide-react';
 
 const technologies = [
   {
-    name: "Digitales Röntgen",
-    description: "Strahlungsreduzierte Aufnahmen für eine präzise Diagnose bei maximaler Schonung.",
+    name: "Digitales Röntgen & 3D-Diagnostik (DVT)",
+    description: "Strahlungsarm und hochpräzise für eine exakte Planung, besonders bei Implantaten und komplexen Fällen.",
     icon: <Camera className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services/prophylaxe"
   },
   {
     name: "Intraorale Kamera",
-    description: "Sehen Sie Ihren Zahn aus der Perspektive des Zahnarztes für ein besseres Verständnis Ihrer Behandlung.",
+    description: "Erleben Sie Ihre Zahnsituation live mit und verstehen Sie jeden Behandlungsschritt.",
     icon: <Camera className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services/prophylaxe"
   },
   {
     name: "CAD/CAM-Technologie",
-    description: "Digitale Planung und präzise Fertigung von Zahnersatz für schnellere und passgenauere Ergebnisse.",
+    description: "Für passgenauen, computerdesignten und -gefertigten Zahnersatz (Kronen, Brücken, Veneers) oft in nur einer Sitzung.",
     icon: <Tablet className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services/zahnersatz"
   },
   {
-    name: "Laser-Behandlung",
-    description: "Schonende Therapie für verschiedene Anwendungen mit minimaler Belastung und schnellerer Heilung.",
+    name: "Laser-Zahnheilkunde",
+    description: "Schonende und schmerzarme Behandlungen für Zahnfleisch, bei Wurzelkanalbehandlungen oder zur Keimreduktion.",
     icon: <Zap className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services"
   },
   {
-    name: "3D-Implantatplanung",
-    description: "Hochpräzise Planung für sichere und optimale Positionierung Ihrer Zahnimplantate in Dresden.",
+    name: "Digitale Abformung",
+    description: "Kein unangenehmer Abdrucklöffel mehr – für höchsten Komfort und präzise Modelle.",
     icon: <ScanSearch className="h-8 w-8 text-dental-turquoise" />,
     linkTo: "/services/implantologie"
   }
@@ -49,10 +49,9 @@ const TechnologySection = () => {
             />
           </div>
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Moderne Technologie</h2>
+            <h2 className="mb-6 text-dental-blue">Technologie für Ihr schönstes Lächeln – Innovation in unserer Dresdner Praxis</h2>
             <p className="text-lg mb-6 text-dental-gray">
-              Für Ihre optimale Versorgung in unserer <strong>Zahnarztpraxis in Dresden</strong> setzen wir auf modernste technische Ausstattung. 
-              So können wir präzise diagnostizieren und Sie schonend behandeln.
+              Um Ihnen die bestmögliche Behandlung und ästhetisch perfekte Ergebnisse zu bieten, setzen wir in unserer <strong>Zahnarztpraxis in Dresden Laubegast</strong> auf führende Technologien:
             </p>
             
             <div className="space-y-6">
@@ -76,6 +75,10 @@ const TechnologySection = () => {
                 </div>
               ))}
             </div>
+            
+            <p className="text-dental-gray mt-6">
+              Diese Technologien ermöglichen uns nicht nur präzisere Diagnosen und Behandlungen, sondern oft auch kürzere Behandlungszeiten und eine angenehmere Erfahrung für Sie als Patient.
+            </p>
           </div>
         </div>
       </div>
