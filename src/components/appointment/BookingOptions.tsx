@@ -10,10 +10,9 @@ const BookingOptions = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-on-scroll">
-          <h2 className="mb-6 text-dental-blue">Termine buchen</h2>
+          <h2 className="mb-6 text-dental-blue">So einfach vereinbaren Sie Ihren Termin bei uns in Dresden Laubegast</h2>
           <p className="text-lg text-dental-gray mb-8">
-            Vereinbaren Sie einen Termin in unserer <strong>Zahnarztpraxis in Dresden</strong>. 
-            Zahnarzt Worsch und sein Team freuen sich auf Ihren Besuch!
+            Wir möchten Ihnen die Terminvereinbarung so angenehm wie möglich gestalten. Wählen Sie die für Sie passende Option:
           </p>
         </div>
 
@@ -21,10 +20,9 @@ const BookingOptions = () => {
           {/* Online-Buchung über Doctolib */}
           <div className="bg-dental-blue p-8 rounded-lg shadow-md animate-on-scroll">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium mb-4 text-white">Online-Termin buchen</h3>
+              <h3 className="text-2xl font-medium mb-4 text-white">Rund um die Uhr verfügbar: Ihr Zahnarzttermin in Dresden per Klick</h3>
               <p className="text-white/90 mb-8">
-                Buchen Sie Ihren <strong>Zahnarzttermin in Dresden</strong> online 
-                über unser Doctolib-Portal - bequem rund um die Uhr!
+                Nutzen Sie unser bequemes Online-Buchungssystem über Doctolib. Wählen Sie Ihren gewünschten Behandlungsgrund, finden Sie freie Termine und reservieren Sie direkt – jederzeit und von überall. Ideal, um schnell und unkompliziert Ihren nächsten Besuch bei Ihrem <strong>Zahnarzt in Dresden</strong> zu planen.
               </p>
               <Button 
                 size="lg"
@@ -59,10 +57,9 @@ const BookingOptions = () => {
           {/* Telefonische Buchung */}
           <div className="bg-dental-beige p-8 rounded-lg shadow-md animate-on-scroll">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium mb-4 text-dental-blue">Telefonisch buchen</h3>
+              <h3 className="text-2xl font-medium mb-4 text-dental-blue">Persönliche Beratung und Terminfindung am Telefon</h3>
               <p className="text-dental-gray mb-8">
-                Um einen <strong>Zahnarzttermin in Dresden</strong> telefonisch zu vereinbaren, 
-                kontaktieren Sie uns bitte während unserer Öffnungszeiten.
+                Sie bevorzugen den persönlichen Kontakt oder haben spezielle Fragen vorab? Rufen Sie uns gerne während unserer Sprechzeiten unter <strong>0351 2522709</strong> an. Unser freundliches Praxisteam in Dresden Laubegast hilft Ihnen gerne weiter und findet gemeinsam mit Ihnen den passenden Termin.
               </p>
               <PhoneButton 
                 size="lg" 

@@ -7,8 +7,9 @@ const BookingInstructions = () => {
   return (
     <div className="max-w-4xl mx-auto animate-on-scroll">
       <div className="mb-12">
-        <h3 className="text-2xl font-medium mb-6 text-center text-dental-blue">Online-Buchung über Doctolib</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h3 className="text-2xl font-medium mb-6 text-center text-dental-blue">Schritt für Schritt zu Ihrem Termin</h3>
+        <h4 className="text-xl font-medium mb-6 text-center text-dental-blue">Online über Doctolib</h4>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <Card className="hover-scale">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -19,7 +20,7 @@ const BookingInstructions = () => {
             <CardContent>
               <CardDescription>
                 <CalendarClock className="h-10 w-10 text-dental-blue mx-auto mb-3" />
-                Besuchen Sie unser Doctolib-Profil oder klicken Sie auf "Auf Doctolib buchen" oben auf dieser Seite.
+                Klicken Sie auf "Auf Doctolib buchen" oder besuchen Sie unser Doctolib-Profil direkt.
               </CardDescription>
             </CardContent>
           </Card>
@@ -28,13 +29,13 @@ const BookingInstructions = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-dental-blue text-white w-8 h-8 rounded-full flex items-center justify-center">2</span>
-                <span>Termin wählen</span>
+                <span>Behandlung wählen</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
                 <Calendar className="h-10 w-10 text-dental-blue mx-auto mb-3" />
-                Wählen Sie einen passenden Termin aus den verfügbaren Zeiten und die gewünschte Behandlung.
+                Geben Sie Ihren Besuchsgrund an und wählen Sie ggf. einen bevorzugten Zahnarzt.
               </CardDescription>
             </CardContent>
           </Card>
@@ -43,13 +44,28 @@ const BookingInstructions = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-dental-blue text-white w-8 h-8 rounded-full flex items-center justify-center">3</span>
+                <span>Termin aussuchen</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>
+                <Users className="h-10 w-10 text-dental-blue mx-auto mb-3" />
+                Suchen Sie sich einen passenden freien Termin aus dem Kalender.
+              </CardDescription>
+            </CardContent>
+          </Card>
+
+          <Card className="hover-scale">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <span className="bg-dental-blue text-white w-8 h-8 rounded-full flex items-center justify-center">4</span>
                 <span>Bestätigen</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
                 <Check className="h-10 w-10 text-dental-blue mx-auto mb-3" />
-                Geben Sie Ihre Kontaktdaten ein und bestätigen Sie Ihren Termin. Sie erhalten eine Bestätigung per E-Mail.
+                Geben Sie Ihre Daten ein und bestätigen Sie. Sie erhalten eine Terminbestätigung per E-Mail.
               </CardDescription>
             </CardContent>
           </Card>
@@ -57,7 +73,7 @@ const BookingInstructions = () => {
       </div>
       
       <div>
-        <h3 className="text-2xl font-medium mb-6 text-center text-dental-blue">Telefonische Terminbuchung</h3>
+        <h4 className="text-xl font-medium mb-6 text-center text-dental-blue">Telefonisch</h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="hover-scale">
             <CardHeader>
@@ -69,7 +85,7 @@ const BookingInstructions = () => {
             <CardContent>
               <CardDescription>
                 <Calendar className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                Rufen Sie uns unter der Telefonnummer 0351 2522709 an, um einen Termin zu vereinbaren.
+                Wählen Sie 0351 2522709 während unserer Öffnungszeiten.
               </CardDescription>
             </CardContent>
           </Card>
@@ -78,13 +94,13 @@ const BookingInstructions = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-dental-turquoise text-white w-8 h-8 rounded-full flex items-center justify-center">2</span>
-                <span>Besprechen</span>
+                <span>Anliegen schildern</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
                 <Users className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                Teilen Sie uns mit, welche Art von Behandlung Sie benötigen und wann Sie Zeit haben.
+                Nennen Sie uns Ihren Behandlungswunsch.
               </CardDescription>
             </CardContent>
           </Card>
@@ -93,13 +109,13 @@ const BookingInstructions = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <span className="bg-dental-turquoise text-white w-8 h-8 rounded-full flex items-center justify-center">3</span>
-                <span>Fertig</span>
+                <span>Termin finden</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>
                 <Check className="h-10 w-10 text-dental-turquoise mx-auto mb-3" />
-                Wir finden einen passenden Termin für Sie und bestätigen diesen direkt am Telefon.
+                Gemeinsam finden wir den idealen Zeitpunkt für Ihren Besuch.
               </CardDescription>
             </CardContent>
           </Card>
