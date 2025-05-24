@@ -7,7 +7,10 @@ const ContactInfo = () => {
   
   return (
     <div className="md:w-1/2 animate-on-scroll">
-      <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Kontaktinformationen</h2>
+      <h2 className="text-3xl font-semibold mb-8 text-dental-blue">So erreichen Sie uns – Ihre Zahnarztpraxis in Dresden Laubegast</h2>
+      <p className="text-lg mb-8 text-dental-gray">
+        Wir freuen uns auf Ihre Kontaktaufnahme und Ihren Besuch!
+      </p>
       
       <div className="space-y-6">
         {/* Adresse */}
@@ -18,8 +21,9 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-lg font-medium mb-1 text-dental-blue">Adresse</h3>
             <p className="text-dental-gray">
+              <strong>Zahnarztpraxis Worsch</strong><br />
               Österreicher Str. 38<br />
-              01279 Dresden<br />
+              01279 Dresden (Laubegast)<br />
               Deutschland
             </p>
           </div>
@@ -88,8 +92,10 @@ const ContactInfo = () => {
                 <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Sonntag:</span>
                 <span>Geschlossen</span>
               </div>
-              <div className="pt-1">
-                <p className="text-sm italic">Termine nach Vereinbarung.</p>
+              <div className="pt-2">
+                <p className="text-sm italic text-dental-gray">
+                  Termine nach Vereinbarung. Für ästhetische Beratungen oder spezielle Anliegen planen wir gerne individuelle Zeiten für Sie ein.
+                </p>
               </div>
             </div>
           </div>

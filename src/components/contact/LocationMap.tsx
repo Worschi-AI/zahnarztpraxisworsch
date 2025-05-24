@@ -1,14 +1,18 @@
+
 import React from 'react';
-import { Button } from '@/components/ui/button'; // Annahme: UI-Komponenten-Pfad
+import { Button } from '@/components/ui/button';
 import { MapPin, Car, Train } from 'lucide-react';
 
 const LocationMap = () => {
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.476298522233!2d13.836413999999998!3d51.0258232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709c7d96d21fce9%3A0xe0acd2eb962737a1!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sde!2sde!4v1747662579748!5m2!1sde!2sde"; // Die src aus Ihrem iframe-Code
-  const googleMapsShareLink = "https://maps.app.goo.gl/zYMPy4MjAHRvKtti7"; // Ihr aktuellster Link zum Teilen
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.476298522233!2d13.836413999999998!3d51.0258232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709c7d96d21fce9%3A0xe0acd2eb962737a1!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sde!2sde!4v1747662579748!5m2!1sde!2sde";
+  const googleMapsShareLink = "https://maps.app.goo.gl/zYMPy4MjAHRvKtti7";
 
   return (
-    <div className="md:w-1/2 animate-on-scroll"> {/* Annahme: Tailwind-Klassen oder äquivalent */}
-      <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Anfahrt</h2>
+    <div className="md:w-1/2 animate-on-scroll">
+      <h2 className="text-3xl font-semibold mb-8 text-dental-blue">Ihr Weg zu uns nach Dresden Laubegast</h2>
+      <p className="text-lg mb-6 text-dental-gray">
+        Unsere Zahnarztpraxis befindet sich verkehrsgünstig gelegen in Dresden Laubegast und ist sowohl mit öffentlichen Verkehrsmitteln als auch mit dem Auto bequem zu erreichen.
+      </p>
       
       {/* Google Maps Embed */}
       <div className="rounded-lg h-[400px] mb-6 overflow-hidden shadow-md">
@@ -37,7 +41,7 @@ const LocationMap = () => {
           <div>
             <h3 className="text-lg font-medium mb-2">Mit öffentlichen Verkehrsmitteln</h3>
             <p className="text-dental-gray">
-              Unsere <strong>Zahnarztpraxis in Dresden</strong> erreichen Sie gut mit öffentlichen Verkehrsmitteln:
+              Erreichen Sie uns entspannt mit Bus und Bahn. Unsere <strong>Zahnarztpraxis in Dresden</strong> ist gut mit öffentlichen Verkehrsmitteln erreichbar:
             </p>
             <ul className="list-disc pl-5 mt-2 text-dental-gray">
               <li>Straßenbahnhaltestelle: Linie 4, 10 (Haltestelle Altenberger Straße)</li>
@@ -51,7 +55,7 @@ const LocationMap = () => {
           <div>
             <h3 className="text-lg font-medium mb-2">Mit dem Auto</h3>
             <p className="text-dental-gray">
-              Parkplätze finden Sie direkt vor der Praxis und in den umliegenden Straßen.
+              Parkmöglichkeiten finden Sie direkt vor der Praxis und in den umliegenden Straßen.
               Von der Autobahn A4 nehmen Sie die Ausfahrt Dresden-Altstadt und folgen den Schildern Richtung Leuben/Niedersedlitz.
             </p>
             <p className="mt-2 text-dental-gray">
@@ -65,7 +69,7 @@ const LocationMap = () => {
           </div>
         </div>
         
-        <div className="mt-4 p-3 bg-dental-turquoise/10 rounded-md text-center"> {/* Annahme: Tailwind-Klassen für Styling */}
+        <div className="mt-4 p-3 bg-dental-turquoise/10 rounded-md text-center">
           <p className="text-dental-blue font-medium">
             Unsere Praxisräume sind vollständig barrierefrei zugänglich
           </p>

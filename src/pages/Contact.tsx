@@ -124,8 +124,8 @@ const ContactPage = () => {
       
       {/* Hero Section with dental-specific image */}
       <HeroSection 
-        title="Kontakt & Anfahrt" 
-        subtitle="So erreichen Sie unsere Praxis in Dresden einfach und schnell" 
+        title="Kontakt & Anfahrt – Zahnarztpraxis Worsch in Dresden Laubegast" 
+        subtitle="Finden Sie uns einfach: Alle Informationen für Ihren Besuch bei Ihrem Zahnarzt in Dresden." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
       />
 
