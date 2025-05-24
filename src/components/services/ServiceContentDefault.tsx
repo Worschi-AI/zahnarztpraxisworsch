@@ -6,6 +6,7 @@ interface ServiceContentDefaultProps {
   procedure?: string;
   isZahnersatz?: boolean;
   isProphylaxe?: boolean;
+  isZahnerhaltung?: boolean;
 }
 
 const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
@@ -13,7 +14,8 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
   fullDescription,
   procedure,
   isZahnersatz = false,
-  isProphylaxe = false
+  isProphylaxe = false,
+  isZahnerhaltung = false
 }) => {
   return (
     <>
@@ -154,6 +156,61 @@ const ServiceContentDefault: React.FC<ServiceContentDefaultProps> = ({
             {procedure && (
               <>
                 <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue">Ablauf Ihrer professionellen Zahnreinigung in Dresden Laubegast</h3>
+                <p>{procedure}</p>
+              </>
+            )}
+          </div>
+        </>
+      ) : isZahnerhaltung ? (
+        <>
+          <h2 className="mb-6 text-dental-blue">Moderne Zahnerhaltung in Dresden – Für den langfristigen Erhalt Ihrer Zähne</h2>
+          <div className="prose prose-lg max-w-none text-dental-gray">
+            <p>{fullDescription}</p>
+            
+            <h3 className="text-2xl font-medium mt-8 mb-6 text-dental-blue">Unsere Leistungen im Bereich Zahnerhaltung in Dresden</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-10">
+              <div className="bg-dental-beige p-5 rounded-lg">
+                <h4 className="text-xl font-medium mb-3 text-dental-blue">Hochwertige Zahnfüllungen (Kompositfüllungen)</h4>
+                <p className="text-base">
+                  Bei Kariesdefekten sind moderne, zahnfarbene Kompositfüllungen die erste Wahl. Diese Hightech-Kunststoffe werden schichtweise aufgetragen und mit Speziallicht gehärtet. Sie verbinden sich fest mit der Zahnsubstanz, sind sehr gut verträglich und ermöglichen eine nahezu unsichtbare Wiederherstellung Ihres Zahnes. Wir beraten Sie in unserer Praxis in Dresden ausführlich zu den Vorteilen dieser ästhetischen Füllungstherapie.
+                </p>
+              </div>
+              
+              <div className="bg-dental-beige p-5 rounded-lg">
+                <h4 className="text-xl font-medium mb-3 text-dental-blue">Keramikinlays und -onlays</h4>
+                <p className="text-base">
+                  Für größere Defekte im Seitenzahnbereich bieten Keramikinlays oder -onlays eine extrem stabile und langlebige Alternative. Sie werden im zahntechnischen Labor individuell gefertigt und präzise eingesetzt. Keramik ist dem natürlichen Zahnschmelz in Aussehen und Eigenschaften sehr ähnlich.
+                </p>
+              </div>
+              
+              <div className="bg-dental-beige p-5 rounded-lg">
+                <h4 className="text-xl font-medium mb-3 text-dental-blue">Moderne Wurzelkanalbehandlung (Endodontie) in Dresden</h4>
+                <p className="text-base">
+                  Wenn das Innere eines Zahnes (der Zahnnerv) entzündet oder abgestorben ist, ist eine Wurzelkanalbehandlung in Dresden oft die einzige Möglichkeit, den Zahn zu erhalten. Mit modernsten Techniken (z.B. maschinelle Aufbereitung, elektronische Längenmessung, desinfizierende Spülungen) reinigen und füllen wir die Wurzelkanäle präzise ab. So kann auch ein stark geschädigter Zahn oft noch viele Jahre seine Funktion erfüllen. Unser Ziel ist eine schmerzarme und erfolgreiche Behandlung.
+                </p>
+              </div>
+              
+              <div className="bg-dental-beige p-5 rounded-lg">
+                <h4 className="text-xl font-medium mb-3 text-dental-blue">Parodontitisbehandlung (Zahnfleischbehandlung)</h4>
+                <p className="text-base">
+                  Eine Parodontitis (Entzündung des Zahnhalteapparates) ist eine häufige Ursache für Zahnverlust. Durch eine systematische Parodontitisbehandlung in unserer Praxis in Dresden stoppen wir den Entzündungsprozess und erhalten Ihr Zahnfleisch und den Kieferknochen. Regelmäßige Nachsorge ist hier entscheidend.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue">Warum Zahnerhaltung bei Zahnarzt Worsch in Dresden Laubegast?</h3>
+            <ul className="list-disc pl-6 mb-6 space-y-2">
+              <li><strong>Minimalinvasive Verfahren:</strong> Wir entfernen nur so viel Zahnsubstanz wie unbedingt nötig.</li>
+              <li><strong>Ästhetische Ergebnisse:</strong> Zahnfarbene Materialien für ein natürliches Aussehen.</li>
+              <li><strong>Langlebigkeit:</strong> Verwendung hochwertiger und erprobter Materialien.</li>
+              <li><strong>Schmerzarme Behandlung:</strong> Moderne Anästhesieverfahren und einfühlsame Betreuung.</li>
+              <li><strong>Fokus auf Prävention:</strong> Wir helfen Ihnen, zukünftige Schäden zu vermeiden.</li>
+            </ul>
+            
+            {procedure && (
+              <>
+                <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue">Ablauf der Behandlung</h3>
                 <p>{procedure}</p>
               </>
             )}

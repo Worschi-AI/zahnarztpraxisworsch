@@ -4,38 +4,38 @@ import { Service } from './types';
 export const zahnerhaltung: Service = {
   id: "zahnerhaltung",
   title: "Zahnerhaltung",
-  shortDescription: "Hochwertige Füllungen und Wurzelbehandlungen",
-  fullDescription: "Die Zahnerhaltung steht im Mittelpunkt unserer zahnmedizinischen Philosophie in Dresden. Unser Ziel ist es, Ihre natürlichen Zähne so lange wie möglich zu erhalten und dabei höchste ästhetische und funktionelle Ansprüche zu erfüllen. Die moderne Zahnerhaltung umfasst verschiedene Behandlungsmethoden: von minimal-invasiven Füllungstherapien über Wurzelkanalbehandlungen bis hin zu Inlays und Onlays. Durch den Einsatz modernster Materialien wie biokompatible Komposite, Glasionomerzemente und Keramiken können wir defekte Zähne nahezu unsichtbar reparieren. Besonders bei der Kariesbehandlung setzen wir auf substanzschonende Verfahren, bei denen nur das erkrankte Gewebe entfernt wird. Unsere Wurzelkanalbehandlungen führen wir mit rotierenden Nickel-Titan-Instrumenten und elektronischer Längenmessung durch, was die Erfolgsquote deutlich erhöht. Durch präzise Diagnostik mittels digitaler Röntgentechnik können wir Probleme frühzeitig erkennen und minimal-invasiv behandeln.",
+  shortDescription: "Mit modernsten Methoden der Zahnerhaltung kämpfen wir in der Praxis Worsch in Dresden Laubegast um jeden Zahn – für Ihre Gesundheit und Ihr Lächeln.",
+  fullDescription: "Das oberste Ziel unserer Zahnarztpraxis in Dresden Laubegast ist es, Ihre natürlichen Zähne so lange wie möglich gesund und funktionsfähig zu erhalten. Die moderne Zahnerhaltung bietet heute eine Vielzahl schonender und effektiver Methoden, um Zähne, die von Karies oder anderen Erkrankungen betroffen sind, zu reparieren und zu bewahren. Wir setzen dabei auf minimalinvasive Techniken und hochwertige, biokompatible Materialien für ästhetisch ansprechende und langlebige Ergebnisse.",
   procedure: "Der Behandlungsablauf bei der Zahnerhaltung richtet sich nach dem individuellen Befund. Bei Karies beginnen wir mit einer lokalen Betäubung für eine schmerzfreie Behandlung. Anschließend entfernen wir das kariöse Gewebe mit modernen rotierenden Instrumenten unter ständiger Wasserkühlung. Der entstandene Defekt wird sorgfältig gereinigt und desinfiziert. Bei kleineren Defekten verwenden wir direkte Kompositfüllungen, die in mehreren Schichten aufgetragen und mit LED-Licht ausgehärtet werden. Größere Defekte versorgen wir mit laborgefertigten Inlays oder Onlays aus Keramik oder Gold. Bei einer Wurzelkanalbehandlung erweitern und desinfizieren wir die Wurzelkanäle mit speziellen Instrumenten und spülen sie mit antibakteriellen Lösungen. Nach der Aufbereitung werden die Kanäle bakteriendicht verschlossen. Abschließend wird der Zahn mit einer Krone oder Füllung versorgt. Alle Behandlungen führen wir unter Lupenhilfe durch, um höchste Präzision zu gewährleisten.",
   benefits: [
-    "Erhalt der natürlichen Zahnsubstanz durch minimal-invasive Verfahren",
-    "Ästhetisch perfekte Ergebnisse mit zahnfarbenen Materialien",
-    "Langlebige und biokompatible Füllungswerkstoffe",
-    "Schmerzfreie Behandlung durch moderne Anästhesieverfahren",
-    "Hohe Erfolgsquote bei Wurzelkanalbehandlungen",
-    "Vermeidung von Zahnverlust und aufwendigem Zahnersatz",
-    "Funktionserhalt für optimale Kaufunktion"
+    "Erhalt Ihrer wertvollen, natürlichen Zahnsubstanz",
+    "Vermeidung von aufwendigerem und teurerem Zahnersatz", 
+    "Wiederherstellung der vollen Kaufunktion und Ästhetik",
+    "Langfristige Sicherung Ihrer Mundgesundheit",
+    "Schmerzlinderung bei entzündeten Zähnen",
+    "Minimalinvasive Verfahren mit modernen Materialien",
+    "Ästhetische Ergebnisse mit zahnfarbenen Füllungen"
   ],
   faqs: [
     {
-      question: "Wie lange halten Kompositfüllungen?",
-      answer: "Hochwertige Kompositfüllungen halten bei guter Pflege und regelmäßigen Kontrollen durchschnittlich 8-12 Jahre. Die Haltbarkeit hängt von verschiedenen Faktoren ab: Größe der Füllung, Kaubelastung, Mundhygiene und individuelle Faktoren wie Zähneknirschen. Kleinere Füllungen halten oft deutlich länger, während große Füllungen im Seitenzahnbereich stärkeren Belastungen ausgesetzt sind."
+      question: "Ist eine Wurzelbehandlung schmerzhaft?",
+      answer: "Dank moderner Betäubungsmethoden ist eine Wurzelkanalbehandlung in unserer Praxis in Dresden in der Regel schmerzfrei. Während der Behandlung spüren Sie durch die örtliche Betäubung nichts. In den ersten Tagen nach der Behandlung können leichte Beschwerden auftreten, die sich gut mit Schmerzmitteln behandeln lassen."
     },
     {
-      question: "Ist eine Wurzelkanalbehandlung schmerzhaft?",
-      answer: "Eine professionell durchgeführte Wurzelkanalbehandlung ist dank moderner Anästhesieverfahren praktisch schmerzfrei. Während der Behandlung spüren Sie durch die örtliche Betäubung nichts. In den ersten Tagen nach der Behandlung können leichte Beschwerden auftreten, die sich gut mit Schmerzmitteln behandeln lassen. Die meisten Patienten sind überrascht, wie angenehm die Behandlung verläuft."
+      question: "Wie lange hält eine Kompositfüllung?",
+      answer: "Bei guter Mundhygiene und regelmäßigen Kontrollen können hochwertige Kompositfüllungen viele Jahre halten. Die Haltbarkeit hängt von verschiedenen Faktoren ab: Größe der Füllung, Kaubelastung, Mundhygiene und individuelle Faktoren wie Zähneknirschen."
+    },
+    {
+      question: "Was ist der Unterschied zwischen einer Füllung und einem Inlay?",
+      answer: "Füllungen werden direkt im Mund modelliert und sofort ausgehärtet. Inlays werden im zahntechnischen Labor individuell gefertigt und dann präzise eingesetzt. Sie sind oft bei größeren Defekten stabiler und langlebiger als direkte Füllungen."
+    },
+    {
+      question: "Was kann ich tun, um meine Zähne bestmöglich zu erhalten?",
+      answer: "Eine gute häusliche Mundhygiene mit regelmäßigem Zähneputzen und Zahnseide, regelmäßige zahnärztliche Kontrollen alle 6 Monate und professionelle Zahnreinigungen sind die wichtigsten Säulen der Zahnerhaltung. Dazu kommt eine zahngesunde Ernährung mit wenig Zucker."
     },
     {
       question: "Wann ist eine Wurzelkanalbehandlung notwendig?",
-      answer: "Eine Wurzelkanalbehandlung wird notwendig, wenn der Zahnnerv (Pulpa) irreversibel geschädigt oder abgestorben ist. Dies kann durch tiefe Karies, einen Zahnunfall, wiederholte Behandlungen am Zahn oder starke thermische Belastung geschehen. Typische Symptome sind anhaltende Schmerzen, Klopfempfindlichkeit, Schwellungen oder eine Verfärbung des Zahnes. Manchmal verläuft der Prozess aber auch völlig schmerzfrei."
-    },
-    {
-      question: "Was passiert, wenn eine Wurzelkanalbehandlung nicht erfolgreich ist?",
-      answer: "Die Erfolgsquote moderner Wurzelkanalbehandlungen liegt bei über 90%. Sollte eine Behandlung nicht erfolgreich sein, gibt es mehrere Optionen: Eine Revision der Wurzelkanalbehandlung, eine Wurzelspitzenresektion (chirurgische Entfernung der Wurzelspitze) oder als letzter Ausweg die Entfernung des Zahnes mit anschließendem Zahnersatz. Wir besprechen alle Möglichkeiten ausführlich mit Ihnen."
-    },
-    {
-      question: "Sind zahnfarbene Füllungen genauso stabil wie Amalgamfüllungen?",
-      answer: "Moderne Kompositfüllungen sind bei korrekter Anwendung genauso stabil und langlebig wie Amalgamfüllungen. Sie haben sogar Vorteile: Sie sind zahnfarben, enthalten kein Quecksilber, erfordern weniger Substanzabtrag und können repariert werden. Für sehr große Defekte empfehlen wir allerdings laborgefertigte Einlagefüllungen (Inlays) aus Keramik oder Gold."
+      answer: "Eine Wurzelkanalbehandlung wird notwendig, wenn der Zahnnerv (Pulpa) irreversibel geschädigt oder abgestorben ist. Dies kann durch tiefe Karies, einen Zahnunfall, wiederholte Behandlungen am Zahn oder starke thermische Belastung geschehen. Typische Symptome sind anhaltende Schmerzen, Klopfempfindlichkeit oder Schwellungen."
     }
   ],
   imageUrl: "https://images.unsplash.com/photo-1643913067177-25ce9fdbc717?q=80&w=1932&auto=format&fit=crop"

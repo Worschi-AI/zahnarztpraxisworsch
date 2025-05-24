@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -12,6 +11,7 @@ const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
   const isImplantologiePage = serviceId === 'implantologie';
   const isAestheticPage = serviceId === 'aesthetische-zahnheilkunde';
   const isProphylaxePage = serviceId === 'prophylaxe';
+  const isZahnerhaltungPage = serviceId === 'zahnerhaltung';
 
   if (isImplantologiePage) {
     return (
@@ -54,6 +54,21 @@ const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
           <Link to="/appointment">Termin Prophylaxe buchen <ChevronRight className="ml-2 h-5 w-5" /></Link>
         </Button>
         <p className="mt-4 text-dental-gray">Für Ihre langfristige Zahngesundheit und ein strahlendes Lächeln</p>
+      </div>
+    );
+  }
+
+  if (isZahnerhaltungPage) {
+    return (
+      <div className="mt-12 text-center animate-on-scroll">
+        <h2 className="text-2xl font-medium mb-4 text-dental-blue">Erhalten Sie Ihr natürliches Lächeln – Beratung zur Zahnerhaltung in Dresden!</h2>
+        <p className="text-lg mb-6 text-dental-gray">
+          Informieren Sie sich über die modernen Möglichkeiten der Zahnerhaltung in der Zahnarztpraxis Worsch in Dresden Laubegast. Vereinbaren Sie jetzt Ihren Beratungstermin.
+        </p>
+        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue text-white px-8 py-6 text-lg">
+          <Link to="/appointment">Termin Zahnerhaltung buchen <ChevronRight className="ml-2 h-5 w-5" /></Link>
+        </Button>
+        <p className="mt-4 text-dental-gray">Wir kämpfen um jeden Zahn – für Ihr natürliches und gesundes Lächeln</p>
       </div>
     );
   }

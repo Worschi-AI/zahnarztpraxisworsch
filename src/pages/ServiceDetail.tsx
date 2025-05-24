@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import HeroSection from '@/components/HeroSection';
@@ -49,6 +48,9 @@ const ServiceDetail = () => {
     if (id === 'prophylaxe') {
       return "Prophylaxe & Zahnreinigung Dresden | Zahnarztpraxis Worsch Laubegast";
     }
+    if (id === 'zahnerhaltung') {
+      return "Zahnerhaltung Dresden | Füllungen & Wurzelbehandlung | Praxis Worsch";
+    }
     return `${service.title} | Zahnarztpraxis Worsch Dresden`;
   };
 
@@ -64,6 +66,9 @@ const ServiceDetail = () => {
     }
     if (id === 'prophylaxe') {
       return "Professionelle Zahnreinigung (PZR) und Prophylaxe in Dresden Laubegast bei Zahnarzt Worsch. Für gesunde Zähne und ein strahlendes Lächeln. Jetzt Termin!";
+    }
+    if (id === 'zahnerhaltung') {
+      return "Moderne Zahnerhaltung in Dresden Laubegast bei Zahnarzt Worsch: Hochwertige Füllungen, schonende Wurzelkanalbehandlungen für den Erhalt Ihrer natürlichen Zähne.";
     }
     return service.shortDescription;
   };
@@ -82,6 +87,9 @@ const ServiceDetail = () => {
     if (id === 'prophylaxe') {
       return "Prophylaxe in Dresden: Vorsorge für Ihr schönstes Lächeln";
     }
+    if (id === 'zahnerhaltung') {
+      return "Zahnerhaltung in Dresden: Ihre natürlichen Zähne bewahren";
+    }
     return service.title;
   };
 
@@ -95,6 +103,9 @@ const ServiceDetail = () => {
     }
     if (id === 'zahnersatz') {
       return "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1740&auto=format&fit=crop";
+    }
+    if (id === 'zahnerhaltung') {
+      return "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1742&auto=format&fit=crop";
     }
     return service.imageUrl;
   };
@@ -192,6 +203,25 @@ const ServiceDetail = () => {
       };
     }
 
+    if (id === 'zahnerhaltung') {
+      return {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Zahnerhaltung in Dresden",
+        "procedureType": "Konservierende Zahnheilkunde",
+        "description": "Moderne Zahnerhaltung mit hochwertigen Füllungen und schonenden Wurzelkanalbehandlungen. Erhalt der natürlichen Zähne in der Zahnarztpraxis Worsch Dresden.",
+        "howPerformed": "Minimalinvasive Verfahren mit modernen Materialien wie Kompositfüllungen und Keramikinlays. Präzise Wurzelkanalbehandlungen mit elektronischer Längenmessung",
+        "preparation": "Gründliche Untersuchung, Aufklärung über Behandlungsoptionen und individuelle Behandlungsplanung",
+        "followup": "Regelmäßige Kontrollen und Nachsorge für optimale Langzeitergebnisse",
+        "medicineSystem": "Zahnmedizin",
+        "relevantSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Konservierende Zahnheilkunde"
+        },
+        "provider": baseProvider
+      };
+    }
+
     if (id === 'kinderzahnheilkunde') {
       return {
         "@context": "https://schema.org",
@@ -228,6 +258,7 @@ const ServiceDetail = () => {
   const isAestheticPage = id === 'aesthetische-zahnheilkunde';
   const isZahnersatzPage = id === 'zahnersatz';
   const isProphylaxePage = id === 'prophylaxe';
+  const isZahnerhaltungPage = id === 'zahnerhaltung';
 
   return (
     <div className="min-h-screen">
@@ -266,6 +297,7 @@ const ServiceDetail = () => {
                   fullDescription={service.fullDescription}
                   procedure={service.procedure}
                   isProphylaxe={isProphylaxePage}
+                  isZahnerhaltung={isZahnerhaltungPage}
                 />
               )}
             </div>
