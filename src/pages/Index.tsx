@@ -23,13 +23,13 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Zahnarztpraxis Worsch Dresden | Implantologie & Ästhetische Zahnmedizin</title>
-        <meta name="description" content="Zahnarztpraxis Worsch in Dresden: Ihr Experte für Implantologie, ästhetische Zahnmedizin und modernste Zahnheilkunde. Vereinbaren Sie jetzt Ihren Wunschtermin!" />
+        <title>Zahnarzt Dresden Laubegast | Praxis Worsch – Ästhetik & Modernste Zahnmedizin</title>
+        <meta name="description" content="Ihre moderne Zahnarztpraxis Worsch in Dresden Laubegast: Spezialisiert auf ästhetische Zahnmedizin, Implantate & Ihr strahlendes Lächeln. Jetzt Termin online buchen!" />
         <link rel="canonical" href={baseUrl} />
         
         {/* Open Graph tags */}
-        <meta property="og:title" content="Zahnarztpraxis Worsch Dresden | Implantologie & Ästhetische Zahnmedizin" />
-        <meta property="og:description" content="Zahnarztpraxis Worsch in Dresden: Ihr Experte für Implantologie, ästhetische Zahnmedizin und modernste Zahnheilkunde. Vereinbaren Sie jetzt Ihren Wunschtermin!" />
+        <meta property="og:title" content="Zahnarzt Dresden Laubegast | Praxis Worsch – Ästhetik & Modernste Zahnmedizin" />
+        <meta property="og:description" content="Ihre moderne Zahnarztpraxis Worsch in Dresden Laubegast: Spezialisiert auf ästhetische Zahnmedizin, Implantate & Ihr strahlendes Lächeln. Jetzt Termin online buchen!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={baseUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop" />
@@ -37,10 +37,10 @@ const Index = () => {
       
       <Navbar />
       
-      {/* Hero Section with dental-specific image */}
+      {/* Hero Section with updated content */}
       <HeroSection 
-        title="Ihr Experte für Implantologie & Ästhetische Zahnmedizin" 
-        subtitle="Modernste Zahnheilkunde und individuelle Betreuung für Ihr strahlendes Lächeln" 
+        title="Ihr Lächeln. Unsere Expertise. Zahnarztpraxis Worsch Dresden." 
+        subtitle="Entdecken Sie moderne Zahnmedizin und ästhetische Perfektion in Ihrer Zahnarztpraxis in Dresden Laubegast." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"
       />

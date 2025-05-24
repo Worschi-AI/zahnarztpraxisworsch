@@ -1,7 +1,6 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
-// Link von react-router-dom wird hier nicht mehr benötigt, da es ein externer Link ist.
-// import { Link } from 'react-router-dom'; 
 import { Star } from 'lucide-react';
 
 const PatientReviewTeaser = () => {
@@ -15,13 +14,13 @@ const PatientReviewTeaser = () => {
           <div className="flex items-center">
             <Star className="h-8 w-8 text-yellow-400 fill-yellow-400 mr-3" aria-hidden="true" />
             <div>
-              <p className="font-bold text-dental-blue text-lg mb-1">Über 95% zufriedene Patienten</p>
-              <p className="text-dental-gray">Unsere Patienten in Dresden vertrauen uns seit Jahren.</p>
+              <p className="font-bold text-dental-blue text-lg mb-1">Über 95% zufriedene Patienten – Ihre Zahnarztpraxis in Dresden Laubegast</p>
+              <p className="text-dental-gray">Das Vertrauen unserer Patienten ist unser größter Ansporn. Lesen Sie, warum junge und anspruchsvolle Patienten aus Dresden und Umgebung auf die Expertise der Zahnarztpraxis Worsch setzen.</p>
             </div>
           </div>
           <Button asChild variant="outline" className="border-dental-blue text-dental-blue hover:bg-dental-blue hover:text-white whitespace-nowrap">
             <a href={googleReviewsLink} target="_blank" rel="noopener noreferrer">
-              Erfahrungsberichte lesen
+              Zu den Google Bewertungen
             </a>
           </Button>
         </div>

@@ -10,16 +10,12 @@ const HeroIntroSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Willkommen in unserer Praxis in Dresden</h2>
+            <h2 className="mb-6 text-dental-blue">Willkommen bei Zahnarzt Worsch – Ihrem Partner für ein strahlendes Lächeln in Dresden</h2>
             <p className="text-lg mb-6 text-dental-gray">
-              In unserer modernen <strong>Zahnarztpraxis in Dresden</strong> steht Ihr Wohlbefinden an erster Stelle. Mit einem erfahrenen Team, 
-              modernsten Technologien und einem ganzheitlichen Behandlungsansatz sorgen wir für Ihre Zahngesundheit 
-              in angenehmer Atmosphäre.
+              Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong>, Ihrem modernen Zentrum für Zahngesundheit und Ästhetik im Herzen von <strong>Dresden-Laubegast</strong>. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens. Deshalb verbinden wir zahnmedizinische Exzellenz mit einem besonderen Fokus auf ästhetische Ergebnisse, die Sie begeistern werden.
             </p>
             <p className="text-lg mb-8 text-dental-gray">
-              Unser Ziel ist es, Ihnen zu einem strahlenden Lächeln zu verhelfen und Ihre Zähne ein Leben lang 
-              gesund zu erhalten. Als <strong>Zahnarzt in Dresden</strong> setzen wir auf präventive Maßnahmen, 
-              schonende Behandlungsmethoden und eine vertrauensvolle Zusammenarbeit.
+              Unser junges und engagiertes Team setzt auf innovative Technologien und individuelle Behandlungskonzepte, um Ihnen nicht nur gesunde, sondern auch wunderschöne Zähne zu ermöglichen. Ob Sie eine umfassende Beratung wünschen, sich für ästhetische Korrekturen interessieren oder eine hochwertige zahnmedizinische Versorgung suchen – bei uns sind Sie in besten Händen. Erfahren Sie, wie wir Ihr Lächeln zum Strahlen bringen können.
             </p>
             <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300 text-white px-6 py-3">
               <Link to="/about">Mehr über uns erfahren</Link>
@@ -29,7 +25,7 @@ const HeroIntroSection = () => {
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop" 
-                alt="Moderne Praxisräume der Zahnarztpraxis Worsch in Dresden" 
+                alt="Moderne Praxisräume der Zahnarztpraxis Worsch in Dresden Laubegast" 
                 className="w-full h-auto"
               />
             </div>

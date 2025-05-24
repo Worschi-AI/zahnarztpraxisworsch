@@ -48,9 +48,9 @@ const TestimonialsSection = () => {
       <section className="py-20 bg-dental-blue text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="mb-4">Was unsere Patienten in Dresden sagen</h2>
+            <h2 className="mb-4">Das sagen unsere jungen & anspruchsvollen Patienten</h2>
             <p className="text-lg max-w-2xl mx-auto opacity-90">
-              Erfahren Sie, wie zufriedene Patienten unsere zahnmedizinische Betreuung erlebt haben.
+              Erfahren Sie, wie zufriedene Patienten unsere zahnmedizinische Betreuung und ästhetischen Behandlungen erlebt haben.
             </p>
           </div>
           

@@ -15,10 +15,9 @@ const FeaturedServices = () => {
     <section className="py-20 bg-dental-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Unsere Premium-Leistungen in Dresden</h2>
+          <h2 className="mb-4 text-dental-blue">Exzellenz in Ästhetik & Funktion – Unsere Premium-Leistungen für Sie</h2>
           <p className="text-lg max-w-2xl mx-auto text-dental-gray">
-            Wir bieten Ihnen hochwertige <strong>zahnmedizinische Leistungen in Dresden</strong> - von 
-            erstklassigen Implantatlösungen über ästhetische Zahnmedizin bis hin zu hochwertigen Zahnersatzlösungen.
+            Entdecken Sie unsere spezialisierten Behandlungen, die modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen verbinden. Wir gestalten Ihr schönstes Lächeln.
           </p>
         </div>
         
@@ -29,23 +28,27 @@ const FeaturedServices = () => {
                 id={service.id}
                 title={service.title}
                 description={
-                  service.id === 'implantologie' 
-                    ? `Fester Zahnersatz für ein natürliches Lächeln und höchste Lebensqualität. Dank modernster 3D-Planung und hochwertiger Implantate sind Sie bei uns in Dresden in besten Händen.` 
-                    : service.id === 'aesthetische-zahnheilkunde'
-                    ? `Perfekte Ästhetik für strahlend schöne Zähne. Mit Veneers, Bleaching und hochwertigen Füllungen sorgen wir für Ihr traumhaftes Lächeln – schonend und individuell angepasst.`
-                    : `Hochwertige Kronen, Brücken und Prothesen für perfekte Funktion und natürliche Ästhetik in Dresden. Wir setzen auf modernste Materialien und präzise Anpassung.`
+                  service.id === 'aesthetische-zahnheilkunde'
+                    ? `Von Veneers über professionelles Bleaching bis hin zu unsichtbaren Zahnkorrekturen – wir bieten Ihnen maßgeschneiderte Lösungen für ein makelloses Lächeln, das Ihre natürliche Schönheit unterstreicht. Erfahren Sie mehr über die Möglichkeiten der modernen Zahnästhetik in unserer Praxis in Dresden Laubegast.`
+                    : service.id === 'implantologie'
+                    ? `Verlorene Zähne? Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr Lächeln und Ihre Lebensqualität zurück. Festsitzender Zahnersatz, der sich anfühlt und aussieht wie Ihre eigenen Zähne – eine Investition in Ihre Zukunft. Ihr Spezialist für Implantologie in Dresden.`
+                    : `Perfektion bis ins Detail. Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen individuellen Zahnersatz aus besten Materialien für natürliche Ästhetik und dauerhafte Funktion. Entdecken Sie die Qualität unserer Zahntechnik.`
                 }
                 imageUrl={
-                  service.id === 'implantologie' 
-                    ? "https://images.unsplash.com/photo-1601986413153-05c2466c26e4?q=80&w=1770&auto=format&fit=crop" 
-                    : service.id === 'aesthetische-zahnheilkunde'
+                  service.id === 'aesthetische-zahnheilkunde'
                     ? "https://images.unsplash.com/photo-1581585095152-9f21db44503c?q=80&w=1770&auto=format&fit=crop"
+                    : service.id === 'implantologie' 
+                    ? "https://images.unsplash.com/photo-1601986413153-05c2466c26e4?q=80&w=1770&auto=format&fit=crop" 
                     : "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop"
                 }
               />
               <div className="mt-4 text-center">
                 <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
-                  <Link to={`/services/${service.id}`}>Details ansehen</Link>
+                  <Link to={`/services/${service.id}`}>
+                    {service.id === 'aesthetische-zahnheilkunde' ? 'Mehr zu Ästhetik' : 
+                     service.id === 'implantologie' ? 'Mehr zu Implantaten' :
+                     'Mehr zu Zahnersatz'}
+                  </Link>
                 </Button>
               </div>
             </div>

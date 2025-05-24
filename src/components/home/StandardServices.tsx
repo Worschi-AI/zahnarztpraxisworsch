@@ -9,9 +9,9 @@ const StandardServices = () => {
     <section className="py-20 bg-dental-beige" id="standard-services">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Weitere Zahnmedizinische Leistungen in Dresden</h2>
+          <h2 className="mb-4 text-dental-blue">Umfassende Zahnmedizin für Ihre Gesundheit in Dresden</h2>
           <p className="text-lg text-dental-gray">
-            Wir bieten Ihnen das gesamte Spektrum der modernen <strong>Zahnheilkunde in Dresden</strong> unter einem Dach.
+            Neben unseren ästhetischen Spezialisierungen bieten wir Ihnen selbstverständlich das gesamte Spektrum moderner Zahnheilkunde für Ihre langfristige Mundgesundheit.
           </p>
         </div>
         
@@ -23,12 +23,12 @@ const StandardServices = () => {
               <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
                 <h3 className="font-semibold text-dental-blue mb-2">{service.title}</h3>
                 <p className="text-dental-gray text-sm mb-4">
-                  {service.id === 'parodontologie' ? 'Effektive Behandlung von Zahnfleischerkrankungen für langfristige Mundgesundheit.' :
-                   service.id === 'kinderzahnheilkunde' ? 'Einfühlsame und altersgerechte Zahnbehandlung für Ihre Kleinen in entspannter Atmosphäre.' :
-                   service.id === 'endodontie' ? 'Schmerzfreie Wurzelbehandlungen mit modernster Technik zum Erhalt Ihrer natürlichen Zähne.' :
-                   service.id === 'funktionstherapie' ? 'Wirksame Behandlung von CMD und Kiefergelenkbeschwerden für schmerzfreies Wohlbefinden.' :
-                   service.id === 'prophylaxe' ? 'Professionelle Zahnreinigung und umfassende Vorsorge für langfristig gesunde Zähne.' :
-                   'Schonende Entfernung nicht erhaltungswürdiger Zähne und sichere Weisheitszahnentfernung.'}
+                  {service.id === 'parodontologie' ? 'Effektive Behandlung von Zahnfleischerkrankungen für langfristige Mundgesundheit und ein gesundes Fundament für Ihr Lächeln.' :
+                   service.id === 'kinderzahnheilkunde' ? 'Einfühlsame und altersgerechte Zahnbehandlung für Ihre Kleinen in entspannter Atmosphäre – der Grundstein für lebenslange Zahngesundheit.' :
+                   service.id === 'endodontie' ? 'Schmerzfreie Wurzelbehandlungen mit modernster Technik zum Erhalt Ihrer natürlichen Zähne und eines strahlenden Lächelns.' :
+                   service.id === 'funktionstherapie' ? 'Wirksame Behandlung von CMD und Kiefergelenkbeschwerden für schmerzfreies Wohlbefinden und harmonische Gesichtszüge.' :
+                   service.id === 'prophylaxe' ? 'Professionelle Zahnreinigung für strahlend weiße Zähne und umfassenden Schutz – die Basis für dauerhafte Zahngesundheit.' :
+                   'Schonende Entfernung nicht erhaltungswürdiger Zähne und sichere Weisheitszahnentfernung mit modernsten Verfahren.'}
                 </p>
                 <div className="mt-auto">
                   <Link to={`/services/${service.id}`} className="text-dental-turquoise hover:text-dental-blue font-medium">
