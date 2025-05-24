@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,13 +34,6 @@
     --ring: 215 20.2% 65.1%;
  
     --radius: 0.5rem;
-    
-    /* Dental brand colors with improved contrast ratios */
-    --dental-blue: #2271b9;
-    --dental-turquoise: #41b6e6;
-    --dental-beige: #f5f2ed;
-    --dental-gray: #424242; /* Improved contrast from #565656 */
-    --dental-white: #ffffff;
   }
  
   .dark {
@@ -81,44 +73,32 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
     font-family: 'Poppins', sans-serif;
   }
-  
-  /* Improved heading hierarchy with consistent Poppins usage and better spacing */
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-dental-blue leading-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-sans;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 1rem;
   }
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-dental-blue leading-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold font-sans;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.75rem;
   }
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl font-medium text-dental-blue leading-tight;
+    @apply text-xl md:text-2xl lg:text-3xl font-medium font-sans;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.5rem;
-  }
-  h4 {
-    @apply text-lg md:text-xl font-medium text-dental-blue leading-tight;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.5rem;
-  }
-  h5 {
-    @apply text-base md:text-lg font-medium text-dental-blue leading-tight;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.25rem;
-  }
-  h6 {
-    @apply text-sm md:text-base font-medium text-dental-blue leading-tight;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.25rem;
   }
 }
 
-/* Dental brand color utilities with improved accessibility */
+/* Custom colors for dental website */
+:root {
+  --dental-blue: #2271b9;
+  --dental-turquoise: #41b6e6;
+  --dental-beige: #f5f2ed;
+  --dental-gray: #565656;
+  --dental-white: #ffffff;
+}
+
 .text-dental-blue {
   color: var(--dental-blue);
 }
@@ -145,16 +125,6 @@
 
 .bg-dental-white {
   background-color: var(--dental-white);
-}
-
-/* High contrast combinations for better accessibility */
-.bg-dental-blue .text-white,
-.bg-dental-turquoise .text-white {
-  color: #ffffff;
-}
-
-.bg-dental-beige .text-dental-gray {
-  color: var(--dental-gray);
 }
 
 /* Animation classes */
@@ -194,7 +164,7 @@
   transform: scale(1.03);
 }
 
-/* Wobble animation */
+/* New wobble animation */
 @keyframes wobble {
   0% { transform: translateX(0) rotate(0); }
   15% { transform: translateX(-5px) rotate(-5deg); }

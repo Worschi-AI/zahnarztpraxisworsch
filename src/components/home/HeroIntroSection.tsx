@@ -10,7 +10,7 @@ const HeroIntroSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6">Willkommen in unserer Praxis in Dresden</h2>
+            <h2 className="mb-6 text-dental-blue">Willkommen in unserer Praxis in Dresden</h2>
             <p className="text-lg mb-6 text-dental-gray">
               In unserer modernen <strong>Zahnarztpraxis in Dresden</strong> steht Ihr Wohlbefinden an erster Stelle. Mit einem erfahrenen Team, 
               modernsten Technologien und einem ganzheitlichen Behandlungsansatz sorgen wir für Ihre Zahngesundheit 
