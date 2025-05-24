@@ -8,6 +8,7 @@ interface DoctolibSchema {
   description: string;
   url: string;
   telephone: string;
+  email?: string;
   address: {
     "@type": string;
     streetAddress: string;
@@ -26,6 +27,11 @@ interface DoctolibSchema {
     opens: string;
     closes: string;
   }>;
+  areaServed?: {
+    "@type": string;
+    name: string;
+  };
+  medicalSpecialty?: string[];
 }
 
 const AppointmentSchemaData: React.FC = () => {
