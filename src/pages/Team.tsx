@@ -84,16 +84,16 @@ const TeamPage = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Unser Zahnarzt-Team in Dresden | Zahnärzte & Experten | Praxis Worsch</title>
+        <title>Unser Team | Zahnärzte & Experten für Ästhetik - Praxis Worsch Dresden</title>
         <meta 
           name="description" 
-          content="Lernen Sie das erfahrene Zahnarzt-Team der Praxis Worsch in Dresden kennen! Unsere Zahnärzte und Fachkräfte freuen sich darauf, Sie persönlich zu betreuen."
+          content="Lernen Sie das engagierte Team der Zahnarztpraxis Worsch in Dresden Laubegast kennen. Spezialisierte Zahnärzte und ein freundliches Team erwarten Sie."
         />
         <link rel="canonical" href={`${baseUrl}/team`} />
         
         {/* Open Graph tags */}
-        <meta property="og:title" content="Unser Zahnarzt-Team in Dresden | Zahnärzte & Experten | Praxis Worsch" />
-        <meta property="og:description" content="Lernen Sie das erfahrene Zahnarzt-Team der Praxis Worsch in Dresden kennen! Unsere Zahnärzte und Fachkräfte freuen sich darauf, Sie persönlich zu betreuen." />
+        <meta property="og:title" content="Unser Team | Zahnärzte & Experten für Ästhetik - Praxis Worsch Dresden" />
+        <meta property="og:description" content="Lernen Sie das engagierte Team der Zahnarztpraxis Worsch in Dresden Laubegast kennen. Spezialisierte Zahnärzte und ein freundliches Team erwarten Sie." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${baseUrl}/team`} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop" />
@@ -107,8 +107,8 @@ const TeamPage = () => {
       
       {/* Hero Section */}
       <HeroSection 
-        title="Lernen Sie uns kennen" 
-        subtitle="Lernen Sie unsere Zahnärzte und unser Praxisteam kennen" 
+        title="Ihr Lächeln in besten Händen: Unser Team in Dresden Laubegast" 
+        subtitle="Kompetenz, Einfühlungsvermögen und die Leidenschaft für perfekte Ergebnisse – das zeichnet unsere Zahnärzte und Mitarbeiter aus" 
         backgroundImage="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop"
       />
 
@@ -116,12 +116,13 @@ const TeamPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Ihr kompetentes Praxisteam</h2>
+            <h2 className="mb-6 text-dental-blue">Experten für Ihre Zahngesundheit und Ästhetik in Dresden</h2>
             <p className="text-lg text-dental-gray">
-              In unserer Zahnarztpraxis in Dresden erwartet Sie ein engagiertes Team aus erfahrenen Zahnärzten und qualifizierten 
-              Fachkräften. Gemeinsam setzen wir uns für Ihre Zahngesundheit und Ihr Wohlbefinden ein. Wir legen 
-              großen Wert auf kontinuierliche Fortbildung, um Ihnen stets die beste Versorgung nach aktuellen 
-              wissenschaftlichen Standards zu bieten.
+              In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> erwartet Sie ein hochqualifiziertes und erfahrenes Team, 
+              das sich mit Leidenschaft Ihrer Zahngesundheit und insbesondere Ihren ästhetischen Wünschen widmet. Wir legen größten 
+              Wert auf eine persönliche Betreuung, eine angenehme Atmosphäre und Behandlungsergebnisse, die Sie begeistern werden. 
+              Kontinuierliche Fortbildungen in allen Bereichen der modernen Zahnmedizin, insbesondere der ästhetischen Zahnheilkunde 
+              und Implantologie, sind für uns selbstverständlich.
             </p>
           </div>
           
@@ -148,10 +149,10 @@ const TeamPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12 animate-on-scroll">
-              <h2 className="mb-6 text-dental-blue">Unsere Teamwerte</h2>
+              <h2 className="mb-6 text-dental-blue">Was uns als Team in Dresden auszeichnet</h2>
               <p className="text-lg text-dental-gray">
-                Als Team verbinden uns gemeinsame Werte, die unsere tägliche Arbeit prägen und die Grundlage 
-                für unseren Umgang mit Patienten bilden.
+                Diese Werte prägen unsere tägliche Arbeit und bilden die Grundlage für Ihre optimale Betreuung 
+                in der Zahnarztpraxis Worsch.
               </p>
             </div>
             
@@ -161,9 +162,9 @@ const TeamPage = () => {
                   <Heart className="text-dental-turquoise" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Einfühlungsvermögen</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Leidenschaft für Ästhetik</h3>
                   <p className="text-dental-gray">
-                    Wir nehmen Ihre Anliegen und Ängste ernst und gehen individuell auf Ihre Bedürfnisse ein.
+                    Wir lieben es, perfekte Lächeln zu gestalten und Ihre individuellen Wünsche zu verwirklichen.
                   </p>
                 </div>
               </div>
@@ -173,9 +174,9 @@ const TeamPage = () => {
                   <Award className="text-dental-turquoise" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Fachkompetenz</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Höchste Präzision</h3>
                   <p className="text-dental-gray">
-                    Regelmäßige Fortbildungen gewährleisten, dass wir stets auf dem neuesten wissenschaftlichen Stand sind.
+                    Dank moderner Technik und Know-how erreichen wir präzise und langlebige Ergebnisse.
                   </p>
                 </div>
               </div>
@@ -185,9 +186,9 @@ const TeamPage = () => {
                   <Users className="text-dental-turquoise" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Vertrauen</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Individuelle Betreuung</h3>
                   <p className="text-dental-gray">
-                    Eine offene und ehrliche Kommunikation ist die Basis für eine vertrauensvolle Zusammenarbeit.
+                    Ihre Wünsche sind unser Maßstab. Wir entwickeln individuelle Behandlungskonzepte für Sie.
                   </p>
                 </div>
               </div>
@@ -197,11 +198,21 @@ const TeamPage = () => {
                   <Stethoscope className="text-dental-turquoise" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Qualität</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Kontinuierliche Innovation</h3>
                   <p className="text-dental-gray">
-                    Wir arbeiten mit hochwertigsten Materialien und modernsten Techniken für langlebige Ergebnisse.
+                    Wir sind immer am Puls der Zeit und bilden uns kontinuierlich in modernsten Verfahren fort.
                   </p>
                 </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll mt-6" style={{ animationDelay: "400ms" }}>
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Wohlfühlatmosphäre</h3>
+                <p className="text-dental-gray">
+                  Damit Sie entspannt zu uns kommen können, schaffen wir eine angenehme und moderne Atmosphäre 
+                  in unserer Praxis in Dresden Laubegast.
+                </p>
               </div>
             </div>
           </div>
@@ -212,10 +223,10 @@ const TeamPage = () => {
       <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto animate-on-scroll">
-            <h2 className="mb-4">Lernen Sie uns persönlich kennen</h2>
+            <h2 className="mb-4">Lernen Sie uns persönlich kennen und lassen Sie sich beraten!</h2>
             <p className="text-lg mb-8">
-              Vereinbaren Sie einen Termin für ein erstes Kennenlerngespräch oder eine Beratung 
-              in unserer Praxis. Wir freuen uns auf Sie!
+              Das Team der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> freut sich darauf, Sie individuell zu betreuen 
+              und Ihnen die besten Lösungen für Ihre Zahngesundheit und Ästhetik anzubieten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
