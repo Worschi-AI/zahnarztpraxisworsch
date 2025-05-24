@@ -14,19 +14,21 @@ import useScrollAnimation from '@/components/appointment/ScrollAnimation';
 const AppointmentPage = () => {
   const baseUrl = "https://zahnarztpraxis-worsch.de";
 
-  // Define schema for structured data
+  // Define schema for structured data with real practice data
   const doctolibSchema: DoctolibSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Zahnarztpraxis Worsch Dresden",
-    "description": "Zahnarztpraxis in Dresden mit Terminvereinbarung",
+    "description": "Zahnarztpraxis in Dresden mit Online-Terminvereinbarung über Doctolib. Spezialisiert auf Implantologie, ästhetische Zahnheilkunde und moderne Zahnmedizin.",
     "url": "https://zahnarztpraxis-worsch.de/appointment",
     "telephone": "+4935125227099",
+    "email": "info@zahnarztpraxis-worsch.de",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Österreicher Str. 38",
       "addressLocality": "Dresden",
       "postalCode": "01279",
+      "addressRegion": "Sachsen",
       "addressCountry": "DE"
     },
     "geo": {
@@ -43,13 +45,37 @@ const AppointmentPage = () => {
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "dayOfWeek": ["Tuesday"],
+        "opens": "08:00",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday"],
+        "opens": "14:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday"],
         "opens": "07:30",
         "closes": "12:00"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "dayOfWeek": ["Wednesday"],
+        "opens": "14:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday"],
+        "opens": "07:30",
+        "closes": "12:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday"],
         "opens": "14:00",
         "closes": "18:00"
       },
@@ -59,6 +85,17 @@ const AppointmentPage = () => {
         "opens": "07:30",
         "closes": "13:00"
       }
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Dresden"
+    },
+    "medicalSpecialty": [
+      "Implantologie",
+      "Ästhetische Zahnheilkunde",
+      "Zahnerhaltung", 
+      "Prophylaxe",
+      "Kinderzahnheilkunde"
     ]
   };
 

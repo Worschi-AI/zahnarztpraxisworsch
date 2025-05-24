@@ -13,6 +13,43 @@ import { Stethoscope, Users, Clock, Award, Heart } from 'lucide-react';
 const TeamPage = () => {
   const baseUrl = "https://zahnarztpraxis-worsch.de";
 
+  // Create structured data for the team
+  const teamStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Zahnarztpraxis Worsch Dresden",
+    "url": "https://zahnarztpraxis-worsch.de/team",
+    "description": "Das erfahrene Team der Zahnarztpraxis Worsch in Dresden: Spezialisierte Zahnärzte und qualifizierte Fachkräfte für Ihre Zahngesundheit.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Österreicher Str. 38",
+      "addressLocality": "Dresden",
+      "postalCode": "01279",
+      "addressRegion": "Sachsen",
+      "addressCountry": "DE"
+    },
+    "employee": team.map(member => ({
+      "@type": member.role.includes("Zahnarzt") ? "Dentist" : "Person",
+      "name": member.name,
+      "jobTitle": member.role,
+      "description": member.bio,
+      "image": member.imageUrl,
+      "worksFor": {
+        "@type": "MedicalOrganization",
+        "name": "Zahnarztpraxis Worsch Dresden"
+      },
+      ...(member.specializations && member.specializations.length > 0 && {
+        "knowsAbout": member.specializations
+      }),
+      ...(member.education && member.education.length > 0 && {
+        "hasCredential": member.education.map(edu => ({
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": edu
+        }))
+      })
+    }))
+  };
+
   // Animation on scroll effect with proper cleanup
   useEffect(() => {
     // Define the IntersectionObserver
@@ -60,6 +97,10 @@ const TeamPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${baseUrl}/team`} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop" />
+
+        <script type="application/ld+json">
+          {JSON.stringify(teamStructuredData)}
+        </script>
       </Helmet>
       
       <Navbar />

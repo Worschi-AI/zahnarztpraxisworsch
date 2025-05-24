@@ -90,36 +90,128 @@ const ServiceDetail = () => {
     return service.imageUrl;
   };
 
-  // Erstellen eines strukturierten Daten-Schemas für den Zahnersatz
+  // Erstellen von strukturierten Daten für alle wichtigen Leistungen
   const getStructuredData = () => {
+    const baseProvider = {
+      "@type": "Dentist",
+      "name": "Zahnarztpraxis Worsch Dresden",
+      "url": "https://zahnarztpraxis-worsch.de",
+      "telephone": "+4935125227099",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Österreicher Str. 38",
+        "addressLocality": "Dresden",
+        "postalCode": "01279",
+        "addressRegion": "Sachsen",
+        "addressCountry": "DE"
+      }
+    };
+
+    if (id === 'implantologie') {
+      return {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Zahnimplantate in Dresden",
+        "procedureType": "Implantologie",
+        "description": "Hochwertige Zahnimplantate für feste Zähne und natürliches Lächeln. Moderne Implantologie in der Zahnarztpraxis Worsch Dresden mit jahrelanger Erfahrung und neuester Technik.",
+        "howPerformed": "Schonendes Einsetzen von Titanimplantaten mit digitaler Planung und modernster Technik. Vollnarkose oder lokale Betäubung möglich.",
+        "preparation": "Umfassende Diagnostik mit 3D-Röntgen, individuelle Beratung und detaillierte Behandlungsplanung",
+        "followup": "Regelmäßige Kontrollen und professionelle Implantatpflege für optimale Langzeitergebnisse",
+        "medicineSystem": "Zahnmedizin",
+        "relevantSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Implantologie"
+        },
+        "provider": baseProvider
+      };
+    }
+
+    if (id === 'aesthetische-zahnheilkunde') {
+      return {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure", 
+        "name": "Ästhetische Zahnheilkunde in Dresden",
+        "procedureType": "Ästhetische Zahnmedizin",
+        "description": "Ästhetische Zahnheilkunde für Ihr perfektes Lächeln: Veneers, Bleaching, Smile Makeover und kosmetische Zahnkorrekturen in Dresden.",
+        "howPerformed": "Moderne Verfahren wie Keramik-Veneers, professionelles Bleaching und digitale Lächeln-Planung für natürlich schöne Ergebnisse",
+        "preparation": "Digitale Lächeln-Analyse, Farbbestimmung und individuelle Behandlungsplanung",
+        "followup": "Nachkontrollen und Pflegeempfehlungen für langanhaltende ästhetische Ergebnisse",
+        "medicineSystem": "Zahnmedizin",
+        "relevantSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Ästhetische Zahnheilkunde"
+        },
+        "provider": baseProvider
+      };
+    }
+
     if (id === 'zahnersatz') {
       return {
         "@context": "https://schema.org",
         "@type": "MedicalProcedure",
         "name": "Zahnersatz in Dresden",
-        "procedureType": "Zahnmedizinische Behandlung",
-        "description": "Hochwertiger Zahnersatz wie Kronen, Brücken und Prothesen in der Zahnarztpraxis Worsch Dresden",
-        "howPerformed": "Moderne Verfahren wie digitale Abformung mit Intraoralscanner und CAD/CAM-Technologie",
+        "procedureType": "Prothetische Zahnmedizin",
+        "description": "Hochwertiger Zahnersatz wie Kronen, Brücken und Prothesen in der Zahnarztpraxis Worsch Dresden für natürliche Ästhetik und optimale Funktion",
+        "howPerformed": "Moderne Verfahren wie digitale Abformung mit Intraoralscanner und CAD/CAM-Technologie für präzisen und ästhetischen Zahnersatz",
         "preparation": "Ausführliche Beratung, individuelle Planung und schonende Vorbereitung der Zähne",
         "followup": "Regelmäßige Kontrollen und professionelle Reinigung für optimale Haltbarkeit",
         "medicineSystem": "Zahnmedizin",
         "relevantSpecialty": {
           "@type": "MedicalSpecialty",
-          "name": "Zahnheilkunde"
+          "name": "Prothetische Zahnheilkunde"
         },
-        "provider": {
-          "@type": "Dentist",
-          "name": "Zahnarztpraxis Worsch Dresden",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Dresden",
-            "addressRegion": "Sachsen",
-            "addressCountry": "DE"
-          }
-        }
+        "provider": baseProvider
       };
     }
-    return null;
+
+    if (id === 'prophylaxe') {
+      return {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Prophylaxe und professionelle Zahnreinigung in Dresden",
+        "procedureType": "Präventive Zahnmedizin",
+        "description": "Professionelle Zahnreinigung und Prophylaxe für gesunde Zähne und Zahnfleisch. Vorbeugende Zahnmedizin in der Zahnarztpraxis Worsch Dresden.",
+        "howPerformed": "Gründliche Entfernung von Plaque und Zahnstein, Politur und Fluoridierung für optimalen Schutz",
+        "preparation": "Untersuchung von Zähnen und Zahnfleisch, individuelle Risikoanalyse",
+        "followup": "Regelmäßige Prophylaxe-Termine und individuelle Mundhygiene-Beratung",
+        "medicineSystem": "Zahnmedizin",
+        "relevantSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Präventive Zahnmedizin"
+        },
+        "provider": baseProvider
+      };
+    }
+
+    if (id === 'kinderzahnheilkunde') {
+      return {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Kinderzahnheilkunde in Dresden",
+        "procedureType": "Kinderzahnmedizin",
+        "description": "Einfühlsame Zahnbehandlung für Kinder in Dresden. Kinderzahnheilkunde mit viel Geduld und altersgerechter Betreuung in der Zahnarztpraxis Worsch.",
+        "howPerformed": "Kindgerechte Behandlungsmethoden, spielerischer Umgang und einfühlsame Betreuung für angstfreie Zahnarztbesuche",
+        "preparation": "Spielerisches Kennenlernen, altersgerechte Aufklärung und vertrauensvolle Atmosphäre",
+        "followup": "Regelmäßige Kontrollen und Aufbau einer positiven Beziehung zur Zahngesundheit",
+        "medicineSystem": "Zahnmedizin",
+        "relevantSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Kinderzahnheilkunde"
+        },
+        "provider": baseProvider
+      };
+    }
+
+    // Fallback für andere Services
+    return {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": service.title,
+      "procedureType": "Zahnmedizinische Behandlung",
+      "description": service.shortDescription,
+      "medicineSystem": "Zahnmedizin",
+      "provider": baseProvider
+    };
   };
 
   // Check if the current page is Implantologie, Ästhetische Zahnheilkunde or Zahnersatz
