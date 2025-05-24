@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dental: {
-					'blue': '#4A90E2',
-					'turquoise': '#50C6B4',
-					'beige': '#F5F1E9',
-					'gray': '#646970',
-					'white': '#FFFFFF',
+					'blue': '#2271b9',
+					'turquoise': '#41b6e6',
+					'beige': '#f5f2ed',
+					'gray': '#424242', // Improved contrast
+					'white': '#ffffff',
 				},
 			},
 			borderRadius: {
