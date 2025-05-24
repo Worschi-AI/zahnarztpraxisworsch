@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import ServiceMetaData from '@/components/services/ServiceMetaData';
@@ -28,7 +29,6 @@ const AppointmentPage = () => {
       "streetAddress": "Österreicher Str. 38",
       "addressLocality": "Dresden",
       "postalCode": "01279",
-      "addressRegion": "Sachsen",
       "addressCountry": "DE"
     },
     "geo": {
@@ -104,14 +104,23 @@ const AppointmentPage = () => {
 
   return (
     <div className="min-h-screen">
-      <ServiceMetaData 
-        title="Termin vereinbaren | Zahnarztpraxis Worsch Dresden"
-        description="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach online über Doctolib oder telefonisch erreichbar unter 0351 2522709."
-        canonicalUrl={`${baseUrl}/appointment`}
-        ogUrl={`${baseUrl}/appointment`}
-        ogImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1770&auto=format&fit=crop"
-        schema={doctolibSchema}
-      />
+      <Helmet>
+        <title>Termin vereinbaren | Zahnarztpraxis Worsch Dresden</title>
+        <meta name="description" content="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach online über Doctolib oder telefonisch erreichbar unter 0351 2522709." />
+        <link rel="canonical" href={`${baseUrl}/appointment`} />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Termin vereinbaren | Zahnarztpraxis Worsch Dresden" />
+        <meta property="og:description" content="Vereinbaren Sie einen Zahnarzttermin bei der Praxis Worsch in Dresden. Schnell und einfach online über Doctolib oder telefonisch erreichbar unter 0351 2522709." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${baseUrl}/appointment`} />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1770&auto=format&fit=crop" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(doctolibSchema)}
+        </script>
+      </Helmet>
       
       <Navbar />
       
