@@ -128,7 +128,7 @@ const AppointmentPage = () => {
 
       <BookingOptions />
 
-      <section className="py-20 bg-white">
+      <section className="pt-8 pb-20 bg-white">
         <div className="container mx-auto px-4">
           <BookingInstructions />
         </div>
