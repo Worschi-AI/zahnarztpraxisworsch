@@ -1,15 +1,12 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Check, Users, CalendarClock, Phone } from 'lucide-react';
 import PhoneButton from '@/components/PhoneButton';
-
 const BookingInstructions = () => {
-  return (
-    <div className="max-w-4xl mx-auto animate-on-scroll">
+  return <div className="max-w-4xl mx-auto animate-on-scroll">
       <div className="mb-12">
-        <h3 className="text-2xl font-medium mb-6 text-center text-dental-blue">Schritt für Schritt zu Ihrem Termin</h3>
-        <h4 className="text-xl font-medium mb-6 text-center text-dental-blue">Online über Doctolib</h4>
+        
+        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <Card className="hover-scale">
             <CardHeader>
@@ -81,12 +78,7 @@ const BookingInstructions = () => {
             <p className="text-dental-gray mb-8">
               Sie bevorzugen den persönlichen Kontakt oder haben spezielle Fragen vorab? Rufen Sie uns gerne während unserer Sprechzeiten unter <strong>0351 2522709</strong> an. Unser freundliches Praxisteam in Dresden Laubegast hilft Ihnen gerne weiter und findet gemeinsam mit Ihnen den passenden Termin.
             </p>
-            <PhoneButton 
-              size="lg" 
-              className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105 text-white"
-              buttonText="0351 2522709"
-              iconPosition="left"
-            >
+            <PhoneButton size="lg" className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105 text-white" buttonText="0351 2522709" iconPosition="left">
               <Calendar className="mr-2 h-5 w-5" />
             </PhoneButton>
           </div>
@@ -94,7 +86,7 @@ const BookingInstructions = () => {
       </div>
       
       <div>
-        <h4 className="text-xl font-medium mb-6 text-center text-dental-blue">Telefonisch</h4>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="hover-scale">
             <CardHeader>
@@ -142,8 +134,6 @@ const BookingInstructions = () => {
           </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default BookingInstructions;
