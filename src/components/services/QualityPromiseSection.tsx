@@ -10,8 +10,8 @@ const QualityPromiseSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
           <div className="lg:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Qualität, der Sie vertrauen können – Ihr Zahnarzt in Dresden</h2>
-            <p className="text-lg mb-8 text-dental-gray leading-relaxed">
+            <h2 className="text-hierarchy-2 font-semibold mb-6 text-dental-blue">Qualität, der Sie vertrauen können – Ihr Zahnarzt in Dresden</h2>
+            <p className="text-lg mb-8 text-dental-gray leading-relaxed font-normal">
               Unsere Behandlungsqualität orientiert sich an den höchsten Standards moderner Zahnmedizin. Vertrauen Sie auf unser Engagement für Ihr perfektes Lächeln.
             </p>
             
@@ -20,7 +20,7 @@ const QualityPromiseSection = () => {
                 <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-semibold text-dental-blue mb-1">Moderne Technologien</h3>
-                  <p className="text-dental-gray">Digitale Diagnostik, 3D-Planung und schonende Verfahren</p>
+                  <p className="text-dental-gray font-normal">Digitale Diagnostik, 3D-Planung und schonende Verfahren</p>
                 </div>
               </div>
               
@@ -28,7 +28,7 @@ const QualityPromiseSection = () => {
                 <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-semibold text-dental-blue mb-1">Höchste Ästhetik</h3>
-                  <p className="text-dental-gray">Individuelle Farbanpassung und natürliche Ergebnisse</p>
+                  <p className="text-dental-gray font-normal">Individuelle Farbanpassung und natürliche Ergebnisse</p>
                 </div>
               </div>
               
@@ -36,7 +36,7 @@ const QualityPromiseSection = () => {
                 <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-semibold text-dental-blue mb-1">Individuelle Beratung</h3>
-                  <p className="text-dental-gray">Wir entwickeln mit Ihnen Ihren persönlichen Behandlungsplan</p>
+                  <p className="text-dental-gray font-normal">Wir entwickeln mit Ihnen Ihren persönlichen Behandlungsplan</p>
                 </div>
               </div>
               
@@ -44,12 +44,12 @@ const QualityPromiseSection = () => {
                 <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-semibold text-dental-blue mb-1">Erfahrenes Team</h3>
-                  <p className="text-dental-gray">Spezialisten für ästhetische Zahnmedizin und Implantologie</p>
+                  <p className="text-dental-gray font-normal">Spezialisten für ästhetische Zahnmedizin und Implantologie</p>
                 </div>
               </div>
             </div>
             
-            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300">
+            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300 font-medium">
               <Link to="/team">Lernen Sie unser Team kennen</Link>
             </Button>
           </div>
