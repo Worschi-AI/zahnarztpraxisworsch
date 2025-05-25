@@ -87,7 +87,7 @@ const BookingInstructions = () => {
         </div>
       </div>
       
-      <div>
+      <div className="mt-8">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="hover-scale">
