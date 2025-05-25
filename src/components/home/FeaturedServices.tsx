@@ -42,6 +42,15 @@ const FeaturedServices = () => {
                     : "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop"
                 }
               />
+              <div className="mt-4 text-center">
+                <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
+                  <Link to={`/services/${service.id}`}>
+                    {service.id === 'aesthetische-zahnheilkunde' ? 'Mehr zu Ästhetik' : 
+                     service.id === 'implantologie' ? 'Mehr zu Implantaten' :
+                     'Mehr zu Zahnersatz'}
+                  </Link>
+                </Button>
+              </div>
             </div>
           ))}
         </div>
