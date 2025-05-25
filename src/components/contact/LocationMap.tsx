@@ -4,9 +4,8 @@ import { Button } from '@/components/ui/button';
 import { MapPin, Car, Train } from 'lucide-react';
 
 const LocationMap = () => {
-  // Updated Google Maps embed URL for the specific practice location
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1254.7381495263785!2d13.8338391!3d51.0258232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709c7d96d21fce9%3A0xe0acd2eb962737a1!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sde!2sde!4v1747662579748!5m2!1sde!2sde";
-  const googleMapsShareLink = "https://www.google.com/maps/place/Zahnarztpraxis+Dipl.med+dent.+Ute+Worsch+%26+Peik+Worsch/@51.0258232,13.8338391,536m/data=!3m3!1e3!4b1!5s0x4709c7d912ce70c1:0xa0772b1bd9b757d8!4m6!3m5!1s0x4709c7d96d21fce9:0xe0acd2eb962737a1!8m2!3d51.0258232!4d13.836414!16s%2Fg%2F1tgcws99?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D";
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.476298522233!2d13.836413999999998!3d51.0258232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4709c7d96d21fce9%3A0xe0acd2eb962737a1!2sZahnarztpraxis%20Dipl.med%20dent.%20Ute%20Worsch%20%26%20Peik%20Worsch!5e0!3m2!1sde!2sde!4v1747662579748!5m2!1sde!2sde";
+  const googleMapsShareLink = "https://maps.app.goo.gl/zYMPy4MjAHRvKtti7";
 
   return (
     <div className="md:w-1/2 animate-on-scroll">
@@ -15,17 +14,17 @@ const LocationMap = () => {
         Unsere Zahnarztpraxis befindet sich verkehrsgünstig gelegen in Dresden Laubegast und ist sowohl mit öffentlichen Verkehrsmitteln als auch mit dem Auto bequem zu erreichen.
       </p>
       
-      {/* Google Maps Widget */}
+      {/* Google Maps Embed */}
       <div className="rounded-lg h-[400px] mb-6 overflow-hidden shadow-md">
         <iframe 
-          src={googleMapsEmbedUrl}
+          src={googleMapsEmbedUrl} 
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
-          title="Zahnarztpraxis Worsch Dresden - Google Maps"
+          title="Zahnarztpraxis Worsch Dresden"
           className="rounded-lg"
         ></iframe>
       </div>
