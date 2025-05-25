@@ -38,7 +38,11 @@ const QualityPromiseSection = () => {
           </div>
           <div className="md:w-1/2 animate-on-scroll">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              {/* Image removed as requested */}
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+                alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
+                className="w-full h-96 object-cover"
+              />
             </div>
           </div>
         </div>
