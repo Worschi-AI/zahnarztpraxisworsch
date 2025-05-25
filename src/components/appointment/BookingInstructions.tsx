@@ -5,9 +5,15 @@ import { Calendar, Check, Users, CalendarClock, Phone } from 'lucide-react';
 import PhoneButton from '@/components/PhoneButton';
 
 const BookingInstructions = () => {
-  return <div className="max-w-4xl mx-auto animate-on-scroll">
-      <div className="mb-8">
-        
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Doctolib Instructions Section */}
+      <div className="mb-12 animate-on-scroll">
+        <div className="mb-8">
+          <h3 className="text-2xl font-medium mb-4 text-dental-blue text-center">
+            So funktioniert die Online-Buchung über Doctolib
+          </h3>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <Card className="hover-scale">
@@ -73,8 +79,8 @@ const BookingInstructions = () => {
       </div>
 
       {/* Phone booking card section */}
-      <div className="mb-8">
-        <div className="bg-dental-beige p-8 rounded-lg shadow-md animate-on-scroll">
+      <div className="mb-12 animate-on-scroll">
+        <div className="bg-dental-beige p-8 rounded-lg shadow-md">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-medium mb-4 text-dental-blue">Persönliche Beratung und Terminfindung am Telefon</h3>
             <p className="text-dental-gray mb-8">
@@ -87,7 +93,13 @@ const BookingInstructions = () => {
         </div>
       </div>
       
-      <div className="mt-8">
+      {/* Phone Instructions Section */}
+      <div className="animate-on-scroll">
+        <div className="mb-8">
+          <h3 className="text-2xl font-medium mb-4 text-dental-blue text-center">
+            So funktioniert die Terminvereinbarung per Telefon
+          </h3>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="hover-scale">
@@ -136,7 +148,8 @@ const BookingInstructions = () => {
           </Card>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default BookingInstructions;
