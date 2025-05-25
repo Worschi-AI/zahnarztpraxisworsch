@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Phone, Clock } from 'lucide-react';
 
@@ -21,10 +20,18 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-lg font-medium mb-1 text-dental-blue">Adresse</h3>
             <p className="text-dental-gray">
-              <strong>Zahnarztpraxis Worsch</strong><br />
-              Österreicher Str. 38<br />
-              01279 Dresden (Laubegast)<br />
-              Deutschland
+              <a 
+                href="https://www.google.com/maps/place/Zahnarztpraxis+Dipl.med+dent.+Ute+Worsch+%26+Peik+Worsch/@51.0258232,13.8338391,536m/data=!3m3!1e3!4b1!5s0x4709c7d912ce70c1:0xa0772b1bd9b757d8!4m6!3m5!1s0x4709c7d96d21fce9:0xe0acd2eb962737a1!8m2!3d51.0258232!4d13.836414!16s%2Fg%2F1tgcws99?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-dental-turquoise hover:underline"
+              >
+                <strong>Zahnarztpraxis Dipl.med dent.<br />
+                Ute Worsch & Peik Worsch</strong><br />
+                Österreicher Str. 38<br />
+                01279 Dresden (Laubegast)<br />
+                Deutschland
+              </a>
             </p>
           </div>
         </div>
