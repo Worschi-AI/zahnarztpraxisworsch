@@ -1,44 +1,67 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const QualityPromiseSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-dental-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 animate-on-scroll">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Text Content */}
+          <div className="lg:w-1/2 animate-on-scroll">
             <h2 className="mb-6 text-dental-blue">Qualität, der Sie vertrauen können – Ihr Zahnarzt in Dresden</h2>
-            <p className="text-lg text-dental-gray mb-8">
+            <p className="text-lg mb-8 text-dental-gray leading-relaxed">
               Unsere Behandlungsqualität orientiert sich an den höchsten Standards moderner Zahnmedizin. Vertrauen Sie auf unser Engagement für Ihr perfektes Lächeln.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray">Moderne Technologien: Digitale Diagnostik, 3D-Planung und schonende Verfahren</span>
+            
+            <div className="space-y-6 mb-8">
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-dental-blue mb-1">Moderne Technologien</h3>
+                  <p className="text-dental-gray">Digitale Diagnostik, 3D-Planung und schonende Verfahren</p>
+                </div>
               </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray">Höchste Ästhetik: Individuelle Farbanpassung und natürliche Ergebnisse</span>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-dental-blue mb-1">Höchste Ästhetik</h3>
+                  <p className="text-dental-gray">Individuelle Farbanpassung und natürliche Ergebnisse</p>
+                </div>
               </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray">Individuelle Beratung: Wir entwickeln mit Ihnen Ihren persönlichen Behandlungsplan</span>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-dental-blue mb-1">Individuelle Beratung</h3>
+                  <p className="text-dental-gray">Wir entwickeln mit Ihnen Ihren persönlichen Behandlungsplan</p>
+                </div>
               </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray">Erfahrenes Team: Spezialisten für ästhetische Zahnmedizin und Implantologie</span>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-dental-turquoise rounded-full mt-3 flex-shrink-0"></div>
+                <div>
+                  <h3 className="font-semibold text-dental-blue mb-1">Erfahrenes Team</h3>
+                  <p className="text-dental-gray">Spezialisten für ästhetische Zahnmedizin und Implantologie</p>
+                </div>
               </div>
             </div>
-            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
+            
+            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300">
               <Link to="/team">Lernen Sie unser Team kennen</Link>
             </Button>
           </div>
-          <div className="md:w-1/2 animate-on-scroll">
+          
+          {/* Image */}
+          <div className="lg:w-1/2 animate-on-scroll">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              {/* Image removed as requested */}
+              <img 
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop" 
+                alt="Modernste Zahnarztpraxis mit fortschrittlicher Technologie in Dresden" 
+                className="w-full h-auto hover-scale transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
