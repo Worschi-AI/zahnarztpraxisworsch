@@ -1,10 +1,12 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Check, Users, CalendarClock, Phone } from 'lucide-react';
 import PhoneButton from '@/components/PhoneButton';
+
 const BookingInstructions = () => {
   return <div className="max-w-4xl mx-auto animate-on-scroll">
-      <div className="mb-12">
+      <div className="mb-8">
         
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -71,7 +73,7 @@ const BookingInstructions = () => {
       </div>
 
       {/* Phone booking card section */}
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="bg-dental-beige p-8 rounded-lg shadow-md animate-on-scroll">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-medium mb-4 text-dental-blue">Persönliche Beratung und Terminfindung am Telefon</h3>
@@ -136,4 +138,5 @@ const BookingInstructions = () => {
       </div>
     </div>;
 };
+
 export default BookingInstructions;
