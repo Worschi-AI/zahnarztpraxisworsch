@@ -65,10 +65,10 @@ const StatisticItem: React.FC<StatisticItemProps> = ({
 
   return (
     <div ref={elementRef} className="text-center text-white">
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+      <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
         {currentValue.toLocaleString()}{suffix}
       </div>
-      <div className="text-lg md:text-xl opacity-90">{label}</div>
+      <div className="text-base md:text-lg opacity-90">{label}</div>
     </div>
   );
 };
@@ -84,7 +84,7 @@ const StatisticsSection = () => {
   return (
     <section className="py-16 bg-dental-blue">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {statistics.map((stat, index) => (
             <StatisticItem
               key={index}
