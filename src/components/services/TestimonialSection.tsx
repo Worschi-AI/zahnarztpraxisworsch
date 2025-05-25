@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { Star } from 'lucide-react';
+
 const TestimonialSection = () => {
   // Structured data for the specific testimonial
   const testimonialStructuredData = {
@@ -65,7 +65,9 @@ const TestimonialSection = () => {
             
             <div className="text-center">
               <Button asChild variant="outline" className="border-dental-blue text-dental-blue hover:bg-dental-blue hover:text-white">
-                <Link to="/about#testimonials">Weitere Erfahrungsberichte</Link>
+                <a href="https://www.google.com/maps/place/Zahnarztpraxis+Dipl.med+dent.+Ute+Worsch+%26+Peik+Worsch/@51.0258232,13.8338391,17z/data=!3m2!4b1!5s0x4709c7d912ce70c1:0xa0772b1bd9b757d8!4m6!3m5!1s0x4709c7d96d21fce9:0xe0acd2eb962737a1!8m2!3d51.0258232!4d13.836414!16s%2Fg%2F1tgcws99?entry=tts&g_ep=EgoyMDI1MDUxMy4xIPu8ASoASAFQAw%3D%3D&skid=46499da1-bc0b-43d4-92ac-f086733c2af9" target="_blank" rel="noopener noreferrer">
+                  Weitere Erfahrungsberichte
+                </a>
               </Button>
             </div>
           </div>
