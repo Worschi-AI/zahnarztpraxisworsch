@@ -8,6 +8,7 @@ import useScrollAnimation from '@/hooks/useScrollAnimation';
 import HeroIntroSection from '@/components/home/HeroIntroSection';
 import PatientReviewTeaser from '@/components/home/PatientReviewTeaser';
 import FeaturedServices from '@/components/home/FeaturedServices';
+import StatisticsSection from '@/components/home/StatisticsSection';
 import TeamPreview from '@/components/home/TeamPreview';
 import QualityPromiseSection from '@/components/services/QualityPromiseSection';
 import StandardServices from '@/components/home/StandardServices';
@@ -53,6 +54,9 @@ const Index = () => {
 
       {/* Premium Services Section */}
       <FeaturedServices />
+
+      {/* Statistics Section */}
+      <StatisticsSection />
 
       {/* Team Teaser */}
       <TeamPreview />

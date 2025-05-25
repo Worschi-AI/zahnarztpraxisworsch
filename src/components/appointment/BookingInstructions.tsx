@@ -2,7 +2,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Check, Users, CalendarClock } from 'lucide-react';
-import StatisticsSection from '@/components/home/StatisticsSection';
 
 const BookingInstructions = () => {
   return (
@@ -71,11 +70,6 @@ const BookingInstructions = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
-
-      {/* Statistics Section eingefügt */}
-      <div className="my-16">
-        <StatisticsSection />
       </div>
       
       <div>
