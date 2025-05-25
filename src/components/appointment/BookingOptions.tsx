@@ -1,7 +1,6 @@
 
 import React from 'react';
-import PhoneButton from '@/components/PhoneButton';
-import { Calendar, CalendarClock } from 'lucide-react';
+import { CalendarClock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
@@ -16,7 +15,7 @@ const BookingOptions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {/* Online-Buchung über Doctolib */}
           <div className="bg-dental-blue p-8 rounded-lg shadow-md animate-on-scroll">
             <div className="text-center mb-6">
@@ -51,24 +50,6 @@ const BookingOptions = () => {
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
-            </div>
-          </div>
-          
-          {/* Telefonische Buchung */}
-          <div className="bg-dental-beige p-8 rounded-lg shadow-md animate-on-scroll">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-medium mb-4 text-dental-blue">Persönliche Beratung und Terminfindung am Telefon</h3>
-              <p className="text-dental-gray mb-8">
-                Sie bevorzugen den persönlichen Kontakt oder haben spezielle Fragen vorab? Rufen Sie uns gerne während unserer Sprechzeiten unter <strong>0351 2522709</strong> an. Unser freundliches Praxisteam in Dresden Laubegast hilft Ihnen gerne weiter und findet gemeinsam mit Ihnen den passenden Termin.
-              </p>
-              <PhoneButton 
-                size="lg" 
-                className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105 text-white"
-                buttonText="0351 2522709"
-                iconPosition="left"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-              </PhoneButton>
             </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, Check, Users, CalendarClock } from 'lucide-react';
+import { Calendar, Check, Users, CalendarClock, Phone } from 'lucide-react';
+import PhoneButton from '@/components/PhoneButton';
 
 const BookingInstructions = () => {
   return (
@@ -69,6 +70,26 @@ const BookingInstructions = () => {
               </CardDescription>
             </CardContent>
           </Card>
+        </div>
+      </div>
+
+      {/* Phone booking card section */}
+      <div className="mb-12">
+        <div className="bg-dental-beige p-8 rounded-lg shadow-md animate-on-scroll">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-medium mb-4 text-dental-blue">Persönliche Beratung und Terminfindung am Telefon</h3>
+            <p className="text-dental-gray mb-8">
+              Sie bevorzugen den persönlichen Kontakt oder haben spezielle Fragen vorab? Rufen Sie uns gerne während unserer Sprechzeiten unter <strong>0351 2522709</strong> an. Unser freundliches Praxisteam in Dresden Laubegast hilft Ihnen gerne weiter und findet gemeinsam mit Ihnen den passenden Termin.
+            </p>
+            <PhoneButton 
+              size="lg" 
+              className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105 text-white"
+              buttonText="0351 2522709"
+              iconPosition="left"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+            </PhoneButton>
+          </div>
         </div>
       </div>
       
