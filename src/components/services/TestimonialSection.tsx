@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Star } from 'lucide-react';
-
 const TestimonialSection = () => {
   // Structured data for the specific testimonial
   const testimonialStructuredData = {
@@ -28,15 +26,13 @@ const TestimonialSection = () => {
       "worstRating": "1"
     },
     "author": {
-      "@type": "Person", 
+      "@type": "Person",
       "name": "Maria S."
     },
     "reviewBody": "Ich bin begeistert von meinen neuen Veneers! Das Ergebnis übertrifft meine Erwartungen und das Team hat mich perfekt beraten. Der Preis war es absolut wert - mein Lächeln sieht nun natürlich schön aus.",
     "datePublished": "2024-01-15"
   };
-
-  return (
-    <>
+  return <>
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(testimonialStructuredData)}
@@ -51,9 +47,7 @@ const TestimonialSection = () => {
             <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
               <div className="flex items-start">
                 <div className="flex-shrink-0 mr-4">
-                  <div className="w-12 h-12 rounded-full bg-dental-turquoise flex items-center justify-center text-white font-bold">
-                    MS
-                  </div>
+                  <div className="w-12 h-12 rounded-full bg-dental-turquoise flex items-center justify-center text-white font-bold">AF</div>
                 </div>
                 <div>
                   <div className="flex items-center mb-2">
@@ -63,11 +57,8 @@ const TestimonialSection = () => {
                     <Star className="h-5 w-5 text-yellow-400 fill-current" />
                     <Star className="h-5 w-5 text-yellow-400 fill-current" />
                   </div>
-                  <p className="italic text-dental-gray mb-2">
-                    "Ich bin begeistert von meinen neuen Veneers! Das Ergebnis übertrifft meine Erwartungen und das Team hat mich perfekt beraten.
-                    Der Preis war es absolut wert - mein Lächeln sieht nun natürlich schön aus."
-                  </p>
-                  <p className="text-sm text-dental-gray">- Maria S., Veneers-Behandlung</p>
+                  <p className="italic text-dental-gray mb-2">&quot;Da mein eigentlicher Zahnarzt im Urlaub war, kam ich mit einem kleinen Notfall in die Praxis zu Dr. Worsch. Ein sehr netter, kompetenter Zahnarzt, man fühlt sich sehr gut aufgehoben und absolut fachmännisch betreut. Vielen Dank an dieser Stelle noch einmal.&quot;</p>
+                  <p className="text-sm text-dental-gray">- Astrid F.</p>
                 </div>
               </div>
             </div>
@@ -80,8 +71,6 @@ const TestimonialSection = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default TestimonialSection;
