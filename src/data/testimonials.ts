@@ -1,4 +1,3 @@
-
 export interface Testimonial {
   id: string;
   quote: string;
@@ -9,20 +8,20 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    quote: "Ich hatte immer Angst vor dem Zahnarzt, aber Dr. Worsch und sein Team haben mich so einfühlsam behandelt, dass ich mich jetzt bei jedem Besuch wohl fühle. Besonders die moderne Ausstattung und die schmerzfreie Behandlung haben mich überzeugt.",
-    author: "Michael K.",
+    quote: "Ein sehr netter und kompetenter Zahnarzt,das Team um ihn herum ist einfach nur Spitze und alle dort wissen was sie tun. Selbst im Notfall wird einem dort schnell geholfen. Ich war Angstpatient bin es seit fasst 3 Jahren aber nicht mehr, mir wurde dort jede Angst genommen und Ich genieße jede Behandlung mittlerweile. Ich hoffe das es so bleibt und ich dort noch lange hingehen kann. Danke weiter so",
+    author: "Sven K.",
     rating: 5
   },
   {
     id: "2",
-    quote: "Die Praxis Worsch ist für mich die erste Adresse, wenn es um Zahngesundheit geht. Die Prophylaxe-Behandlungen sind gründlich, und das Team nimmt sich immer Zeit für eine ausführliche Beratung. Ich bin seit Jahren treuer Patient.",
-    author: "Sandra M.",
+    quote: "Ich bin seit mehreren Jahrzehnten hier in Behandlung und kann ebenfalls nur Gutes berichten. Das Personal ist durch die Bank weg sehr zuvorkommend und immer freundlich, die Praxis sehr gemütlich. Nachdem ich bei meinem vorherigen Zahnarzt sehr große Probleme hatte, fühle ich mich hier nun seit Jahren wunderbar aufgehoben. Danke!",
+    author: "Denise W.",
     rating: 5
   },
   {
     id: "3",
-    quote: "Meine neue Zahnkrone passt perfekt und sieht völlig natürlich aus. Die Beratung war umfassend, und alle meine Fragen wurden geduldig beantwortet. Ich kann die Praxis Worsch uneingeschränkt weiterempfehlen.",
-    author: "Thomas G.",
+    quote: "Dr. Worsch und sein Praxis Team kann ich nur in den höchsten Tönen loben 👍👍👍 Absolut Spitze, fachlich sehr kompetent und einfühlsam! Meine absolute Empfehlung! und herzlichen Dank für jede Behandlung 👍👍👍",
+    author: "Uwe K.",
     rating: 5
   },
   {
