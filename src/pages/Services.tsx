@@ -10,7 +10,7 @@ import StandardServiceSection from '@/components/services/StandardServiceSection
 import QualityPromiseSection from '@/components/services/QualityPromiseSection';
 import TestimonialSection from '@/components/services/TestimonialSection';
 import CallToActionSection from '@/components/services/CallToActionSection';
-import FAQSection from '@/components/services/FAQSection';
+import ServicesOverviewFAQ from '@/components/services/ServicesOverviewFAQ';
 import ServicesPageMeta from '@/components/services/ServicesPageMeta';
 
 const ServicesPage = () => {
@@ -56,7 +56,7 @@ const ServicesPage = () => {
       <CallToActionSection />
 
       {/* FAQ Section */}
-      <FAQSection />
+      <ServicesOverviewFAQ />
 
       <Footer />
     </div>
