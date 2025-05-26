@@ -101,18 +101,6 @@ const TeamFAQ = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-              
-              <div className="mt-8 pt-6">
-                <p className="text-dental-gray text-base">
-                  Haben Sie weitere Fragen? {' '}
-                  <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">
-                    Kontaktieren Sie uns gerne
-                  </Link> oder {' '}
-                  <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">
-                    vereinbaren Sie direkt einen Termin
-                  </Link>.
-                </p>
-              </div>
             </div>
           </div>
         </div>
