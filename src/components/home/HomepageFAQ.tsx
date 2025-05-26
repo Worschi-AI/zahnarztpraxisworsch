@@ -26,7 +26,7 @@ const HomepageFAQ = () => {
             <div className="animate-on-scroll">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
                     Was macht die Zahnarztpraxis Worsch in Dresden besonders für junge Patienten und ästhetische Wünsche?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
@@ -35,7 +35,7 @@ const HomepageFAQ = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
                     Welche Behandlungen im Bereich ästhetische Zahnmedizin bieten Sie in Ihrer Dresdner Praxis an?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
@@ -44,7 +44,7 @@ const HomepageFAQ = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
                     Ist eine Erstberatung für ästhetische Behandlungen in Ihrer Praxis in Dresden kostenlos?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
@@ -53,7 +53,7 @@ const HomepageFAQ = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
                     Wie modern ist die technische Ausstattung Ihrer Zahnarztpraxis in Dresden Laubegast?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
@@ -62,7 +62,7 @@ const HomepageFAQ = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
                     Wie kann ich einen Termin bei Zahnarzt Worsch in Dresden vereinbaren?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
