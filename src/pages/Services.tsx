@@ -52,11 +52,11 @@ const ServicesPage = () => {
       {/* Testimonial Section */}
       <TestimonialSection />
 
-      {/* Call to Action Section */}
-      <CallToActionSection />
-
       {/* FAQ Section */}
       <ServicesOverviewFAQ />
+
+      {/* Call to Action Section */}
+      <CallToActionSection />
 
       <Footer />
     </div>
