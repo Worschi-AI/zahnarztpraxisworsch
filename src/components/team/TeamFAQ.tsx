@@ -12,7 +12,21 @@ const TeamFAQ = () => {
   const faqs = [
     {
       question: "Welche Qualifikationen und Spezialisierungen haben die Zahnärzte der Praxis Worsch in Dresden?",
-      answer: "Unser Zahnarzt-Team in Dresden verfügt über umfassende Qualifikationen und bildet sich kontinuierlich in Spezialgebieten wie ästhetische Zahnmedizin, Implantologie, Endodontie und Kinderzahnheilkunde weiter. Detaillierte Informationen zu den Schwerpunkten unserer Zahnärzte finden Sie in den einzelnen Teamprofilen auf dieser Seite."
+      answer: (
+        <>
+          Unser Zahnarzt-Team in Dresden verfügt über umfassende Qualifikationen und bildet sich kontinuierlich in Spezialgebieten wie{' '}
+          <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">
+            ästhetische Zahnmedizin
+          </Link>, {' '}
+          <Link to="/services/implantologie" className="text-dental-turquoise hover:text-dental-blue underline">
+            Implantologie
+          </Link>, Endodontie und{' '}
+          <Link to="/services/kinderzahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">
+            Kinderzahnheilkunde
+          </Link>{' '}
+          weiter. Detaillierte Informationen zu den Schwerpunkten unserer Zahnärzte finden Sie in den einzelnen Teamprofilen auf dieser Seite.
+        </>
+      )
     },
     {
       question: "Wie geht das Team der Zahnarztpraxis Worsch mit Angstpatienten um?",
@@ -20,15 +34,38 @@ const TeamFAQ = () => {
     },
     {
       question: "Kann ich mir einen bestimmten Zahnarzt oder eine Zahnärztin in Ihrer Dresdner Praxis aussuchen?",
-      answer: "Ja, selbstverständlich können Sie bei der Terminvereinbarung Ihren Wunschbehandler in unserer Zahnarztpraxis in Dresden angeben. Wir versuchen, dies bestmöglich zu berücksichtigen. Bei Notfällen oder sehr kurzfristigen Terminen kann es jedoch sein, dass Sie von dem gerade verfügbaren Zahnarzt behandelt werden."
+      answer: (
+        <>
+          Ja, selbstverständlich können Sie bei der{' '}
+          <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">
+            Terminvereinbarung
+          </Link>{' '}
+          Ihren Wunschbehandler in unserer Zahnarztpraxis in Dresden angeben. Wir versuchen, dies bestmöglich zu berücksichtigen. Bei Notfällen oder sehr kurzfristigen Terminen kann es jedoch sein, dass Sie von dem gerade verfügbaren Zahnarzt behandelt werden.
+        </>
+      )
     },
     {
       question: "Spricht das Praxisteam auch andere Sprachen außer Deutsch?",
-      answer: "Einige Mitglieder unseres Teams in Dresden sprechen auch Englisch. Bitte geben Sie bei der Terminvereinbarung Bescheid, falls Sie eine Betreuung in einer anderen Sprache wünschen, damit wir dies bestmöglich organisieren können."
+      answer: (
+        <>
+          Einige Mitglieder unseres Teams in Dresden sprechen auch Englisch. Bitte geben Sie bei der Terminvereinbarung Bescheid, falls Sie eine Betreuung in einer anderen Sprache wünschen, damit wir dies bestmöglich organisieren können. Weitere Informationen finden Sie auf unserer{' '}
+          <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">
+            Kontaktseite
+          </Link>.
+        </>
+      )
     },
     {
       question: "Wie wichtig ist dem Team der Zahnarztpraxis Worsch die kontinuierliche Weiterbildung?",
-      answer: "Sehr wichtig! Um Ihnen stets Zahnmedizin auf dem neuesten Stand der Wissenschaft anbieten zu können, nehmen alle unsere Zahnärzte und Mitarbeiter in Dresden regelmäßig an Fortbildungen und Fachkongressen teil. So stellen wir sicher, dass Sie von den modernsten und besten Behandlungsmethoden profitieren."
+      answer: (
+        <>
+          Sehr wichtig! Um Ihnen stets Zahnmedizin auf dem neuesten Stand der Wissenschaft anbieten zu können, nehmen alle unsere Zahnärzte und Mitarbeiter in Dresden regelmäßig an Fortbildungen und Fachkongressen teil. So stellen wir sicher, dass Sie von den modernsten und besten Behandlungsmethoden profitieren. Mehr über unsere{' '}
+          <Link to="/services" className="text-dental-turquoise hover:text-dental-blue underline">
+            Behandlungsmethoden
+          </Link>{' '}
+          erfahren Sie hier.
+        </>
+      )
     }
   ];
 
@@ -55,7 +92,7 @@ const TeamFAQ = () => {
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
-                    <AccordionTrigger className="text-left text-base font-medium text-dental-gray hover:text-dental-blue py-6">
+                    <AccordionTrigger className="text-left text-lg font-medium text-dental-gray hover:text-dental-blue py-6">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
