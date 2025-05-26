@@ -1,10 +1,10 @@
-
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import TeamMember from '@/components/TeamMember';
+import TeamFAQ from '@/components/team/TeamFAQ';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { team } from '@/data/team';
@@ -48,6 +48,54 @@ const TeamPage = () => {
         }))
       })
     }))
+  };
+
+  // FAQ Schema für die Team-Seite
+  const teamFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Welche Qualifikationen und Spezialisierungen haben die Zahnärzte der Praxis Worsch in Dresden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser Zahnarzt-Team in Dresden verfügt über umfassende Qualifikationen und bildet sich kontinuierlich in Spezialgebieten wie ästhetische Zahnmedizin, Implantologie, Endodontie und Kinderzahnheilkunde weiter. Detaillierte Informationen zu den Schwerpunkten unserer Zahnärzte finden Sie in den einzelnen Teamprofilen auf dieser Seite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie geht das Team der Zahnarztpraxis Worsch mit Angstpatienten um?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir haben großes Verständnis für Patienten mit Zahnarztangst. Unser Team in Dresden Laubegast ist speziell geschult, um Ihnen einen möglichst stressfreien und angenehmen Besuch zu ermöglichen. Wir nehmen uns viel Zeit für Sie, erklären jeden Schritt und bieten bei Bedarf auch schonende Behandlungsmethoden wie Sedierung (Dämmerschlaf) an. Sprechen Sie uns gerne offen auf Ihre Ängste an!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich mir einen bestimmten Zahnarzt oder eine Zahnärztin in Ihrer Dresdner Praxis aussuchen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, selbstverständlich können Sie bei der Terminvereinbarung Ihren Wunschbehandler in unserer Zahnarztpraxis in Dresden angeben. Wir versuchen, dies bestmöglich zu berücksichtigen. Bei Notfällen oder sehr kurzfristigen Terminen kann es jedoch sein, dass Sie von dem gerade verfügbaren Zahnarzt behandelt werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Spricht das Praxisteam auch andere Sprachen außer Deutsch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Einige Mitglieder unseres Teams in Dresden sprechen auch Englisch. Bitte geben Sie bei der Terminvereinbarung Bescheid, falls Sie eine Betreuung in einer anderen Sprache wünschen, damit wir dies bestmöglich organisieren können."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie wichtig ist dem Team der Zahnarztpraxis Worsch die kontinuierliche Weiterbildung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sehr wichtig! Um Ihnen stets Zahnmedizin auf dem neuesten Stand der Wissenschaft anbieten zu können, nehmen alle unsere Zahnärzte und Mitarbeiter in Dresden regelmäßig an Fortbildungen und Fachkongressen teil. So stellen wir sicher, dass Sie von den modernsten und besten Behandlungsmethoden profitieren."
+        }
+      }
+    ]
   };
 
   // Animation on scroll effect with proper cleanup
@@ -100,6 +148,10 @@ const TeamPage = () => {
 
         <script type="application/ld+json">
           {JSON.stringify(teamStructuredData)}
+        </script>
+        
+        <script type="application/ld+json">
+          {JSON.stringify(teamFaqSchema)}
         </script>
       </Helmet>
       
@@ -218,6 +270,9 @@ const TeamPage = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <TeamFAQ />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
