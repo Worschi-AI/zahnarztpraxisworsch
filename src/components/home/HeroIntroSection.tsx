@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -12,7 +11,7 @@ const HeroIntroSection = () => {
           <div className="md:w-1/2 animate-on-scroll">
             <h2 className="mb-6 text-dental-blue">Willkommen bei Zahnarzt Worsch – Ihrem Partner für ein strahlendes Lächeln in Dresden</h2>
             <p className="text-lg mb-6 text-dental-gray">
-              Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong>, Ihrem modernen Zentrum für Zahngesundheit und Ästhetik im Herzen von <strong>Dresden-Laubegast</strong>. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens. Deshalb verbinden wir zahnmedizinische Exzellenz mit einem besonderen Fokus auf ästhetische Ergebnisse, die Sie begeistern werden.
+              Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong>, Ihrem modernen Zentrum für Zahngesundheit und Ästhetik im Herzen von <strong>Dresden-Laubegast</strong>. Seit über 32 Jahren sind wir für unsere Patienten da und verbinden dabei Erfahrung mit Innovation. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens. Deshalb verbinden wir zahnmedizinische Exzellenz mit einem besonderen Fokus auf ästhetische Ergebnisse, die Sie begeistern werden.
             </p>
             <p className="text-lg mb-8 text-dental-gray">
               Unser junges und engagiertes Team setzt auf innovative Technologien und individuelle Behandlungskonzepte, um Ihnen nicht nur gesunde, sondern auch wunderschöne Zähne zu ermöglichen. Ob Sie eine umfassende Beratung wünschen, sich für ästhetische Korrekturen interessieren oder eine hochwertige zahnmedizinische Versorgung suchen – bei uns sind Sie in besten Händen. Erfahren Sie, wie wir Ihr Lächeln zum Strahlen bringen können.
