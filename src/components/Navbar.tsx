@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-xl md:text-2xl font-heading font-bold text-dental-blue">
+          <span className="text-xl md:text-2xl font-sans font-bold text-dental-blue">
             Zahnarztpraxis Worsch
           </span>
         </Link>
