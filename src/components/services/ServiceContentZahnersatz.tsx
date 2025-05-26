@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -236,10 +237,13 @@ const ServiceContentZahnersatz = () => {
         </div>
       </div>
       
-      {/* CTA-Button */}
-      <div className="mt-12 text-center">
-        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue">
-          <Link to="/appointment">Persönliche Beratung zu Ihrem optimalen Zahnersatz anfordern</Link>
+      {/* CTA-Button mit besserem Mobile-Layout */}
+      <div className="mt-12 text-center px-4">
+        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue w-full max-w-md text-sm sm:text-base px-4 py-3 leading-tight">
+          <Link to="/appointment">
+            <span className="block sm:inline">Persönliche Beratung zu</span>
+            <span className="block sm:inline sm:ml-1">Ihrem optimalen Zahnersatz</span>
+          </Link>
         </Button>
       </div>
     </>
