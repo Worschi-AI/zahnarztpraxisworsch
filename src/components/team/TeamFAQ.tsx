@@ -1,6 +1,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const TeamFAQ = () => {
   const faqs = [
@@ -44,20 +50,20 @@ const TeamFAQ = () => {
               </p>
             </div>
             
-            {/* Right Column - FAQ Items */}
+            {/* Right Column - FAQ Accordion */}
             <div className="animate-on-scroll">
-              <div className="space-y-8">
+              <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-gray-200 pb-6">
-                    <h3 className="text-base font-medium text-dental-gray mb-3 leading-relaxed">
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200">
+                    <AccordionTrigger className="text-left text-base font-medium text-dental-gray hover:text-dental-blue py-6">
                       {faq.question}
-                    </h3>
-                    <p className="text-dental-gray text-base leading-relaxed">
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
                       {faq.answer}
-                    </p>
-                  </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
               
               <div className="mt-8 pt-6">
                 <p className="text-dental-gray text-base">
