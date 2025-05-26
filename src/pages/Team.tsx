@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import TeamMember from '@/components/TeamMember';
+import TeamHero from '@/components/team/TeamHero';
+import TeamIntroduction from '@/components/team/TeamIntroduction';
+import TeamValues from '@/components/team/TeamValues';
 import TeamFAQ from '@/components/team/TeamFAQ';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import TeamCTA from '@/components/team/TeamCTA';
 import { team } from '@/data/team';
-import { Stethoscope, Users, Clock, Award, Heart } from 'lucide-react';
 
 const TeamPage = () => {
   const baseUrl = "https://zahnarztpraxis-worsch.de";
@@ -156,145 +155,11 @@ const TeamPage = () => {
       </Helmet>
       
       <Navbar />
-      
-      {/* Hero Section */}
-      <HeroSection 
-        title="Ihr Lächeln in besten Händen: Unser Team in Dresden Laubegast" 
-        subtitle="Kompetenz, Einfühlungsvermögen und die Leidenschaft für perfekte Ergebnisse – das zeichnet unsere Zahnärzte und Mitarbeiter aus" 
-        backgroundImage="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1770&auto=format&fit=crop"
-      />
-
-      {/* Team Introduction */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Experten für Ihre Zahngesundheit und Ästhetik in Dresden</h2>
-            <p className="text-lg text-dental-gray">
-              In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> erwartet Sie ein hochqualifiziertes und erfahrenes Team, 
-              das sich mit Leidenschaft Ihrer Zahngesundheit und insbesondere Ihren ästhetischen Wünschen widmet. Wir legen größten 
-              Wert auf eine persönliche Betreuung, eine angenehme Atmosphäre und Behandlungsergebnisse, die Sie begeistern werden. 
-              Kontinuierliche Fortbildungen in allen Bereichen der modernen Zahnmedizin, insbesondere der ästhetischen Zahnheilkunde 
-              und Implantologie, sind für uns selbstverständlich.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <div key={member.id} className="animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
-                <TeamMember
-                  id={member.id}
-                  name={member.name}
-                  role={member.role}
-                  bio={member.bio}
-                  imageUrl={member.imageUrl}
-                  specializations={member.specializations}
-                  education={member.education}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Values */}
-      <section className="py-20 bg-dental-beige">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12 animate-on-scroll">
-              <h2 className="mb-6 text-dental-blue">Was uns als Team in Dresden auszeichnet</h2>
-              <p className="text-lg text-dental-gray">
-                Diese Werte prägen unsere tägliche Arbeit und bilden die Grundlage für Ihre optimale Betreuung 
-                in der Zahnarztpraxis Worsch.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll flex">
-                <div className="bg-dental-turquoise/10 p-3 rounded-full mr-4 flex items-center justify-center">
-                  <Heart className="text-dental-turquoise" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Leidenschaft für Ästhetik</h3>
-                  <p className="text-dental-gray">
-                    Wir lieben es, perfekte Lächeln zu gestalten und Ihre individuellen Wünsche zu verwirklichen.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll flex" style={{ animationDelay: "100ms" }}>
-                <div className="bg-dental-turquoise/10 p-3 rounded-full mr-4 flex items-center justify-center">
-                  <Award className="text-dental-turquoise" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Höchste Präzision</h3>
-                  <p className="text-dental-gray">
-                    Dank moderner Technik und Know-how erreichen wir präzise und langlebige Ergebnisse.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll flex" style={{ animationDelay: "200ms" }}>
-                <div className="bg-dental-turquoise/10 p-3 rounded-full mr-4 flex items-center justify-center">
-                  <Users className="text-dental-turquoise" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Individuelle Betreuung</h3>
-                  <p className="text-dental-gray">
-                    Ihre Wünsche sind unser Maßstab. Wir entwickeln individuelle Behandlungskonzepte für Sie.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll flex" style={{ animationDelay: "300ms" }}>
-                <div className="bg-dental-turquoise/10 p-3 rounded-full mr-4 flex items-center justify-center">
-                  <Stethoscope className="text-dental-turquoise" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Kontinuierliche Innovation</h3>
-                  <p className="text-dental-gray">
-                    Wir sind immer am Puls der Zeit und bilden uns kontinuierlich in modernsten Verfahren fort.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md animate-on-scroll mt-6" style={{ animationDelay: "400ms" }}>
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-3 text-dental-turquoise">Wohlfühlatmosphäre</h3>
-                <p className="text-dental-gray">
-                  Damit Sie entspannt zu uns kommen können, schaffen wir eine angenehme und moderne Atmosphäre 
-                  in unserer Praxis in Dresden Laubegast.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
+      <TeamHero />
+      <TeamIntroduction />
+      <TeamValues />
       <TeamFAQ />
-
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto animate-on-scroll">
-            <h2 className="mb-4">Lernen Sie uns persönlich kennen und lassen Sie sich beraten!</h2>
-            <p className="text-lg mb-8">
-              Das Team der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> freut sich darauf, Sie individuell zu betreuen 
-              und Ihnen die besten Lösungen für Ihre Zahngesundheit und Ästhetik anzubieten.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
-                <Link to="/appointment">Termin vereinbaren</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">
-                <Link to="/contact">Kontakt & Anfahrt</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <TeamCTA />
       <Footer />
     </div>
   );
