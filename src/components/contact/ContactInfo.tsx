@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, Phone, Clock } from 'lucide-react';
 
@@ -62,41 +63,41 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-lg font-medium mb-1 text-dental-blue">Öffnungszeiten</h3>
             <div className="text-dental-gray space-y-1.5">
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Montag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0">Mo:</span>
                 <span>07:30 – 13:00 Uhr</span>
               </div>
-              <div className="flex"> {/* Geändert: Wochentag und Zeitenblock sind Geschwister */}
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0 align-top">Dienstag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0 align-top">Di:</span>
                 <span className="inline-block">
                   08:00 – 12:00 Uhr<br />
                   14:00 – 18:00 Uhr
                 </span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0 align-top">Mittwoch:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0 align-top">Mi:</span>
                 <span className="inline-block">
                   07:30 – 12:00 Uhr<br />
                   14:00 – 18:00 Uhr
                 </span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0 align-top">Donnerstag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0 align-top">Do:</span>
                 <span className="inline-block">
                   07:30 – 12:00 Uhr<br />
                   14:00 – 18:00 Uhr
                 </span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Freitag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0">Fr:</span>
                 <span>07:30 – 13:00 Uhr</span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Samstag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0">Sa:</span>
                 <span>Geschlossen</span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Sonntag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-12 shrink-0">So:</span>
                 <span>Geschlossen</span>
               </div>
               <div className="pt-2">
