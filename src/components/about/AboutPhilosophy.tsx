@@ -19,16 +19,16 @@ const AboutPhilosophy = () => {
               </p>
 
               <ul className="mb-6 space-y-3">
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Individuelle Ästhetik-Beratung:</strong> Wir nehmen uns Zeit, Ihre Vorstellungen zu verstehen und gemeinsam mit Ihnen die optimale Lösung für Ihr Wunschergebnis zu finden – von dezenten Korrekturen bis zum kompletten Smile Makeover.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Innovative Behandlungsmethoden:</strong> Wir nutzen fortschrittliche digitale Verfahren wie 3D-Planung für Implantate, CAD/CAM-gefertigten Zahnersatz und schonende Lasertherapien, um präzise, vorhersagbare und ästhetisch überzeugende Ergebnisse zu erzielen.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Transparenz und Aufklärung:</strong> Wir erklären Ihnen jeden Behandlungsschritt verständlich und zeigen Ihnen die Möglichkeiten moderner Zahnästhetik auf.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Angenehmes Ambiente:</strong> Unsere Praxisräume in <strong>Dresden Laubegast</strong> sind modern und hell gestaltet, um Ihnen eine entspannte Atmosphäre zu bieten, in der Sie sich von Anfang an wohlfühlen.
                 </li>
               </ul>
@@ -36,16 +36,16 @@ const AboutPhilosophy = () => {
               <h3 className="text-xl font-semibold text-dental-turquoise mb-4 animate-on-scroll">Unsere Kernwerte für Ihre Zufriedenheit</h3>
 
               <ul className="mb-6 space-y-3">
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Ästhetische Perfektion:</strong> Wir streben nach Ergebnissen, die nicht nur gesund, sondern auch natürlich schön sind und Ihre Persönlichkeit unterstreichen.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Innovation & Präzision:</strong> Durch kontinuierliche Fortbildung und den Einsatz neuester Technologien garantieren wir Behandlungen auf höchstem Niveau.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Patientenorientierung:</strong> Ihre Bedürfnisse und Wünsche stehen im Mittelpunkt unserer Arbeit. Wir möchten, dass Sie sich bei uns bestens aufgehoben fühlen.
                 </li>
-                <li className="animate-on-scroll hover-lift transition-all duration-300 p-3 rounded-lg hover:bg-dental-beige/50">
+                <li className="p-3">
                   <strong>Nachhaltige Qualität:</strong> Wir verwenden ausschließlich hochwertige, biokompatible Materialien für langlebige und gesunde Ergebnisse.
                 </li>
               </ul>
