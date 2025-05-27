@@ -1,77 +1,47 @@
+
 import React from 'react';
-import { Heart, Star, Users } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const HeroIntroSection = () => {
-  const statistics = [
-    {
-      label: "Zufriedene Patienten",
-      value: "1500+",
-      description: "Jedes Jahr schenken uns zahlreiche Patienten Ihr Vertrauen.",
-      icon: <Users className="w-6 h-6 text-dental-turquoise" />,
-    },
-    {
-      label: "Jahre Erfahrung",
-      value: "15+",
-      description: "Langjährige Expertise in allen Bereichen der Zahnmedizin.",
-      icon: <Star className="w-6 h-6 text-dental-turquoise" />,
-    },
-    {
-      label: "Herzblut",
-      value: "100%",
-      description: "Wir lieben was wir tun und das spüren unsere Patienten.",
-      icon: <Heart className="w-6 h-6 text-dental-turquoise" />,
-    },
-  ];
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-dental-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-8 text-dental-blue animate-on-scroll">
-            Willkommen in der Zahnarztpraxis Worsch in Dresden Laubegast
-          </h2>
-          
-          <div className="mb-12 animate-on-scroll">
-            <p className="text-lg text-dental-gray mb-8">
-              Seit über 15 Jahren 
-              <strong className="text-dental-blue"> sind wir für unsere Patienten da</strong> und verbinden dabei Erfahrung mit Innovation.
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-1/2 animate-on-scroll">
+            <h2 className="mb-6 text-dental-blue">Willkommen bei Zahnarzt Worsch – Ihrem Partner für ein strahlendes Lächeln in Dresden</h2>
+            
+            <p className="text-lg mb-6 text-dental-gray">
+              Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong>, Ihrem modernen Zentrum für Zahngesundheit und Ästhetik im Herzen von <strong>Dresden-Laubegast</strong>. 
             </p>
             
-            {/* Highlighted text in a beautiful card */}
-            <div className="bg-gradient-to-br from-dental-turquoise to-dental-blue p-8 rounded-xl text-white max-w-3xl mx-auto">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-white/20 rounded-full">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <p className="text-lg leading-relaxed">
-                Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens.
+            <div className="bg-dental-beige/30 p-6 rounded-lg mb-6">
+              <p className="text-lg text-dental-gray">
+                <strong>Seit über 32 Jahren</strong> sind wir für unsere Patienten da und verbinden dabei Erfahrung mit Innovation. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens.
               </p>
             </div>
+            
+            <p className="text-lg mb-4 text-dental-gray">
+              Deshalb verbinden wir zahnmedizinische Exzellenz mit einem besonderen Fokus auf <strong>ästhetische Ergebnisse</strong>, die Sie begeistern werden.
+            </p>
+            
+            <p className="text-lg mb-8 text-dental-gray">
+              Unser junges und engagiertes Team setzt auf innovative Technologien und individuelle Behandlungskonzepte, um Ihnen nicht nur gesunde, sondern auch wunderschöne Zähne zu ermöglichen. Ob Sie eine umfassende Beratung wünschen, sich für ästhetische Korrekturen interessieren oder eine hochwertige zahnmedizinische Versorgung suchen – <strong>bei uns sind Sie in besten Händen</strong>.
+            </p>
+            
+            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300 text-white px-6 py-3">
+              <Link to="/about">Mehr über uns erfahren</Link>
+            </Button>
           </div>
-
-          {/* Statistics Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {statistics.map((stat, index) => (
-              <Card key={index} className="border border-dental-beige hover:shadow-lg transition-all duration-300 hover:border-dental-turquoise/20">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 p-3 bg-dental-beige rounded-lg">
-                      {stat.icon}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-dental-blue mb-2">
-                        {stat.value}
-                      </h4>
-                      <p className="text-dental-gray text-sm leading-relaxed">
-                        {stat.label} - {stat.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="md:w-1/2 animate-on-scroll">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop" 
+                alt="Moderne Praxisräume der Zahnarztpraxis Worsch in Dresden Laubegast" 
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
