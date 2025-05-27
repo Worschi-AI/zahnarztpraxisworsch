@@ -9,14 +9,9 @@ const AboutPhilosophy = () => {
           <div className="animate-on-scroll">
             <h2 className="mb-6 text-center text-dental-blue">Unsere Philosophie: Ihr Lächeln ist unsere Leidenschaft</h2>
             <div className="prose prose-lg max-w-none text-dental-gray">
-              <div className="text-lg mb-8 animate-on-scroll space-y-4">
-                <p>
-                  In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> verstehen wir Zahnmedizin als eine Verbindung aus höchster Präzision, modernster Technologie und einem tiefen Verständnis für die individuellen Wünsche unserer Patienten.
-                </p>
-                <p>
-                  Besonders wenn es um die Ästhetik Ihres Lächelns geht, legen wir größten Wert auf eine persönliche und professionelle Betreuung.
-                </p>
-              </div>
+              <p className="text-lg mb-6 animate-on-scroll">
+                In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> verstehen wir Zahnmedizin als eine Verbindung aus höchster Präzision, modernster Technologie und einem tiefen Verständnis für die individuellen Wünsche unserer Patienten – insbesondere, wenn es um die Ästhetik Ihres Lächelns geht.
+              </p>
 
               <h3 className="text-xl font-semibold text-dental-turquoise mb-4 animate-on-scroll">Der moderne Patient im Fokus – Besonders für unsere junge Zielgruppe</h3>
               <p className="mb-4 animate-on-scroll">
