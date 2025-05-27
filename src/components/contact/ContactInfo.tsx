@@ -67,15 +67,15 @@ const ContactInfo = () => {
                 <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Montag:</span>
                 <span>07:30 – 13:00 Uhr</span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0 align-top">Dienstag:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Dienstag:</span>
                 <span className="inline-block">
                   08:00 – 12:00 Uhr<br />
                   14:00 – 18:00 Uhr
                 </span>
               </div>
-              <div className="flex">
-                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0 align-top">Mittwoch:</span>
+              <div className="flex items-start">
+                <span className="font-semibold inline-block w-24 sm:w-28 shrink-0">Mittwoch:</span>
                 <span className="inline-block">
                   07:30 – 12:00 Uhr<br />
                   14:00 – 18:00 Uhr
