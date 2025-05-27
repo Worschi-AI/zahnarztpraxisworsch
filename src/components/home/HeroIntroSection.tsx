@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Award, Heart } from 'lucide-react';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const HeroIntroSection = () => {
@@ -16,10 +17,20 @@ const HeroIntroSection = () => {
               Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong>, Ihrem modernen Zentrum für Zahngesundheit und Ästhetik im Herzen von <strong>Dresden-Laubegast</strong>. 
             </p>
             
-            <div className="bg-dental-beige/30 p-6 rounded-lg mb-6">
-              <p className="text-lg text-dental-gray">
-                <strong>Seit über 32 Jahren</strong> sind wir für unsere Patienten da und verbinden dabei Erfahrung mit Innovation. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens.
-              </p>
+            <div className="bg-gradient-to-br from-dental-turquoise to-dental-blue p-6 rounded-xl text-white mb-6 shadow-lg">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 p-3 bg-white/20 rounded-full">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-2 text-lg">
+                    Über 32 Jahre Erfahrung
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    <strong>Seit über 32 Jahren</strong> sind wir für unsere Patienten da und verbinden dabei Erfahrung mit Innovation. Wir verstehen, dass ein Lächeln mehr ist als nur gesunde Zähne – es ist ein Ausdruck Ihrer Persönlichkeit und Ihres Wohlbefindens.
+                  </p>
+                </div>
+              </div>
             </div>
             
             <p className="text-lg mb-4 text-dental-gray">
