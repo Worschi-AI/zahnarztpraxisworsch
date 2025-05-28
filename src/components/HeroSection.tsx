@@ -51,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <h1 className="mb-4">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
+          <p className="text-xl md:text-2xl mb-6">Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden.</p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
