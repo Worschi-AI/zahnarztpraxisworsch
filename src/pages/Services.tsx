@@ -1,66 +1,51 @@
 
-import React from 'react';
-import HeroSection from '@/components/HeroSection';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import { services } from '@/data/services';
-import useScrollAnimation from '@/hooks/useScrollAnimation';
-import PremiumServiceSection from '@/components/services/PremiumServiceSection';
-import StandardServiceSection from '@/components/services/StandardServiceSection';
-import QualityPromiseSection from '@/components/services/QualityPromiseSection';
-import TestimonialSection from '@/components/services/TestimonialSection';
-import CallToActionSection from '@/components/services/CallToActionSection';
-import ServicesOverviewFAQ from '@/components/services/ServicesOverviewFAQ';
-import ServicesPageMeta from '@/components/services/ServicesPageMeta';
+import { Suspense } from "react";
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import { 
+  LazyQualityPromiseSection, 
+  LazyServicesOverviewFAQ,
+  LazyFooter 
+} from "@/components/LazyComponents";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import ServicesPageMeta from "@/components/services/ServicesPageMeta";
+import PremiumServiceSection from "@/components/services/PremiumServiceSection";
+import StandardServiceSection from "@/components/services/StandardServiceSection";
+import CallToActionSection from "@/components/services/CallToActionSection";
 
-const ServicesPage = () => {
-  // Use the scroll animation hook
-  useScrollAnimation();
-
-  // Filter premium services that have the highest margins
-  const premiumServices = services.filter(service => 
-    ['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
-  );
-
-  // Standard services
-  const standardServices = services.filter(service => 
-    !['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
-  );
-
+const Services = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <ServicesPageMeta />
       
-      <Navbar />
-      
-      {/* Hero Section with dental-specific image */}
-      <HeroSection 
-        title="Zahnarztpraxis Worsch: Unser Leistungsspektrum für Ihr perfektes Lächeln in Dresden" 
-        subtitle="Von innovativer Ästhetik über hochwertige Implantate bis zur umfassenden Vorsorge – entdecken Sie unsere modernen Zahnbehandlungen in Dresden Laubegast"
-        backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
-      />
-
-      {/* Premium Services Section */}
-      <PremiumServiceSection premiumServices={premiumServices} />
-
-      {/* Standard Services Section */}
-      <StandardServiceSection standardServices={standardServices} />
-
-      {/* Quality Promise Section */}
-      <QualityPromiseSection />
-
-      {/* Testimonial Section */}
-      <TestimonialSection />
-
-      {/* FAQ Section */}
-      <ServicesOverviewFAQ />
-
-      {/* Call to Action Section */}
-      <CallToActionSection />
-
-      <Footer />
-    </div>
+      <div className="min-h-screen">
+        <Navbar />
+        <HeroSection 
+          title="Unsere Leistungen für Ihre Zahngesundheit"
+          subtitle="Von Prophylaxe bis Implantologie – entdecken Sie unser umfassendes Spektrum moderner Zahnmedizin in Dresden."
+          useSolidBackground={true}
+        />
+        
+        <PremiumServiceSection />
+        <StandardServiceSection />
+        
+        <Suspense fallback={<LoadingSpinner />}>
+          <LazyQualityPromiseSection />
+        </Suspense>
+        
+        <CallToActionSection />
+        
+        <Suspense fallback={<LoadingSpinner />}>
+          <LazyServicesOverviewFAQ />
+        </Suspense>
+        
+        <Suspense fallback={<LoadingSpinner />}>
+          <LazyFooter />
+        </Suspense>
+      </div>
+    </>
   );
 };
 
-export default ServicesPage;
+export default Services;
