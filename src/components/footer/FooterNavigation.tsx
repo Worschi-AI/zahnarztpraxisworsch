@@ -5,25 +5,43 @@ import { Link } from 'react-router-dom';
 const FooterNavigation = () => {
   return (
     <div>
-      <h3 className="text-xl md:text-2xl font-bold mb-6 text-dental-turquoise">Navigation</h3>
+      <h3 className="text-2xl font-bold mb-6 text-white">Navigation</h3>
       <ul className="space-y-3">
         <li>
-          <Link to="/" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Startseite</Link>
+          <Link to="/" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Startseite</span>
+          </Link>
         </li>
         <li>
-          <Link to="/about" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Über uns</Link>
+          <Link to="/about" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Über uns</span>
+          </Link>
         </li>
         <li>
-          <Link to="/team" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Unser Team</Link>
+          <Link to="/team" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Unser Team</span>
+          </Link>
         </li>
         <li>
-          <Link to="/services" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Leistungen</Link>
+          <Link to="/services" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Leistungen</span>
+          </Link>
         </li>
         <li>
-          <Link to="/appointment" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Termine</Link>
+          <Link to="/appointment" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Termine</span>
+          </Link>
         </li>
         <li>
-          <Link to="/contact" className="block py-1 hover:underline hover:scale-105 transform transition-all duration-300">Kontakt & Anfahrt</Link>
+          <Link to="/contact" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
+            <span className="mr-2">></span>
+            <span>Kontakt & Anfahrt</span>
+          </Link>
         </li>
       </ul>
     </div>
