@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FooterNavigation = () => {
   return (
     <div>
-      <h3 className="text-2xl font-bold mb-6 text-white">Navigation</h3>
+      <h3 className="text-xl font-bold mb-6 text-white">Navigation</h3>
       <ul className="space-y-3">
         <li>
           <Link to="/" className="flex items-center py-1 hover:underline hover:scale-105 transform transition-all duration-300">
