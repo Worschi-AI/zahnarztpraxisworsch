@@ -8,22 +8,22 @@ const AboutPhilosophy = () => {
     {
       icon: <Star className="w-6 h-6 text-dental-turquoise" />,
       title: "Individuelle Ästhetik-Beratung",
-      description: "Wir nehmen uns Zeit, Ihre Vorstellungen zu verstehen und gemeinsam mit Ihnen die optimale Lösung für Ihr Wunschergebnis zu finden – von dezenten Korrekturen bis zum kompletten Smile Makeover."
+      description: "Wir nehmen uns umfassend Zeit, um Ihre persönlichen Vorstellungen zu verstehen. Gemeinsam finden wir die optimale Lösung für Ihr Wunschergebnis – von dezenten, aber wirkungsvollen Korrekturen bis zum kompletten Smile Makeover."
     },
     {
       icon: <Sparkles className="w-6 h-6 text-dental-turquoise" />,
       title: "Innovative Behandlungsmethoden",
-      description: "Wir nutzen fortschrittliche digitale Verfahren wie 3D-Planung für Implantate, CAD/CAM-gefertigten Zahnersatz und schonende Lasertherapien, um präzise, vorhersagbare und ästhetisch überzeugende Ergebnisse zu erzielen."
+      description: "Um präzise, vorhersagbare und ästhetisch überzeugende Ergebnisse zu erzielen, setzen wir auf fortschrittlichste digitale Verfahren wie detaillierte 3D-Planung für Implantate, passgenauen CAD/CAM-gefertigten Zahnersatz und schonende Lasertherapien."
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-dental-turquoise" />,
-      title: "Transparenz und Aufklärung",
-      description: "Wir erklären Ihnen jeden Behandlungsschritt verständlich und zeigen Ihnen die Möglichkeiten moderner Zahnästhetik auf."
+      title: "Transparenz und verständliche Aufklärung",
+      description: "Jeder Behandlungsschritt wird Ihnen von uns persönlich und absolut verständlich erklärt. Wir zeigen Ihnen alle Möglichkeiten moderner Zahnästhetik auf, damit Sie fundierte Entscheidungen treffen können."
     },
     {
       icon: <Heart className="w-6 h-6 text-dental-turquoise" />,
       title: "Angenehmes Ambiente",
-      description: "Unsere Praxisräume in Dresden Laubegast sind modern und hell gestaltet, um Ihnen eine entspannte Atmosphäre zu bieten, in der Sie sich von Anfang an wohlfühlen."
+      description: "Unsere Praxisräume in Dresden-Laubegast sind bewusst modern, hell und freundlich gestaltet, um Ihnen eine entspannte Atmosphäre zu bieten. Wir möchten, dass Sie sich von dem Moment an, in dem Sie eintreten, rundum wohlfühlen."
     }
   ];
 
@@ -31,22 +31,22 @@ const AboutPhilosophy = () => {
     {
       icon: <Target className="w-8 h-8 text-white" />,
       title: "Ästhetische Perfektion",
-      description: "Wir streben nach Ergebnissen, die nicht nur gesund, sondern auch natürlich schön sind und Ihre Persönlichkeit unterstreichen."
+      description: "Wir streben nach Ergebnissen, die nicht nur gesund sind, sondern Ihr Lächeln auch natürlich schön erstrahlen lassen und Ihre einzigartige Persönlichkeit perfekt unterstreichen."
     },
     {
       icon: <Sparkles className="w-8 h-8 text-white" />,
       title: "Innovation & Präzision",
-      description: "Durch kontinuierliche Fortbildung und den Einsatz neuester Technologien garantieren wir Behandlungen auf höchstem Niveau."
+      description: "Durch unsere kontinuierliche Fortbildung und den konsequenten Einsatz neuester Technologien gewährleisten wir Behandlungen von höchster Präzision und Qualität."
     },
     {
       icon: <Users className="w-8 h-8 text-white" />,
       title: "Patientenorientierung",
-      description: "Ihre Bedürfnisse und Wünsche stehen im Mittelpunkt unserer Arbeit. Wir möchten, dass Sie sich bei uns bestens aufgehoben fühlen."
+      description: "Ihre individuellen Bedürfnisse und Wünsche stehen jederzeit im Mittelpunkt unserer Arbeit. Wir möchten, dass Sie sich bei uns bestens aufgehoben und verstanden fühlen."
     },
     {
       icon: <Award className="w-8 h-8 text-white" />,
       title: "Nachhaltige Qualität",
-      description: "Wir verwenden ausschließlich hochwertige, biokompatible Materialien für langlebige und gesunde Ergebnisse."
+      description: "Für langlebige, gesunde und biokompatible Ergebnisse verwenden wir ausschließlich sorgfältig ausgewählte, hochwertige Materialien, denen Sie vertrauen können."
     }
   ];
 
@@ -60,11 +60,11 @@ const AboutPhilosophy = () => {
             
             <div className="max-w-4xl mx-auto">
               <p className="text-lg mb-8 text-dental-gray leading-relaxed">
-                In der <strong className="text-dental-blue">Zahnarztpraxis Worsch in Dresden Laubegast</strong> verstehen wir Zahnmedizin als eine Verbindung aus höchster Präzision, modernster Technologie und einem tiefen Verständnis für die individuellen Wünsche unserer Patienten.
+                In der <strong className="text-dental-blue">Zahnarztpraxis Worsch in Dresden-Laubegast</strong> verstehen wir unsere Arbeit als eine harmonische Verbindung aus höchster Präzision, modernster Technologie und einem tiefen, menschlichen Verständnis für Ihre individuellen Wünsche und Bedürfnisse.
               </p>
               
               <p className="text-lg text-dental-gray leading-relaxed">
-                Besonders wichtig ist uns die <strong className="text-dental-turquoise">Ästhetik Ihres Lächelns</strong> – denn wir wissen, wie sehr ein selbstbewusstes Lächeln Ihre Lebensqualität steigern kann.
+                Ganz besonders wichtig ist uns dabei die <strong className="text-dental-turquoise">Ästhetik Ihres Lächelns</strong> – denn wir wissen aus Erfahrung, wie sehr ein selbstbewusstes Lächeln Ihre Lebensqualität positiv beeinflussen kann.
               </p>
             </div>
           </div>
@@ -73,11 +73,10 @@ const AboutPhilosophy = () => {
           <div className="mb-20 animate-on-scroll">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-semibold text-dental-blue mb-4">
-                Der moderne Patient im Fokus – Besonders für unsere junge Zielgruppe
+                Der moderne Patient im Fokus – Ihre Bedürfnisse stehen im Mittelpunkt
               </h3>
               <p className="text-lg text-dental-gray max-w-3xl mx-auto">
-                Wir wissen, dass gerade junge Menschen hohe Ansprüche an Ästhetik und Lebensqualität stellen. 
-                Ein selbstbewusstes Lächeln spielt dabei eine entscheidende Rolle.
+                Wir wissen, dass insbesondere die junge Generation und alle anspruchsvollen Patienten hohe Erwartungen an Ästhetik und Lebensqualität haben. Ein selbstbewusstes Lächeln ist dabei oft der Schlüssel.
               </p>
             </div>
 
@@ -108,10 +107,10 @@ const AboutPhilosophy = () => {
           <div className="mb-16 animate-on-scroll">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-semibold text-dental-blue mb-4">
-                Unsere Kernwerte für Ihre Zufriedenheit
+                Unsere Kernwerte: Das Fundament Ihrer Zufriedenheit
               </h3>
               <p className="text-lg text-dental-gray max-w-3xl mx-auto">
-                Diese Werte prägen unsere tägliche Arbeit und garantieren Ihnen eine Behandlung auf höchstem Niveau.
+                Diese fundamentalen Werte prägen unsere tägliche Arbeit und sind unser Versprechen an Sie für eine Behandlung auf höchstem Niveau.
               </p>
             </div>
 
@@ -146,7 +145,7 @@ const AboutPhilosophy = () => {
               </div>
               <p className="text-lg text-dental-gray leading-relaxed">
                 Wir sind mehr als nur Ihr <strong className="text-dental-blue">Zahnarzt in Dresden</strong> – 
-                wir sind Ihre Partner für ein gesundes und strahlend schönes Lächeln, das Ihnen Selbstvertrauen schenkt.
+                wir sind Ihre verlässlichen Partner für ein gesundes und strahlend schönes Lächeln, das Ihnen neues Selbstvertrauen schenkt und Ihre Lebensfreude steigert.
               </p>
             </div>
           </div>

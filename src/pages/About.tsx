@@ -92,8 +92,8 @@ const AboutPage = () => {
       
       {/* Hero Section */}
       <HeroSection 
-        title="Zahnarztpraxis Worsch Dresden: Wo moderne Zahnmedizin auf Ästhetik trifft" 
-        subtitle="Entdecken Sie unsere patientenorientierte Philosophie, innovative Technologien und ein Ambiente, in dem Sie sich wohlfühlen" 
+        title="Zahnarztpraxis Worsch Dresden: Hier trifft moderne Zahnmedizin auf Ihr schönstes Lächeln" 
+        subtitle="Entdecken Sie unsere patientenorientierte Philosophie, erleben Sie innovative Technologien und fühlen Sie sich in unserem angenehmen Ambiente rundum wohl" 
         backgroundImage="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1887&auto=format&fit=crop"
       />
 

@@ -8,7 +8,7 @@ const praxisImages = [
     src: "https://images.unsplash.com/photo-1629909615957-f11847120b5c?q=80&w=1932&auto=format&fit=crop",
     alt: "Empfangsbereich der Zahnarztpraxis Worsch Dresden",
     title: "Empfangsbereich",
-    description: "Unser freundliches Team empfängt Sie in angenehmer Atmosphäre."
+    description: "Herzlich willkommen! Unser freundliches Team empfängt Sie in einer angenehmen und ruhigen Atmosphäre, damit Sie sich sofort gut aufgehoben fühlen."
   },
   {
     src: "https://images.unsplash.com/photo-1631815588090-d4bfec5b9589?q=80&w=1972&auto=format&fit=crop",
