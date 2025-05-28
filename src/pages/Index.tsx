@@ -94,7 +94,7 @@ const Index = () => {
       {/* Hero Section with updated content */}
       <HeroSection 
         title="Ihr Lächeln. Unsere Expertise. Zahnarztpraxis Worsch Dresden." 
-        subtitle="Entdecken Sie moderne Zahnmedizin und ästhetische Perfektion in Ihrer Zahnarztpraxis in Dresden Laubegast." 
+        subtitle="Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"
       />

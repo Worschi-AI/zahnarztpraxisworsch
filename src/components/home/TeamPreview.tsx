@@ -9,9 +9,9 @@ const TeamPreview = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Lernen Sie unser Team kennen – Kompetenz und Einfühlungsvermögen</h2>
+          <h2 className="mb-4 text-dental-blue">Lernen Sie unser Team kennen: Kompetenz, die von Herzen kommt</h2>
           <p className="text-lg max-w-2xl mx-auto text-dental-gray">
-            Bei <strong>Zahnarzt Worsch in Dresden</strong> erwartet Sie ein Team, das nicht nur fachlich exzellent, sondern auch menschlich überzeugt. Wir nehmen uns Zeit für Sie und Ihre Wünsche.
+            In der <strong>Zahnarztpraxis Worsch in Dresden</strong> erwartet Sie ein Team, das höchste fachliche Exzellenz mit echtem Einfühlungsvermögen verbindet. Wir nehmen uns umfassend Zeit, um Ihre individuellen Wünsche und Bedürfnisse zu verstehen und Sie persönlich zu betreuen.
           </p>
         </div>
         
