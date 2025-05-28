@@ -29,10 +29,10 @@ const FeaturedServices = () => {
                 title={service.title}
                 description={
                   service.id === 'aesthetische-zahnheilkunde'
-                    ? `**Ihr Weg zum Traumlächeln.** Von schonendem Bleaching bis zu unsichtbaren Zahnkorrekturen wie Veneers – wir entwickeln maßgeschneiderte Lösungen, die perfekt zu Ihren individuellen Wünschen passen.`
+                    ? `Ihr Weg zum Traumlächeln. Von schonendem Bleaching bis zu unsichtbaren Zahnkorrekturen wie Veneers – wir entwickeln maßgeschneiderte Lösungen, die perfekt zu Ihren individuellen Wünschen passen.`
                     : service.id === 'implantologie'
-                    ? `**Endlich wieder unbeschwert lachen und kauen.** Verlorene Zähne können das Leben einschränken. Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr volles Lächeln und damit ein großes Stück Lebensqualität zurück.`
-                    : `**Perfektion, die sich sehen und fühlen lässt.** Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen Ihren individuellen Zahnersatz aus besten Materialien, passgenau für Ihr natürliches Lächeln.`
+                    ? `Endlich wieder unbeschwert lachen und kauen. Verlorene Zähne können das Leben einschränken. Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr volles Lächeln und damit ein großes Stück Lebensqualität zurück.`
+                    : `Perfektion, die sich sehen und fühlen lässt. Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen Ihren individuellen Zahnersatz aus besten Materialien, passgenau für Ihr natürliches Lächeln.`
                 }
                 imageUrl={
                   service.id === 'aesthetische-zahnheilkunde'
