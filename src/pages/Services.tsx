@@ -13,6 +13,7 @@ import ServicesPageMeta from "@/components/services/ServicesPageMeta";
 import PremiumServiceSection from "@/components/services/PremiumServiceSection";
 import StandardServiceSection from "@/components/services/StandardServiceSection";
 import CallToActionSection from "@/components/services/CallToActionSection";
+import { premiumServices, standardServices } from "@/data/services";
 
 const Services = () => {
   return (
@@ -27,8 +28,8 @@ const Services = () => {
           useSolidBackground={true}
         />
         
-        <PremiumServiceSection />
-        <StandardServiceSection />
+        <PremiumServiceSection premiumServices={premiumServices} />
+        <StandardServiceSection standardServices={standardServices} />
         
         <Suspense fallback={<LoadingSpinner />}>
           <LazyQualityPromiseSection />
