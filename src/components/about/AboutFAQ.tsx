@@ -12,21 +12,21 @@ const AboutFAQ = () => {
   const faqs = [
     {
       question: "Was ist die Philosophie der Zahnarztpraxis Worsch in Dresden?",
-      answer: "Unsere Philosophie stellt Sie als Patient in den Mittelpunkt. Wir kombinieren moderne, innovative Zahnmedizin mit einem starken Fokus auf Ästhetik und individuelle Betreuung. Unser Ziel ist es, Ihnen nicht nur gesunde Zähne, sondern auch ein Lächeln zu schenken, mit dem Sie sich rundum wohlfühlen. Transparenz, Qualität und eine angenehme Atmosphäre sind uns dabei besonders wichtig."
+      answer: "Unsere Philosophie stellt Sie als Patient konsequent in den Mittelpunkt. Wir verbinden modernste, innovative Zahnmedizin mit einem starken Fokus auf Ästhetik und einer ganzheitlichen, individuellen Betreuung. Unser vorrangiges Ziel ist es, Ihnen nicht nur gesunde Zähne, sondern auch ein Lächeln zu schenken, mit dem Sie sich absolut wohl und selbstbewusst fühlen. Transparenz, höchste Qualität und eine entspannte, angenehme Atmosphäre sind uns dabei von größter Bedeutung."
     },
     {
-      question: "Ist die Zahnarztpraxis Worsch in Dresden Laubegast modern ausgestattet?",
-      answer: "Ja, wir legen großen Wert auf eine moderne Praxisausstattung. Dazu gehören digitale Röntgentechnologie (DVT), intraorale Kameras, CAD/CAM-Systeme für Zahnersatz, Lasertechnologie und digitale Abformung. Diese Technologien ermöglichen präzisere Diagnosen, schonendere Behandlungen und oft schnellere Ergebnisse."
+      question: "Ist die Zahnarztpraxis Worsch in Dresden-Laubegast modern ausgestattet?",
+      answer: "Ja, wir legen größten Wert auf eine topmoderne Praxisausstattung, um Ihnen Behandlungen auf höchstem Niveau zu bieten. Dazu gehören digitale Röntgentechnologie (DVT) mit reduzierter Strahlung, hochauflösende intraorale Kameras, präzise CAD/CAM-Systeme für individuellen Zahnersatz, schonende Lasertechnologie und die komfortable digitale Abformung ohne Abdrucklöffel. Diese Technologien ermöglichen uns präzisere Diagnosen, wesentlich schonendere Behandlungen und oft schnellere sowie komfortablere Ergebnisse für Sie."
     },
     {
       question: "Wie gehen Sie in Ihrer Praxis mit Angstpatienten um?",
       answer: (
         <>
-          Wir haben viel Erfahrung im Umgang mit Angstpatienten. Unser{' '}
+          Wir haben sehr viel Erfahrung und Einfühlungsvermögen im Umgang mit Angstpatienten. Unser einfühlsames{' '}
           <Link to="/team" className="text-dental-turquoise hover:text-dental-blue underline">
             Team in Dresden
           </Link>{' '}
-          nimmt sich Zeit, hört Ihnen zu und erklärt jeden Schritt behutsam. Wir schaffen eine ruhige, entspannte Atmosphäre und bieten bei Bedarf auch Behandlungsmöglichkeiten wie Sedierung (Dämmerschlaf) an, um Ihnen den Besuch so angenehm wie möglich zu gestalten.
+          nimmt sich besonders viel Zeit für Sie, hört Ihnen aufmerksam zu und erklärt jeden einzelnen Behandlungsschritt behutsam und in Ruhe. Wir schaffen eine ruhige, entspannte und angstfreie Atmosphäre. Bei Bedarf bieten wir Ihnen auch zusätzliche Behandlungsmöglichkeiten wie eine Sedierung (Dämmerschlaf) an, um Ihnen den Besuch bei uns so angenehm und stressfrei wie möglich zu gestalten.
         </>
       )
     },
@@ -34,14 +34,14 @@ const AboutFAQ = () => {
       question: "Legt die Zahnarztpraxis Worsch Wert auf Fortbildungen?",
       answer: (
         <>
-          Absolut! Kontinuierliche Fortbildung ist für unser gesamtes Team in Dresden selbstverständlich. So stellen wir sicher, dass wir Ihnen stets Zahnmedizin auf dem neuesten wissenschaftlichen Stand und mit den modernsten Techniken anbieten können, insbesondere in unseren Schwerpunktbereichen wie der{' '}
+          Absolut! Kontinuierliche und umfassende Fortbildung ist für unser gesamtes Team in Dresden eine absolute Selbstverständlichkeit. So stellen wir sicher, dass wir Ihnen stets Zahnmedizin auf dem neuesten wissenschaftlichen Stand und mit den modernsten, innovativsten Techniken anbieten können. Das gilt insbesondere für unsere Schwerpunktbereiche wie die{' '}
           <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">
-            ästhetischen Zahnmedizin
+            ästhetische Zahnmedizin
           </Link>{' '}
           und{' '}
           <Link to="/services/implantologie" className="text-dental-turquoise hover:text-dental-blue underline">
             Implantologie
-          </Link>.
+          </Link>, wo wir immer am Puls der Zeit sind.
         </>
       )
     },
@@ -49,13 +49,13 @@ const AboutFAQ = () => {
       question: "Kann ich in der Zahnarztpraxis Worsch auch als Neupatient schnell einen Termin bekommen?",
       answer: (
         <>
-          Wir bemühen uns stets, auch Neupatienten zeitnah Termine anbieten zu können, besonders bei akuten Beschwerden. Für eine Erstberatung, insbesondere im Bereich Ästhetik oder Implantologie, empfehlen wir eine frühzeitige Kontaktaufnahme, damit wir ausreichend Zeit für Sie einplanen können. Nutzen Sie gerne unsere{' '}
+          Ja, wir bemühen uns stets sehr, auch Neupatienten zeitnah Termine anbieten zu können – besonders natürlich bei akuten Beschwerden, wo schnelle Hilfe zählt. Für eine umfassende Erstberatung, speziell im Bereich Ästhetik oder Implantologie, empfehlen wir eine frühzeitige Kontaktaufnahme, damit wir ausreichend Zeit für Ihr persönliches Anliegen einplanen können. Nutzen Sie hierfür gerne unsere komfortable{' '}
           <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">
             Online-Terminbuchung
           </Link>{' '}
           oder{' '}
           <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">
-            rufen Sie uns an
+            rufen Sie uns einfach persönlich an
           </Link>.
         </>
       )
@@ -70,13 +70,13 @@ const AboutFAQ = () => {
             {/* Left Column - Title */}
             <div className="animate-on-scroll">
               <p className="text-dental-turquoise text-lg font-medium mb-4">
-                Fragen zu unserer Praxis
+                Ihre Fragen zu unserer Praxis – Wir geben Antworten.
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-dental-blue leading-tight">
-                Fragen zu unserer Zahnarztpraxis in Dresden? Wir antworten!
+                Sie haben Fragen zu unserer Zahnarztpraxis in Dresden?
               </h2>
               <p className="text-lg text-dental-gray mt-6">
-                Erfahren Sie mehr darüber, was die Zahnarztpraxis Worsch in Dresden Laubegast auszeichnet und was Sie bei uns erwartet.
+                Hier finden Sie alle Antworten! Erfahren Sie detailliert, was die Zahnarztpraxis Worsch in Dresden-Laubegast so besonders macht und welche Vorteile Sie bei uns erwarten.
               </p>
             </div>
             
