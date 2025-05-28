@@ -9,7 +9,7 @@ interface ServiceCardProps {
   id: string;
   title: string;
   description: string;
-  icon?: React.ReactNode;
+  icon?: string;
   imageUrl?: string;
 }
 
@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           {icon && (
-            <span className="text-dental-turquoise">{icon}</span>
+            <span className="text-dental-turquoise" dangerouslySetInnerHTML={{ __html: icon }} />
           )}
           <span>{title}</span>
         </CardTitle>

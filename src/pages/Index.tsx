@@ -31,7 +31,7 @@ const Index = () => {
         "name": "Was macht die Zahnarztpraxis Worsch in Dresden besonders für junge Patienten und ästhetische Wünsche?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In der Zahnarztpraxis Worsch in Dresden-Laubegast liegt unser Fokus darauf, modernste Zahnmedizin mit herausragender Ästhetik zu verbinden, um Ihr individuelles Wunschlächeln zu realisieren. Wir nutzen hierfür digitale Technologien wie präzise 3D-Planung und CAD/CAM-Fertigung und bieten innovative Behandlungen wie Veneers oder unsichtbare Zahnkorrekturen. Besonderen Wert legen wir dabei auf eine entspannte Atmosphäre und eine umfassende, persönliche Beratung, bei der Ihre Wünsche im Mittelpunkt stehen."
+          "text": "Bei Zahnarzt Worsch in Dresden Laubegast verbinden wir modernste Zahnmedizin mit einem besonderen Fokus auf Ästhetik. Wir nutzen digitale Technologien wie 3D-Planung und CAD/CAM-Fertigung, bieten innovative Behandlungen wie Veneers oder unsichtbare Zahnkorrekturen und legen großen Wert auf eine individuelle Beratung in entspannter Atmosphäre, um Ihr Wunschlächeln zu realisieren."
         }
       },
       {
@@ -39,7 +39,7 @@ const Index = () => {
         "name": "Welche Behandlungen im Bereich ästhetische Zahnmedizin bieten Sie in Ihrer Dresdner Praxis an?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unser umfassendes Spektrum der ästhetischen Zahnmedizin in Dresden bietet Ihnen zahlreiche Möglichkeiten für Ihr perfektes Lächeln. Dazu gehören unter anderem schonendes, professionelles Bleaching (Zahnaufhellung), langlebige Keramik-Veneers, ästhetische zahnfarbene Füllungen und Inlays, diskrete Zahnkorrekturen mit unsichtbaren Alignern sowie komplette Smile Makeovers. Wir beraten Sie sehr gerne individuell, um die optimalen Optionen für Ihr strahlendes Lächeln zu finden."
+          "text": "Unser Spektrum der ästhetischen Zahnmedizin in Dresden umfasst unter anderem professionelles Bleaching (Zahnaufhellung), hochwertige Keramik-Veneers, zahnfarbene Füllungen und Inlays, unsichtbare Zahnkorrekturen mit Alignern sowie komplette Smile Makeovers. Gerne beraten wir Sie individuell zu den besten Optionen für Ihr Lächeln."
         }
       },
       {
@@ -47,7 +47,7 @@ const Index = () => {
         "name": "Ist eine Erstberatung für ästhetische Behandlungen in Ihrer Praxis in Dresden kostenlos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, wir bieten Ihnen sehr gerne ein erstes, unverbindliches Beratungsgespräch für ästhetische Behandlungen an. Hier lernen wir Ihre individuellen Wünsche kennen und zeigen Ihnen transparent alle Möglichkeiten der modernen ästhetischen Zahnmedizin auf. Sollten für eine weiterführende Diagnostik oder Planung Kosten entstehen, besprechen wir diese selbstverständlich im Vorfeld detailliert mit Ihnen."
+          "text": "Wir bieten Ihnen gerne ein erstes unverbindliches Beratungsgespräch an, um Ihre Wünsche kennenzulernen und Ihnen die Möglichkeiten der modernen ästhetischen Zahnmedizin aufzuzeigen. Die Details zu eventuellen Kosten für eine umfassende Diagnostik und Planung besprechen wir transparent mit Ihnen im Vorfeld."
         }
       },
       {
@@ -55,7 +55,7 @@ const Index = () => {
         "name": "Wie modern ist die technische Ausstattung Ihrer Zahnarztpraxis in Dresden Laubegast?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unsere Zahnarztpraxis in Dresden-Laubegast ist auf dem neuesten Stand der Technik und mit modernster Technologie ausgestattet, um Ihnen Behandlungen auf höchstem Niveau zu ermöglichen. Dazu zählen digitales Röntgen (besonders strahlungsarm), hochpräzise 3D-Diagnostik (DVT) für eine exakte Implantatplanung, intraorale Kameras zur transparenten Visualisierung während der Behandlung, innovative CAD/CAM-Systeme für passgenauen Zahnersatz und schonende Lasertechnologie für vielfältige, angenehme Anwendungsbereiche."
+          "text": "Unsere Zahnarztpraxis in Dresden Laubegast ist mit modernster Technologie ausgestattet. Dazu gehören digitales Röntgen (strahlungsarm), 3D-Diagnostik (DVT) für präzise Implantatplanung, intraorale Kameras zur Visualisierung, CAD/CAM-Systeme für passgenauen Zahnersatz und schonende Lasertechnologie für verschiedene Anwendungsbereiche."
         }
       },
       {
@@ -63,7 +63,7 @@ const Index = () => {
         "name": "Wie kann ich einen Termin bei Zahnarzt Worsch in Dresden vereinbaren?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ihren persönlichen Wunschtermin können Sie ganz bequem und rund um die Uhr (24/7) über unser Online-Buchungsportal vereinbaren. Falls Sie den persönlichen Kontakt bevorzugen, steht Ihnen unser freundliches Team in Dresden-Laubegast während der Sprechzeiten gerne telefonisch zur Verfügung. Wir freuen uns sehr darauf, Sie bald persönlich kennenzulernen!"
+          "text": "Sie können Ihren Termin ganz bequem online über unser Doctolib-Portal buchen – 24/7. Alternativ erreichen Sie unser freundliches Team in Dresden Laubegast telefonisch während unserer Sprechzeiten. Wir freuen uns auf Sie!"
         }
       }
     ]
@@ -94,7 +94,7 @@ const Index = () => {
       {/* Hero Section with updated content */}
       <HeroSection 
         title="Ihr Lächeln. Unsere Expertise. Zahnarztpraxis Worsch Dresden." 
-        subtitle="Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden." 
+        subtitle="Entdecken Sie moderne Zahnmedizin und ästhetische Perfektion in Ihrer Zahnarztpraxis in Dresden Laubegast." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"
       />

@@ -10,26 +10,26 @@ const QualityPromiseSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Qualität, der Sie voll und ganz vertrauen können – Ihre Zahnarztpraxis in Dresden</h2>
+            <h2 className="mb-6 text-dental-blue">Qualität, der Sie vertrauen können – Ihr Zahnarzt in Dresden</h2>
             <p className="text-lg text-dental-gray mb-8">
-              Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin. Vertrauen Sie auf unser Engagement und unsere Leidenschaft für Ihr perfektes Lächeln – wir begleiten Sie auf diesem Weg.
+              Unsere Behandlungsqualität orientiert sich an den höchsten Standards moderner Zahnmedizin. Vertrauen Sie auf unser Engagement für Ihr perfektes Lächeln.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray"><strong>Modernste Technologien:</strong> Wir setzen auf digitale Diagnostik, präzise 3D-Planung und schonende Verfahren für Ihre komfortable Behandlung.</span>
+                <span className="text-dental-gray">Moderne Technologien: Digitale Diagnostik, 3D-Planung und schonende Verfahren</span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray"><strong>Höchste Ästhetik:</strong> Für natürliche und harmonische Ergebnisse sorgen wir mit individueller Farbanpassung und einer perfekt auf Sie abgestimmten Ästhetik.</span>
+                <span className="text-dental-gray">Höchste Ästhetik: Individuelle Farbanpassung und natürliche Ergebnisse</span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray"><strong>Individuelle Beratung:</strong> Gemeinsam mit Ihnen entwickeln wir einen maßgeschneiderten Behandlungsplan, der genau auf Ihre Bedürfnisse und Wünsche zugeschnitten ist.</span>
+                <span className="text-dental-gray">Individuelle Beratung: Wir entwickeln mit Ihnen Ihren persönlichen Behandlungsplan</span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-dental-turquoise mr-2 flex-shrink-0 mt-1" />
-                <span className="text-dental-gray"><strong>Erfahrenes Team:</strong> Unser spezialisiertes Team aus Experten für ästhetische Zahnmedizin und Implantologie ist für Sie da und sorgt für beste Ergebnisse.</span>
+                <span className="text-dental-gray">Erfahrenes Team: Spezialisten für ästhetische Zahnmedizin und Implantologie</span>
               </div>
             </div>
             <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">

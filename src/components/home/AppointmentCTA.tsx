@@ -10,10 +10,10 @@ const AppointmentCTA = () => {
     <section className="py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-2xl mx-auto animate-on-scroll">
-          <h2 className="mb-4">Bereit für Ihr strahlendes Lächeln? Ihre Zahnarztpraxis Worsch in Dresden freut sich auf Sie!</h2>
+          <h2 className="mb-4">Bereit für Ihr schönstes Lächeln? Ihr Zahnarzt in Dresden Laubegast erwartet Sie.</h2>
           <p className="text-lg mb-8 opacity-90">
-            Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin in der <strong>Zahnarztpraxis Worsch</strong>. 
-            Wir nehmen uns gerne Zeit, um Ihnen die vielfältigen Möglichkeiten modernster ästhetischer Zahnmedizin aufzuzeigen und Ihr Wunschlächeln Wirklichkeit werden zu lassen.
+            Vereinbaren Sie jetzt Ihren persönlichen Beratungstermin in der <strong>Zahnarztpraxis Worsch</strong>. 
+            Entdecken Sie die Möglichkeiten moderner ästhetischer Zahnmedizin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
