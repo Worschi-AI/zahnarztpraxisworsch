@@ -5,30 +5,30 @@ import { Button } from '@/components/ui/button';
 import { CalendarClock } from 'lucide-react';
 
 const FloatingAppointmentButton = () => {
-  const [isWobbling, setIsWobbling] = useState(false);
+  const [isPulsing, setIsPulsing] = useState(false);
   
   useEffect(() => {
-    // Start the wobble effect after a delay when the component mounts
+    // Start the pulse effect after a delay when the component mounts
     const initialTimeout = setTimeout(() => {
-      startWobbleInterval();
+      startPulseInterval();
     }, 2000);
     
-    // Function to handle the wobble animation interval
-    const startWobbleInterval = () => {
-      // Set wobble animation every 5 seconds
+    // Function to handle the pulse animation interval
+    const startPulseInterval = () => {
+      // Set pulse animation every 4 seconds
       const intervalId = setInterval(() => {
-        setIsWobbling(true);
+        setIsPulsing(true);
         
-        // Reset wobble after animation completes
+        // Reset pulse after animation completes
         setTimeout(() => {
-          setIsWobbling(false);
-        }, 1000); // Animation duration
-      }, 5000); // Interval between animations
+          setIsPulsing(false);
+        }, 2000); // Animation duration
+      }, 6000); // Interval between animations
       
       return intervalId;
     };
     
-    const intervalId = startWobbleInterval();
+    const intervalId = startPulseInterval();
     
     return () => {
       clearTimeout(initialTimeout);
@@ -41,7 +41,7 @@ const FloatingAppointmentButton = () => {
       <Button
         asChild
         size="lg"
-        className={`rounded-full shadow-lg bg-dental-turquoise hover:bg-dental-blue text-white transition-all duration-300 hover:scale-105 ${isWobbling ? 'animate-wobble' : ''}`}
+        className={`rounded-full shadow-lg bg-dental-blue hover:bg-dental-blue/90 text-white transition-all duration-300 hover:scale-105 ${isPulsing ? 'animate-pulse-wave' : ''}`}
       >
         <Link to="/appointment" className="flex items-center gap-2 p-1">
           <CalendarClock className="h-5 w-5" />
