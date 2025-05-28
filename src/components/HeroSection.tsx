@@ -17,7 +17,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
   title, 
-  subtitle = "Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden.", 
+  subtitle,
   backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
   useSolidBackground = false,
   ctaText = "Jetzt Wunschtermin finden",
@@ -51,7 +51,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <h1 className="mb-4">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl mb-6">Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden.</p>
+          {subtitle && (
+            <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
+          )}
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
