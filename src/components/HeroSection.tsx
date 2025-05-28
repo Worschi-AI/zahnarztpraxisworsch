@@ -17,10 +17,10 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ 
   title, 
-  subtitle = "Ihre Experten für gesunde und schöne Zähne", 
+  subtitle = "Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden.", 
   backgroundImage = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop",
   useSolidBackground = false,
-  ctaText = "Termin online buchen",
+  ctaText = "Jetzt Wunschtermin finden",
   secondaryCtaText = "Termin telefonisch buchen",
   introText
 }) => {

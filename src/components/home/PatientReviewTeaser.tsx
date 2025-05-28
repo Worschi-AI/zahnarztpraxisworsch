@@ -14,8 +14,8 @@ const PatientReviewTeaser = () => {
           <div className="flex items-center">
             <Star className="h-12 w-12 text-yellow-400 fill-yellow-400 mr-3 flex-shrink-0" aria-hidden="true" />
             <div>
-              <p className="font-bold text-dental-blue text-lg mb-1">Über 95% zufriedene Patienten – Ihre Zahnarztpraxis in Dresden Laubegast</p>
-              <p className="text-dental-gray">Das Vertrauen unserer Patienten ist unser größter Ansporn. Lesen Sie, warum junge und anspruchsvolle Patienten aus Dresden und Umgebung auf die Expertise der Zahnarztpraxis Worsch setzen.</p>
+              <p className="font-bold text-dental-blue text-lg mb-1">Über 95% zufriedene Patienten – Ihre Zahnarztpraxis Worsch in Dresden-Laubegast</p>
+              <p className="text-dental-gray">Das Vertrauen, das unsere Patienten uns schenken, ist unser größter Ansporn. Erfahren Sie selbst, warum so viele – von jungen Familien bis zu anspruchsvollen Erwachsenen aus Dresden und Umgebung – auf die Expertise und Fürsorge der Zahnarztpraxis Worsch vertrauen.</p>
             </div>
           </div>
           <Button asChild variant="outline" className="border-dental-blue text-dental-blue hover:bg-dental-blue hover:text-white flex-shrink-0 px-6 py-3 text-sm font-medium">

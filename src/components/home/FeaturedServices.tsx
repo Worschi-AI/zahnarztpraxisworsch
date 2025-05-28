@@ -15,9 +15,9 @@ const FeaturedServices = () => {
     <section className="py-20 bg-dental-beige">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Exzellenz in Ästhetik & Funktion – Unsere Premium-Leistungen für Sie</h2>
+          <h2 className="mb-4 text-dental-blue">Exzellenz in Ästhetik & Funktion – Unsere Premium-Leistungen für Ihr Lächeln</h2>
           <p className="text-lg max-w-2xl mx-auto text-dental-gray">
-            Entdecken Sie unsere spezialisierten Behandlungen, die modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen verbinden. Wir gestalten Ihr schönstes Lächeln.
+            Entdecken Sie bei uns spezialisierte Behandlungen, die modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen vereinen. Gemeinsam gestalten wir Ihr schönstes und gesündestes Lächeln.
           </p>
         </div>
         
@@ -29,10 +29,10 @@ const FeaturedServices = () => {
                 title={service.title}
                 description={
                   service.id === 'aesthetische-zahnheilkunde'
-                    ? `Von Veneers über professionelles Bleaching bis hin zu unsichtbaren Zahnkorrekturen – wir bieten Ihnen maßgeschneiderte Lösungen für ein makelloses Lächeln, das Ihre natürliche Schönheit unterstreicht. Erfahren Sie mehr über die Möglichkeiten der modernen Zahnästhetik in unserer Praxis in Dresden Laubegast.`
+                    ? `**Ihr Weg zum Traumlächeln.** Von schonendem Bleaching bis zu unsichtbaren Zahnkorrekturen wie Veneers – wir entwickeln maßgeschneiderte Lösungen, die perfekt zu Ihren individuellen Wünschen passen.`
                     : service.id === 'implantologie'
-                    ? `Verlorene Zähne? Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr Lächeln und Ihre Lebensqualität zurück. Festsitzender Zahnersatz, der sich anfühlt und aussieht wie Ihre eigenen Zähne – eine Investition in Ihre Zukunft. Ihr Spezialist für Implantologie in Dresden.`
-                    : `Perfektion bis ins Detail. Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen individuellen Zahnersatz aus besten Materialien für natürliche Ästhetik und dauerhafte Funktion. Entdecken Sie die Qualität unserer Zahntechnik.`
+                    ? `**Endlich wieder unbeschwert lachen und kauen.** Verlorene Zähne können das Leben einschränken. Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr volles Lächeln und damit ein großes Stück Lebensqualität zurück.`
+                    : `**Perfektion, die sich sehen und fühlen lässt.** Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen Ihren individuellen Zahnersatz aus besten Materialien, passgenau für Ihr natürliches Lächeln.`
                 }
                 imageUrl={
                   service.id === 'aesthetische-zahnheilkunde'

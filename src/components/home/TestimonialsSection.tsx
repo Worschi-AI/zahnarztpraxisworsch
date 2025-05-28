@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import TestimonialCard from '@/components/TestimonialCard';
@@ -48,9 +49,9 @@ const TestimonialsSection = () => {
       <section className="py-20 bg-dental-blue text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="mb-4">Das sagen unsere anspruchsvollen Patienten</h2>
+            <h2 className="mb-4">Echte Stimmen. Echte Erfahrungen. Das sagen unsere Patienten.</h2>
             <p className="text-lg max-w-2xl mx-auto opacity-90">
-              Erfahren Sie, wie zufriedene Patienten unsere zahnmedizinische Betreuung und ästhetischen Behandlungen erlebt haben.
+              Lassen Sie sich überzeugen: Erfahren Sie aus erster Hand, wie unsere zufriedenen Patienten die zahnmedizinische Betreuung und unsere ästhetischen Behandlungen in der Zahnarztpraxis Worsch erlebt haben.
             </p>
           </div>
           
