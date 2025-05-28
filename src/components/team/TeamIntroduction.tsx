@@ -8,13 +8,14 @@ const TeamIntroduction = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
-          <h2 className="mb-6 text-dental-blue">Experten für Ihre Zahngesundheit und Ästhetik in Dresden</h2>
+          <h2 className="mb-6 text-dental-blue">Ihr Team für Zahngesundheit & Ästhetik in Dresden: Erfahren & Empathisch.</h2>
           <p className="text-lg text-dental-gray">
-            In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> erwartet Sie ein hochqualifiziertes und erfahrenes Team, 
-            das sich mit Leidenschaft Ihrer Zahngesundheit und insbesondere Ihren ästhetischen Wünschen widmet. Wir legen größten 
-            Wert auf eine persönliche Betreuung, eine angenehme Atmosphäre und Behandlungsergebnisse, die Sie begeistern werden. 
-            Kontinuierliche Fortbildungen in allen Bereichen der modernen Zahnmedizin, insbesondere der ästhetischen Zahnheilkunde 
-            und Implantologie, sind für uns selbstverständlich.
+            In der <strong>Zahnarztpraxis Worsch in Dresden-Laubegast</strong> erwartet Sie ein hochqualifiziertes und herzliches Team, 
+            das sich mit größter Leidenschaft Ihrer Zahngesundheit und insbesondere Ihren individuellen ästhetischen Wünschen widmet. 
+            Wir legen größten Wert auf eine persönliche Betreuung, schaffen eine angenehme und entspannte Atmosphäre und arbeiten 
+            stets für Behandlungsergebnisse, die Sie begeistern werden. Kontinuierliche Fort- und Weiterbildungen in allen Bereichen 
+            der modernen Zahnmedizin, besonders in der ästhetischen Zahnheilkunde und Implantologie, sind für uns dabei eine 
+            Selbstverständlichkeit – für Ihre optimale Versorgung.
           </p>
         </div>
         
