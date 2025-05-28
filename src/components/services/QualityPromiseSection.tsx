@@ -38,23 +38,11 @@ const QualityPromiseSection = () => {
           </div>
           <div className="md:w-1/2 animate-on-scroll">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <picture>
-                <source 
-                  srcSet="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&fm=webp&w=800 800w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&fm=webp&w=600 600w"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  type="image/webp"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&w=800" 
-                  srcSet="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&w=800 800w, https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&w=600 600w"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
-                  className="w-full h-96 object-cover"
-                  width="800"
-                  height="384"
-                  loading="lazy"
-                />
-              </picture>
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+                alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
+                className="w-full h-96 object-cover"
+              />
             </div>
           </div>
         </div>

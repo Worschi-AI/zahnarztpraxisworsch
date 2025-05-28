@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -25,52 +24,36 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   introText
 }) => {
   return (
-    <div className="hero-container">
+    <div className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
       {/* Background Image with Overlay or Solid Background */}
       {!useSolidBackground ? (
-        <picture>
-          <source 
-            srcSet={`${backgroundImage}&fm=webp&w=1920 1920w, ${backgroundImage}&fm=webp&w=1200 1200w, ${backgroundImage}&fm=webp&w=768 768w`}
-            sizes="100vw"
-            type="image/webp"
-          />
-          <img
-            src={backgroundImage}
-            srcSet={`${backgroundImage}&w=1920 1920w, ${backgroundImage}&w=1200 1200w, ${backgroundImage}&w=768 768w`}
-            sizes="100vw"
-            alt="Zahnarztpraxis Worsch Dresden - moderne Behandlungsräume"
-            className="hero-bg"
-            width="1920"
-            height="1080"
-            loading="eager"
-            fetchPriority="high"
-            style={{ 
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: "brightness(0.8)"
-            }}
-          />
-        </picture>
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${backgroundImage})`,
+            filter: "brightness(0.8)"
+          }}
+          aria-hidden="true"
+          role="img"
+          aria-label="Zahnarztpraxis Worsch Dresden - moderne Behandlungsräume"
+        />
       ) : (
         <div className="absolute inset-0 z-0 bg-dental-blue/90" aria-hidden="true" />
       )}
       
       {/* Only gradient overlay, no additional images */}
-      <div className="hero-overlay" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" aria-hidden="true" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
-        <div className="hero-content animate-fade-in">
+        <div className="max-w-2xl text-white animate-fade-in">
           <h1 className="mb-4">
             {title}
           </h1>
           <p className="text-xl md:text-2xl mb-6">{subtitle}</p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="btn btn-primary">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">{ctaText}</Link>
             </Button>
             <PhoneButton 

@@ -47,23 +47,11 @@ const HeroIntroSection = () => {
           </div>
           <div className="md:w-1/2 animate-on-scroll">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <picture>
-                <source 
-                  srcSet="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop&fm=webp&w=800 800w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop&fm=webp&w=600 600w"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  type="image/webp"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop&w=800" 
-                  srcSet="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop&w=800 800w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop&w=600 600w"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  alt="Moderne Praxisräume der Zahnarztpraxis Worsch in Dresden Laubegast" 
-                  className="w-full h-auto"
-                  width="800"
-                  height="600"
-                  loading="lazy"
-                />
-              </picture>
+              <img 
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop" 
+                alt="Moderne Praxisräume der Zahnarztpraxis Worsch in Dresden Laubegast" 
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

@@ -20,23 +20,11 @@ const TeamPreview = () => {
             <div key={member.id} className="w-full md:w-5/12 lg:w-[30%] animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="bg-dental-beige rounded-lg p-6 h-full flex flex-col items-center text-center hover-scale">
                 <div className="w-40 h-40 rounded-full overflow-hidden mb-4">
-                  <picture>
-                    <source 
-                      srcSet={`${member.imageUrl}?fm=webp&w=320&h=320&fit=crop&crop=face 320w, ${member.imageUrl}?fm=webp&w=160&h=160&fit=crop&crop=face 160w`}
-                      sizes="160px"
-                      type="image/webp"
-                    />
-                    <img 
-                      src={`${member.imageUrl}?w=320&h=320&fit=crop&crop=face`}
-                      srcSet={`${member.imageUrl}?w=320&h=320&fit=crop&crop=face 320w, ${member.imageUrl}?w=160&h=160&fit=crop&crop=face 160w`}
-                      sizes="160px"
-                      alt={`${member.name}, ${member.role} - Zahnarztpraxis Worsch Dresden`} 
-                      className="w-full h-full object-cover"
-                      width="160"
-                      height="160"
-                      loading="lazy"
-                    />
-                  </picture>
+                  <img 
+                    src={member.imageUrl} 
+                    alt={`${member.name}, ${member.role} - Zahnarztpraxis Worsch Dresden`} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                 <p className="text-dental-turquoise mb-4">{member.role}</p>

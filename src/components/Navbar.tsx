@@ -25,12 +25,12 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
-      role="navigation"
-      aria-label="Hauptnavigation"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center" aria-label="Zur Startseite">
+        <Link to="/" className="flex items-center">
           <span className="text-xl md:text-2xl font-sans font-bold text-dental-blue">
             Zahnarztpraxis Worsch
           </span>
@@ -61,12 +61,8 @@ const Navbar = () => {
         {/* Mobile Menu with Sheet Component */}
         <Sheet>
           <SheetTrigger asChild>
-            <button 
-              className="md:hidden p-2 rounded-md hover:bg-dental-beige hover:scale-105 transform transition-all duration-300"
-              aria-label="Mobilmenü öffnen"
-              aria-expanded="false"
-            >
-              <Menu className="h-6 w-6 text-dental-blue" aria-hidden="true" />
+            <button className="md:hidden p-2 rounded-md hover:bg-dental-beige hover:scale-105 transform transition-all duration-300">
+              <Menu className="h-6 w-6 text-dental-blue" />
             </button>
           </SheetTrigger>
           <SheetContent className="w-full pt-16 bg-white">
