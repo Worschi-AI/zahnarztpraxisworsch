@@ -54,11 +54,23 @@ const PraxisGallery = () => {
       <div className="relative mx-auto max-w-4xl rounded-lg overflow-hidden shadow-lg">
         {/* Main image */}
         <div className="relative h-[500px] bg-dental-blue/10">
-          <img 
-            src={praxisImages[currentIndex].src}
-            alt={praxisImages[currentIndex].alt}
-            className="w-full h-full object-cover transition-all duration-300"
-          />
+          <picture>
+            <source 
+              srcSet={`${praxisImages[currentIndex].src}&fm=webp&w=1024 1024w, ${praxisImages[currentIndex].src}&fm=webp&w=768 768w`}
+              sizes="(max-width: 768px) 100vw, 1024px"
+              type="image/webp"
+            />
+            <img 
+              src={`${praxisImages[currentIndex].src}&w=1024`}
+              srcSet={`${praxisImages[currentIndex].src}&w=1024 1024w, ${praxisImages[currentIndex].src}&w=768 768w`}
+              sizes="(max-width: 768px) 100vw, 1024px"
+              alt={praxisImages[currentIndex].alt}
+              className="w-full h-full object-cover transition-all duration-300"
+              width="1024"
+              height="500"
+              loading="lazy"
+            />
+          </picture>
           
           {/* Navigation arrows */}
           <div className="absolute inset-0 flex items-center justify-between px-4">
@@ -67,18 +79,18 @@ const PraxisGallery = () => {
               variant="outline" 
               size="icon" 
               className="bg-white/80 hover:bg-white border-none rounded-full"
-              aria-label="Vorheriges Bild anzeigen"
+              aria-label={`Vorheriges Bild anzeigen. Aktuell: ${praxisImages[currentIndex].title}`}
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-6 w-6" aria-hidden="true" />
             </Button>
             <Button 
               onClick={nextSlide}
               variant="outline" 
               size="icon" 
               className="bg-white/80 hover:bg-white border-none rounded-full"
-              aria-label="Nächstes Bild anzeigen"
+              aria-label={`Nächstes Bild anzeigen. Aktuell: ${praxisImages[currentIndex].title}`}
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-6 w-6" aria-hidden="true" />
             </Button>
           </div>
           
@@ -90,7 +102,7 @@ const PraxisGallery = () => {
         </div>
         
         {/* Thumbnails */}
-        <div className="flex justify-center gap-2 mt-4 px-4 py-2">
+        <div className="flex justify-center gap-2 mt-4 px-4 py-2" role="tablist" aria-label="Bildergalerie Navigation">
           {praxisImages.map((image, index) => (
             <button
               key={index}
@@ -98,13 +110,25 @@ const PraxisGallery = () => {
               className={`w-16 h-16 overflow-hidden rounded-md transition-all ${
                 index === currentIndex ? 'ring-2 ring-dental-turquoise' : 'opacity-70'
               }`}
+              role="tab"
+              aria-selected={index === currentIndex}
               aria-label={`Bild ${index + 1} von ${praxisImages.length} anzeigen: ${image.title}`}
             >
-              <img 
-                src={image.src} 
-                alt={`Miniaturansicht: ${image.title}`}
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source 
+                  srcSet={`${image.src}&fm=webp&w=128&h=128&fit=crop 128w`}
+                  sizes="64px"
+                  type="image/webp"
+                />
+                <img 
+                  src={`${image.src}&w=128&h=128&fit=crop`}
+                  alt={`Miniaturansicht: ${image.title}`}
+                  className="w-full h-full object-cover"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </picture>
             </button>
           ))}
         </div>

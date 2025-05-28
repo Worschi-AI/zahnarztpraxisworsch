@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import HeroIntroSection from '@/components/home/HeroIntroSection';
-import PatientReviewTeaser from '@/components/home/PatientReviewTeaser';
-import FeaturedServices from '@/components/home/FeaturedServices';
-import StatisticsSection from '@/components/home/StatisticsSection';
-import TeamPreview from '@/components/home/TeamPreview';
-import QualityPromiseSection from '@/components/services/QualityPromiseSection';
-import StandardServices from '@/components/home/StandardServices';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import HomepageFAQ from '@/components/home/HomepageFAQ';
-import AppointmentCTA from '@/components/home/AppointmentCTA';
+
+// Lazy load non-critical components for better performance
+const PatientReviewTeaser = React.lazy(() => import('@/components/home/PatientReviewTeaser'));
+const FeaturedServices = React.lazy(() => import('@/components/home/FeaturedServices'));
+const StatisticsSection = React.lazy(() => import('@/components/home/StatisticsSection'));
+const TeamPreview = React.lazy(() => import('@/components/home/TeamPreview'));
+const QualityPromiseSection = React.lazy(() => import('@/components/services/QualityPromiseSection'));
+const StandardServices = React.lazy(() => import('@/components/home/StandardServices'));
+const TestimonialsSection = React.lazy(() => import('@/components/home/TestimonialsSection'));
+const HomepageFAQ = React.lazy(() => import('@/components/home/HomepageFAQ'));
+const AppointmentCTA = React.lazy(() => import('@/components/home/AppointmentCTA'));
+
+// Loading component for better UX
+const SectionLoader = () => (
+  <div className="py-20 flex justify-center items-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-dental-turquoise"></div>
+  </div>
+);
 
 const Index = () => {
   // Use the scroll animation hook
@@ -75,6 +84,9 @@ const Index = () => {
         <meta name="description" content="Ihre moderne Zahnarztpraxis Worsch in Dresden Laubegast: Spezialisiert auf ästhetische Zahnmedizin, Implantate & Ihr strahlendes Lächeln. Jetzt Termin online buchen!" />
         <link rel="canonical" href={baseUrl} />
         
+        {/* Preload critical resources */}
+        <link rel="preload" as="image" href="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop&fm=webp&w=1920" />
+        
         {/* FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -90,7 +102,7 @@ const Index = () => {
       
       <Navbar />
       
-      {/* Hero Section with updated content */}
+      {/* Hero Section with updated content - Critical, loaded immediately */}
       <HeroSection 
         title="Ihr Lächeln. Unsere Expertise. Zahnarztpraxis Worsch Dresden." 
         subtitle="Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden." 
@@ -98,35 +110,45 @@ const Index = () => {
         ctaText="Jetzt Wunschtermin finden"
       />
 
-      {/* Intro Section */}
+      {/* Intro Section - Critical, loaded immediately */}
       <HeroIntroSection />
 
-      {/* Patient Reviews Teaser */}
-      <PatientReviewTeaser />
+      {/* Lazy loaded sections with Suspense for better performance */}
+      <Suspense fallback={<SectionLoader />}>
+        <PatientReviewTeaser />
+      </Suspense>
 
-      {/* Premium Services Section */}
-      <FeaturedServices />
+      <Suspense fallback={<SectionLoader />}>
+        <FeaturedServices />
+      </Suspense>
 
-      {/* Statistics Section */}
-      <StatisticsSection />
+      <Suspense fallback={<SectionLoader />}>
+        <StatisticsSection />
+      </Suspense>
 
-      {/* Team Teaser */}
-      <TeamPreview />
+      <Suspense fallback={<SectionLoader />}>
+        <TeamPreview />
+      </Suspense>
 
-      {/* Quality Promise Section */}
-      <QualityPromiseSection />
+      <Suspense fallback={<SectionLoader />}>
+        <QualityPromiseSection />
+      </Suspense>
 
-      {/* Services Section - Standard Services */}
-      <StandardServices />
+      <Suspense fallback={<SectionLoader />}>
+        <StandardServices />
+      </Suspense>
 
-      {/* Testimonials */}
-      <TestimonialsSection />
+      <Suspense fallback={<SectionLoader />}>
+        <TestimonialsSection />
+      </Suspense>
 
-      {/* FAQ Section - vor AppointmentCTA eingefügt */}
-      <HomepageFAQ />
+      <Suspense fallback={<SectionLoader />}>
+        <HomepageFAQ />
+      </Suspense>
 
-      {/* Appointment CTA */}
-      <AppointmentCTA />
+      <Suspense fallback={<SectionLoader />}>
+        <AppointmentCTA />
+      </Suspense>
 
       <Footer />
     </div>
