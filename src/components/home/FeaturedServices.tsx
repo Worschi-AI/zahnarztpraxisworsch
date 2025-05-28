@@ -6,25 +6,25 @@ import { Sparkles, Heart, Shield, Star } from 'lucide-react';
 const FeaturedServices = () => {
   const featuredServices = [
     {
+      id: "aesthetische-zahnheilkunde",
       title: "Ästhetische Zahnheilkunde",
       description: "Veneers, Bleaching und Smile Makeovers für Ihr perfektes Lächeln",
       icon: <Sparkles className="w-6 h-6" />,
-      link: "/services/aesthetische-zahnheilkunde",
-      image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1740&auto=format&fit=crop"
     },
     {
+      id: "implantologie",
       title: "Implantologie",
       description: "Moderne Zahnimplantate für natürliche und dauerhafte Ergebnisse",
       icon: <Shield className="w-6 h-6" />,
-      link: "/services/implantologie",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1968&auto=format&fit=crop"
     },
     {
+      id: "zahnersatz",
       title: "Hochwertiger Zahnersatz",
       description: "Kronen, Brücken und Prothesen in Premium-Qualität",
       icon: <Star className="w-6 h-6" />,
-      link: "/services/zahnersatz",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1740&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1740&auto=format&fit=crop"
     }
   ];
 
@@ -41,7 +41,13 @@ const FeaturedServices = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {featuredServices.map((service, index) => (
             <div key={index} className="animate-on-scroll">
-              <ServiceCard {...service} />
+              <ServiceCard 
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                imageUrl={service.imageUrl}
+              />
             </div>
           ))}
         </div>
