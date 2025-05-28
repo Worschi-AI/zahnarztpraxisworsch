@@ -1,12 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { X, Menu } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { X, Menu, Home, Building, Users, List, Mail } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,18 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const isActiveRoute = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const menuItems = [
+    { title: "Startseite", url: "/", icon: Home },
+    { title: "Praxis", url: "/about", icon: Building },
+    { title: "Team", url: "/team", icon: Users },
+    { title: "Leistungen", url: "/services", icon: List },
+    { title: "Kontakt", url: "/contact", icon: Mail },
+  ];
 
   return (
     <nav 
@@ -65,41 +79,47 @@ const Navbar = () => {
               <Menu className="h-6 w-6 text-dental-blue" />
             </button>
           </SheetTrigger>
-          <SheetContent className="w-full pt-16 bg-white">
-            <div className="flex flex-col space-y-6 px-2">
-              <Link 
-                to="/" 
-                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
-              >
-                Startseite
-              </Link>
-              <Link 
-                to="/about" 
-                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
-              >
-                Praxis
-              </Link>
-              <Link 
-                to="/team" 
-                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
-              >
-                Team
-              </Link>
-              <Link 
-                to="/services" 
-                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
-              >
-                Leistungen
-              </Link>
-              <Link 
-                to="/contact" 
-                className="py-3 px-4 text-lg font-medium hover:bg-dental-beige rounded-md transition-all hover:text-dental-blue flex items-center"
-              >
-                Kontakt
-              </Link>
-              <Button asChild className="mt-4 w-full bg-dental-turquoise hover:bg-dental-blue text-white">
-                <Link to="/appointment">Termin buchen</Link>
-              </Button>
+          <SheetContent className="w-full pt-4 bg-white">
+            {/* Header mit Logo/Praxisname */}
+            <div className="flex items-center justify-between mb-8 px-2">
+              <div className="flex items-center">
+                <span className="text-lg font-sans font-bold text-dental-blue">
+                  Zahnarztpraxis Worsch
+                </span>
+              </div>
+            </div>
+            
+            {/* Navigation Links */}
+            <div className="flex flex-col px-2">
+              {menuItems.map((item, index) => (
+                <React.Fragment key={item.title}>
+                  <Link 
+                    to={item.url} 
+                    className={`py-4 px-4 text-lg font-medium rounded-md transition-all flex items-center gap-3 relative ${
+                      isActiveRoute(item.url) 
+                        ? 'text-dental-blue bg-dental-beige/50' 
+                        : 'hover:bg-dental-beige hover:text-dental-blue'
+                    }`}
+                  >
+                    {/* Aktiver Indikator */}
+                    {isActiveRoute(item.url) && (
+                      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-8 bg-dental-turquoise rounded-r-full"></div>
+                    )}
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.title}</span>
+                  </Link>
+                  {index < menuItems.length - 1 && (
+                    <Separator className="my-1 bg-gray-200/50" />
+                  )}
+                </React.Fragment>
+              ))}
+              
+              {/* Termin buchen Button mit mehr Abstand */}
+              <div className="mt-6 px-4">
+                <Button asChild className="w-full bg-dental-turquoise hover:bg-dental-blue text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Link to="/appointment">Termin buchen</Link>
+                </Button>
+              </div>
             </div>
           </SheetContent>
         </Sheet>
