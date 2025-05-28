@@ -14,23 +14,22 @@ const TeamFAQ = () => {
       question: "Welche Qualifikationen und Spezialisierungen haben die Zahnärzte der Praxis Worsch in Dresden?",
       answer: (
         <>
-          Unser Zahnarzt-Team in Dresden verfügt über umfassende Qualifikationen und bildet sich kontinuierlich in Spezialgebieten wie{' '}
+          Unser erfahrenes Zahnarzt-Team in Dresden verfügt über umfassende Qualifikationen und bildet sich kontinuierlich in wichtigen Spezialgebieten weiter, um Ihnen stets die bestmögliche Versorgung zu bieten. Dazu gehören beispielsweise die{' '}
           <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">
             ästhetische Zahnmedizin
-          </Link>, {' '}
+          </Link>, die{' '}
           <Link to="/services/implantologie" className="text-dental-turquoise hover:text-dental-blue underline">
             Implantologie
-          </Link>, Endodontie und{' '}
+          </Link>, die Endodontie (Wurzelkanalbehandlungen) und die{' '}
           <Link to="/services/kinderzahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">
             Kinderzahnheilkunde
-          </Link>{' '}
-          weiter. Detaillierte Informationen zu den Schwerpunkten unserer Zahnärzte finden Sie in den einzelnen Teamprofilen auf dieser Seite.
+          </Link>. Detaillierte Informationen zu den einzelnen Schwerpunkten unserer Zahnärzte finden Sie direkt in ihren persönlichen Profilen auf dieser Seite.
         </>
       )
     },
     {
       question: "Wie geht das Team der Zahnarztpraxis Worsch mit Angstpatienten um?",
-      answer: "Wir haben großes Verständnis für Patienten mit Zahnarztangst. Unser Team in Dresden Laubegast ist speziell geschult, um Ihnen einen möglichst stressfreien und angenehmen Besuch zu ermöglichen. Wir nehmen uns viel Zeit für Sie, erklären jeden Schritt und bieten bei Bedarf auch schonende Behandlungsmethoden wie Sedierung (Dämmerschlaf) an. Sprechen Sie uns gerne offen auf Ihre Ängste an!"
+      answer: "Wir haben großes Verständnis und viel Einfühlungsvermögen für Patienten mit Zahnarztangst. Unser gesamtes Team in Dresden-Laubegast ist speziell geschult, um Ihnen einen möglichst stressfreien und angenehmen Besuch zu ermöglichen. Wir nehmen uns bewusst viel Zeit für Sie, hören Ihnen aufmerksam zu und erklären Ihnen jeden einzelnen Schritt behutsam und in Ruhe. Bei Bedarf bieten wir Ihnen auch schonende Behandlungsmethoden wie eine Sedierung (Dämmerschlaf) an. Bitte sprechen Sie uns jederzeit offen auf Ihre Ängste an – wir sind für Sie da!"
     },
     {
       question: "Kann ich mir einen bestimmten Zahnarzt oder eine Zahnärztin in Ihrer Dresdner Praxis aussuchen?",
@@ -40,7 +39,7 @@ const TeamFAQ = () => {
           <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">
             Terminvereinbarung
           </Link>{' '}
-          Ihren Wunschbehandler in unserer Zahnarztpraxis in Dresden angeben. Wir versuchen, dies bestmöglich zu berücksichtigen. Bei Notfällen oder sehr kurzfristigen Terminen kann es jedoch sein, dass Sie von dem gerade verfügbaren Zahnarzt behandelt werden.
+          gerne Ihren Wunschbehandler in unserer Zahnarztpraxis in Dresden angeben. Wir bemühen uns stets, dies bestmöglich zu berücksichtigen, denn Ihre Zufriedenheit ist uns wichtig. Bei Notfällen oder sehr kurzfristigen Terminen kann es jedoch im Einzelfall vorkommen, dass Sie von dem gerade verfügbaren Zahnarzt oder der Zahnärztin behandelt werden.
         </>
       )
     },
@@ -48,7 +47,7 @@ const TeamFAQ = () => {
       question: "Spricht das Praxisteam auch andere Sprachen außer Deutsch?",
       answer: (
         <>
-          Einige Mitglieder unseres Teams in Dresden sprechen auch Englisch. Bitte geben Sie bei der Terminvereinbarung Bescheid, falls Sie eine Betreuung in einer anderen Sprache wünschen, damit wir dies bestmöglich organisieren können. Weitere Informationen finden Sie auf unserer{' '}
+          Ja, einige Mitglieder unseres Teams in Dresden sprechen auch sehr gut Englisch. Falls Sie eine Betreuung in einer anderen Sprache wünschen, geben Sie uns dies bitte bereits bei der Terminvereinbarung Bescheid, damit wir dies bestmöglich für Sie organisieren können und eine reibungslose Kommunikation gewährleistet ist. Weitere Informationen und Kontaktmöglichkeiten finden Sie auf unserer{' '}
           <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">
             Kontaktseite
           </Link>.
@@ -59,7 +58,7 @@ const TeamFAQ = () => {
       question: "Wie wichtig ist dem Team der Zahnarztpraxis Worsch die kontinuierliche Weiterbildung?",
       answer: (
         <>
-          Sehr wichtig! Um Ihnen stets Zahnmedizin auf dem neuesten Stand der Wissenschaft anbieten zu können, nehmen alle unsere Zahnärzte und Mitarbeiter in Dresden regelmäßig an Fortbildungen und Fachkongressen teil. So stellen wir sicher, dass Sie von den modernsten und besten Behandlungsmethoden profitieren. Mehr über unsere{' '}
+          Kontinuierliche Weiterbildung ist für unser gesamtes Team von allergrößter Bedeutung! Um Ihnen stets Zahnmedizin auf dem absolut neuesten Stand der Wissenschaft anbieten zu können, nehmen alle unsere Zahnärzte und Mitarbeiter in Dresden regelmäßig und engagiert an Fortbildungen, Fachkongressen und spezifischen Schulungen teil. So stellen wir sicher, dass Sie bei uns immer von den modernsten und besten Behandlungsmethoden profitieren und optimal versorgt sind. Mehr über unsere fortschrittlichen{' '}
           <Link to="/services" className="text-dental-turquoise hover:text-dental-blue underline">
             Behandlungsmethoden
           </Link>{' '}
@@ -77,13 +76,13 @@ const TeamFAQ = () => {
             {/* Left Column - Title */}
             <div className="animate-on-scroll">
               <p className="text-dental-turquoise text-lg font-medium mb-4">
-                Fragen an unser Team
+                Ihre Fragen an unser Team
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-dental-blue leading-tight">
-                Hier finden Sie Antworten!
+                Wir geben persönliche Antworten.
               </h2>
               <p className="text-lg text-dental-gray mt-6">
-                Wir möchten, dass Sie sich bei uns gut aufgehoben fühlen. Erfahren Sie mehr über unser Team und unsere Arbeitsweise in der Zahnarztpraxis Worsch in Dresden Laubegast.
+                Sie möchten mehr über unser Team erfahren? Hier finden Sie alle Antworten! Wir möchten, dass Sie sich bei uns von Anfang an gut aufgehoben und persönlich betreut fühlen. Entdecken Sie, was unser Team in der Zahnarztpraxis Worsch in Dresden-Laubegast auszeichnet und wie wir arbeiten.
               </p>
             </div>
             
