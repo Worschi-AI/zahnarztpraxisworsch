@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const PracticeInfo = () => {
@@ -6,7 +5,7 @@ const PracticeInfo = () => {
   
   return (
     <div>
-      <h3 className="text-xl font-bold mb-6 text-white">Zahnarztpraxis Dipl.med dent.<br />Ute Worsch & Peik Worsch</h3>
+      <h3 className="text-xl font-bold mb-6 text-white">Zahnarztpraxis Worsch</h3>
       <p className="mb-2">
         <a 
           href="https://maps.app.goo.gl/8FQz7SawJR9QrXdh7" 
