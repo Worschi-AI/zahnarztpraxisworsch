@@ -10,11 +10,36 @@ const PatientReviewTeaser = () => {
     <section className="py-8 bg-dental-beige">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-br from-white via-white to-gray-50 rounded-2xl p-8 shadow-soft hover:shadow-lg transition-shadow duration-300 animate-on-scroll">
-          {/* Zentraler Stern oberhalb des Titels */}
+          {/* 5 Sterne in Kreisformation oberhalb des Titels */}
           <div className="flex flex-col items-center text-center mb-6">
-            <div className="mb-4">
+            <div className="mb-4 relative w-32 h-32 flex items-center justify-center">
+              {/* Stern 1 - oben */}
               <Star 
-                className="h-16 w-16 text-yellow-400 fill-yellow-400 drop-shadow-sm" 
+                className="absolute h-8 w-8 text-yellow-400 fill-yellow-400 drop-shadow-sm transform -translate-y-12" 
+                style={{ color: '#FFD700', fill: '#FFD700' }}
+                aria-hidden="true" 
+              />
+              {/* Stern 2 - oben rechts */}
+              <Star 
+                className="absolute h-8 w-8 text-yellow-400 fill-yellow-400 drop-shadow-sm transform translate-x-9 -translate-y-7" 
+                style={{ color: '#FFD700', fill: '#FFD700' }}
+                aria-hidden="true" 
+              />
+              {/* Stern 3 - unten rechts */}
+              <Star 
+                className="absolute h-8 w-8 text-yellow-400 fill-yellow-400 drop-shadow-sm transform translate-x-6 translate-y-9" 
+                style={{ color: '#FFD700', fill: '#FFD700' }}
+                aria-hidden="true" 
+              />
+              {/* Stern 4 - unten links */}
+              <Star 
+                className="absolute h-8 w-8 text-yellow-400 fill-yellow-400 drop-shadow-sm transform -translate-x-6 translate-y-9" 
+                style={{ color: '#FFD700', fill: '#FFD700' }}
+                aria-hidden="true" 
+              />
+              {/* Stern 5 - oben links */}
+              <Star 
+                className="absolute h-8 w-8 text-yellow-400 fill-yellow-400 drop-shadow-sm transform -translate-x-9 -translate-y-7" 
                 style={{ color: '#FFD700', fill: '#FFD700' }}
                 aria-hidden="true" 
               />
