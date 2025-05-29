@@ -583,3 +583,8 @@
 .animated {
   will-change: auto;
 }
+
+/* Enhanced shadow utilities */
+.shadow-soft {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
