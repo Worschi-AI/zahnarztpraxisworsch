@@ -46,7 +46,11 @@ const TestimonialsSection = () => {
         </script>
       </Helmet>
       
-      <section className="py-20 bg-dental-blue text-white">
+      <section className="py-20 bg-dental-blue text-white animate-slide-down" 
+               style={{
+                 animationDuration: '0.7s',
+                 animationTimingFunction: 'ease-out'
+               }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-on-scroll">
             <h2 className="mb-4">Echte Stimmen. Echte Erfahrungen. Das sagen unsere Patienten.</h2>
