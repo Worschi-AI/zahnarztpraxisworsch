@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -17,19 +16,34 @@ const HeroIntroSection = () => {
               Herzlich willkommen in der <strong>Zahnarztpraxis Worsch</strong> – Ihrem modernen Zentrum für umfassende Zahngesundheit und ästhetische Zahnheilkunde im Herzen von <strong>Dresden-Laubegast</strong>. 
             </p>
             
-            <div className="bg-gradient-to-br from-dental-turquoise to-dental-blue p-6 rounded-xl text-white mb-6 shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-white/20 rounded-full">
-                  <Award className="w-6 h-6 text-white" />
+            <div className="bg-gradient-to-br from-dental-turquoise to-dental-blue rounded-[20px] text-white my-10 mx-5 px-5 py-[30px] animate-slide-up" 
+                 style={{ 
+                   boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.2)',
+                   animationDuration: '0.6s',
+                   animationTimingFunction: 'ease-out',
+                   animationDelay: '0.1s'
+                 }}>
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-[15px]">
+                  <svg 
+                    width="60" 
+                    height="60" 
+                    viewBox="0 0 60 60" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mx-auto"
+                  >
+                    <circle cx="30" cy="30" r="28" fill="#FFD700" stroke="#FFD700" strokeWidth="2"/>
+                    <circle cx="30" cy="30" r="20" fill="none" stroke="#2271b9" strokeWidth="2"/>
+                    <path d="M30 15L33.5 25H44L35.5 32L39 42L30 35L21 42L24.5 32L16 25H26.5L30 15Z" fill="#2271b9"/>
+                  </svg>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2 text-lg">
-                    Mehr als 32 Jahre Leidenschaft für Ihr Lächeln
-                  </h3>
-                  <p className="text-white/90 leading-relaxed">
-                    Mit über 32 Jahren Erfahrung sind wir mit Herz und Seele für unsere Patienten da. Wir verbinden bewährte Expertise mit modernster Innovation, denn wir wissen: Ein gesundes, strahlendes Lächeln ist mehr als nur schöne Zähne – es ist ein tiefgreifender Ausdruck Ihrer Persönlichkeit, Ihres Wohlbefindens und Ihrer Lebensfreude.
-                  </p>
-                </div>
+                <h3 className="font-bold text-white mb-4 text-lg">
+                  Mehr als 32 Jahre Leidenschaft für Ihr Lächeln
+                </h3>
+                <p className="text-white leading-relaxed">
+                  Mit über 32 Jahren Erfahrung sind wir mit Herz und Seele für unsere Patienten da. Wir verbinden bewährte Expertise mit modernster Innovation, denn wir wissen: Ein gesundes, strahlendes Lächeln ist mehr als nur schöne Zähne – es ist ein tiefgreifender Ausdruck Ihrer Persönlichkeit, Ihres Wohlbefindens und Ihrer Lebensfreude.
+                </p>
               </div>
             </div>
             
