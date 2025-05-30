@@ -23,7 +23,15 @@ const FeaturedServices = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredServices.map((service, index) => (
-            <div key={service.id} className="animate-on-scroll flex flex-col h-full" style={{ animationDelay: `${index * 100}ms` }}>
+            <div 
+              key={service.id} 
+              className="animate-on-scroll flex flex-col h-full" 
+              style={{ 
+                animationDelay: `${index * 100}ms`,
+                animationDuration: '0.6s',
+                animationTimingFunction: 'ease-out'
+              }}
+            >
               <ServiceCard
                 id={service.id}
                 title={service.title}
