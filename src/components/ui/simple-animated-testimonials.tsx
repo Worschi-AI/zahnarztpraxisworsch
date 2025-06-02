@@ -137,7 +137,7 @@ export function TestimonialsSection({
             </div>
 
             {/* Testimonial cards */}
-            <div className="relative h-[320px] md:h-[280px]">
+            <div className="relative h-[400px] md:h-[380px]">
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={testimonial.id}
@@ -171,7 +171,9 @@ export function TestimonialsSection({
 
                     <Separator className="my-4" />
 
-                    <p className="flex-1 italic text-base/relaxed">"{testimonial.content}"</p>
+                    <div className="flex-1 overflow-hidden">
+                      <p className="italic text-base/relaxed line-clamp-6">"{testimonial.content}"</p>
+                    </div>
 
                     {showVerifiedBadge && (
                       <div className="mt-4 text-xs text-right text-muted-foreground">Verified Customer</div>
