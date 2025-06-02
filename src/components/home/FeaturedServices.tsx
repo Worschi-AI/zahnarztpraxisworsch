@@ -51,7 +51,7 @@ const FeaturedServices = () => {
         return {
           bg: 'bg-gray-100',
           iconBg: 'bg-gray-400',
-          title: service.title,
+          title: 'Premium Service',
           subtitle: 'Premium Service'
         };
     }
