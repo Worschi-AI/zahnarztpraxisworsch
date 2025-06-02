@@ -54,23 +54,15 @@ const HeroIntroSection = () => {
             </div>
           </div>
 
-          {/* Content */}
+          {/* Content - nur noch ein kurzer Teaser */}
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="mb-6 lg:mb-8">
               <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                Willkommen in Ihrer modernen Zahnarztpraxis in Dresden-Laubegast
+                Moderne Zahnmedizin in Dresden-Laubegast
               </h2>
               
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
-                Herzlich willkommen in der Zahnarztpraxis Worsch! Als Ihr Zahnarzt Dresden-Laubegast verbinden wir modernste Zahnmedizin mit einer persönlichen, entspannten Atmosphäre.
-              </p>
-              
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
-                Unser Fokus liegt auf ästhetischer Zahnheilkunde und innovativen Behandlungsmethoden, die Ihnen zu einem strahlend schönen Lächeln verhelfen. Mit digitaler Diagnostik, schonenden Behandlungsverfahren und höchsten Qualitätsstandards sorgen wir dafür, dass Sie sich bei uns rundum wohlfühlen.
-              </p>
-              
               <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-8">
-                Ob professionelles Bleaching, unsichtbare Zahnkorrektur mit Invisalign oder ästhetische Restaurationen – wir begleiten Sie als Zahnarzt in Dresden auf dem Weg zu Ihren Traumzähnen. Vertrauen Sie auf unsere Expertise und erleben Sie Zahnmedizin, die Spaß macht.
+                Erleben Sie zeitgemäße Zahnbehandlungen in entspannter Atmosphäre. Scrollen Sie weiter und entdecken Sie unsere Philosophie und Expertise.
               </p>
             </div>
             

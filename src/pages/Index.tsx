@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
@@ -5,6 +6,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import HeroIntroSection from '@/components/home/HeroIntroSection';
+import TextRevealSection from '@/components/home/TextRevealSection';
 import FeaturedServices from '@/components/home/FeaturedServices';
 import StatisticsSection from '@/components/home/StatisticsSection';
 import TeamPreview from '@/components/home/TeamPreview';
@@ -98,6 +100,9 @@ const Index = () => {
 
       {/* Intro Section */}
       <HeroIntroSection />
+
+      {/* Text Reveal Section */}
+      <TextRevealSection />
 
       {/* Premium Services Section */}
       <FeaturedServices />
