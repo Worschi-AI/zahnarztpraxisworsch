@@ -66,10 +66,10 @@ const StatisticItem: React.FC<StatisticItemProps> = ({
   return (
     <div 
       ref={elementRef} 
-      className="group relative text-center text-white bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+      className="group relative text-center text-white bg-white/10 backdrop-blur-sm rounded-full w-40 h-40 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center mx-auto"
     >
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dental-turquoise/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-dental-turquoise/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       
       {/* Content */}
       <div className="relative z-10">
@@ -102,25 +102,7 @@ const StatisticsSection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white rounded-full blur-3xl opacity-5"></div>
       </div>
       
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute animate-pulse top-20 left-1/4 w-1.5 h-1.5 bg-white rounded-full"></div>
-        <div className="absolute animate-pulse delay-300 top-40 right-1/4 w-2 h-2 bg-dental-turquoise rounded-full"></div>
-        <div className="absolute animate-pulse delay-700 bottom-32 left-1/3 w-1.5 h-1.5 bg-white rounded-full"></div>
-        <div className="absolute animate-pulse delay-1000 bottom-20 right-1/3 w-2 h-2 bg-dental-turquoise rounded-full"></div>
-      </div>
-      
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section header */}
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight">
-            Vertrauen Sie auf unsere Expertise
-          </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Zahlen, die für sich sprechen – Ihre Zufriedenheit ist unser Erfolg
-          </p>
-        </div>
-        
         {/* Statistics grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {statistics.map((stat, index) => (
