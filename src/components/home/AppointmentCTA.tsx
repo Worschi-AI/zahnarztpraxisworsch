@@ -7,11 +7,11 @@ import PhoneButton from '@/components/PhoneButton';
 
 const AppointmentCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-2xl mx-auto animate-on-scroll">
-          <h2 className="mb-4">Bereit für Ihr strahlendes Lächeln? Ihre Zahnarztpraxis Worsch in Dresden freut sich auf Sie!</h2>
-          <p className="text-lg mb-8 opacity-90">
+          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl">Bereit für Ihr strahlendes Lächeln? Ihre Zahnarztpraxis Worsch in Dresden freut sich auf Sie!</h2>
+          <p className="text-base lg:text-lg mb-6 lg:mb-8 opacity-90">
             Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin in der <strong>Zahnarztpraxis Worsch</strong>. 
             Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an.
           </p>
