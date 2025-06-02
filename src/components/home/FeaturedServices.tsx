@@ -7,8 +7,16 @@ import { ArrowRight } from 'lucide-react';
 
 const FeaturedServices = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-dental-beige">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 lg:py-20 bg-dental-beige relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-12 w-32 h-32 bg-dental-turquoise/12 rounded-full blur-2xl"></div>
+        <div className="absolute top-32 right-16 w-28 h-28 bg-dental-blue/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-24 left-1/4 w-36 h-36 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-12 right-12 w-24 h-24 bg-dental-blue/12 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Desktop: Two-column layout, Mobile: Single column */}
         <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
           
@@ -42,7 +50,7 @@ const FeaturedServices = () => {
                 className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconRenderer iconName="sparkles" className="text-dental-turquoise" size={20} />
+                  <IconRenderer iconName="star" className="text-dental-turquoise" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Ästhetische Zahnmedizin
@@ -62,7 +70,7 @@ const FeaturedServices = () => {
                 style={{ animationDelay: '100ms' }}
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconRenderer iconName="star" className="text-dental-blue" size={20} />
+                  <IconRenderer iconName="zap" className="text-dental-blue" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Professionelles Bleaching
@@ -82,7 +90,7 @@ const FeaturedServices = () => {
                 style={{ animationDelay: '200ms' }}
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconRenderer iconName="eye-off" className="text-dental-turquoise" size={20} />
+                  <IconRenderer iconName="shield" className="text-dental-turquoise" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Invisalign – Unsichtbare Zahnkorrektur

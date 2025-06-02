@@ -82,8 +82,16 @@ const QualityPromiseSection = () => {
   };
 
   return (
-    <section className="py-12 lg:py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-16 right-10 w-36 h-36 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-8 w-28 h-28 bg-dental-blue/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-24 right-1/4 w-32 h-32 bg-dental-turquoise/12 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 left-12 w-24 h-24 bg-dental-blue/8 rounded-full blur-xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-1/3 animate-on-scroll">
             <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">

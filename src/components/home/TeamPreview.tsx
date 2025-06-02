@@ -6,8 +6,16 @@ import { team } from '@/data/team';
 
 const TeamPreview = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 lg:py-20 bg-dental-beige relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-dental-turquoise/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-dental-blue/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-28 h-28 bg-dental-blue/12 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8 lg:mb-12 animate-on-scroll">
           <h2 className="mb-4 text-dental-blue text-xl md:text-2xl lg:text-3xl xl:text-4xl">Unser Team – Kompetenz trifft Herzlichkeit</h2>
           <p className="text-base lg:text-lg max-w-3xl mx-auto text-dental-gray">

@@ -5,8 +5,16 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 const HomepageFAQ = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-12 w-32 h-32 bg-dental-turquoise/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-40 right-16 w-28 h-28 bg-dental-blue/8 rounded-full blur-xl"></div>
+        <div className="absolute bottom-32 left-1/3 w-36 h-36 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-16 right-12 w-24 h-24 bg-dental-blue/10 rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Column - Title */}
