@@ -4,7 +4,7 @@ import PraxisGallery from '@/components/praxis/PraxisGallery';
 
 const AboutPraxisGallery = () => {
   return (
-    <section className="py-20 bg-dental-beige">
+    <section className="py-20 bg-gradient-to-br from-dental-blue/5 to-dental-turquoise/8">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
           <h2 className="mb-4 text-dental-blue">Ein Ambiente zum Wohlfühlen: Ihre moderne Zahnarztpraxis in Dresden-Laubegast</h2>

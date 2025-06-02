@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,7 @@ import { team } from '@/data/team';
 
 const TeamPreview = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-dental-beige relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-blue/5 to-dental-turquoise/8 relative overflow-hidden">
       {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-20 h-20 bg-dental-turquoise/25 rounded-full blur-[50px]"></div>
@@ -51,4 +50,3 @@ const TeamPreview = () => {
 };
 
 export default TeamPreview;
-
