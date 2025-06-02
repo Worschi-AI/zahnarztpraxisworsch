@@ -1,4 +1,6 @@
 
+import { IconName } from '../../components/IconRenderer';
+
 export interface Service {
   id: string;
   title: string;
@@ -8,5 +10,5 @@ export interface Service {
   benefits?: string[];
   faqs?: { question: string; answer: string }[];
   imageUrl?: string;
-  icon?: string;
+  iconName?: IconName;
 }

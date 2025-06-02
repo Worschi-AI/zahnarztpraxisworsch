@@ -3,8 +3,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { services } from '@/data/services';
+import IconRenderer from '@/components/IconRenderer';
 
 const StandardServices = () => {
+  const getServiceIcon = (serviceId: string) => {
+    switch (serviceId) {
+      case 'prophylaxe':
+        return 'shield';
+      case 'zahnerhaltung':
+        return 'heart';
+      case 'kinderzahnheilkunde':
+        return 'smile';
+      case 'parodontologie':
+        return 'activity';
+      case 'endodontie':
+        return 'settings';
+      case 'funktionstherapie':
+        return 'zap';
+      default:
+        return 'check-circle';
+    }
+  };
+
   return (
     <section className="py-20 bg-dental-beige" id="standard-services">
       <div className="container mx-auto px-4">
@@ -21,7 +41,14 @@ const StandardServices = () => {
           ).slice(0, 6).map((service, index) => (
             <div key={service.id} className="animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
-                <h3 className="font-semibold text-dental-blue mb-2">{service.title}</h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <IconRenderer 
+                    iconName={getServiceIcon(service.id)} 
+                    className="text-dental-turquoise" 
+                    size={20} 
+                  />
+                  <h3 className="font-semibold text-dental-blue">{service.title}</h3>
+                </div>
                 <p className="text-dental-gray text-sm mb-4">
                   {service.id === 'prophylaxe' ? 'Die professionelle Zahnreinigung ist der Grundstein für ein strahlend weißes Lächeln und den umfassenden Schutz Ihrer Zähne – für eine dauerhaft gesunde Mundhygiene und ein Leben lang.' :
                    service.id === 'zahnerhaltung' ? 'Wir setzen alles daran, Ihre natürlichen Zähne so lange wie möglich zu erhalten. Dazu bieten wir schonende Behandlungen und sichere, modernste Verfahren, auch bei der Entfernung von Weisheitszähnen.' :

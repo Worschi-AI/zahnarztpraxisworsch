@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import IconRenderer, { IconName } from './IconRenderer';
 
 interface ServiceCardProps {
   id: string;
   title: string;
   description: string;
-  icon?: string;
+  iconName?: IconName;
   imageUrl?: string;
 }
 
@@ -17,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   id, 
   title, 
   description, 
-  icon, 
+  iconName, 
   imageUrl 
 }) => {
   return (
@@ -45,8 +46,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       
       <CardHeader style={{ padding: '20px 20px 0 20px' }}>
         <CardTitle className="flex items-center gap-2">
-          {icon && (
-            <span className="text-dental-turquoise" dangerouslySetInnerHTML={{ __html: icon }} />
+          {iconName && (
+            <IconRenderer iconName={iconName} className="text-dental-turquoise" />
           )}
           <span>{title}</span>
         </CardTitle>

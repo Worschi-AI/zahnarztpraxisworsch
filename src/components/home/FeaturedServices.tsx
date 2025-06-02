@@ -42,6 +42,11 @@ const FeaturedServices = () => {
                     ? `Endlich wieder unbeschwert lachen und kauen. Verlorene Zähne können das Leben einschränken. Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr volles Lächeln und damit ein großes Stück Lebensqualität zurück.`
                     : `Perfektion, die sich sehen und fühlen lässt. Ob Kronen, Brücken oder komplexe Versorgungen – wir fertigen Ihren individuellen Zahnersatz aus besten Materialien, passgenau für Ihr natürliches Lächeln.`
                 }
+                iconName={
+                  service.id === 'aesthetische-zahnheilkunde' ? 'sparkles' :
+                  service.id === 'implantologie' ? 'heart' :
+                  'shield'
+                }
                 imageUrl={
                   service.id === 'aesthetische-zahnheilkunde'
                     ? "https://images.unsplash.com/photo-1581585095152-9f21db44503c?q=80&w=1770&auto=format&fit=crop"
@@ -60,7 +65,7 @@ const FeaturedServices = () => {
           </Button>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
