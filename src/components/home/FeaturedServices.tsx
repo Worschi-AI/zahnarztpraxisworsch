@@ -65,7 +65,7 @@ const FeaturedServices = () => {
           </Button>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 
