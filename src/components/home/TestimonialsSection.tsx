@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TestimonialsSection as AnimatedTestimonialsSection } from '@/components/ui/simple-animated-testimonials';
 import { testimonials } from '@/data/testimonials';
+import { Star, Sparkles, Heart } from 'lucide-react';
 
 const TestimonialsSection = () => {
   // Updated Google Maps Link
@@ -53,24 +54,39 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <>
+    <div className="relative">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(testimonialsStructuredData)}
         </script>
       </Helmet>
       
-      <AnimatedTestimonialsSection
-        title="Das sagen unsere Patienten – Echte Erfahrungen"
-        subtitle="Lassen Sie sich überzeugen: Erfahren Sie aus erster Hand, wie unsere zufriedenen Patienten die zahnmedizinische Betreuung und unsere ästhetischen Behandlungen in der Zahnarztpraxis Worsch erlebt haben."
-        testimonials={transformedTestimonials}
-        autoRotateInterval={6000}
-        showVerifiedBadge={true}
-        trustedCompanies={["Google Reviews", "Jameda", "DocCheck", "Doctolib", "Proven Expert"]}
-        trustedCompaniesTitle="Vertraut von Patienten auf führenden Bewertungsplattformen"
-        className="bg-dental-blue text-white"
-      />
-    </>
+      {/* Background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-dental-turquoise/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-dental-blue/8 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+        <Star className="absolute top-20 right-1/4 w-5 h-5 text-white/20 animate-pulse" />
+        <Sparkles className="absolute bottom-24 left-1/3 w-4 h-4 text-dental-turquoise/30 animate-pulse delay-1000" />
+        <Heart className="absolute top-1/2 right-1/6 w-6 h-6 text-white/15 animate-pulse delay-500" />
+      </div>
+      
+      <div className="relative z-20">
+        <AnimatedTestimonialsSection
+          title="Das sagen unsere Patienten – Echte Erfahrungen"
+          subtitle="Lassen Sie sich überzeugen: Erfahren Sie aus erster Hand, wie unsere zufriedenen Patienten die zahnmedizinische Betreuung und unsere ästhetischen Behandlungen in der Zahnarztpraxis Worsch erlebt haben."
+          testimonials={transformedTestimonials}
+          autoRotateInterval={6000}
+          showVerifiedBadge={true}
+          trustedCompanies={["Google Reviews", "Jameda", "DocCheck", "Doctolib", "Proven Expert"]}
+          trustedCompaniesTitle="Vertraut von Patienten auf führenden Bewertungsplattformen"
+          className="bg-gradient-to-br from-dental-blue via-dental-blue to-dental-turquoise text-white relative"
+        />
+      </div>
+    </div>
   );
 };
 
