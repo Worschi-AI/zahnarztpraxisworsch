@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -25,7 +26,7 @@ const StandardServices = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-dental-blue/12 to-dental-turquoise/15" id="standard-services">
+    <section className="py-20 bg-gradient-to-br from-dental-blue/25 to-dental-turquoise/30" id="standard-services">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-on-scroll">
           <h2 className="mb-4 text-dental-blue">Umfassende Zahnmedizin: Für Ihre ganzheitliche Gesundheit in Dresden</h2>

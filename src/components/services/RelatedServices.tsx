@@ -11,7 +11,7 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({ currentServiceId, ser
   const relatedServices = services.filter(s => s.id !== currentServiceId).slice(0, 3);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-dental-blue/12 to-dental-turquoise/15">
+    <section className="py-16 bg-gradient-to-br from-dental-blue/25 to-dental-turquoise/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 animate-on-scroll">
           <h2 className="mb-4 text-dental-blue">Weitere Leistungen</h2>
