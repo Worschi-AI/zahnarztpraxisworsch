@@ -6,13 +6,15 @@ import { team } from '@/data/team';
 const TeamPreview = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-dental-beige relative overflow-hidden">
-      {/* Enhanced Background Decorations */}
+      {/* Intensive Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-40 h-40 bg-dental-turquoise/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-dental-blue/15 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 left-1/4 w-48 h-48 bg-dental-turquoise/12 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-10 right-10 w-36 h-36 bg-dental-blue/18 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-dental-turquoise/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-8 left-8 w-80 h-80 bg-dental-turquoise/50 rounded-full blur-[300px]"></div>
+        <div className="absolute top-32 right-8 w-72 h-72 bg-dental-blue/45 rounded-full blur-[280px]"></div>
+        <div className="absolute bottom-16 left-1/4 w-88 h-88 bg-dental-turquoise/40 rounded-full blur-[320px]"></div>
+        <div className="absolute bottom-8 right-8 w-76 h-76 bg-dental-blue/55 rounded-full blur-[290px]"></div>
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-dental-turquoise/35 rounded-full blur-[260px]"></div>
+        <div className="absolute top-16 left-1/2 w-56 h-56 bg-dental-blue/40 rounded-full blur-[240px]"></div>
+        <div className="absolute bottom-32 right-1/2 w-68 h-68 bg-dental-turquoise/45 rounded-full blur-[270px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

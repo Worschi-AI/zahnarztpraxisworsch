@@ -22,13 +22,15 @@ const HeroIntroSection = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-white to-dental-beige/30 relative overflow-hidden">
-      {/* Enhanced Background Decorations */}
+      {/* Intensive Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-16 w-48 h-48 bg-dental-turquoise/12 rounded-full blur-[150px]"></div>
-        <div className="absolute top-10 right-24 w-40 h-40 bg-dental-blue/15 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 left-8 w-36 h-36 bg-dental-turquoise/18 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-16 right-16 w-44 h-44 bg-dental-blue/12 rounded-full blur-[120px]"></div>
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 left-8 w-64 h-64 bg-dental-turquoise/35 rounded-full blur-[200px]"></div>
+        <div className="absolute top-32 right-12 w-56 h-56 bg-dental-blue/40 rounded-full blur-[180px]"></div>
+        <div className="absolute bottom-20 left-16 w-72 h-72 bg-dental-turquoise/30 rounded-full blur-[220px]"></div>
+        <div className="absolute bottom-32 right-20 w-60 h-60 bg-dental-blue/35 rounded-full blur-[190px]"></div>
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-dental-turquoise/40 rounded-full blur-[160px]"></div>
+        <div className="absolute top-20 right-1/3 w-44 h-44 bg-dental-blue/30 rounded-full blur-[140px]"></div>
+        <div className="absolute bottom-10 left-1/2 w-52 h-52 bg-dental-turquoise/25 rounded-full blur-[170px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
