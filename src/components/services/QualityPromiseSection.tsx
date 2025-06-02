@@ -2,135 +2,129 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
+import {
+  IconMicroscope,
+  IconDiamond,
+  IconSchool,
+  IconShieldCheck,
+  IconHeart,
+} from '@tabler/icons-react';
 
 const QualityPromiseSection = () => {
-  // Custom checkmark SVG icon
-  const CheckmarkIcon = () => (
-    <svg 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="12" cy="12" r="10" fill="#28A745" />
-      <path 
-        d="M9 12l2 2 4-4" 
-        stroke="white" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-
   const qualityPoints = [
     {
       title: "Modernste Technologie",
-      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Behandlungen. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse."
+      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Behandlungen. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse.",
+      icon: <IconMicroscope className="w-8 h-8" />,
     },
     {
       title: "Hochwertige Materialien",
-      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Implantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen."
+      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Implantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen.",
+      icon: <IconDiamond className="w-8 h-8" />,
     },
     {
       title: "Kontinuierliche Fortbildung",
-      description: "Unser Team bildet sich regelmäßig weiter und ist zertifiziert in den neuesten Behandlungsmethoden. So profitieren Sie immer von den modernsten Verfahren der Zahnmedizin."
+      description: "Unser Team bildet sich regelmäßig weiter und ist zertifiziert in den neuesten Behandlungsmethoden. So profitieren Sie immer von den modernsten Verfahren der Zahnmedizin.",
+      icon: <IconSchool className="w-8 h-8" />,
     },
     {
       title: "Strenge Hygiene",
-      description: "Höchste Hygienestandards und moderne Sterilisationsverfahren sorgen für Ihre Sicherheit. Unsere Praxis erfüllt alle aktuellen Richtlinien und wird regelmäßig überprüft."
+      description: "Höchste Hygienestandards und moderne Sterilisationsverfahren sorgen für Ihre Sicherheit. Unsere Praxis erfüllt alle aktuellen Richtlinien und wird regelmäßig überprüft.",
+      icon: <IconShieldCheck className="w-8 h-8" />,
     },
     {
       title: "Transparente Beratung",
-      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise. Sie wissen immer, was gemacht wird und was es kostet – ohne versteckte Kosten."
+      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise. Sie wissen immer, was gemacht wird und was es kostet – ohne versteckte Kosten.",
+      icon: <IconHeart className="w-8 h-8" />,
     }
   ];
+
+  const Feature = ({
+    title,
+    description,
+    icon,
+    index,
+  }: {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    index: number;
+  }) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-col lg:border-r py-10 relative group/feature border-dental-blue/10",
+          (index === 0) && "lg:border-l border-dental-blue/10",
+          index < 3 && "lg:border-b border-dental-blue/10"
+        )}
+      >
+        {index < 3 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        {index >= 3 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        <div className="mb-4 relative z-10 px-10 text-dental-turquoise">
+          {icon}
+        </div>
+        <div className="text-lg font-bold mb-2 relative z-10 px-10">
+          <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-dental-blue/20 group-hover/feature:bg-dental-turquoise transition-all duration-200 origin-center" />
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-dental-blue">
+            {title}
+          </span>
+        </div>
+        <p className="text-sm text-dental-gray max-w-xs relative z-10 px-10">
+          {description}
+        </p>
+      </div>
+    );
+  };
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 animate-on-scroll">
+        <div className="flex flex-col lg:flex-row items-start gap-16">
+          <div className="lg:w-1/3 animate-on-scroll">
             <h2 className="mb-6 text-dental-blue">Unser Qualitätsversprechen – Höchste Standards für Sie</h2>
             <p className="text-lg text-dental-gray mb-8">
-              Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin. Vertrauen Sie auf unser Engagement und unsere Leidenschaft für Ihr perfektes Lächeln – wir begleiten Sie auf diesem Weg.
+              Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
             </p>
-            
-            {/* Quality points with custom styling */}
-            <div 
-              className="mb-8"
-              style={{
-                margin: '0 20px',
-                padding: '0 0 40px 0'
-              }}
-            >
-              {qualityPoints.map((point, index) => (
-                <div 
-                  key={index}
-                  className="animate-slide-left"
-                  style={{
-                    marginBottom: '25px',
-                    animationDelay: `${index * 100}ms`,
-                    animationDuration: '0.5s',
-                    animationTimingFunction: 'ease-out'
-                  }}
-                >
-                  <div className="flex items-start">
-                    <div style={{ marginRight: '10px', flexShrink: 0, marginTop: '2px' }}>
-                      <CheckmarkIcon />
-                    </div>
-                    <div>
-                      <h4 
-                        style={{
-                          fontWeight: '600',
-                          lineHeight: '1.4',
-                          marginBottom: '5px'
-                        }}
-                        className="text-dental-gray"
-                      >
-                        {point.title}
-                      </h4>
-                      <p 
-                        style={{
-                          fontWeight: '400',
-                          lineHeight: '1.6'
-                        }}
-                        className="text-dental-gray"
-                      >
-                        {point.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
             
             <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
               <Link to="/team">Lernen Sie unser Team kennen</Link>
             </Button>
           </div>
           
-          <div className="md:w-1/2 animate-scale-in" style={{ animationDuration: '0.7s', animationTimingFunction: 'ease-out' }}>
-            <div 
-              className="overflow-hidden"
-              style={{
-                borderRadius: '12px',
-                boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                margin: '40px 20px 20px 20px'
-              }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
-                alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
-                style={{
-                  width: '100%',
-                  height: '250px',
-                  objectFit: 'cover'
-                }}
-                loading="lazy"
-              />
+          <div className="lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-5xl">
+              {qualityPoints.map((feature, index) => (
+                <Feature key={feature.title} {...feature} index={index} />
+              ))}
             </div>
+          </div>
+        </div>
+        
+        <div className="mt-16 animate-on-scroll">
+          <div 
+            className="overflow-hidden"
+            style={{
+              borderRadius: '12px',
+              boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+              margin: '0 auto',
+              maxWidth: '800px'
+            }}
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+              alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
+              style={{
+                width: '100%',
+                height: '300px',
+                objectFit: 'cover'
+              }}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
