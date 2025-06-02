@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 interface StatisticItemProps {
@@ -66,20 +65,17 @@ const StatisticItem: React.FC<StatisticItemProps> = ({
   return (
     <div 
       ref={elementRef} 
-      className="group relative text-center text-white bg-white/10 backdrop-blur-sm rounded-full w-32 h-32 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center mx-auto"
+      className="text-center text-white flex flex-col items-center justify-center mx-auto"
     >
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dental-turquoise/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
       {/* Content */}
-      <div className="relative z-10">
+      <div>
         <div className="text-xl md:text-2xl font-bold mb-1 bg-gradient-to-r from-white to-dental-turquoise bg-clip-text text-transparent">
           {currentValue.toLocaleString()}{suffix}
         </div>
         <div className="text-xs md:text-sm font-medium opacity-90 tracking-wide">{label}</div>
         
         {/* Decorative element */}
-        <div className="w-6 h-0.5 bg-gradient-to-r from-dental-turquoise to-white mx-auto mt-2 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="w-6 h-0.5 bg-gradient-to-r from-dental-turquoise to-white mx-auto mt-2 rounded-full opacity-60"></div>
       </div>
     </div>
   );
