@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -83,12 +82,13 @@ const QualityPromiseSection = () => {
 
   return (
     <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
-      {/* Background Decorations */}
+      {/* Enhanced Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-16 right-10 w-36 h-36 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 left-8 w-28 h-28 bg-dental-blue/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-24 right-1/4 w-32 h-32 bg-dental-turquoise/12 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-10 left-12 w-24 h-24 bg-dental-blue/8 rounded-full blur-xl"></div>
+        <div className="absolute top-16 right-10 w-44 h-44 bg-dental-turquoise/15 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/3 left-8 w-36 h-36 bg-dental-blue/18 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-24 right-1/4 w-40 h-40 bg-dental-turquoise/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-12 w-32 h-32 bg-dental-blue/12 rounded-full blur-2xl"></div>
+        <div className="absolute top-20 left-1/3 w-28 h-28 bg-dental-turquoise/10 rounded-full blur-xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

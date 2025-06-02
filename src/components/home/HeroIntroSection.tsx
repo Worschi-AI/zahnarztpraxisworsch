@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -23,12 +22,13 @@ const HeroIntroSection = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-white to-dental-beige/30 relative overflow-hidden">
-      {/* Background Decorations */}
+      {/* Enhanced Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-16 w-40 h-40 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
-        <div className="absolute top-10 right-24 w-32 h-32 bg-dental-blue/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-32 left-8 w-28 h-28 bg-dental-turquoise/12 rounded-full blur-xl"></div>
-        <div className="absolute bottom-16 right-16 w-36 h-36 bg-dental-blue/8 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-16 w-48 h-48 bg-dental-turquoise/12 rounded-full blur-[150px]"></div>
+        <div className="absolute top-10 right-24 w-40 h-40 bg-dental-blue/15 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-8 w-36 h-36 bg-dental-turquoise/18 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-16 right-16 w-44 h-44 bg-dental-blue/12 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-dental-turquoise/8 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
