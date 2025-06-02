@@ -57,38 +57,27 @@ const HeroIntroSection = () => {
           {/* Content */}
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="mb-6 lg:mb-8">
-              <div className="mb-4 lg:mb-6">
-                <span className="text-dental-turquoise font-medium text-sm lg:text-base tracking-wide uppercase">About Us</span>
-              </div>
-              
               <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                Professionals and Personalized Dental Excellence
+                Willkommen in Ihrer modernen Zahnarztpraxis in Dresden-Laubegast
               </h2>
               
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-8">
-                We offer high-quality dental care tailored for the whole family. From routine checkups to advanced treatments, our compassionate team ensures your smile stays healthy and confident.
+              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
+                Herzlich willkommen in der Zahnarztpraxis Worsch! Als Ihr Zahnarzt Dresden-Laubegast verbinden wir modernste Zahnmedizin mit einer persönlichen, entspannten Atmosphäre.
               </p>
               
-              {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="flex-shrink-0 w-6 h-6 bg-dental-turquoise rounded-full flex items-center justify-center">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-dental-gray font-medium text-sm lg:text-base">{feature}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
+                Unser Fokus liegt auf ästhetischer Zahnheilkunde und innovativen Behandlungsmethoden, die Ihnen zu einem strahlend schönen Lächeln verhelfen. Mit digitaler Diagnostik, schonenden Behandlungsverfahren und höchsten Qualitätsstandards sorgen wir dafür, dass Sie sich bei uns rundum wohlfühlen.
+              </p>
+              
+              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-8">
+                Ob professionelles Bleaching, unsichtbare Zahnkorrektur mit Invisalign oder ästhetische Restaurationen – wir begleiten Sie als Zahnarzt in Dresden auf dem Weg zu Ihren Traumzähnen. Vertrauen Sie auf unsere Expertise und erleben Sie Zahnmedizin, die Spaß macht.
+              </p>
             </div>
             
             <div className="mt-8 lg:mt-10">
               <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300 text-white shadow-lg px-8 py-3">
-                <Link to="/appointment">
-                  Book Appointment
+                <Link to="/about">
+                  Mehr über uns erfahren
                 </Link>
               </Button>
             </div>
