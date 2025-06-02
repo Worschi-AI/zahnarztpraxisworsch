@@ -10,7 +10,9 @@ import {
   Zap,
   CheckCircle,
   Settings,
-  Smile
+  Smile,
+  Star,
+  EyeOff
 } from 'lucide-react';
 
 export type IconName = 
@@ -23,7 +25,9 @@ export type IconName =
   | 'zap'
   | 'check-circle'
   | 'settings'
-  | 'smile';
+  | 'smile'
+  | 'star'
+  | 'eye-off';
 
 interface IconRendererProps {
   iconName?: IconName;
@@ -42,6 +46,8 @@ const iconMap = {
   'check-circle': CheckCircle,
   'settings': Settings,
   'smile': Smile,
+  'star': Star,
+  'eye-off': EyeOff,
 };
 
 const IconRenderer: React.FC<IconRendererProps> = ({ 
