@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 const FeaturedServices = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-blue/12 to-dental-turquoise/15 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{ backgroundColor: '#edf2fa' }}>
       {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-24 h-24 bg-dental-turquoise/20 rounded-full blur-[60px]"></div>
