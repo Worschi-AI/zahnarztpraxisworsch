@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 
 interface StatisticItemProps {
@@ -69,7 +70,7 @@ const StatisticItem: React.FC<StatisticItemProps> = ({
     >
       {/* Content */}
       <div>
-        <div className="text-xl md:text-2xl font-bold mb-1 bg-gradient-to-r from-white to-dental-turquoise bg-clip-text text-transparent">
+        <div className="text-xl md:text-2xl font-bold mb-1 text-white">
           {currentValue.toLocaleString()}{suffix}
         </div>
         <div className="text-xs md:text-sm font-medium opacity-90 tracking-wide">{label}</div>
