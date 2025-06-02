@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
+import { TextGradientScroll } from '@/components/ui/text-gradient-scroll';
 
 const HeroIntroSection = () => {
   const features = [
@@ -12,6 +13,8 @@ const HeroIntroSection = () => {
     "State-of-the-Art Technology", 
     "Flexible Appointment Scheduling"
   ];
+
+  const gradientScrollText = "Herzlich willkommen in der Zahnarztpraxis Worsch! Als Ihr Zahnarzt Dresden-Laubegast verbinden wir modernste Zahnmedizin mit einer persönlichen, entspannten Atmosphäre. Unser Fokus liegt auf ästhetischer Zahnheilkunde und innovativen Behandlungsmethoden, die Ihnen zu einem strahlend schönen Lächeln verhelfen. Mit digitaler Diagnostik, schonenden Behandlungsverfahren und höchsten Qualitätsstandards sorgen wir dafür, dass Sie sich bei uns rundum wohlfühlen. Ob professionelles Bleaching, unsichtbare Zahnkorrektur mit Invisalign oder ästhetische Restaurationen – wir begleiten Sie als Zahnarzt in Dresden auf dem Weg zu Ihren Traumzähnen. Vertrauen Sie auf unsere Expertise und erleben Sie Zahnmedizin, die Spaß macht.";
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-white to-dental-beige/30 relative overflow-hidden">
@@ -61,17 +64,14 @@ const HeroIntroSection = () => {
                 Willkommen in Ihrer modernen Zahnarztpraxis in Dresden-Laubegast
               </h2>
               
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
-                Herzlich willkommen in der Zahnarztpraxis Worsch! Als Ihr Zahnarzt Dresden-Laubegast verbinden wir modernste Zahnmedizin mit einer persönlichen, entspannten Atmosphäre.
-              </p>
-              
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">
-                Unser Fokus liegt auf ästhetischer Zahnheilkunde und innovativen Behandlungsmethoden, die Ihnen zu einem strahlend schönen Lächeln verhelfen. Mit digitaler Diagnostik, schonenden Behandlungsverfahren und höchsten Qualitätsstandards sorgen wir dafür, dass Sie sich bei uns rundum wohlfühlen.
-              </p>
-              
-              <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-8">
-                Ob professionelles Bleaching, unsichtbare Zahnkorrektur mit Invisalign oder ästhetische Restaurationen – wir begleiten Sie als Zahnarzt in Dresden auf dem Weg zu Ihren Traumzähnen. Vertrauen Sie auf unsere Expertise und erleben Sie Zahnmedizin, die Spaß macht.
-              </p>
+              <div className="min-h-[400px] lg:min-h-[500px]">
+                <TextGradientScroll 
+                  text={gradientScrollText}
+                  type="word"
+                  textOpacity="soft"
+                  className="text-base lg:text-lg leading-relaxed text-dental-gray"
+                />
+              </div>
             </div>
             
             <div className="mt-8 lg:mt-10">
