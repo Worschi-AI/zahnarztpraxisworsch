@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
@@ -99,11 +100,20 @@ const Index = () => {
       {/* Intro Section */}
       <HeroIntroSection />
 
+      {/* Statistics Section - moved above Featured Services */}
+      <StatisticsSection />
+
       {/* Premium Services Section */}
       <FeaturedServices />
 
-      {/* Statistics Section */}
-      <StatisticsSection />
+      {/* Full-width image above Team section */}
+      <section className="w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2000&auto=format&fit=crop" 
+          alt="Unser professionelles Zahnarzt-Team in Dresden" 
+          className="w-full h-full object-cover"
+        />
+      </section>
 
       {/* Team Teaser */}
       <TeamPreview />
