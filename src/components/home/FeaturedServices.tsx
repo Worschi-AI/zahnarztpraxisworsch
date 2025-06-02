@@ -17,7 +17,7 @@ const FeaturedServices = () => {
     const service = featuredServices.find(s => s.id === serviceId);
     return {
       title: service?.title || '',
-      description: service?.description || '',
+      shortDescription: service?.shortDescription || '',
       id: serviceId
     };
   };
