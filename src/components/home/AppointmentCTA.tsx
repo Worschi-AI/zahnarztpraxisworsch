@@ -13,7 +13,7 @@ const AppointmentCTA = () => {
           <h2 className="mb-4">Bereit für Ihr strahlendes Lächeln? Ihre Zahnarztpraxis Worsch in Dresden freut sich auf Sie!</h2>
           <p className="text-lg mb-8 opacity-90">
             Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin in der <strong>Zahnarztpraxis Worsch</strong>. 
-            Wir nehmen uns gerne Zeit, um Ihnen die vielfältigen Möglichkeiten modernster ästhetischer Zahnmedizin aufzuzeigen und Ihr Wunschlächeln Wirklichkeit werden zu lassen.
+            Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">

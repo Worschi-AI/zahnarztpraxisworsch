@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
@@ -5,7 +6,6 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import HeroIntroSection from '@/components/home/HeroIntroSection';
-import PatientReviewTeaser from '@/components/home/PatientReviewTeaser';
 import FeaturedServices from '@/components/home/FeaturedServices';
 import StatisticsSection from '@/components/home/StatisticsSection';
 import TeamPreview from '@/components/home/TeamPreview';
@@ -27,42 +27,42 @@ const Index = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Was macht die Zahnarztpraxis Worsch in Dresden besonders für junge Patienten und ästhetische Wünsche?",
+        "name": "Was kostet eine ästhetische Behandlung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Bei Zahnarzt Worsch in Dresden Laubegast verbinden wir modernste Zahnmedizin mit einem besonderen Fokus auf Ästhetik. Wir nutzen digitale Technologien wie 3D-Planung und CAD/CAM-Fertigung, bieten innovative Behandlungen wie Veneers oder unsichtbare Zahnkorrekturen und legen großen Wert auf eine individuelle Beratung in entspannter Atmosphäre, um Ihr Wunschlächeln zu realisieren."
+          "text": "Die Kosten variieren je nach Behandlung. Ein professionelles Bleaching beginnt ab 280€, Veneers ab 890€ pro Zahn. In unserem kostenlosen Beratungsgespräch in Dresden erstellen wir Ihnen einen transparenten Kostenvoranschlag."
         }
       },
       {
         "@type": "Question",
-        "name": "Welche Behandlungen im Bereich ästhetische Zahnmedizin bieten Sie in Ihrer Dresdner Praxis an?",
+        "name": "Wie schnell bekomme ich einen Termin?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unser Spektrum der ästhetischen Zahnmedizin in Dresden umfasst unter anderem professionelles Bleaching (Zahnaufhellung), hochwertige Keramik-Veneers, zahnfarbene Füllungen und Inlays, unsichtbare Zahnkorrekturen mit Alignern sowie komplette Smile Makeovers. Gerne beraten wir Sie individuell zu den besten Optionen für Ihr Lächeln."
+          "text": "Online-Termine sind oft schon innerhalb weniger Tage verfügbar. Für Notfälle haben wir täglich Notfallzeiten reserviert. Buchen Sie bequem über Doctolib oder rufen Sie uns in Laubegast an."
         }
       },
       {
         "@type": "Question",
-        "name": "Ist eine Erstberatung für ästhetische Behandlungen in Ihrer Praxis in Dresden kostenlos?",
+        "name": "Für wen ist Invisalign geeignet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir bieten Ihnen gerne ein erstes unverbindliches Beratungsgespräch an, um Ihre Wünsche kennenzulernen und Ihnen die Möglichkeiten der modernen ästhetischen Zahnmedizin aufzuzeigen. Die Details zu eventuellen Kosten für eine umfassende Diagnostik und Planung besprechen wir transparent mit Ihnen im Vorfeld."
+          "text": "Invisalign eignet sich für die meisten Zahnfehlstellungen bei Jugendlichen und Erwachsenen. In einem kostenlosen 3D-Scan prüfen wir, ob Invisalign für Sie geeignet ist und zeigen Ihnen das Endergebnis vorab."
         }
       },
       {
         "@type": "Question",
-        "name": "Wie modern ist die technische Ausstattung Ihrer Zahnarztpraxis in Dresden Laubegast?",
+        "name": "Wie lange hält ein professionelles Bleaching?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unsere Zahnarztpraxis in Dresden Laubegast ist mit modernster Technologie ausgestattet. Dazu gehören digitales Röntgen (strahlungsarm), 3D-Diagnostik (DVT) für präzise Implantatplanung, intraorale Kameras zur Visualisierung, CAD/CAM-Systeme für passgenauen Zahnersatz und schonende Lasertechnologie für verschiedene Anwendungsbereiche."
+          "text": "Bei guter Pflege bleiben Ihre Zähne 2-3 Jahre deutlich heller. Mit unserem Take-Home-Bleaching können Sie das Ergebnis jederzeit auffrischen. Wir beraten Sie gerne zur optimalen Nachsorge."
         }
       },
       {
         "@type": "Question",
-        "name": "Wie kann ich einen Termin bei Zahnarzt Worsch in Dresden vereinbaren?",
+        "name": "Was tun Sie für Angstpatienten?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sie können Ihren Termin ganz bequem online über unser Doctolib-Portal buchen – 24/7. Alternativ erreichen Sie unser freundliches Team in Dresden Laubegast telefonisch während unserer Sprechzeiten. Wir freuen uns auf Sie!"
+          "text": "Wir nehmen Ihre Ängste ernst! Ausführliche Aufklärung, sanfte Behandlungsmethoden und bei Bedarf Sedierung sorgen für eine entspannte Behandlung. Sprechen Sie uns einfach darauf an."
         }
       }
     ]
@@ -92,17 +92,14 @@ const Index = () => {
       
       {/* Hero Section with updated content */}
       <HeroSection 
-        title="Ihr Lächeln. Unsere Expertise. Zahnarztpraxis Worsch Dresden." 
-        subtitle="Entdecken Sie, wie wir moderne Zahnmedizin und ästhetische Perfektion für Ihr strahlendes Lächeln in Dresden-Laubegast verbinden." 
+        title="Zahnarzt Dresden-Laubegast: Moderne Zahnmedizin für Ihr perfektes Lächeln" 
+        subtitle="Von Invisalign bis Bleaching – Entdecken Sie zeitgemäße Zahnbehandlungen in entspannter Atmosphäre. Ihre Zahngesundheit liegt uns am Herzen." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"
       />
 
       {/* Intro Section */}
       <HeroIntroSection />
-
-      {/* Patient Reviews Teaser */}
-      <PatientReviewTeaser />
 
       {/* Premium Services Section */}
       <FeaturedServices />
@@ -122,7 +119,7 @@ const Index = () => {
       {/* Testimonials */}
       <TestimonialsSection />
 
-      {/* FAQ Section - vor AppointmentCTA eingefügt */}
+      {/* FAQ Section */}
       <HomepageFAQ />
 
       {/* Appointment CTA */}

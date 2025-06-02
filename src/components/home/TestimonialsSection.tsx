@@ -61,7 +61,7 @@ const TestimonialsSection = () => {
       </Helmet>
       
       <AnimatedTestimonialsSection
-        title="Echte Stimmen. Echte Erfahrungen. Das sagen unsere Patienten."
+        title="Das sagen unsere Patienten – Echte Erfahrungen"
         subtitle="Lassen Sie sich überzeugen: Erfahren Sie aus erster Hand, wie unsere zufriedenen Patienten die zahnmedizinische Betreuung und unsere ästhetischen Behandlungen in der Zahnarztpraxis Worsch erlebt haben."
         testimonials={transformedTestimonials}
         autoRotateInterval={6000}

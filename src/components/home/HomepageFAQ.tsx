@@ -27,46 +27,55 @@ const HomepageFAQ = () => {
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className="border-b border-gray-200">
                   <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
-                    Was macht die Zahnarztpraxis Worsch in Dresden besonders für junge Patienten und ästhetische Wünsche?
+                    Was kostet eine ästhetische Behandlung?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
-                    In der Zahnarztpraxis Worsch in Dresden-Laubegast liegt unser Fokus darauf, modernste Zahnmedizin mit herausragender Ästhetik zu verbinden, um Ihr individuelles Wunschlächeln zu realisieren. Wir nutzen hierfür digitale Technologien wie präzise 3D-Planung und CAD/CAM-Fertigung und bieten innovative Behandlungen wie <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">Veneers oder unsichtbare Zahnkorrekturen</Link>. Besonderen Wert legen wir dabei auf eine entspannte Atmosphäre und eine umfassende, persönliche Beratung, bei der Ihre Wünsche im Mittelpunkt stehen.
+                    Die Kosten variieren je nach Behandlung. Ein professionelles Bleaching beginnt ab 280€, Veneers ab 890€ pro Zahn. In unserem kostenlosen Beratungsgespräch in Dresden erstellen wir Ihnen einen transparenten Kostenvoranschlag. <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Vereinbaren Sie jetzt einen Termin</Link>.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border-b border-gray-200">
                   <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
-                    Welche Behandlungen im Bereich ästhetische Zahnmedizin bieten Sie in Ihrer Dresdner Praxis an?
+                    Wie schnell bekomme ich einen Termin?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
-                    Unser umfassendes Spektrum der <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">ästhetischen Zahnmedizin in Dresden</Link> bietet Ihnen zahlreiche Möglichkeiten für Ihr perfektes Lächeln. Dazu gehören unter anderem schonendes, professionelles Bleaching (Zahnaufhellung), langlebige Keramik-Veneers, ästhetische zahnfarbene Füllungen und Inlays, diskrete Zahnkorrekturen mit unsichtbaren Alignern sowie komplette Smile Makeovers. Wir beraten Sie sehr gerne individuell, um die optimalen Optionen für Ihr strahlendes Lächeln zu finden.
+                    Online-Termine sind oft schon innerhalb weniger Tage verfügbar. Für Notfälle haben wir täglich Notfallzeiten reserviert. Buchen Sie bequem über <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Doctolib</Link> oder <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">rufen Sie uns in Laubegast an</Link>.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border-b border-gray-200">
                   <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
-                    Ist eine Erstberatung für ästhetische Behandlungen in Ihrer Praxis in Dresden kostenlos?
+                    Für wen ist Invisalign geeignet?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
-                    Ja, wir bieten Ihnen sehr gerne ein erstes, unverbindliches Beratungsgespräch für ästhetische Behandlungen an. Hier lernen wir Ihre individuellen Wünsche kennen und zeigen Ihnen transparent alle Möglichkeiten der modernen ästhetischen Zahnmedizin auf. Sollten für eine weiterführende Diagnostik oder Planung Kosten entstehen, besprechen wir diese selbstverständlich im Vorfeld detailliert mit Ihnen. Wir laden Sie herzlich ein, <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">einen Termin zu vereinbaren</Link>.
+                    Invisalign eignet sich für die meisten Zahnfehlstellungen bei Jugendlichen und Erwachsenen. In einem kostenlosen 3D-Scan prüfen wir, ob <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">Invisalign für Sie geeignet ist</Link> und zeigen Ihnen das Endergebnis vorab.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border-b border-gray-200">
                   <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
-                    Wie modern ist die technische Ausstattung Ihrer Zahnarztpraxis in Dresden Laubegast?
+                    Wie lange hält ein professionelles Bleaching?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
-                    Unsere Zahnarztpraxis in Dresden-Laubegast ist auf dem neuesten Stand der Technik und mit modernster Technologie ausgestattet, um Ihnen Behandlungen auf höchstem Niveau zu ermöglichen. Dazu zählen digitales Röntgen (besonders strahlungsarm), hochpräzise 3D-Diagnostik (DVT) für eine exakte <Link to="/services/implantologie" className="text-dental-turquoise hover:text-dental-blue underline">Implantatplanung</Link>, intraorale Kameras zur transparenten Visualisierung während der Behandlung, innovative CAD/CAM-Systeme für passgenauen <Link to="/services/zahnersatz" className="text-dental-turquoise hover:text-dental-blue underline">Zahnersatz</Link> und schonende Lasertechnologie für vielfältige, angenehme Anwendungsbereiche.
+                    Bei guter Pflege bleiben Ihre Zähne 2-3 Jahre deutlich heller. Mit unserem Take-Home-Bleaching können Sie das Ergebnis jederzeit auffrischen. Wir beraten Sie gerne zur optimalen Nachsorge. Mehr über <Link to="/services/aesthetische-zahnheilkunde" className="text-dental-turquoise hover:text-dental-blue underline">professionelles Bleaching</Link>.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border-b border-gray-200">
                   <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
-                    Wie kann ich einen Termin bei Zahnarzt Worsch in Dresden vereinbaren?
+                    Was tun Sie für Angstpatienten?
                   </AccordionTrigger>
                   <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
-                    Ihren persönlichen Wunschtermin können Sie ganz bequem und rund um die Uhr (24/7) über unser <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Online-Buchungsportal</Link> vereinbaren. Falls Sie den persönlichen Kontakt bevorzugen, steht Ihnen unser freundliches Team in Dresden-Laubegast während der Sprechzeiten gerne telefonisch zur Verfügung. Alle weiteren Informationen finden Sie übersichtlich auf unserer <Link to="/contact" className="text-dental-turquoise hover:text-dental-blue underline">Kontaktseite</Link>. Wir freuen uns sehr darauf, Sie bald persönlich kennenzulernen!
+                    Wir nehmen Ihre Ängste ernst! Ausführliche Aufklärung, sanfte Behandlungsmethoden und bei Bedarf Sedierung sorgen für eine entspannte Behandlung. Sprechen Sie uns einfach darauf an. Lernen Sie unser <Link to="/team" className="text-dental-turquoise hover:text-dental-blue underline">einfühlsames Team</Link> kennen.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-left text-lg font-normal text-dental-gray hover:text-dental-blue py-6">
+                    Welche Garantien geben Sie?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-dental-gray text-base leading-relaxed pb-6">
+                    Auf Füllungen geben wir 2 Jahre, auf Kronen und Veneers 5 Jahre Garantie. <Link to="/services/implantologie" className="text-dental-turquoise hover:text-dental-blue underline">Implantate sind sogar 10 Jahre garantiert</Link>. Ihre Investition in schöne Zähne ist bei uns bestens abgesichert. Erfahren Sie mehr über unsere <Link to="/services" className="text-dental-turquoise hover:text-dental-blue underline">Leistungen</Link>.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

@@ -2,26 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { services } from '@/data/services';
 import IconRenderer from '@/components/IconRenderer';
 import { ArrowRight } from 'lucide-react';
 
 const FeaturedServices = () => {
-  // Featured services (top 3) - selecting premium services
-  const featuredServices = services.filter(service => 
-    ['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
-  ).slice(0, 3);
-
-  // Get service data for each specific service
-  const getServiceData = (serviceId: string) => {
-    const service = featuredServices.find(s => s.id === serviceId);
-    return {
-      title: service?.title || '',
-      shortDescription: service?.shortDescription || '',
-      id: serviceId
-    };
-  };
-
   return (
     <section className="py-20 bg-dental-beige">
       <div className="container mx-auto px-4">
@@ -34,7 +18,7 @@ const FeaturedServices = () => {
               <span className="text-dental-turquoise font-medium">Unsere Leistungen</span>
             </div>
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-dental-blue mb-6 leading-tight">
-              Exzellenz in Ästhetik & Funktion – Unsere Premium-Leistungen für Ihr Lächeln
+              Unsere Behandlungsschwerpunkte – Für Ihr schönstes Lächeln
             </h2>
             <p className="text-lg text-dental-gray mb-8 leading-relaxed">
               Entdecken Sie bei uns spezialisierte Behandlungen, die modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen vereinen. Gemeinsam gestalten wir Ihr schönstes und gesündestes Lächeln.
@@ -52,79 +36,79 @@ const FeaturedServices = () => {
           <div>
             {/* Services grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-12 lg:mb-0">
-              {/* Service 1 - Ästhetische Zahnheilkunde */}
+              {/* Service 1 - Ästhetische Zahnmedizin */}
               <Link 
-                to={`/services/${getServiceData('aesthetische-zahnheilkunde').id}`}
+                to="/services/aesthetische-zahnheilkunde"
                 className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
               >
                 <div className="w-12 h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-4">
                   <IconRenderer iconName="sparkles" className="text-dental-turquoise" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-dental-blue mb-2">
-                  {getServiceData('aesthetische-zahnheilkunde').title}
+                  Ästhetische Zahnmedizin
                 </h3>
                 <p className="text-sm text-dental-gray leading-relaxed mb-4">
-                  Ihr Weg zum Traumlächeln. Von schonendem Bleaching bis zu unsichtbaren Zahnkorrekturen wie Veneers.
+                  Veneers, Vollkeramikkronen und ästhetische Füllungen für ein natürlich schönes Lächeln. Mit modernster Technologie erschaffen wir Zähne, die perfekt zu Ihnen passen und jahrelang strahlen.
                 </p>
                 <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
                   Mehr erfahren <ArrowRight size={14} />
                 </div>
               </Link>
 
-              {/* Service 2 - Implantologie */}
+              {/* Service 2 - Professionelles Bleaching */}
               <Link 
-                to={`/services/${getServiceData('implantologie').id}`}
+                to="/services/aesthetische-zahnheilkunde"
                 className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
                 style={{ animationDelay: '100ms' }}
+              >
+                <div className="w-12 h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-4">
+                  <IconRenderer iconName="star" className="text-dental-blue" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-dental-blue mb-2">
+                  Professionelles Bleaching
+                </h3>
+                <p className="text-sm text-dental-gray leading-relaxed mb-4">
+                  Schonende Zahnaufhellung für bis zu 8 Nuancen hellere Zähne. Unser In-Office-Bleaching dauert nur 60 Minuten und sorgt für sofort sichtbare Ergebnisse – ganz ohne Schmerzen.
+                </p>
+                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
+                  Mehr erfahren <ArrowRight size={14} />
+                </div>
+              </Link>
+
+              {/* Service 3 - Invisalign */}
+              <Link 
+                to="/services/aesthetische-zahnheilkunde"
+                className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
+                style={{ animationDelay: '200ms' }}
+              >
+                <div className="w-12 h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-4">
+                  <IconRenderer iconName="eye-off" className="text-dental-turquoise" size={24} />
+                </div>
+                <h3 className="text-lg font-semibold text-dental-blue mb-2">
+                  Invisalign – Unsichtbare Zahnkorrektur
+                </h3>
+                <p className="text-sm text-dental-gray leading-relaxed mb-4">
+                  Gerade Zähne ohne Metallspangen! Mit transparenten Alignern korrigieren wir Zahnfehlstellungen diskret und komfortabel. Ideal für Beruf und Alltag.
+                </p>
+                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
+                  Mehr erfahren <ArrowRight size={14} />
+                </div>
+              </Link>
+
+              {/* Service 4 - Moderne Implantologie */}
+              <Link 
+                to="/services/implantologie"
+                className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
+                style={{ animationDelay: '300ms' }}
               >
                 <div className="w-12 h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-4">
                   <IconRenderer iconName="heart" className="text-dental-blue" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-dental-blue mb-2">
-                  {getServiceData('implantologie').title}
+                  Moderne Implantologie
                 </h3>
                 <p className="text-sm text-dental-gray leading-relaxed mb-4">
-                  Endlich wieder unbeschwert lachen und kauen. Mit hochwertigen Zahnimplantaten schenken wir Ihnen Ihr volles Lächeln zurück.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} />
-                </div>
-              </Link>
-
-              {/* Service 3 - Zahnersatz */}
-              <Link 
-                to={`/services/${getServiceData('zahnersatz').id}`}
-                className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
-                style={{ animationDelay: '200ms' }}
-              >
-                <div className="w-12 h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-4">
-                  <IconRenderer iconName="shield" className="text-dental-turquoise" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-dental-blue mb-2">
-                  {getServiceData('zahnersatz').title}
-                </h3>
-                <p className="text-sm text-dental-gray leading-relaxed mb-4">
-                  Perfektion, die sich sehen und fühlen lässt. Wir fertigen Ihren individuellen Zahnersatz aus besten Materialien.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} />
-                </div>
-              </Link>
-
-              {/* Service 4 - Moderne Technologie */}
-              <Link 
-                to="/services"
-                className="animate-on-scroll bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
-                style={{ animationDelay: '300ms' }}
-              >
-                <div className="w-12 h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-4">
-                  <IconRenderer iconName="settings" className="text-dental-blue" size={24} />
-                </div>
-                <h3 className="text-lg font-semibold text-dental-blue mb-2">
-                  Moderne Technologie
-                </h3>
-                <p className="text-sm text-dental-gray leading-relaxed mb-4">
-                  Mit modernster Technologie und digitaler Diagnostik sorgen wir für präzise und schonende Behandlungen.
+                  Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
                 </p>
                 <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
                   Mehr erfahren <ArrowRight size={14} />

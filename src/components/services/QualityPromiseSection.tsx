@@ -26,20 +26,24 @@ const QualityPromiseSection = () => {
 
   const qualityPoints = [
     {
-      title: "Modernste Technologien:",
-      description: "Wir setzen auf digitale Diagnostik, präzise 3D-Planung und schonende Verfahren für Ihre komfortable Behandlung."
+      title: "Modernste Technologie",
+      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Behandlungen. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse."
     },
     {
-      title: "Höchste Ästhetik:",
-      description: "Für natürliche und harmonische Ergebnisse sorgen wir mit individueller Farbanpassung und einer perfekt auf Sie abgestimmten Ästhetik."
+      title: "Hochwertige Materialien",
+      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Implantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen."
     },
     {
-      title: "Individuelle Beratung:",
-      description: "Gemeinsam mit Ihnen entwickeln wir einen maßgeschneiderten Behandlungsplan, der genau auf Ihre Bedürfnisse und Wünsche zugeschnitten ist."
+      title: "Kontinuierliche Fortbildung",
+      description: "Unser Team bildet sich regelmäßig weiter und ist zertifiziert in den neuesten Behandlungsmethoden. So profitieren Sie immer von den modernsten Verfahren der Zahnmedizin."
     },
     {
-      title: "Erfahrenes Team:",
-      description: "Unser spezialisiertes Team aus Experten für ästhetische Zahnmedizin und Implantologie ist für Sie da und sorgt für beste Ergebnisse."
+      title: "Strenge Hygiene",
+      description: "Höchste Hygienestandards und moderne Sterilisationsverfahren sorgen für Ihre Sicherheit. Unsere Praxis erfüllt alle aktuellen Richtlinien und wird regelmäßig überprüft."
+    },
+    {
+      title: "Transparente Beratung",
+      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise. Sie wissen immer, was gemacht wird und was es kostet – ohne versteckte Kosten."
     }
   ];
 
@@ -48,7 +52,7 @@ const QualityPromiseSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Qualität, der Sie voll und ganz vertrauen können – Ihre Zahnarztpraxis in Dresden</h2>
+            <h2 className="mb-6 text-dental-blue">Unser Qualitätsversprechen – Höchste Standards für Sie</h2>
             <p className="text-lg text-dental-gray mb-8">
               Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin. Vertrauen Sie auf unser Engagement und unsere Leidenschaft für Ihr perfektes Lächeln – wir begleiten Sie auf diesem Weg.
             </p>

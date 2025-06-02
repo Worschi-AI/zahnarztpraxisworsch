@@ -9,9 +9,12 @@ const TeamPreview = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue">Lernen Sie unser Team kennen: Kompetenz, die von Herzen kommt</h2>
-          <p className="text-lg max-w-2xl mx-auto text-dental-gray">
-            In der <strong>Zahnarztpraxis Worsch in Dresden</strong> erwartet Sie ein Team, das höchste fachliche Exzellenz mit echtem Einfühlungsvermögen verbindet. Wir nehmen uns umfassend Zeit, um Ihre individuellen Wünsche und Bedürfnisse zu verstehen und Sie persönlich zu betreuen.
+          <h2 className="mb-4 text-dental-blue">Unser Team – Kompetenz trifft Herzlichkeit</h2>
+          <p className="text-lg max-w-3xl mx-auto text-dental-gray">
+            Lernen Sie unser dynamisches Praxisteam kennen! Wir sind ein hochqualifiziertes, eingespieltes Team aus erfahrenen Zahnärzten und Fachkräften in Dresden, das sich kontinuierlich fortbildet. Unsere Spezialisierungen in ästhetischer Zahnmedizin, Implantologie und digitaler Zahnheilkunde garantieren Ihnen Behandlungen auf höchstem Niveau.
+          </p>
+          <p className="text-lg max-w-3xl mx-auto text-dental-gray mt-4">
+            Dabei vergessen wir nie: Gute Zahnmedizin beginnt mit Vertrauen und Verständnis. Wir nehmen uns Zeit für Sie, erklären jeden Behandlungsschritt und gehen individuell auf Ihre Wünsche ein. Angstpatienten sind bei uns in Laubegast besonders willkommen – mit Einfühlungsvermögen und modernen Methoden machen wir Ihren Zahnarztbesuch zu einer entspannten Erfahrung.
           </p>
         </div>
         
