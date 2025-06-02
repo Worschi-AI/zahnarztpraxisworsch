@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -82,15 +83,12 @@ const QualityPromiseSection = () => {
 
   return (
     <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
-      {/* Intensive Background Decorations */}
+      {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-8 right-8 w-84 h-84 bg-dental-turquoise/50 rounded-full blur-[330px]"></div>
-        <div className="absolute top-1/3 left-8 w-76 h-76 bg-dental-blue/55 rounded-full blur-[300px]"></div>
-        <div className="absolute bottom-16 right-1/4 w-92 h-92 bg-dental-turquoise/45 rounded-full blur-[350px]"></div>
-        <div className="absolute bottom-8 left-8 w-68 h-68 bg-dental-blue/40 rounded-full blur-[280px]"></div>
-        <div className="absolute top-16 left-1/3 w-60 h-60 bg-dental-turquoise/35 rounded-full blur-[260px]"></div>
-        <div className="absolute bottom-32 right-1/3 w-72 h-72 bg-dental-blue/50 rounded-full blur-[310px]"></div>
-        <div className="absolute top-1/2 right-1/2 w-56 h-56 bg-dental-turquoise/40 rounded-full blur-[250px]"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-dental-turquoise/20 rounded-full blur-[70px]"></div>
+        <div className="absolute top-1/3 left-0 w-28 h-28 bg-dental-blue/22 rounded-full blur-[65px]"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-dental-turquoise/18 rounded-full blur-[80px]"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-dental-blue/20 rounded-full blur-[55px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -145,3 +143,4 @@ const QualityPromiseSection = () => {
 };
 
 export default QualityPromiseSection;
+
