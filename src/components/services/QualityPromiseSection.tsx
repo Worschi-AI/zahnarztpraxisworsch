@@ -54,7 +54,7 @@ const QualityPromiseSection = () => {
     return (
       <div
         className={cn(
-          "flex flex-col lg:border-r py-10 relative group/feature border-dental-blue/10",
+          "flex flex-col lg:border-r py-6 lg:py-10 relative group/feature border-dental-blue/10",
           (index === 0) && "lg:border-l border-dental-blue/10",
           index < 3 && "lg:border-b border-dental-blue/10"
         )}
@@ -65,16 +65,16 @@ const QualityPromiseSection = () => {
         {index >= 3 && (
           <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-dental-beige/30 to-transparent pointer-events-none" />
         )}
-        <div className="mb-4 relative z-10 px-10 text-dental-turquoise">
+        <div className="mb-4 relative z-10 px-6 lg:px-10 text-dental-turquoise">
           {icon}
         </div>
-        <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="text-base lg:text-lg font-bold mb-2 relative z-10 px-6 lg:px-10">
           <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-dental-blue/20 group-hover/feature:bg-dental-turquoise transition-all duration-200 origin-center" />
           <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-dental-blue">
             {title}
           </span>
         </div>
-        <p className="text-sm text-dental-gray max-w-xs relative z-10 px-10">
+        <p className="text-sm text-dental-gray relative z-10 px-6 lg:px-10">
           {description}
         </p>
       </div>
@@ -82,12 +82,14 @@ const QualityPromiseSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-start gap-16">
-          <div className="lg:w-1/3 animate-on-scroll">
-            <h2 className="mb-6 text-dental-blue">Unser Qualitätsversprechen – Höchste Standards für Sie</h2>
-            <p className="text-lg text-dental-gray mb-8">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
+          <div className="w-full lg:w-1/3 animate-on-scroll">
+            <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">
+              Unser Qualitätsversprechen – Höchste Standards für Sie
+            </h2>
+            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
               Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
             </p>
             
@@ -96,7 +98,7 @@ const QualityPromiseSection = () => {
             </Button>
           </div>
           
-          <div className="lg:w-2/3">
+          <div className="w-full lg:w-2/3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-5xl">
               {qualityPoints.map((feature, index) => (
                 <Feature key={feature.title} {...feature} index={index} />
@@ -105,7 +107,7 @@ const QualityPromiseSection = () => {
           </div>
         </div>
         
-        <div className="mt-16 animate-on-scroll">
+        <div className="mt-12 lg:mt-16 animate-on-scroll">
           <div 
             className="overflow-hidden"
             style={{
