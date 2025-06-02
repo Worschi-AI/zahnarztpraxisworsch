@@ -86,8 +86,8 @@ const QualityPromiseSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-1/3 animate-on-scroll">
-            <h2 className="mb-4 lg:mb-6 text-dental-blue text-lg lg:text-xl xl:text-2xl leading-tight">
-              Qualitätsversprechen
+            <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">
+              Unser Qualitätsversprechen – Höchste Standards für Sie
             </h2>
             <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
               Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
