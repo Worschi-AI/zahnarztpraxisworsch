@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '@/components/HeroSection';
@@ -10,7 +9,6 @@ import FeaturedServices from '@/components/home/FeaturedServices';
 import StatisticsSection from '@/components/home/StatisticsSection';
 import TeamPreview from '@/components/home/TeamPreview';
 import QualityPromiseSection from '@/components/services/QualityPromiseSection';
-import StandardServices from '@/components/home/StandardServices';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import HomepageFAQ from '@/components/home/HomepageFAQ';
 import AppointmentCTA from '@/components/home/AppointmentCTA';
@@ -112,9 +110,6 @@ const Index = () => {
 
       {/* Quality Promise Section */}
       <QualityPromiseSection />
-
-      {/* Services Section - Standard Services */}
-      <StandardServices />
 
       {/* Testimonials */}
       <TestimonialsSection />
