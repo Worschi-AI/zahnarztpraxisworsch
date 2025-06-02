@@ -116,25 +116,42 @@ const QualityPromiseSection = () => {
         </div>
         
         <div className="mt-12 lg:mt-16 animate-on-scroll">
-          <div 
-            className="overflow-hidden"
-            style={{
-              borderRadius: '12px',
-              boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-              margin: '0 auto',
-              maxWidth: '800px'
-            }}
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
-              alt="Moderne Zahnmedizin - Zahnarztpraxis Worsch Dresden" 
-              style={{
-                width: '100%',
-                height: '300px',
-                objectFit: 'cover'
-              }}
-              loading="lazy"
-            />
+          <div className="max-w-4xl mx-auto">
+            {/* Image Collage inspired by the reference */}
+            <div className="grid grid-cols-2 gap-4 h-[400px]">
+              {/* Top left image */}
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Glückliche Patientin bei der Zahnbehandlung" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              
+              {/* Right side - stacked images */}
+              <div className="flex flex-col gap-4">
+                {/* Top right image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
+                  <img 
+                    src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Moderne Zahnarztpraxis Dresden" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                
+                {/* Bottom right image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+                    alt="Zahnarzt Team bei der Behandlung" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -143,4 +160,3 @@ const QualityPromiseSection = () => {
 };
 
 export default QualityPromiseSection;
-
