@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -111,7 +110,7 @@ const QualityPromiseSection = () => {
           </div>
         </div>
         
-        <div className="mt-12 lg:mt-16 animate-on-scroll text-center">
+        <div className="mt-8 lg:mt-12 animate-on-scroll text-center">
           <Button asChild className="bg-dental-turquoise hover:bg-dental-blue mb-8 lg:mb-12">
             <Link to="/team">Lernen Sie unser Team kennen</Link>
           </Button>
