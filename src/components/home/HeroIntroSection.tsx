@@ -58,7 +58,7 @@ const HeroIntroSection = () => {
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="mb-6 lg:mb-8">
               <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                Willkommen in Ihrer modernen Zahnarztpraxis in Dresden-Laubegast
+                Willkommen in Ihrer Zahnarztpraxis in Dresden-Laubegast
               </h2>
               
               <p className="text-base lg:text-lg leading-relaxed text-dental-gray mb-6">

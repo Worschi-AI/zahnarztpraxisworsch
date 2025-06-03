@@ -49,12 +49,40 @@ export function TestimonialsSection({
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
   const controls = useAnimation()
 
+  // Touch handling for mobile swipe
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
   // Google Maps link for the dental practice
   const googleMapsLink = "https://www.google.com/maps/place/Zahnarztpraxis+Dipl.med+dent.+Ute+Worsch+%26+Peik+Worsch/@51.0258232,13.8338391,17z/data=!3m2!4b1!5s0x4709c7d912ce70c1:0xa0772b1bd9b757d8!4m6!3m5!1s0x4709c7d96d21fce9:0xe0acd2eb962737a1!8m2!3d51.0258232!4d13.836414!16s%2Fg%2F1tgcws99?entry=tts&g_ep=EgoyMDI1MDUxMy4xIPu8ASoASAFQAw%3D%3D&skid=46499da1-bc0b-43d4-92ac-f086733c2af9"
 
   // Handle card click
   const handleCardClick = () => {
     window.open(googleMapsLink, '_blank')
+  }
+
+  // Touch handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+
+    if (isLeftSwipe) {
+      handleNext()
+    } else if (isRightSwipe) {
+      handlePrev()
+    }
   }
 
   // Automatically cycle through testimonials
@@ -125,10 +153,10 @@ export function TestimonialsSection({
           variants={containerVariants}
           className="text-center mb-12 space-y-4"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
             {title}
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-muted-foreground max-w-[700px] mx-auto md:text-xl/relaxed">
+          <motion.p variants={itemVariants} className="text-white max-w-[700px] mx-auto md:text-xl/relaxed">
             {subtitle}
           </motion.p>
         </motion.div>
@@ -145,7 +173,12 @@ export function TestimonialsSection({
             </div>
 
             {/* Testimonial cards */}
-            <div className="relative h-[400px] md:h-[380px]">
+            <div 
+              className="relative h-[400px] md:h-[380px]"
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={testimonial.id}
@@ -217,7 +250,7 @@ export function TestimonialsSection({
                   key={index}
                   className={cn(
                     "w-2 h-2 rounded-full transition-colors",
-                    index === activeIndex ? "bg-primary" : "bg-muted-foreground/20",
+                    index === activeIndex ? "bg-white" : "bg-white/30",
                   )}
                   role="button"
                   tabIndex={0}
