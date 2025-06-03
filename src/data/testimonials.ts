@@ -27,24 +27,12 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "4",
-    quote: "Bei Dr. Müller fühlen sich meine Kinder bestens aufgehoben. Sie hat eine besondere Art, mit den Kleinen umzugehen, sodass der Zahnarztbesuch für sie mittlerweile ein positives Erlebnis ist. Das erleichtert uns als Eltern vieles.",
-    author: "Familie Schneider",
-    rating: 5
-  },
-  {
-    id: "5",
-    quote: "Nach meiner Zahnaufhellung bekomme ich ständig Komplimente für mein strahlendes Lächeln. Die Beratung war ehrlich und kompetent, und das Ergebnis übertrifft meine Erwartungen. Vielen Dank an das gesamte Team!",
-    author: "Julia B.",
-    rating: 4
-  },
-  {
-    id: "6",
     quote: "Top Zahnarzt mit einem sehr guten Team, selbst meine 4 Jahre alte Tochter geht gerne zu ihm.",
     author: "Ralf K.",
     rating: 5
   },
   {
-    id: "7",
+    id: "5",
     quote: "Bin sehr zufrieden mit Dr. Worsch, freundlich und kompetent. Super freundliches Praxisteam und angenehme Atmosphäre.",
     author: "Loui L.",
     rating: 5
