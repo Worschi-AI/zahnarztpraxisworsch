@@ -44,10 +44,8 @@ export function TestimonialsSection({
   // State for active testimonial
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Refs for scroll animations and touch handling
+  // Refs for scroll animations
   const sectionRef = useRef(null)
-  const touchStartX = useRef<number | null>(null)
-  const touchEndX = useRef<number | null>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
   const controls = useAnimation()
 
@@ -57,33 +55,6 @@ export function TestimonialsSection({
   // Handle card click
   const handleCardClick = () => {
     window.open(googleMapsLink, '_blank')
-  }
-
-  // Touch handlers for mobile swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return
-    
-    const distance = touchStartX.current - touchEndX.current
-    const isLeftSwipe = distance > 50
-    const isRightSwipe = distance < -50
-
-    if (isLeftSwipe) {
-      handleNext()
-    }
-    if (isRightSwipe) {
-      handlePrev()
-    }
-
-    touchStartX.current = null
-    touchEndX.current = null
   }
 
   // Automatically cycle through testimonials
@@ -154,10 +125,10 @@ export function TestimonialsSection({
           variants={containerVariants}
           className="text-center mb-12 space-y-4"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {title}
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-white max-w-[700px] mx-auto md:text-xl/relaxed">
+          <motion.p variants={itemVariants} className="text-muted-foreground max-w-[700px] mx-auto md:text-xl/relaxed">
             {subtitle}
           </motion.p>
         </motion.div>
@@ -173,13 +144,8 @@ export function TestimonialsSection({
               <Quote className="h-12 w-12 text-primary/20" strokeWidth={1} />
             </div>
 
-            {/* Testimonial cards with touch support */}
-            <div 
-              className="relative h-[400px] md:h-[380px]"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
+            {/* Testimonial cards */}
+            <div className="relative h-[400px] md:h-[380px]">
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={testimonial.id}

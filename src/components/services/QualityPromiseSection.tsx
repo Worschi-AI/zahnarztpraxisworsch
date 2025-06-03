@@ -2,70 +2,157 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Shield, Users, Award, Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import {
+  IconMicroscope,
+  IconDiamond,
+  IconSchool,
+  IconShieldCheck,
+  IconHeart,
+} from '@tabler/icons-react';
 
 const QualityPromiseSection = () => {
-  const features = [
+  const qualityPoints = [
     {
-      icon: Shield,
-      title: "Höchste Qualitätsstandards",
-      description: "Modernste Technologie und bewährte Behandlungsmethoden für Ihre optimale Zahngesundheit in Dresden-Laubegast."
+      title: "Modernste Technologie",
+      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Behandlungen. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse.",
+      icon: <IconMicroscope className="w-8 h-8" />,
     },
     {
-      icon: Users,
-      title: "Persönliche Betreuung",
-      description: "Individuelle Behandlungspläne und einfühlsame Beratung – bei uns stehen Sie im Mittelpunkt."
+      title: "Hochwertige Materialien",
+      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Implantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen.",
+      icon: <IconDiamond className="w-8 h-8" />,
     },
     {
-      icon: Award,
-      title: "Langjährige Expertise",
-      description: "Vertrauen Sie auf über 15 Jahre Erfahrung in der modernen Zahnmedizin und ästhetischen Zahnheilkunde."
+      title: "Kontinuierliche Fortbildung",
+      description: "Unser Team bildet sich regelmäßig weiter und ist zertifiziert in den neuesten Behandlungsmethoden. So profitieren Sie immer von den modernsten Verfahren der Zahnmedizin.",
+      icon: <IconSchool className="w-8 h-8" />,
     },
     {
-      icon: Heart,
+      title: "Strenge Hygiene",
+      description: "Höchste Hygienestandards und moderne Sterilisationsverfahren sorgen für Ihre Sicherheit. Unsere Praxis erfüllt alle aktuellen Richtlinien und wird regelmäßig überprüft.",
+      icon: <IconShieldCheck className="w-8 h-8" />,
+    },
+    {
       title: "Transparente Beratung",
-      description: "Ehrliche Aufklärung, faire Preise und keine versteckten Kosten – Vertrauen ist die Basis unserer Zusammenarbeit."
+      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise. Sie wissen immer, was gemacht wird und was es kostet – ohne versteckte Kosten.",
+      icon: <IconHeart className="w-8 h-8" />,
     }
   ];
 
-  return (
-    <section className="py-16 bg-dental-beige">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="text-3xl font-bold text-dental-blue mb-4">
-            Unser Qualitätsversprechen
-          </h2>
-          <p className="text-dental-gray max-w-3xl mx-auto text-lg">
-            In der Zahnarztpraxis Worsch steht Ihre Zufriedenheit an erster Stelle. 
-            Entdecken Sie, was uns als Zahnarzt in Dresden-Laubegast auszeichnet.
-          </p>
+  const Feature = ({
+    title,
+    description,
+    icon,
+    index,
+  }: {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    index: number;
+  }) => {
+    return (
+      <div
+        className={cn(
+          "flex flex-col lg:border-r py-6 lg:py-10 relative group/feature border-dental-blue/10",
+          (index === 0) && "lg:border-l border-dental-blue/10",
+          index < 3 && "lg:border-b border-dental-blue/10"
+        )}
+      >
+        {index < 3 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        {index >= 3 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        <div className="mb-4 relative z-10 px-6 lg:px-10 text-dental-turquoise">
+          {icon}
         </div>
+        <div className="text-base lg:text-lg font-bold mb-2 relative z-10 px-6 lg:px-10">
+          <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-dental-blue/20 group-hover/feature:bg-dental-turquoise transition-all duration-200 origin-center" />
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-dental-blue">
+            {title}
+          </span>
+        </div>
+        <p className="text-sm text-dental-gray relative z-10 px-6 lg:px-10">
+          {description}
+        </p>
+      </div>
+    );
+  };
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="text-center animate-on-scroll bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-dental-turquoise/10 rounded-full mb-4">
-                <feature.icon className="h-8 w-8 text-dental-turquoise" />
-              </div>
-              <h3 className="text-xl font-semibold text-dental-blue mb-3">{feature.title}</h3>
-              <p className="text-dental-gray">{feature.description}</p>
-              
-              {/* Add button only under "Transparente Beratung" card */}
-              {feature.title === "Transparente Beratung" && (
-                <div className="mt-6">
-                  <Button asChild className="bg-dental-turquoise hover:bg-dental-blue text-white">
-                    <Link to="/team">
-                      Lernen Sie unser Team kennen
-                    </Link>
-                  </Button>
-                </div>
-              )}
+  return (
+    <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
+      {/* Dezente Eck-Dekorationen */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-dental-turquoise/20 rounded-full blur-[70px]"></div>
+        <div className="absolute top-1/3 left-0 w-28 h-28 bg-dental-blue/22 rounded-full blur-[65px]"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-dental-turquoise/18 rounded-full blur-[80px]"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-dental-blue/20 rounded-full blur-[55px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
+          <div className="w-full lg:w-1/3 animate-on-scroll">
+            <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">
+              Unser Qualitätsversprechen – Höchste Standards für Sie
+            </h2>
+            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
+              Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
+            </p>
+            
+            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
+              <Link to="/team">Lernen Sie unser Team kennen</Link>
+            </Button>
+          </div>
+          
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-5xl">
+              {qualityPoints.map((feature, index) => (
+                <Feature key={feature.title} {...feature} index={index} />
+              ))}
             </div>
-          ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 lg:mt-16 animate-on-scroll">
+          <div className="max-w-4xl mx-auto">
+            {/* Image Collage inspired by the reference */}
+            <div className="grid grid-cols-2 gap-4 h-[400px]">
+              {/* Top left image */}
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Glückliche Patientin bei der Zahnbehandlung" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              
+              {/* Right side - stacked images */}
+              <div className="flex flex-col gap-4">
+                {/* Top right image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
+                  <img 
+                    src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Moderne Zahnarztpraxis Dresden" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                
+                {/* Bottom right image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
+                    alt="Zahnarzt Team bei der Behandlung" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
