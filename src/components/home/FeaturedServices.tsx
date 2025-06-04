@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { IconSparkles, IconSmile, IconEyeOff, IconTool } from '@tabler/icons-react';
+import { IconSparkles, IconMoodSmile, IconEyeOff, IconTool } from '@tabler/icons-react';
 
 const FeaturedServices = () => {
   return (
@@ -70,7 +69,7 @@ const FeaturedServices = () => {
                 style={{ animationDelay: '100ms' }}
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconSmile className="text-dental-blue" size={20} />
+                  <IconMoodSmile className="text-dental-blue" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Professionelles Bleaching
