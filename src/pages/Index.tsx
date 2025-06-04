@@ -91,7 +91,7 @@ const Index = () => {
       
       {/* Hero Section with updated content */}
       <HeroSection 
-        title="Zahnarzt Dresden-Laubegast: Moderne Zahnmedizin für Ihr perfektes Lächeln" 
+        title="Ihr Zahnarzt in Dresden-Laubegast: Moderne Zahnmedizin & ästhetische Behandlungen" 
         subtitle="Von Invisalign bis Bleaching – Entdecken Sie zeitgemäße Zahnbehandlungen in entspannter Atmosphäre. Ihre Zahngesundheit liegt uns am Herzen." 
         backgroundImage="https://images.unsplash.com/photo-1629909615957-f6d7e5bd7a25?q=80&w=1769&auto=format&fit=crop"
         ctaText="Jetzt Wunschtermin finden"

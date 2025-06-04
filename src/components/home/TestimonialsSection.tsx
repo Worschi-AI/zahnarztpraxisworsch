@@ -64,7 +64,7 @@ const TestimonialsSection = () => {
       
       <AnimatedTestimonialsSection
         title="Das sagen unsere Patienten – Echte Erfahrungen"
-        subtitle="Lassen Sie sich überzeugen: Erfahren Sie aus erster Hand, wie unsere zufriedenen Patienten die zahnmedizinische Betreuung und unsere ästhetischen Behandlungen in der Zahnarztpraxis Worsch erlebt haben."
+        subtitle="Lesen Sie, wie zufriedene Patienten ihre Behandlungserfahrungen in unserer Dresdner Zahnarztpraxis bewerten."
         testimonials={transformedTestimonials}
         autoRotateInterval={6000}
         showVerifiedBadge={true}
