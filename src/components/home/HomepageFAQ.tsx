@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -26,7 +25,7 @@ const HomepageFAQ = () => {
                 Ihre häufigsten Fragen an uns
               </h2>
               <p className="text-base lg:text-lg text-dental-gray mt-4 lg:mt-6">
-                Wir möchten, dass Sie sich von Anfang an gut informiert und rundum wohlfühlen. Hier finden Sie Antworten auf einige der Fragen, die uns in Ihrer Zahnarztpraxis Worsch in Dresden-Laubegast am häufigsten gestellt werden.
+                Als Ihr vertrauensvoller Zahnarzt in Dresden-Laubegast informieren wir Sie transparent über alle Behandlungen. Hier finden Sie Antworten auf häufige Patientenfragen zu Kosten, Terminen und Behandlungsmöglichkeiten.
               </p>
             </div>
             
@@ -96,4 +95,3 @@ const HomepageFAQ = () => {
 };
 
 export default HomepageFAQ;
-
