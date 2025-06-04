@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -68,8 +69,8 @@ const FeaturedServices = () => {
                 className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
                 style={{ animationDelay: '100ms' }}
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconMoodSmile className="text-dental-blue" size={20} />
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
+                  <IconMoodSmile className="text-dental-turquoise" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Professionelles Bleaching
@@ -108,8 +109,8 @@ const FeaturedServices = () => {
                 className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block group"
                 style={{ animationDelay: '300ms' }}
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-blue/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
-                  <IconTool className="text-dental-blue" size={20} />
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4">
+                  <IconTool className="text-dental-turquoise" size={20} />
                 </div>
                 <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                   Moderne Implantologie
