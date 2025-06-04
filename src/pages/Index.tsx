@@ -53,7 +53,7 @@ const Index = () => {
         </script>
       </Helmet>
       
-      <HeroSection />
+      <HeroSection title="Ihr Zahnarzt in Dresden-Laubegast: Moderne Zahnmedizin & ästhetische Behandlungen" />
       <HeroIntroSection />
       <FeaturedServices />
       <StandardServices />
