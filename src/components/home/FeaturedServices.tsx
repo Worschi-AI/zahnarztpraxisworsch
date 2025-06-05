@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { IconSparkles, IconMoodSmile, IconEyeOff, IconTool } from '@tabler/icons-react';
 
 const FeaturedServices = () => {
   return (
@@ -44,7 +43,7 @@ const FeaturedServices = () => {
           <div>
             {/* Services grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-8 lg:mb-0">
-              {/* Service 1 - Ästhetische Zahnmedizin */}
+              {/* Service 1 - Moderne Implantologie (now first) */}
               <div className="animate-on-scroll">
                 <div 
                   className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
@@ -55,15 +54,67 @@ const FeaturedServices = () => {
                     paddingBottom: '20px'
                   }}
                 >
+                  {/* Image placeholder */}
+                  <div 
+                    className="w-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop)`,
+                      height: '200px',
+                      borderTopLeftRadius: '16px',
+                      borderTopRightRadius: '16px'
+                    }}
+                  />
+                  
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
-                        <IconSparkles className="text-dental-turquoise icon-glow" size={20} />
-                      </div>
-                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
-                        Ästhetische Zahnmedizin
-                      </h3>
-                    </div>
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                      Moderne Implantologie
+                    </h3>
+                  </div>
+                  
+                  <div style={{ padding: '10px 20px 0 20px' }}>
+                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
+                      Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
+                    </p>
+                  </div>
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <Link 
+                      to="/services/implantologie"
+                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
+                      style={{ fontWeight: '600' }}
+                    >
+                      Mehr erfahren <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 2 - Ästhetische Zahnmedizin */}
+              <div className="animate-on-scroll" style={{ animationDelay: '100ms' }}>
+                <div 
+                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                    margin: '20px',
+                    paddingBottom: '20px'
+                  }}
+                >
+                  {/* Image placeholder */}
+                  <div 
+                    className="w-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1770&auto=format&fit=crop)`,
+                      height: '200px',
+                      borderTopLeftRadius: '16px',
+                      borderTopRightRadius: '16px'
+                    }}
+                  />
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                      Ästhetische Zahnmedizin
+                    </h3>
                   </div>
                   
                   <div style={{ padding: '10px 20px 0 20px' }}>
@@ -84,8 +135,8 @@ const FeaturedServices = () => {
                 </div>
               </div>
 
-              {/* Service 2 - Professionelles Bleaching */}
-              <div className="animate-on-scroll" style={{ animationDelay: '100ms' }}>
+              {/* Service 3 - Professionelles Bleaching */}
+              <div className="animate-on-scroll" style={{ animationDelay: '200ms' }}>
                 <div 
                   className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
                   style={{
@@ -95,15 +146,21 @@ const FeaturedServices = () => {
                     paddingBottom: '20px'
                   }}
                 >
+                  {/* Image placeholder */}
+                  <div 
+                    className="w-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1770&auto=format&fit=crop)`,
+                      height: '200px',
+                      borderTopLeftRadius: '16px',
+                      borderTopRightRadius: '16px'
+                    }}
+                  />
+                  
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
-                        <IconMoodSmile className="text-dental-turquoise icon-glow" size={20} />
-                      </div>
-                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
-                        Professionelles Bleaching
-                      </h3>
-                    </div>
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                      Professionelles Bleaching
+                    </h3>
                   </div>
                   
                   <div style={{ padding: '10px 20px 0 20px' }}>
@@ -124,8 +181,8 @@ const FeaturedServices = () => {
                 </div>
               </div>
 
-              {/* Service 3 - Invisalign */}
-              <div className="animate-on-scroll" style={{ animationDelay: '200ms' }}>
+              {/* Service 4 - Invisalign */}
+              <div className="animate-on-scroll" style={{ animationDelay: '300ms' }}>
                 <div 
                   className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
                   style={{
@@ -135,15 +192,21 @@ const FeaturedServices = () => {
                     paddingBottom: '20px'
                   }}
                 >
+                  {/* Image placeholder */}
+                  <div 
+                    className="w-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1770&auto=format&fit=crop)`,
+                      height: '200px',
+                      borderTopLeftRadius: '16px',
+                      borderTopRightRadius: '16px'
+                    }}
+                  />
+                  
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
-                        <IconEyeOff className="text-dental-turquoise icon-glow" size={20} />
-                      </div>
-                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
-                        Invisalign – Unsichtbare Zahnkorrektur
-                      </h3>
-                    </div>
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                      Invisalign – Unsichtbare Zahnkorrektur
+                    </h3>
                   </div>
                   
                   <div style={{ padding: '10px 20px 0 20px' }}>
@@ -155,46 +218,6 @@ const FeaturedServices = () => {
                   <div style={{ padding: '20px 20px 0 20px' }}>
                     <Link 
                       to="/services/aesthetische-zahnheilkunde"
-                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
-                      style={{ fontWeight: '600' }}
-                    >
-                      Mehr erfahren <ArrowRight size={16} />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 4 - Moderne Implantologie */}
-              <div className="animate-on-scroll" style={{ animationDelay: '300ms' }}>
-                <div 
-                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
-                  style={{
-                    borderRadius: '16px',
-                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                    margin: '20px',
-                    paddingBottom: '20px'
-                  }}
-                >
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
-                        <IconTool className="text-dental-turquoise icon-glow" size={20} />
-                      </div>
-                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
-                        Moderne Implantologie
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  <div style={{ padding: '10px 20px 0 20px' }}>
-                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
-                      Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
-                    </p>
-                  </div>
-                  
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <Link 
-                      to="/services/implantologie"
                       className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
                       style={{ fontWeight: '600' }}
                     >
