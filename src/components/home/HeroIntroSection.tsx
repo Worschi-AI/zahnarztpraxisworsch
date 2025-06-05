@@ -15,12 +15,12 @@ const HeroIntroSection = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-white to-dental-beige/30 relative overflow-hidden">
-      {/* Dezente Eck-Dekorationen */}
+      {/* Dezente Eck-Dekorationen mit Animation */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-dental-turquoise/15 rounded-full blur-[80px]"></div>
-        <div className="absolute top-0 right-0 w-40 h-40 bg-dental-blue/12 rounded-full blur-[90px]"></div>
-        <div className="absolute bottom-0 left-0 w-36 h-36 bg-dental-turquoise/10 rounded-full blur-[85px]"></div>
-        <div className="absolute bottom-0 right-0 w-28 h-28 bg-dental-blue/15 rounded-full blur-[75px]"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-dental-turquoise/15 rounded-full blur-[80px] animate-float"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-dental-blue/12 rounded-full blur-[90px] animate-float animate-delay-300"></div>
+        <div className="absolute bottom-0 left-0 w-36 h-36 bg-dental-turquoise/10 rounded-full blur-[85px] animate-float animate-delay-200"></div>
+        <div className="absolute bottom-0 right-0 w-28 h-28 bg-dental-blue/15 rounded-full blur-[75px] animate-float animate-delay-400"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -29,25 +29,25 @@ const HeroIntroSection = () => {
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="relative flex gap-4">
               {/* Erstes Bild - größer */}
-              <div className="relative flex-1">
+              <div className="relative flex-1 hover-premium">
                 <div className="absolute -inset-2 bg-gradient-to-r from-dental-turquoise/20 to-dental-blue/20 rounded-2xl blur-lg"></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white image-zoom">
                   <img 
                     src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
                     alt="Glückliche Patientin beim Zahnarzt" 
-                    className="w-full h-[300px] lg:h-[400px] object-cover"
+                    className="w-full h-[300px] lg:h-[400px] object-cover transition-transform duration-500"
                   />
                 </div>
               </div>
               
               {/* Zweites Bild - etwas kleiner und versetzt */}
-              <div className="relative flex-1 mt-8">
+              <div className="relative flex-1 mt-8 hover-premium" style={{ animationDelay: '200ms' }}>
                 <div className="absolute -inset-2 bg-gradient-to-r from-dental-blue/20 to-dental-turquoise/20 rounded-2xl blur-lg"></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white image-zoom">
                   <img 
                     src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
                     alt="Zahnarzt mit Patientin - professionelle Betreuung" 
-                    className="w-full h-[250px] lg:h-[320px] object-cover"
+                    className="w-full h-[250px] lg:h-[320px] object-cover transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -57,7 +57,7 @@ const HeroIntroSection = () => {
           {/* Content */}
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="mb-6 lg:mb-8">
-              <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+              <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold hover-text-highlight">
                 Willkommen in Ihrer Zahnarztpraxis in Dresden-Laubegast
               </h2>
               
@@ -75,7 +75,7 @@ const HeroIntroSection = () => {
             </div>
             
             <div className="mt-8 lg:mt-10">
-              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transition-all duration-300 text-white shadow-lg px-8 py-3">
+              <Button asChild size="lg" className="btn-premium text-white shadow-premium hover:shadow-luxury px-8 py-3">
                 <Link to="/about">
                   Mehr über uns erfahren
                 </Link>
