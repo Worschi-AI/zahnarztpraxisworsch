@@ -45,83 +45,164 @@ const FeaturedServices = () => {
             {/* Services grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-8 lg:mb-0">
               {/* Service 1 - Ästhetische Zahnmedizin */}
-              <Link 
-                to="/services/aesthetische-zahnheilkunde"
-                className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover-premium shadow-layered block group"
-              >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4 icon-interactive">
-                  <IconSparkles className="text-dental-turquoise icon-glow" size={20} />
+              <div className="animate-on-scroll">
+                <div 
+                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                    margin: '20px',
+                    paddingBottom: '20px'
+                  }}
+                >
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
+                        <IconSparkles className="text-dental-turquoise icon-glow" size={20} />
+                      </div>
+                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
+                        Ästhetische Zahnmedizin
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <div style={{ padding: '10px 20px 0 20px' }}>
+                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
+                      Veneers, Vollkeramikkronen und ästhetische Füllungen für ein natürlich schönes Lächeln. Mit modernster Technologie erschaffen wir Zähne, die perfekt zu Ihnen passen und jahrelang strahlen.
+                    </p>
+                  </div>
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <Link 
+                      to="/services/aesthetische-zahnheilkunde"
+                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
+                      style={{ fontWeight: '600' }}
+                    >
+                      Mehr erfahren <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
-                <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2 hover-text-highlight">
-                  Ästhetische Zahnmedizin
-                </h3>
-                <p className="text-sm lg:text-base text-dental-gray leading-relaxed mb-3 lg:mb-4">
-                  Veneers, Vollkeramikkronen und ästhetische Füllungen für ein natürlich schönes Lächeln. Mit modernster Technologie erschaffen wir Zähne, die perfekt zu Ihnen passen und jahrelang strahlen.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} className="icon-rotate" />
-                </div>
-              </Link>
+              </div>
 
               {/* Service 2 - Professionelles Bleaching */}
-              <Link 
-                to="/services/aesthetische-zahnheilkunde"
-                className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover-premium shadow-layered block group"
-                style={{ animationDelay: '100ms' }}
-              >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4 icon-interactive">
-                  <IconMoodSmile className="text-dental-turquoise icon-glow" size={20} />
+              <div className="animate-on-scroll" style={{ animationDelay: '100ms' }}>
+                <div 
+                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                    margin: '20px',
+                    paddingBottom: '20px'
+                  }}
+                >
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
+                        <IconMoodSmile className="text-dental-turquoise icon-glow" size={20} />
+                      </div>
+                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
+                        Professionelles Bleaching
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <div style={{ padding: '10px 20px 0 20px' }}>
+                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
+                      Schonende Zahnaufhellung für bis zu 8 Nuancen hellere Zähne. Unser In-Office-Bleaching dauert nur 60 Minuten und sorgt für sofort sichtbare Ergebnisse – ganz ohne Schmerzen.
+                    </p>
+                  </div>
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <Link 
+                      to="/services/aesthetische-zahnheilkunde"
+                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
+                      style={{ fontWeight: '600' }}
+                    >
+                      Mehr erfahren <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
-                <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2 hover-text-highlight">
-                  Professionelles Bleaching
-                </h3>
-                <p className="text-sm lg:text-base text-dental-gray leading-relaxed mb-3 lg:mb-4">
-                  Schonende Zahnaufhellung für bis zu 8 Nuancen hellere Zähne. Unser In-Office-Bleaching dauert nur 60 Minuten und sorgt für sofort sichtbare Ergebnisse – ganz ohne Schmerzen.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} className="icon-rotate" />
-                </div>
-              </Link>
+              </div>
 
               {/* Service 3 - Invisalign */}
-              <Link 
-                to="/services/aesthetische-zahnheilkunde"
-                className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover-premium shadow-layered block group"
-                style={{ animationDelay: '200ms' }}
-              >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4 icon-interactive">
-                  <IconEyeOff className="text-dental-turquoise icon-glow" size={20} />
+              <div className="animate-on-scroll" style={{ animationDelay: '200ms' }}>
+                <div 
+                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                    margin: '20px',
+                    paddingBottom: '20px'
+                  }}
+                >
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
+                        <IconEyeOff className="text-dental-turquoise icon-glow" size={20} />
+                      </div>
+                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
+                        Invisalign – Unsichtbare Zahnkorrektur
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <div style={{ padding: '10px 20px 0 20px' }}>
+                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
+                      Gerade Zähne ohne Metallspangen! Mit transparenten Alignern korrigieren wir Zahnfehlstellungen diskret und komfortabel. Ideal für Beruf und Alltag.
+                    </p>
+                  </div>
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <Link 
+                      to="/services/aesthetische-zahnheilkunde"
+                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
+                      style={{ fontWeight: '600' }}
+                    >
+                      Mehr erfahren <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
-                <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2 hover-text-highlight">
-                  Invisalign – Unsichtbare Zahnkorrektur
-                </h3>
-                <p className="text-sm lg:text-base text-dental-gray leading-relaxed mb-3 lg:mb-4">
-                  Gerade Zähne ohne Metallspangen! Mit transparenten Alignern korrigieren wir Zahnfehlstellungen diskret und komfortabel. Ideal für Beruf und Alltag.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} className="icon-rotate" />
-                </div>
-              </Link>
+              </div>
 
               {/* Service 4 - Moderne Implantologie */}
-              <Link 
-                to="/services/implantologie"
-                className="animate-on-scroll bg-white rounded-2xl p-4 lg:p-6 hover-premium shadow-layered block group"
-                style={{ animationDelay: '300ms' }}
-              >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center mb-3 lg:mb-4 icon-interactive">
-                  <IconTool className="text-dental-turquoise icon-glow" size={20} />
+              <div className="animate-on-scroll" style={{ animationDelay: '300ms' }}>
+                <div 
+                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
+                  style={{
+                    borderRadius: '16px',
+                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                    margin: '20px',
+                    paddingBottom: '20px'
+                  }}
+                >
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-dental-turquoise/10 rounded-xl flex items-center justify-center icon-interactive">
+                        <IconTool className="text-dental-turquoise icon-glow" size={20} />
+                      </div>
+                      <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight">
+                        Moderne Implantologie
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <div style={{ padding: '10px 20px 0 20px' }}>
+                    <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
+                      Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
+                    </p>
+                  </div>
+                  
+                  <div style={{ padding: '20px 20px 0 20px' }}>
+                    <Link 
+                      to="/services/implantologie"
+                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
+                      style={{ fontWeight: '600' }}
+                    >
+                      Mehr erfahren <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
-                <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2 hover-text-highlight">
-                  Moderne Implantologie
-                </h3>
-                <p className="text-sm lg:text-base text-dental-gray leading-relaxed mb-3 lg:mb-4">
-                  Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
-                </p>
-                <div className="inline-flex items-center gap-2 text-dental-turquoise group-hover:text-dental-blue transition-colors font-medium text-sm">
-                  Mehr erfahren <ArrowRight size={14} className="icon-rotate" />
-                </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
