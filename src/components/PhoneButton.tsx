@@ -3,7 +3,6 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { Button, ButtonProps } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { useLocation } from 'react-router-dom';
 
 interface PhoneButtonProps extends Omit<ButtonProps, 'asChild'> {
   phoneNumber?: string;
@@ -26,12 +25,6 @@ const PhoneButton = ({
   // Format the phone number for the href attribute
   const formattedPhoneNumber = phoneNumber.replace(/\s/g, '');
   
-  // Apply white background with blue text for all pages
-  const buttonClass = cn(
-    "bg-white text-dental-blue hover:bg-dental-beige",
-    className
-  );
-  
   // Use the phoneNumber as the button text if buttonText is not provided
   const displayText = buttonText || phoneNumber;
   
@@ -40,7 +33,7 @@ const PhoneButton = ({
       asChild
       variant={variant}
       size={size}
-      className={buttonClass}
+      className={className}
       {...props}
     >
       <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">
