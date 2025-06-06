@@ -53,10 +53,10 @@ const QualityPromiseSection = () => {
           </div>
           
           {/* Content */}
-          <h3 className="text-xl font-semibold text-dental-blue mb-4 group-hover:text-dental-turquoise transition-colors duration-300">
+          <h3 className="text-lg font-semibold text-dental-blue mb-3 group-hover:text-dental-turquoise transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-dental-gray leading-relaxed">
+          <p className="text-sm text-dental-gray leading-relaxed">
             {description}
           </p>
           
@@ -80,10 +80,10 @@ const QualityPromiseSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-16 animate-on-scroll">
-          <h2 className="mb-6 text-dental-blue text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+          <h2 className="mb-6 text-dental-blue text-2xl lg:text-3xl font-bold leading-tight">
             Unser Qualitätsversprechen – Höchste Standards für Sie
           </h2>
-          <p className="text-lg lg:text-xl text-dental-gray leading-relaxed">
+          <p className="text-dental-gray leading-relaxed">
             Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
           </p>
         </div>
