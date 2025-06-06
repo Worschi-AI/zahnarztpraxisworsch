@@ -88,6 +88,10 @@ const QualityPromiseSection = () => {
             <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
               Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
             </p>
+            
+            <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
+              <Link to="/team">Lernen Sie unser Team kennen</Link>
+            </Button>
           </div>
           
           <div className="w-full lg:w-2/3">
@@ -99,13 +103,7 @@ const QualityPromiseSection = () => {
           </div>
         </div>
         
-        <div className="mt-12 lg:mt-16 text-center animate-on-scroll">
-          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl mb-8 lg:mb-12">
-            <Link to="/team">Lernen Sie unser Team kennen</Link>
-          </Button>
-        </div>
-        
-        <div className="animate-on-scroll">
+        <div className="mt-12 lg:mt-16 animate-on-scroll">
           <div className="max-w-4xl mx-auto">
             {/* Image Collage inspired by the reference */}
             <div className="grid grid-cols-2 gap-4 h-[400px]">
