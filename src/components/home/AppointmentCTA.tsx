@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -17,10 +16,9 @@ const AppointmentCTA = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-2xl mx-auto animate-on-scroll">
-          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl hover-text-highlight">Vereinbaren Sie Ihren Termin beim Zahnarzt in Dresden-Laubegast! Die Zahnarztpraxis Worsch freut sich auf Ihren Besuch.</h2>
+          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl hover-text-highlight">Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin beim Zahnarzt in Dresden-Laubegast!</h2>
           <p className="text-base lg:text-lg mb-6 lg:mb-8 opacity-90">
-            Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin in der <strong>Zahnarztpraxis Worsch</strong>. 
-            Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an.
+            Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an. Die <strong>Zahnarztpraxis Worsch</strong> freut sich auf Ihren Besuch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue btn-premium text-white shadow-premium">
