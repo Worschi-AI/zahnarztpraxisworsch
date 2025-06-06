@@ -7,7 +7,7 @@ import PhoneButton from '@/components/PhoneButton';
 
 const AppointmentCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-dental-turquoise to-dental-blue text-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-[60px] animate-float"></div>
@@ -17,8 +17,8 @@ const AppointmentCTA = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-2xl mx-auto animate-on-scroll">
-          <h2 className="mb-6">Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin beim Zahnarzt in Dresden-Laubegast!</h2>
-          <p className="text-lg mb-12 opacity-90">
+          <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl xl:text-4xl">Vereinbaren Sie jetzt ganz einfach Ihren persönlichen Beratungstermin beim Zahnarzt in Dresden-Laubegast!</h2>
+          <p className="text-base lg:text-lg mb-6 lg:mb-8 opacity-90">
             Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an. Die <strong>Zahnarztpraxis Worsch</strong> freut sich auf Ihren Besuch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
