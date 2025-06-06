@@ -38,11 +38,11 @@ const PhoneButton = ({
     >
       <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">
         {showIcon && iconPosition === 'left' && (
-          <Phone className="h-4 w-4" />
+          <Phone className="h-4 w-4 icon-pulse" />
         )}
         <span>{displayText}</span>
         {showIcon && iconPosition === 'right' && (
-          <Phone className="h-4 w-4" />
+          <Phone className="h-4 w-4 icon-pulse" />
         )}
       </a>
     </Button>
