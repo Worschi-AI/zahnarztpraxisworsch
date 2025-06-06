@@ -42,14 +42,16 @@ const PhoneButton = ({
       href={`tel:+49${formattedPhoneNumber}`} 
       className={cn(
         "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium",
-        "ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50",
         sizeClasses[size],
         "bg-white text-dental-blue border border-dental-blue/20",
-        "hover:bg-dental-turquoise hover:text-white hover:border-dental-turquoise",
-        "transform transition-all duration-300 hover:scale-105",
+        "hover:bg-white hover:text-dental-blue hover:border-dental-blue/20 hover:scale-105",
+        "active:bg-white active:text-dental-blue active:border-dental-blue/20 active:scale-105",
+        "focus:bg-white focus:text-dental-blue focus:border-dental-blue/20",
         "shadow-md hover:shadow-lg",
         "cursor-pointer",
+        "no-underline",
         className
       )}
       onClick={onClick}
