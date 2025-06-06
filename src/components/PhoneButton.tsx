@@ -33,7 +33,13 @@ const PhoneButton = ({
       asChild
       variant={variant}
       size={size}
-      className={className}
+      className={cn(
+        "bg-white text-dental-blue border border-dental-blue/20",
+        "hover:bg-dental-turquoise hover:text-white hover:border-dental-turquoise",
+        "transform transition-all duration-300 hover:scale-105",
+        "shadow-md hover:shadow-lg",
+        className
+      )}
       {...props}
     >
       <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">

@@ -64,7 +64,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               phoneNumber="0351 2522709" 
               variant="outline"
               size="lg"
-              className="bg-white text-dental-blue hover:bg-dental-beige transform transition-all duration-300"
+              className=""
               buttonText={secondaryCtaText}
               iconPosition="left"
             />

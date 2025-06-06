@@ -86,9 +86,12 @@ const BookingInstructions = () => {
             <p className="text-dental-gray mb-8">
               Sie bevorzugen den persönlichen Kontakt oder haben spezielle Fragen vorab? Rufen Sie uns gerne während unserer Sprechzeiten unter <strong>0351 2522709</strong> an. Unser freundliches Praxisteam in Dresden Laubegast hilft Ihnen gerne weiter und findet gemeinsam mit Ihnen den passenden Termin.
             </p>
-            <PhoneButton size="lg" className="bg-dental-turquoise hover:bg-dental-blue transform transition hover:scale-105 text-white" buttonText="0351 2522709" iconPosition="left">
-              <Calendar className="mr-2 h-5 w-5" />
-            </PhoneButton>
+            <PhoneButton 
+              size="lg" 
+              className="" 
+              buttonText="0351 2522709" 
+              iconPosition="left"
+            />
           </div>
         </div>
       </div>
