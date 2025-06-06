@@ -43,7 +43,6 @@ const CallToActionSection = () => {
               <PhoneButton 
                 size="lg" 
                 className="bg-white text-dental-blue hover:bg-dental-beige w-full"
-                variant="default"
                 iconPosition="right"
               />
             </div>

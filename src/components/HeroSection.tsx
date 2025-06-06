@@ -62,7 +62,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </Button>
             <PhoneButton 
               phoneNumber="0351 2522709" 
-              variant="outline"
               size="lg"
               className=""
               buttonText={secondaryCtaText}
