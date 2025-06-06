@@ -17,7 +17,7 @@ const TeamPreview = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8 lg:mb-12 animate-on-scroll">
-          <h2 className="mb-4 text-dental-blue text-xl md:text-2xl lg:text-3xl xl:text-4xl hover-text-highlight">Unser Team – Kompetenz trifft Herzlichkeit</h2>
+          <h2 className="mb-4 text-dental-blue text-xl md:text-2xl lg:text-3xl xl:text-4xl">Unser Team – Kompetenz trifft Herzlichkeit</h2>
           <p className="text-base lg:text-lg max-w-3xl mx-auto text-dental-gray">
             Lernen Sie Ihren Zahnarzt in Dresden-Laubegast und sein erfahrenes Praxisteam kennen! Unsere Spezialisierung auf Implantologie, ästhetische Zahnheilkunde und digitale Diagnostik sichert Ihnen Behandlungen auf höchstem medizinischen Niveau.
           </p>
@@ -25,23 +25,26 @@ const TeamPreview = () => {
         
         <div className="flex flex-wrap justify-center gap-6 lg:gap-8 mb-8 lg:mb-12">
           {team.slice(0, 3).map((member, index) => (
-            <div key={member.id} className="flex flex-col items-center text-center animate-on-scroll hover-premium" style={{ animationDelay: `${index * 100}ms` }}>
-              <div className="w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden mb-4 lg:mb-6 border-4 border-dental-blue p-1 image-zoom shadow-layered hover:shadow-premium transition-all duration-500">
-                <img 
-                  src={member.imageUrl} 
-                  alt={`${member.name}, ${member.role} - Zahnarztpraxis Worsch Dresden`} 
-                  className="w-full h-full object-cover rounded-full transition-transform duration-500"
-                />
+            <div key={member.id} className="flex flex-col items-center text-center animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
+              <div className="w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden mb-4 lg:mb-6 relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-dental-turquoise/20 to-dental-blue/20 rounded-full blur-lg"></div>
+                <div className="relative w-full h-full border-4 border-dental-blue p-1 rounded-full shadow-layered">
+                  <img 
+                    src={member.imageUrl} 
+                    alt={`${member.name}, ${member.role} - Zahnarztpraxis Worsch Dresden`} 
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
               </div>
-              <h3 className="text-lg lg:text-xl font-bold mb-2 text-dental-blue hover-text-highlight">{member.name}</h3>
-              <p className="text-dental-turquoise mb-3 lg:mb-4 font-medium text-sm lg:text-base hover-text-highlight">{member.role}</p>
+              <h3 className="text-lg lg:text-xl font-bold mb-2 text-dental-blue">{member.name}</h3>
+              <p className="text-dental-turquoise mb-3 lg:mb-4 font-medium text-sm lg:text-base">{member.role}</p>
               <p className="text-dental-gray max-w-xs leading-relaxed text-sm lg:text-base">{member.bio.substring(0, 120)}...</p>
             </div>
           ))}
         </div>
         
         <div className="text-center animate-on-scroll">
-          <Button asChild className="btn-premium text-white shadow-premium hover:shadow-luxury">
+          <Button asChild className="bg-gradient-to-r from-dental-turquoise to-dental-blue text-white hover:from-dental-blue hover:to-dental-turquoise transition-all duration-300 shadow-lg hover:shadow-xl">
             <Link to="/team">Zum gesamten Team</Link>
           </Button>
         </div>
