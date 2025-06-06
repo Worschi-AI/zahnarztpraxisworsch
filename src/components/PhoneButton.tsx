@@ -31,7 +31,6 @@ const PhoneButton = ({
   return (
     <Button
       asChild
-      variant="ghost"
       size={size}
       className={cn(
         "bg-white text-dental-blue border border-dental-blue/20",
