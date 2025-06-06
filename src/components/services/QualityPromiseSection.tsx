@@ -40,102 +40,103 @@ const QualityPromiseSection = () => {
     index: number;
   }) => {
     return (
-      <div className="group relative">
-        {/* Card container with hover effects */}
-        <div className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-layered transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-          {/* Icon container */}
-          <div className="mb-6 relative">
-            <div className="w-16 h-16 bg-gradient-to-br from-dental-turquoise/10 to-dental-blue/10 rounded-xl flex items-center justify-center group-hover:from-dental-turquoise/20 group-hover:to-dental-blue/20 transition-all duration-300">
-              <div className="text-dental-turquoise group-hover:text-dental-blue transition-colors duration-300">
-                {icon}
-              </div>
-            </div>
-          </div>
-          
-          {/* Content */}
-          <h3 className="text-lg font-semibold text-dental-blue mb-3 group-hover:text-dental-turquoise transition-colors duration-300">
-            {title}
-          </h3>
-          <p className="text-sm text-dental-gray leading-relaxed">
-            {description}
-          </p>
-          
-          {/* Subtle accent line */}
-          <div className="absolute bottom-0 left-8 right-8 h-1 bg-gradient-to-r from-dental-turquoise to-dental-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div
+        className={cn(
+          "flex flex-col lg:border-r py-6 lg:py-10 relative group/feature border-dental-blue/10",
+          (index === 0) && "lg:border-l border-dental-blue/10",
+          index < 2 && "lg:border-b border-dental-blue/10"
+        )}
+      >
+        {index < 2 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        {index >= 2 && (
+          <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-dental-beige/30 to-transparent pointer-events-none" />
+        )}
+        <div className="mb-4 relative z-10 px-6 lg:px-10 text-dental-turquoise">
+          {icon}
         </div>
+        <div className="text-base lg:text-lg font-bold mb-2 relative z-10 px-6 lg:px-10">
+          <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-dental-blue/20 group-hover/feature:bg-dental-turquoise transition-all duration-200 origin-center" />
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-dental-blue">
+            {title}
+          </span>
+        </div>
+        <p className="text-sm text-dental-gray relative z-10 px-6 lg:px-10">
+          {description}
+        </p>
       </div>
     );
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
-      {/* Dezente Hintergrund-Dekorationen */}
+    <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
+      {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-dental-turquoise/10 rounded-full blur-[70px]"></div>
-        <div className="absolute top-1/3 left-0 w-28 h-28 bg-dental-blue/15 rounded-full blur-[65px]"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 bg-dental-turquoise/8 rounded-full blur-[80px]"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-dental-blue/12 rounded-full blur-[55px]"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-dental-turquoise/20 rounded-full blur-[70px]"></div>
+        <div className="absolute top-1/3 left-0 w-28 h-28 bg-dental-blue/22 rounded-full blur-[65px]"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 bg-dental-turquoise/18 rounded-full blur-[80px]"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-dental-blue/20 rounded-full blur-[55px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-16 animate-on-scroll">
-          <h2 className="mb-6 text-dental-blue text-2xl lg:text-3xl font-bold leading-tight">
-            Unser Qualitätsversprechen – Höchste Standards für Sie
-          </h2>
-          <p className="text-dental-gray leading-relaxed">
-            Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
-          </p>
-        </div>
-        
-        {/* Quality Points Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {qualityPoints.map((feature, index) => (
-            <div key={feature.title} className="animate-on-scroll" style={{ animationDelay: `${index * 150}ms` }}>
-              <Feature {...feature} index={index} />
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
+          <div className="w-full lg:w-1/3 animate-on-scroll">
+            <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">
+              Unser Qualitätsversprechen – Höchste Standards für Sie
+            </h2>
+            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
+              Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
+            </p>
+          </div>
+          
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-5xl">
+              {qualityPoints.map((feature, index) => (
+                <Feature key={feature.title} {...feature} index={index} />
+              ))}
             </div>
-          ))}
+          </div>
         </div>
         
-        {/* CTA Button */}
-        <div className="text-center mb-16 animate-on-scroll">
-          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl px-8 py-6 text-lg rounded-xl">
+        <div className="mt-12 lg:mt-16 text-center animate-on-scroll">
+          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl mb-8 lg:mb-12">
             <Link to="/team">Lernen Sie unser Team kennen</Link>
           </Button>
         </div>
         
-        {/* Image Collage */}
         <div className="animate-on-scroll">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 gap-6 h-[400px]">
+          <div className="max-w-4xl mx-auto">
+            {/* Image Collage inspired by the reference */}
+            <div className="grid grid-cols-2 gap-4 h-[400px]">
               {/* Top left image */}
-              <div className="rounded-3xl overflow-hidden shadow-layered hover:shadow-luxury transition-all duration-300 hover:-translate-y-1">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
                   alt="Glückliche Patientin bei der Zahnbehandlung" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
               
               {/* Right side - stacked images */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 {/* Top right image */}
-                <div className="rounded-3xl overflow-hidden shadow-layered hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 flex-1">
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
                   <img 
                     src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
                     alt="Moderne Zahnarztpraxis Dresden" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
                 
                 {/* Bottom right image */}
-                <div className="rounded-3xl overflow-hidden shadow-layered hover:shadow-luxury transition-all duration-300 hover:-translate-y-1 flex-1">
+                <div className="rounded-2xl overflow-hidden shadow-lg flex-1">
                   <img 
                     src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop" 
                     alt="Zahnarzt Team bei der Behandlung" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
                 </div>
