@@ -18,7 +18,6 @@ const PhoneButton = ({
   iconPosition = 'left',
   className,
   buttonText,
-  variant = 'default',
   size = 'default',
   ...props
 }: PhoneButtonProps) => {
@@ -37,6 +36,7 @@ const PhoneButton = ({
         "hover:bg-dental-turquoise hover:text-white hover:border-dental-turquoise",
         "transform transition-all duration-300 hover:scale-105",
         "shadow-md hover:shadow-lg",
+        "hover:bg-dental-turquoise/100 hover:text-white/100", // Override any default hover styles
         className
       )}
       {...props}
