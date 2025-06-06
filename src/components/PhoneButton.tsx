@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { Button, ButtonProps } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-interface PhoneButtonProps extends Omit<ButtonProps, 'asChild'> {
+interface PhoneButtonProps {
   phoneNumber?: string;
   showIcon?: boolean;
   iconPosition?: 'left' | 'right';
   className?: string;
   buttonText?: string;
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  onClick?: () => void;
 }
 
 const PhoneButton = ({
@@ -19,6 +20,7 @@ const PhoneButton = ({
   className,
   buttonText,
   size = 'default',
+  onClick,
   ...props
 }: PhoneButtonProps) => {
   // Format the phone number for the href attribute
@@ -27,30 +29,40 @@ const PhoneButton = ({
   // Use the phoneNumber as the button text if buttonText is not provided
   const displayText = buttonText || phoneNumber;
   
+  // Size classes
+  const sizeClasses = {
+    default: "h-10 px-4 py-2",
+    sm: "h-9 px-3",
+    lg: "h-11 px-8",
+    icon: "h-10 w-10"
+  };
+  
   return (
-    <Button
-      asChild
-      size={size}
+    <a 
+      href={`tel:+49${formattedPhoneNumber}`} 
       className={cn(
+        "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium",
+        "ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "disabled:pointer-events-none disabled:opacity-50",
+        sizeClasses[size],
         "bg-white text-dental-blue border border-dental-blue/20",
         "hover:bg-dental-turquoise hover:text-white hover:border-dental-turquoise",
         "transform transition-all duration-300 hover:scale-105",
         "shadow-md hover:shadow-lg",
-        "hover:bg-dental-turquoise/100 hover:text-white/100", // Override any default hover styles
+        "cursor-pointer",
         className
       )}
+      onClick={onClick}
       {...props}
     >
-      <a href={`tel:+49${formattedPhoneNumber}`} className="flex items-center justify-center gap-2">
-        {showIcon && iconPosition === 'left' && (
-          <Phone className="h-4 w-4 icon-pulse" />
-        )}
-        <span>{displayText}</span>
-        {showIcon && iconPosition === 'right' && (
-          <Phone className="h-4 w-4 icon-pulse" />
-        )}
-      </a>
-    </Button>
+      {showIcon && iconPosition === 'left' && (
+        <Phone className="h-4 w-4 icon-pulse" />
+      )}
+      <span>{displayText}</span>
+      {showIcon && iconPosition === 'right' && (
+        <Phone className="h-4 w-4 icon-pulse" />
+      )}
+    </a>
   );
 };
 
