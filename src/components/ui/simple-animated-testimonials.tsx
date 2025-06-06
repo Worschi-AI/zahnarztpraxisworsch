@@ -43,6 +43,8 @@ export function TestimonialsSection({
 }: TestimonialsSectionProps) {
   // State for active testimonial
   const [activeIndex, setActiveIndex] = useState(0)
+  // State to control auto-rotation
+  const [isAutoPaused, setIsAutoPaused] = useState(false)
 
   // Refs for scroll animations
   const sectionRef = useRef(null)
@@ -85,16 +87,16 @@ export function TestimonialsSection({
     }
   }
 
-  // Automatically cycle through testimonials
+  // Automatically cycle through testimonials (only when not paused)
   useEffect(() => {
-    if (autoRotateInterval <= 0 || testimonials.length <= 1) return
+    if (autoRotateInterval <= 0 || testimonials.length <= 1 || isAutoPaused) return
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonials.length)
     }, autoRotateInterval)
 
     return () => clearInterval(interval)
-  }, [testimonials.length, autoRotateInterval])
+  }, [testimonials.length, autoRotateInterval, isAutoPaused])
 
   // Trigger animations when section comes into view
   useEffect(() => {
@@ -105,11 +107,23 @@ export function TestimonialsSection({
 
   // Handlers for navigation
   const handlePrev = () => {
+    setIsAutoPaused(true) // Pause auto-rotation when user clicks navigation
     setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    
+    // Resume auto-rotation after 10 seconds of inactivity
+    setTimeout(() => {
+      setIsAutoPaused(false)
+    }, 10000)
   }
 
   const handleNext = () => {
+    setIsAutoPaused(true) // Pause auto-rotation when user clicks navigation
     setActiveIndex((prev) => (prev + 1) % testimonials.length)
+    
+    // Resume auto-rotation after 10 seconds of inactivity
+    setTimeout(() => {
+      setIsAutoPaused(false)
+    }, 10000)
   }
 
   // Animation variants
@@ -238,7 +252,7 @@ export function TestimonialsSection({
               variant="outline"
               size="icon"
               onClick={handlePrev}
-              className="rounded-full h-10 w-10"
+              className="rounded-full h-10 w-10 bg-white/20 border-white/30 text-white hover:bg-white/30"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -269,7 +283,7 @@ export function TestimonialsSection({
               variant="outline"
               size="icon"
               onClick={handleNext}
-              className="rounded-full h-10 w-10"
+              className="rounded-full h-10 w-10 bg-white/20 border-white/30 text-white hover:bg-white/30"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-4 w-4" />
