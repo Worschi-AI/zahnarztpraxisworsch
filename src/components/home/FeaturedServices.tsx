@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
 const FeaturedServices = () => {
-  return (
-    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{ backgroundColor: '#edf2fa' }}>
+  return <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{
+    backgroundColor: '#edf2fa'
+  }}>
       {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-24 h-24 bg-dental-turquoise/20 rounded-full blur-[60px] animate-float"></div>
@@ -27,9 +26,7 @@ const FeaturedServices = () => {
             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-dental-blue mb-4 lg:mb-6 leading-tight">
               Unsere Behandlungsschwerpunkte – Für Ihr schönstes Lächeln
             </h2>
-            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8 leading-relaxed">
-              Entdecken Sie bei uns spezialisierte Behandlungen, die modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen vereinen. Gemeinsam gestalten wir Ihr schönstes und gesündestes Lächeln.
-            </p>
+            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8 leading-relaxed">Von hochwertigen Zahnimplantaten bis zu ästhetischen Korrekturen - wir vereinen modernste Zahnmedizin mit höchsten ästhetischen Ansprüchen. Gemeinsam gestalten wir Ihr schönstes und gesündestes Lächeln.</p>
             
             {/* Button - in text section on desktop */}
             <div className="hidden lg:block">
@@ -45,44 +42,42 @@ const FeaturedServices = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-8 lg:mb-0">
               {/* Service 1 - Moderne Implantologie (now first) */}
               <div className="animate-on-scroll">
-                <div 
-                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
-                  style={{
-                    borderRadius: '16px',
-                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                    margin: '20px',
-                    paddingBottom: '20px'
-                  }}
-                >
+                <div className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale" style={{
+                borderRadius: '16px',
+                boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                margin: '20px',
+                paddingBottom: '20px'
+              }}>
                   {/* Image placeholder */}
-                  <div 
-                    className="w-full bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop)`,
-                      height: '200px',
-                      borderTopLeftRadius: '16px',
-                      borderTopRightRadius: '16px'
-                    }}
-                  />
+                  <div className="w-full bg-cover bg-center" style={{
+                  backgroundImage: `url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop)`,
+                  height: '200px',
+                  borderTopLeftRadius: '16px',
+                  borderTopRightRadius: '16px'
+                }} />
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
                     <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Moderne Implantologie
                     </h3>
                   </div>
                   
-                  <div style={{ padding: '10px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '10px 20px 0 20px'
+                }}>
                     <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
                       Festsitzender Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit 3D-Planung und schonenden Verfahren erhalten Sie Implantate höchster Qualität.
                     </p>
                   </div>
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <Link 
-                      to="/services/implantologie"
-                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
-                      style={{ fontWeight: '600' }}
-                    >
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
+                    <Link to="/services/implantologie" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
+                    fontWeight: '600'
+                  }}>
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -90,45 +85,45 @@ const FeaturedServices = () => {
               </div>
 
               {/* Service 2 - Ästhetische Zahnmedizin */}
-              <div className="animate-on-scroll" style={{ animationDelay: '100ms' }}>
-                <div 
-                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
-                  style={{
-                    borderRadius: '16px',
-                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                    margin: '20px',
-                    paddingBottom: '20px'
-                  }}
-                >
+              <div className="animate-on-scroll" style={{
+              animationDelay: '100ms'
+            }}>
+                <div className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale" style={{
+                borderRadius: '16px',
+                boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                margin: '20px',
+                paddingBottom: '20px'
+              }}>
                   {/* Image placeholder */}
-                  <div 
-                    className="w-full bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1770&auto=format&fit=crop)`,
-                      height: '200px',
-                      borderTopLeftRadius: '16px',
-                      borderTopRightRadius: '16px'
-                    }}
-                  />
+                  <div className="w-full bg-cover bg-center" style={{
+                  backgroundImage: `url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1770&auto=format&fit=crop)`,
+                  height: '200px',
+                  borderTopLeftRadius: '16px',
+                  borderTopRightRadius: '16px'
+                }} />
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
                     <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Ästhetische Zahnmedizin
                     </h3>
                   </div>
                   
-                  <div style={{ padding: '10px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '10px 20px 0 20px'
+                }}>
                     <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
                       Veneers, Vollkeramikkronen und ästhetische Füllungen für ein natürlich schönes Lächeln. Mit modernster Technologie erschaffen wir Zähne, die perfekt zu Ihnen passen und jahrelang strahlen.
                     </p>
                   </div>
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <Link 
-                      to="/services/aesthetische-zahnheilkunde"
-                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
-                      style={{ fontWeight: '600' }}
-                    >
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
+                    fontWeight: '600'
+                  }}>
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -136,45 +131,45 @@ const FeaturedServices = () => {
               </div>
 
               {/* Service 3 - Professionelles Bleaching */}
-              <div className="animate-on-scroll" style={{ animationDelay: '200ms' }}>
-                <div 
-                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
-                  style={{
-                    borderRadius: '16px',
-                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                    margin: '20px',
-                    paddingBottom: '20px'
-                  }}
-                >
+              <div className="animate-on-scroll" style={{
+              animationDelay: '200ms'
+            }}>
+                <div className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale" style={{
+                borderRadius: '16px',
+                boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                margin: '20px',
+                paddingBottom: '20px'
+              }}>
                   {/* Image placeholder */}
-                  <div 
-                    className="w-full bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url(https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1770&auto=format&fit=crop)`,
-                      height: '200px',
-                      borderTopLeftRadius: '16px',
-                      borderTopRightRadius: '16px'
-                    }}
-                  />
+                  <div className="w-full bg-cover bg-center" style={{
+                  backgroundImage: `url(https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=1770&auto=format&fit=crop)`,
+                  height: '200px',
+                  borderTopLeftRadius: '16px',
+                  borderTopRightRadius: '16px'
+                }} />
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
                     <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Professionelles Bleaching
                     </h3>
                   </div>
                   
-                  <div style={{ padding: '10px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '10px 20px 0 20px'
+                }}>
                     <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
                       Schonende Zahnaufhellung für bis zu 8 Nuancen hellere Zähne. Unser In-Office-Bleaching dauert nur 60 Minuten und sorgt für sofort sichtbare Ergebnisse – ganz ohne Schmerzen.
                     </p>
                   </div>
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <Link 
-                      to="/services/aesthetische-zahnheilkunde"
-                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
-                      style={{ fontWeight: '600' }}
-                    >
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
+                    fontWeight: '600'
+                  }}>
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -182,45 +177,45 @@ const FeaturedServices = () => {
               </div>
 
               {/* Service 4 - Invisalign */}
-              <div className="animate-on-scroll" style={{ animationDelay: '300ms' }}>
-                <div 
-                  className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale"
-                  style={{
-                    borderRadius: '16px',
-                    boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
-                    margin: '20px',
-                    paddingBottom: '20px'
-                  }}
-                >
+              <div className="animate-on-scroll" style={{
+              animationDelay: '300ms'
+            }}>
+                <div className="bg-white hover:shadow-lg transition-shadow overflow-hidden hover-scale" style={{
+                borderRadius: '16px',
+                boxShadow: '0px 6px 18px rgba(0, 0, 0, 0.12)',
+                margin: '20px',
+                paddingBottom: '20px'
+              }}>
                   {/* Image placeholder */}
-                  <div 
-                    className="w-full bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1770&auto=format&fit=crop)`,
-                      height: '200px',
-                      borderTopLeftRadius: '16px',
-                      borderTopRightRadius: '16px'
-                    }}
-                  />
+                  <div className="w-full bg-cover bg-center" style={{
+                  backgroundImage: `url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1770&auto=format&fit=crop)`,
+                  height: '200px',
+                  borderTopLeftRadius: '16px',
+                  borderTopRightRadius: '16px'
+                }} />
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
                     <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Invisalign – Unsichtbare Zahnkorrektur
                     </h3>
                   </div>
                   
-                  <div style={{ padding: '10px 20px 0 20px' }}>
+                  <div style={{
+                  padding: '10px 20px 0 20px'
+                }}>
                     <p className="text-sm lg:text-base text-dental-gray leading-relaxed line-clamp-3">
                       Gerade Zähne ohne Metallspangen! Mit transparenten Alignern korrigieren wir Zahnfehlstellungen diskret und komfortabel. Ideal für Beruf und Alltag.
                     </p>
                   </div>
                   
-                  <div style={{ padding: '20px 20px 0 20px' }}>
-                    <Link 
-                      to="/services/aesthetische-zahnheilkunde"
-                      className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold"
-                      style={{ fontWeight: '600' }}
-                    >
+                  <div style={{
+                  padding: '20px 20px 0 20px'
+                }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
+                    fontWeight: '600'
+                  }}>
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -237,8 +232,6 @@ const FeaturedServices = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturedServices;
