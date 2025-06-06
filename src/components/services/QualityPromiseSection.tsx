@@ -6,8 +6,6 @@ import { cn } from '@/lib/utils';
 import {
   IconMicroscope,
   IconDiamond,
-  IconSchool,
-  IconShieldCheck,
   IconHeart,
 } from '@tabler/icons-react';
 
@@ -15,27 +13,17 @@ const QualityPromiseSection = () => {
   const qualityPoints = [
     {
       title: "Modernste Technologie",
-      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Behandlungen. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse.",
+      description: "Digitales Röntgen, 3D-Diagnostik und Intraoralkameras ermöglichen präzise Diagnosen und schonende Implantologie. Unsere hochmoderne Ausstattung ist Ihr Garant für erstklassige Ergebnisse.",
       icon: <IconMicroscope className="w-8 h-8" />,
     },
     {
       title: "Hochwertige Materialien",
-      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Implantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen.",
+      description: "Wir verwenden ausschließlich biokompatible Materialien höchster Güte. Vollkeramik, Titan-Zahnimplantate und moderne Komposite sorgen für langlebige, ästhetische Lösungen.",
       icon: <IconDiamond className="w-8 h-8" />,
     },
     {
-      title: "Kontinuierliche Fortbildung",
-      description: "Unser Team bildet sich regelmäßig weiter und ist zertifiziert in den neuesten Behandlungsmethoden. So profitieren Sie immer von den modernsten Verfahren der Zahnmedizin.",
-      icon: <IconSchool className="w-8 h-8" />,
-    },
-    {
-      title: "Strenge Hygiene",
-      description: "Höchste Hygienestandards und moderne Sterilisationsverfahren sorgen für Ihre Sicherheit. Unsere Praxis erfüllt alle aktuellen Richtlinien und wird regelmäßig überprüft.",
-      icon: <IconShieldCheck className="w-8 h-8" />,
-    },
-    {
       title: "Transparente Beratung",
-      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise. Sie wissen immer, was gemacht wird und was es kostet – ohne versteckte Kosten.",
+      description: "Ausführliche Aufklärung, detaillierte Behandlungspläne und faire Preise für Implantate, Bleaching & Co. Ihr Zahnarzt in Dresden informiert Sie transparent – ohne versteckte Kosten.",
       icon: <IconHeart className="w-8 h-8" />,
     }
   ];
@@ -56,13 +44,13 @@ const QualityPromiseSection = () => {
         className={cn(
           "flex flex-col lg:border-r py-6 lg:py-10 relative group/feature border-dental-blue/10",
           (index === 0) && "lg:border-l border-dental-blue/10",
-          index < 3 && "lg:border-b border-dental-blue/10"
+          index < 2 && "lg:border-b border-dental-blue/10"
         )}
       >
-        {index < 3 && (
+        {index < 2 && (
           <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-dental-beige/30 to-transparent pointer-events-none" />
         )}
-        {index >= 3 && (
+        {index >= 2 && (
           <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-dental-beige/30 to-transparent pointer-events-none" />
         )}
         <div className="mb-4 relative z-10 px-6 lg:px-10 text-dental-turquoise">
