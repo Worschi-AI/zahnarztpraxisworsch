@@ -1,20 +1,12 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
-interface PremiumService {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  benefits: string[];
-  image: string;
-  ctaText: string;
-}
+import { Service } from '@/data/services/types';
 
 interface PremiumServiceSectionProps {
-  premiumServices: PremiumService[];
+  premiumServices: Service[];
 }
 
 const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumServices }) => {
@@ -32,18 +24,20 @@ const PremiumServiceSection: React.FC<PremiumServiceSectionProps> = ({ premiumSe
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {premiumServices.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-md overflow-hidden animate-on-scroll">
-              <img src={service.image} alt={service.title} className="w-full h-56 object-cover" loading="lazy" />
+              <img src={service.imageUrl} alt={service.title} className="w-full h-56 object-cover" loading="lazy" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-dental-blue mb-2">{service.title}</h3>
-                <p className="text-dental-gray text-sm mb-4">{service.description}</p>
-                <ul className="list-disc pl-5 text-sm text-dental-gray mb-4">
-                  {service.benefits.map((benefit, index) => (
-                    <li key={index}>{benefit}</li>
-                  ))}
-                </ul>
+                <p className="text-dental-gray text-sm mb-4">{service.shortDescription}</p>
+                {service.benefits && (
+                  <ul className="list-disc pl-5 text-sm text-dental-gray mb-4">
+                    {service.benefits.slice(0, 3).map((benefit, index) => (
+                      <li key={index}>{benefit}</li>
+                    ))}
+                  </ul>
+                )}
                 <Button asChild className="bg-dental-turquoise hover:bg-dental-blue">
                   <Link to={`/services/${service.id}`} className="flex items-center gap-2">
-                    {service.ctaText}
+                    Mehr erfahren
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </Button>
