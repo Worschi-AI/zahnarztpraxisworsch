@@ -42,7 +42,7 @@ const QualityPromiseSection = () => {
     return (
       <div
         className={cn(
-          "flex flex-col lg:border-r py-4 lg:py-6 relative group/feature border-dental-blue/10",
+          "flex flex-col lg:border-r py-6 lg:py-10 relative group/feature border-dental-blue/10",
           (index === 0) && "lg:border-l border-dental-blue/10",
           index < 2 && "lg:border-b border-dental-blue/10"
         )}
@@ -80,12 +80,12 @@ const QualityPromiseSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-1/3 animate-on-scroll">
             <h2 className="mb-4 lg:mb-6 text-dental-blue text-xl lg:text-2xl xl:text-3xl leading-tight">
               Unser Qualitätsversprechen – Höchste Standards für Sie
             </h2>
-            <p className="text-base lg:text-lg text-dental-gray mb-4 lg:mb-6">
+            <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8">
               Ihre Gesundheit und Ihr strahlendes Lächeln stehen für uns an erster Stelle. Unsere Behandlungsqualität orientiert sich stets an den höchsten Standards modernster Zahnmedizin.
             </p>
           </div>
@@ -99,7 +99,7 @@ const QualityPromiseSection = () => {
           </div>
         </div>
         
-        <div className="mt-8 lg:mt-12 text-center animate-on-scroll">
+        <div className="mt-12 lg:mt-16 text-center animate-on-scroll">
           <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl mb-8 lg:mb-12">
             <Link to="/team">Lernen Sie unser Team kennen</Link>
           </Button>
