@@ -30,7 +30,7 @@ const HeroIntroSection = () => {
             <div className="relative flex gap-4">
               {/* Erstes Bild - größer */}
               <div className="relative flex-1">
-                <div className="absolute -inset-2 bg-gradient-to-r from-dental-turquoise/20 to-dental-blue/20 rounded-2xl blur-lg"></div>
+                <div className="absolute -inset-2 bg-dental-blue/20 rounded-2xl blur-lg"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white">
                   <img 
                     src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
@@ -42,7 +42,7 @@ const HeroIntroSection = () => {
               
               {/* Zweites Bild - etwas kleiner und versetzt */}
               <div className="relative flex-1 mt-8">
-                <div className="absolute -inset-2 bg-gradient-to-r from-dental-blue/20 to-dental-turquoise/20 rounded-2xl blur-lg"></div>
+                <div className="absolute -inset-2 bg-dental-blue/20 rounded-2xl blur-lg"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white">
                   <img 
                     src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
@@ -75,7 +75,7 @@ const HeroIntroSection = () => {
             </div>
             
             <div className="mt-8 lg:mt-10">
-              <Button asChild size="lg" className="bg-gradient-to-r from-dental-turquoise to-dental-blue text-white hover:from-dental-blue hover:to-dental-turquoise transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-3">
+              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 px-8 py-3">
                 <Link to="/about">
                   Mehr über uns erfahren
                 </Link>

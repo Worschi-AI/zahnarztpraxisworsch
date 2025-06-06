@@ -27,7 +27,7 @@ const TeamPreview = () => {
           {team.slice(0, 3).map((member, index) => (
             <div key={member.id} className="flex flex-col items-center text-center animate-on-scroll" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="w-40 h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden mb-4 lg:mb-6 relative">
-                <div className="absolute -inset-2 bg-gradient-to-r from-dental-turquoise/20 to-dental-blue/20 rounded-full blur-lg"></div>
+                <div className="absolute -inset-2 bg-dental-blue/20 rounded-full blur-lg"></div>
                 <div className="relative w-full h-full border-4 border-dental-blue p-1 rounded-full shadow-layered">
                   <img 
                     src={member.imageUrl} 
@@ -44,7 +44,7 @@ const TeamPreview = () => {
         </div>
         
         <div className="text-center animate-on-scroll">
-          <Button asChild className="bg-gradient-to-r from-dental-turquoise to-dental-blue text-white hover:from-dental-blue hover:to-dental-turquoise transition-all duration-300 shadow-lg hover:shadow-xl">
+          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
             <Link to="/team">Zum gesamten Team</Link>
           </Button>
         </div>

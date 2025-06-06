@@ -22,7 +22,7 @@ const AppointmentCTA = () => {
             Online-Buchung rund um die Uhr über Doctolib oder rufen Sie uns direkt an. Die <strong>Zahnarztpraxis Worsch</strong> freut sich auf Ihren Besuch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-dental-turquoise to-dental-blue text-white hover:from-dental-blue hover:to-dental-turquoise transition-all duration-300 shadow-lg hover:shadow-xl">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
               <Link to="/appointment">
                 <Calendar className="w-5 h-5 mr-2 icon-pulse" aria-hidden="true" />
                 <span>Online Termin buchen</span>

@@ -13,7 +13,7 @@ const TeamCTA = () => {
             Das gesamte Team der <strong>Zahnarztpraxis Worsch in Dresden-Laubegast</strong> freut sich darauf, Sie bald persönlich willkommen zu heißen! Wir möchten Sie individuell betreuen und Ihnen die besten Lösungen für Ihre Zahngesundheit und ästhetischen Wünsche anbieten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-dental-blue hover:bg-dental-beige">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
               <Link to="/appointment">Termin vereinbaren</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white hover:bg-white hover:text-dental-blue">

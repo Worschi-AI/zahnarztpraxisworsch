@@ -22,9 +22,9 @@ const FeaturedServices = () => {
           {/* Text section - left column on desktop, top on mobile */}
           <div className="animate-on-scroll mb-8 lg:mb-0 lg:sticky lg:top-8">
             <div className="mb-4 lg:mb-6">
-              <span className="text-dental-turquoise font-medium text-sm md:text-base hover-text-highlight">Unsere Leistungen</span>
+              <span className="text-dental-turquoise font-medium text-sm md:text-base">Unsere Leistungen</span>
             </div>
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-dental-blue mb-4 lg:mb-6 leading-tight hover-text-highlight">
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-dental-blue mb-4 lg:mb-6 leading-tight">
               Unsere Behandlungsschwerpunkte – Für Ihr schönstes Lächeln
             </h2>
             <p className="text-base lg:text-lg text-dental-gray mb-6 lg:mb-8 leading-relaxed">
@@ -33,7 +33,7 @@ const FeaturedServices = () => {
             
             {/* Button - in text section on desktop */}
             <div className="hidden lg:block">
-              <Button asChild className="btn-premium text-white shadow-premium hover:shadow-luxury">
+              <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
                 <Link to="/services">Alle Leistungen ansehen</Link>
               </Button>
             </div>
@@ -66,7 +66,7 @@ const FeaturedServices = () => {
                   />
                   
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Moderne Implantologie
                     </h3>
                   </div>
@@ -112,7 +112,7 @@ const FeaturedServices = () => {
                   />
                   
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Ästhetische Zahnmedizin
                     </h3>
                   </div>
@@ -158,7 +158,7 @@ const FeaturedServices = () => {
                   />
                   
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Professionelles Bleaching
                     </h3>
                   </div>
@@ -204,7 +204,7 @@ const FeaturedServices = () => {
                   />
                   
                   <div style={{ padding: '20px 20px 0 20px' }}>
-                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue hover-text-highlight mb-2">
+                    <h3 className="text-base lg:text-lg font-semibold text-dental-blue mb-2">
                       Invisalign – Unsichtbare Zahnkorrektur
                     </h3>
                   </div>
@@ -232,7 +232,7 @@ const FeaturedServices = () => {
 
         {/* Button - below cards on mobile only */}
         <div className="text-center lg:hidden">
-          <Button asChild className="btn-premium text-white shadow-premium hover:shadow-luxury">
+          <Button asChild className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
             <Link to="/services">Alle Leistungen ansehen</Link>
           </Button>
         </div>
