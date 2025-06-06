@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, Calendar } from "lucide-react";
 import PhoneButton from '@/components/PhoneButton';
 
 interface HeroSectionProps {
@@ -55,7 +55,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
-              <Link to="/appointment">{ctaText}</Link>
+              <Link to="/appointment">
+                <Calendar className="w-5 h-5 mr-2 icon-pulse" aria-hidden="true" />
+                {ctaText}
+              </Link>
             </Button>
             <PhoneButton 
               phoneNumber="0351 2522709" 
