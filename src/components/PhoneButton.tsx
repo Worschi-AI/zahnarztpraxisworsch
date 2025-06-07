@@ -45,14 +45,13 @@ const PhoneButton = ({
         "ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50",
         sizeClasses[size],
-        "bg-gray-100 text-dental-gray border border-gray-200/50",
-        "hover:bg-gray-200 hover:text-dental-gray hover:border-gray-300/50",
-        "active:bg-gray-200 active:text-dental-gray active:border-gray-300/50",
-        "focus:bg-gray-200 focus:text-dental-gray focus:border-gray-300/50",
+        "bg-white text-dental-gray border border-gray-200/50",
+        "hover:bg-gray-50 hover:text-dental-gray hover:border-gray-300/50",
+        "active:bg-gray-50 active:text-dental-gray active:border-gray-300/50",
+        "focus:bg-gray-50 focus:text-dental-gray focus:border-gray-300/50",
         "shadow-sm hover:shadow-md",
         "cursor-pointer",
         "no-underline",
-        "opacity-80",
         className
       )}
       onClick={onClick}
