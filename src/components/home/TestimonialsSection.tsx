@@ -71,6 +71,8 @@ const TestimonialsSection = () => {
         trustedCompanies={["Google Reviews", "Jameda", "DocCheck", "Doctolib", "Proven Expert"]}
         trustedCompaniesTitle="Vertraut von Patienten auf führenden Bewertungsplattformen"
         className="bg-dental-blue text-white"
+        titleClassName="text-xl md:text-2xl lg:text-3xl xl:text-4xl"
+        subtitleClassName="text-base lg:text-lg"
       />
     </>
   );

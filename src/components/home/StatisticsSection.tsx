@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 interface StatisticItemProps {
@@ -70,10 +69,10 @@ const StatisticItem: React.FC<StatisticItemProps> = ({
     >
       {/* Content */}
       <div>
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 text-white">
+        <div className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-1 text-white">
           {currentValue.toLocaleString()}{suffix}
         </div>
-        <div className="text-lg md:text-xl font-medium text-white tracking-wide">{label}</div>
+        <div className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-white tracking-wide">{label}</div>
         
         {/* Decorative element */}
         <div className="w-6 h-0.5 bg-gradient-to-r from-dental-turquoise to-white mx-auto mt-2 rounded-full opacity-60"></div>

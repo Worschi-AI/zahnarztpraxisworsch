@@ -1,10 +1,11 @@
+
 import React from 'react';
 
 const OpeningHours = () => {
   return (
     <div>
       <h3 className="text-xl font-bold mb-6 text-white">Öffnungszeiten</h3>
-      <div className="text-white space-y-1.5">
+      <div className="text-white space-y-1.5 text-sm">
         <div className="flex">
           <span className="font-semibold w-12 shrink-0">Mo:</span>
           <span>07:30 – 13:00 Uhr</span>
