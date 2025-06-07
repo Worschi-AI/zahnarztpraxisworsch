@@ -5,6 +5,10 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 import TeamHero from '@/components/team/TeamHero';
+import TeamIntroduction from '@/components/team/TeamIntroduction';
+import TeamMembersGrid from '@/components/team/TeamMembersGrid';
+import TeamValues from '@/components/team/TeamValues';
+import TeamFAQ from '@/components/team/TeamFAQ';
 import HomepageFAQ from '@/components/home/HomepageFAQ';
 import AppointmentCTA from '@/components/home/AppointmentCTA';
 
@@ -21,6 +25,10 @@ const Team = () => {
       
       <Navbar />
       <TeamHero />
+      <TeamIntroduction />
+      <TeamMembersGrid />
+      <TeamValues />
+      <TeamFAQ />
       
       {/* FAQ Section - same as homepage */}
       <HomepageFAQ />
