@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <PhoneButton 
               phoneNumber="0351 2522709" 
               size="lg"
-              className=""
+              className="bg-white/90 text-dental-gray hover:bg-white border-white/50 hover:border-white opacity-70 hover:opacity-80"
               buttonText={secondaryCtaText}
               iconPosition="left"
             />

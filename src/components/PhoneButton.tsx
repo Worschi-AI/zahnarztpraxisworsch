@@ -45,24 +45,25 @@ const PhoneButton = ({
         "ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50",
         sizeClasses[size],
-        "bg-white text-dental-blue border border-dental-blue/20",
-        "hover:bg-white hover:text-dental-blue hover:border-dental-blue/20 hover:scale-105",
-        "active:bg-white active:text-dental-blue active:border-dental-blue/20 active:scale-105",
-        "focus:bg-white focus:text-dental-blue focus:border-dental-blue/20",
-        "shadow-md hover:shadow-lg",
+        "bg-gray-100 text-dental-gray border border-gray-200/50",
+        "hover:bg-gray-200 hover:text-dental-gray hover:border-gray-300/50",
+        "active:bg-gray-200 active:text-dental-gray active:border-gray-300/50",
+        "focus:bg-gray-200 focus:text-dental-gray focus:border-gray-300/50",
+        "shadow-sm hover:shadow-md",
         "cursor-pointer",
         "no-underline",
+        "opacity-80",
         className
       )}
       onClick={onClick}
       {...props}
     >
       {showIcon && iconPosition === 'left' && (
-        <Phone className="h-4 w-4 icon-pulse" />
+        <Phone className="h-4 w-4" />
       )}
       <span>{displayText}</span>
       {showIcon && iconPosition === 'right' && (
-        <Phone className="h-4 w-4 icon-pulse" />
+        <Phone className="h-4 w-4" />
       )}
     </a>
   );

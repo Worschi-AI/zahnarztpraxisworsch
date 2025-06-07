@@ -30,7 +30,7 @@ const AppointmentCTA = () => {
             </Button>
             <PhoneButton
               size="lg"
-              className="bg-white text-dental-blue hover:bg-dental-beige transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-white/90 text-dental-gray hover:bg-white border-white/50 hover:border-white opacity-70 hover:opacity-80"
               buttonText="Telefonisch Termin vereinbaren"
               showIcon={true}
             />

@@ -1,11 +1,14 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+
 const FeaturedServices = () => {
-  return <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{
-    backgroundColor: '#edf2fa'
-  }}>
+  return (
+    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{
+      backgroundColor: '#edf2fa'
+    }}>
       {/* Dezente Eck-Dekorationen */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-24 h-24 bg-dental-turquoise/20 rounded-full blur-[60px] animate-float"></div>
@@ -75,9 +78,7 @@ const FeaturedServices = () => {
                   <div style={{
                   padding: '20px 20px 0 20px'
                 }}>
-                    <Link to="/services/implantologie" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
-                    fontWeight: '600'
-                  }}>
+                    <Link to="/services/implantologie" className="flex items-center gap-2 text-dental-turquoise hover:text-dental-blue transition-colors text-sm md:text-base font-medium">
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -121,9 +122,7 @@ const FeaturedServices = () => {
                   <div style={{
                   padding: '20px 20px 0 20px'
                 }}>
-                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
-                    fontWeight: '600'
-                  }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-turquoise hover:text-dental-blue transition-colors text-sm md:text-base font-medium">
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -167,9 +166,7 @@ const FeaturedServices = () => {
                   <div style={{
                   padding: '20px 20px 0 20px'
                 }}>
-                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
-                    fontWeight: '600'
-                  }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-turquoise hover:text-dental-blue transition-colors text-sm md:text-base font-medium">
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -213,9 +210,7 @@ const FeaturedServices = () => {
                   <div style={{
                   padding: '20px 20px 0 20px'
                 }}>
-                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-blue hover:text-dental-turquoise transition-colors font-semibold" style={{
-                    fontWeight: '600'
-                  }}>
+                    <Link to="/services/aesthetische-zahnheilkunde" className="flex items-center gap-2 text-dental-turquoise hover:text-dental-blue transition-colors text-sm md:text-base font-medium">
                       Mehr erfahren <ArrowRight size={16} />
                     </Link>
                   </div>
@@ -232,6 +227,8 @@ const FeaturedServices = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FeaturedServices;
