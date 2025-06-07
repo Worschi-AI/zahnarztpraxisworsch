@@ -18,10 +18,10 @@ const HomepageFAQ = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 lg:mb-12 animate-on-scroll">
             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-dental-blue mb-4 lg:mb-6">
-              Ihre Fragen an unser Team – Wir geben persönliche Antworten
+              Wir sind für Sie da – Persönlich & Transparent
             </h2>
             <p className="text-base lg:text-lg text-dental-gray leading-relaxed">
-              Sie möchten mehr über unser Team erfahren? Hier finden Sie alle Antworten! Wir möchten, dass Sie sich bei uns von Anfang an gut aufgehoben und persönlich betreut fühlen. Entdecken Sie, was unser Team in der Zahnarztpraxis Worsch in Dresden-Laubegast auszeichnet und wie wir arbeiten.
+              Als Ihr vertrauensvoller Zahnarzt in Dresden-Laubegast informieren wir Sie transparent über alle Behandlungen. Hier finden Sie Antworten auf häufige Patientenfragen zu Kosten, Terminen und Behandlungsmöglichkeiten.
             </p>
           </div>
 
@@ -29,46 +29,55 @@ const HomepageFAQ = () => {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1" className="border-b border-gray-200">
                 <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
-                  Welche Qualifikationen und Spezialisierungen haben die Zahnärzte der Praxis Worsch in Dresden?
+                  Was kostet eine ästhetische Behandlung?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Dr. Thomas Worsch verfügt über einen Master of Science (M.Sc.) in Ästhetisch-Rekonstruktiver Zahnmedizin und ist zertifizierter Implantologie-Experte der DGI. Dr. Lisa Müller ist spezialisiert auf unsichtbare Zahnkorrekturen und zertifizierte Invisalign-Anwenderin. Beide Zahnärzte bilden sich kontinuierlich in modernsten Behandlungsmethoden fort und bringen jahrelange Erfahrung in der ästhetischen Zahnmedizin mit.
+                  Die Kosten variieren je nach Behandlung. Ein professionelles Bleaching beginnt ab 280€, Veneers ab 890€ pro Zahn. In unserem kostenlosen Beratungsgespräch in Dresden erstellen wir Ihnen einen transparenten Kostenvoranschlag.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2" className="border-b border-gray-200">
                 <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
-                  Wie geht das Team der Zahnarztpraxis Worsch mit Angstpatienten um?
+                  Wie schnell bekomme ich einen Termin?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Wir verstehen, dass der Zahnarztbesuch für manche Patienten mit Ängsten verbunden ist. Unser Team ist speziell geschult im Umgang mit Angstpatienten. Wir nehmen uns extra Zeit für ausführliche Beratungsgespräche, erklären jeden Behandlungsschritt verständlich und arbeiten mit schonenden, schmerzarmen Methoden. Auf Wunsch bieten wir auch Entspannungstechniken und eine besonders einfühlsame Betreuung an.
+                  Online-Termine sind oft schon innerhalb weniger Tage verfügbar. Für Notfälle haben wir täglich Notfallzeiten reserviert. Buchen Sie bequem über <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Doctolib</Link> oder rufen Sie uns in Laubegast an.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3" className="border-b border-gray-200">
                 <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
-                  Kann ich mir einen bestimmten Zahnarzt oder eine Zahnärztin in Ihrer Dresdner Praxis aussuchen?
+                  Für wen ist Invisalign geeignet?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Selbstverständlich können Sie bei der Terminbuchung Ihren Wunschbehandler angeben. Dr. Worsch ist spezialisiert auf Implantologie und komplexe ästhetische Behandlungen, während Dr. Müller der perfekte Ansprechpartner für Invisalign und Prophylaxe ist. Bei der <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Online-Terminbuchung über Doctolib</Link> können Sie direkt den gewünschten Zahnarzt auswählen.
+                  Invisalign eignet sich für die meisten Zahnfehlstellungen bei Jugendlichen und Erwachsenen. In einem kostenlosen 3D-Scan prüfen wir, ob Invisalign für Sie geeignet ist und zeigen Ihnen das Endergebnis vorab.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4" className="border-b border-gray-200">
                 <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
-                  Spricht das Praxisteam auch andere Sprachen außer Deutsch?
+                  Wie lange hält ein professionelles Bleaching?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Ja, unser Team spricht fließend Englisch, sodass wir auch internationale Patienten optimal betreuen können. Dr. Worsch verfügt zusätzlich über Grundkenntnisse in Französisch. Für andere Sprachen organisieren wir gerne einen Dolmetscher, damit die Kommunikation reibungslos funktioniert und Sie sich vollständig verstanden fühlen.
+                  Bei guter Pflege bleiben Ihre Zähne 2-3 Jahre deutlich heller. Mit unserem Take-Home-Bleaching können Sie das Ergebnis jederzeit auffrischen. Wir beraten Sie gerne zur optimalen Nachsorge.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="border-b border-gray-200">
                 <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
-                  Wie wichtig ist dem Team der Zahnarztpraxis Worsch die kontinuierliche Weiterbildung?
+                  Was tun Sie für Angstpatienten?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Weiterbildung ist für uns essentiell! Unser gesamtes Team nimmt regelmäßig an Fortbildungen, Kongressen und Zertifizierungskursen teil. Wir investieren jährlich einen erheblichen Betrag in die neuesten Technologien und Behandlungsmethoden. So können wir Ihnen immer die modernsten und effektivsten Therapien anbieten – von digitaler Smile-Planung bis zu innovativen Implantationstechniken.
+                  Wir nehmen Ihre Ängste ernst! Ausführliche Aufklärung, sanfte Behandlungsmethoden und bei Bedarf Sedierung sorgen für eine entspannte Behandlung. Sprechen Sie uns einfach darauf an.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border-b border-gray-200">
+                <AccordionTrigger className="text-left text-base lg:text-lg font-normal text-dental-gray hover:text-dental-blue py-4 lg:py-6">
+                  Welche Garantien geben Sie?
+                </AccordionTrigger>
+                <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
+                  Wir stehen zu unserer Arbeit! Auf Füllungen geben wir 2 Jahre, auf Kronen und Brücken 5 Jahre Garantie. Bei Implantaten gewähren wir sogar 10 Jahre Garantie bei regelmäßiger Prophylaxe.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -76,7 +85,7 @@ const HomepageFAQ = () => {
 
           <div className="text-center mt-8 lg:mt-12 animate-on-scroll">
             <p className="text-lg font-medium text-dental-blue">
-              Ein eingespieltes Team ist die Basis für erfolgreiche Behandlungen. Lernen Sie uns kennen – wir freuen uns auf Sie!
+              Ihre häufigsten Fragen an uns
             </p>
           </div>
         </div>

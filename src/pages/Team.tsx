@@ -8,7 +8,7 @@ import TeamHero from '@/components/team/TeamHero';
 import TeamIntroduction from '@/components/team/TeamIntroduction';
 import TeamMembersGrid from '@/components/team/TeamMembersGrid';
 import TeamValues from '@/components/team/TeamValues';
-import HomepageFAQ from '@/components/home/HomepageFAQ';
+import TeamFAQ from '@/components/team/TeamFAQ';
 import AppointmentCTA from '@/components/home/AppointmentCTA';
 
 const Team = () => {
@@ -28,10 +28,10 @@ const Team = () => {
       <TeamMembersGrid />
       <TeamValues />
       
-      {/* FAQ Section - same as homepage */}
-      <HomepageFAQ />
+      {/* Team-specific FAQ Section */}
+      <TeamFAQ />
 
-      {/* Appointment CTA - same as homepage */}
+      {/* Appointment CTA */}
       <AppointmentCTA />
 
       <Footer />
