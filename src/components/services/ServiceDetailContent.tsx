@@ -1,6 +1,5 @@
 
 import React from 'react';
-import ServiceContentImplantologie from '@/components/services/ServiceContentImplantologie';
 import ServiceContentAesthetic from '@/components/services/ServiceContentAesthetic';
 import ServiceContentDefault from '@/components/services/ServiceContentDefault';
 import ServiceContentZahnersatz from '@/components/services/ServiceContentZahnersatz';
@@ -15,7 +14,6 @@ interface ServiceDetailContentProps {
 }
 
 const ServiceDetailContent: React.FC<ServiceDetailContentProps> = ({ serviceId, service }) => {
-  const isImplantologiePage = serviceId === 'implantologie';
   const isAestheticPage = serviceId === 'aesthetische-zahnheilkunde';
   const isZahnersatzPage = serviceId === 'zahnersatz';
   const isProphylaxePage = serviceId === 'prophylaxe';
@@ -27,9 +25,7 @@ const ServiceDetailContent: React.FC<ServiceDetailContentProps> = ({ serviceId, 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12 animate-on-scroll">
-            {isImplantologiePage ? (
-              <ServiceContentImplantologie />
-            ) : isAestheticPage ? (
+            {isAestheticPage ? (
               <ServiceContentAesthetic />
             ) : isZahnersatzPage ? (
               <ServiceContentZahnersatz />

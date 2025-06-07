@@ -9,26 +9,10 @@ interface ServiceCTAProps {
 }
 
 const ServiceCTA: React.FC<ServiceCTAProps> = ({ serviceId }) => {
-  const isImplantologiePage = serviceId === 'implantologie';
   const isAestheticPage = serviceId === 'aesthetische-zahnheilkunde';
   const isProphylaxePage = serviceId === 'prophylaxe';
   const isZahnerhaltungPage = serviceId === 'zahnerhaltung';
   const isKinderzahnheilkundePage = serviceId === 'kinderzahnheilkunde';
-
-  if (isImplantologiePage) {
-    return (
-      <div className="mt-12 text-center animate-on-scroll">
-        <h2 className="text-2xl font-medium mb-4 text-dental-blue">Feste Zähne, neues Lebensgefühl – Informieren Sie sich jetzt!</h2>
-        <p className="text-lg mb-6 text-dental-gray">
-          Vereinbaren Sie einen unverbindlichen Beratungstermin zum Thema Zahnimplantate in unserer Praxis in Dresden Laubegast.
-        </p>
-        <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue text-white px-8 py-6 text-lg">
-          <Link to="/appointment">Beratungstermin Implantologie vereinbaren <ChevronRight className="ml-2 h-5 w-5" /></Link>
-        </Button>
-        <p className="mt-4 text-dental-gray">Wir nehmen uns Zeit für Ihre individuellen Fragen zu Zahnimplantaten</p>
-      </div>
-    );
-  }
 
   if (isAestheticPage) {
     return (
