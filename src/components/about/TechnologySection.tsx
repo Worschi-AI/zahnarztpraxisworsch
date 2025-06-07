@@ -3,7 +3,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Monitor, Sparkles, Scan, Zap, CheckCircle, Calendar, Users, Heart, MessageCircle, Home } from 'lucide-react';
-import PraxisGallery from '@/components/praxis/PraxisGallery';
 
 const TechnologySection = () => {
   const technologyFeatures = [
@@ -63,114 +62,95 @@ const TechnologySection = () => {
   ];
 
   return (
-    <>
-      {/* Praxis Gallery Section */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#edf2fa' }}>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="mb-4 text-dental-blue">Ein Ambiente zum Wohlfühlen: Ihre moderne Zahnarztpraxis in Dresden-Laubegast</h2>
-            <p className="text-lg max-w-2xl mx-auto text-dental-gray animate-on-scroll">
-              Treten Sie ein und überzeugen Sie sich selbst: Unsere Praxisräume sind hell, modern und mit neuester Technik ausgestattet. Unser größter Wunsch ist es, dass jeder Besuch bei uns so angenehm und entspannt wie möglich für Sie verläuft.
-            </p>
-          </div>
-          
-          <div className="animate-on-scroll mb-12">
-            <PraxisGallery />
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Section */}
-      <section className="py-20" style={{ backgroundColor: '#F8FAFC' }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* Patient Focus Section First */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg animate-on-scroll mb-20">
-              <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-dental-blue mb-6">
-                  Der moderne Patient im Fokus – Ihre Bedürfnisse stehen im Mittelpunkt
-                </h2>
-                <p className="text-lg text-dental-gray max-w-4xl mx-auto leading-relaxed">
-                  Wir wissen, dass insbesondere die junge Generation und alle anspruchsvollen Patienten hohe Erwartungen an Ästhetik und Lebensqualität haben. Ein selbstbewusstes Lächeln ist dabei oft der Schlüssel.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                {patientFocusFeatures.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-4 p-4 md:p-6 bg-dental-beige/30 rounded-xl hover:bg-dental-beige/50 transition-colors animate-on-scroll"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <div className="flex-shrink-0">
-                      {feature.icon}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h4 className="text-lg font-semibold text-dental-blue mb-3">
-                        {feature.title}
-                      </h4>
-                      <p className="text-dental-gray leading-relaxed break-words">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Technology Section */}
-            <div className="text-center mb-12 animate-on-scroll">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-dental-blue mb-6">
-                Modernste Technologie für Ihre Zahngesundheit
-              </h3>
-              <p className="text-lg text-dental-gray max-w-3xl mx-auto">
-                Mit innovativer Technik und digitalen Verfahren bieten wir Ihnen Behandlungen auf höchstem Niveau für präzise und ästhetisch überzeugende Ergebnisse.
+    <section className="py-20" style={{ backgroundColor: '#F8FAFC' }}>
+      <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Patient Focus Section First */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg animate-on-scroll mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-dental-blue mb-6">
+                Der moderne Patient im Fokus – Ihre Bedürfnisse stehen im Mittelpunkt
+              </h2>
+              <p className="text-lg text-dental-gray max-w-4xl mx-auto leading-relaxed">
+                Wir wissen, dass insbesondere die junge Generation und alle anspruchsvollen Patienten hohe Erwartungen an Ästhetik und Lebensqualität haben. Ein selbstbewusstes Lächeln ist dabei oft der Schlüssel.
               </p>
             </div>
 
-            {/* Tech-Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {technologyFeatures.map((tech, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {patientFocusFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="tech-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="flex gap-4 p-4 md:p-6 bg-dental-beige/30 rounded-xl hover:bg-dental-beige/50 transition-colors animate-on-scroll"
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="flex justify-center mb-4">
-                    <div className="p-4 bg-dental-beige rounded-full">
-                      {tech.icon}
-                    </div>
+                  <div className="flex-shrink-0">
+                    {feature.icon}
                   </div>
-                  <div className="text-center">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-dental-turquoise text-white text-xs rounded-full">
-                        {tech.badge}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-dental-blue mb-3">
-                      {tech.title}
-                    </h3>
-                    <p className="text-sm text-dental-gray leading-relaxed">
-                      {tech.description}
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-lg font-semibold text-dental-blue mb-3">
+                      {feature.title}
+                    </h4>
+                    <p className="text-dental-gray leading-relaxed break-words">
+                      {feature.description}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* CTA */}
-            <div className="text-center animate-on-scroll">
-              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
-                <Link to="/appointment">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Technik erleben - Termin buchen
-                </Link>
-              </Button>
-            </div>
+          {/* Technology Section */}
+          <div className="text-center mb-12 animate-on-scroll">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-dental-blue mb-6">
+              Modernste Technologie für Ihre Zahngesundheit
+            </h3>
+            <p className="text-lg text-dental-gray max-w-3xl mx-auto">
+              Mit innovativer Technik und digitalen Verfahren bieten wir Ihnen Behandlungen auf höchstem Niveau für präzise und ästhetisch überzeugende Ergebnisse.
+            </p>
+          </div>
+
+          {/* Tech-Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {technologyFeatures.map((tech, index) => (
+              <div
+                key={index}
+                className="tech-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-on-scroll"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-dental-beige rounded-full">
+                    {tech.icon}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="mb-2">
+                    <span className="inline-block px-3 py-1 bg-dental-turquoise text-white text-xs rounded-full">
+                      {tech.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-dental-blue mb-3">
+                    {tech.title}
+                  </h3>
+                  <p className="text-sm text-dental-gray leading-relaxed">
+                    {tech.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center animate-on-scroll">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 text-white shadow-lg hover:shadow-xl">
+              <Link to="/appointment">
+                <Calendar className="w-5 h-5 mr-2" />
+                Technik erleben - Termin buchen
+              </Link>
+            </Button>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
