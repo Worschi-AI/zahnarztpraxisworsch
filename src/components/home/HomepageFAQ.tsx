@@ -82,12 +82,6 @@ const HomepageFAQ = () => {
               </AccordionItem>
             </Accordion>
           </div>
-
-          <div className="text-center mt-8 lg:mt-12 animate-on-scroll">
-            <p className="text-lg font-medium text-dental-blue">
-              Ihre häufigsten Fragen an uns
-            </p>
-          </div>
         </div>
       </div>
     </section>

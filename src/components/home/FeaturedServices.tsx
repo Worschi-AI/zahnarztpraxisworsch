@@ -23,9 +23,6 @@ const FeaturedServices = () => {
           
           {/* Text section - left column on desktop, top on mobile */}
           <div className="animate-on-scroll mb-8 lg:mb-0 lg:sticky lg:top-8">
-            <div className="mb-4 lg:mb-6">
-              <span className="text-dental-turquoise font-medium text-sm md:text-base">Unsere Leistungen</span>
-            </div>
             <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-dental-blue mb-4 lg:mb-6 leading-tight">
               Unsere Behandlungsschwerpunkte – Für Ihr schönstes Lächeln
             </h2>
