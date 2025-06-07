@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Star, Users, Shield, Sparkles, Target, Award, CheckCircle, Monitor, Zap, Scan, Laser } from 'lucide-react';
+import { Heart, Star, Users, Shield, Sparkles, Target, Award, CheckCircle, Monitor, Zap, Scan } from 'lucide-react';
 
 const AboutPhilosophy = () => {
   const youngPatientFeatures = [
@@ -44,7 +43,7 @@ const AboutPhilosophy = () => {
       description: "Schluss mit unangenehmen Abdrücken! Unser digitaler Scanner erstellt präzise 3D-Modelle für Invisalign-Behandlungen und hochwertigen Zahnersatz in Dresden."
     },
     {
-      icon: <Laser className="w-6 h-6 text-dental-turquoise" />,
+      icon: <Zap className="w-6 h-6 text-dental-turquoise" />,
       title: "Laserzahnheilkunde",
       description: "Schonende Behandlung von Zahnfleischerkrankungen und unterstützend bei Implantologie. Der Laser arbeitet berührungslos, reduziert Schmerzen und beschleunigt die Heilung."
     },
