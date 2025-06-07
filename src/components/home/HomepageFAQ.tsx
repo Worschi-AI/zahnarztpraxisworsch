@@ -32,7 +32,7 @@ const HomepageFAQ = () => {
                   Was kostet eine ästhetische Behandlung?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Die Kosten variieren je nach Behandlung. Ein professionelles Bleaching beginnt ab 280€, Veneers ab 890€ pro Zahn. In unserem kostenlosen Beratungsgespräch in Dresden erstellen wir Ihnen einen transparenten Kostenvoranschlag.
+                  Die Kosten variieren je nach Behandlung: Bleaching ab 300€, Veneers ab 800€ pro Zahn, Invisalign ab 3.500€. Wir erstellen Ihnen gerne einen detaillierten Kostenvoranschlag und bieten Finanzierungsmöglichkeiten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -41,7 +41,7 @@ const HomepageFAQ = () => {
                   Wie schnell bekomme ich einen Termin?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Online-Termine sind oft schon innerhalb weniger Tage verfügbar. Für Notfälle haben wir täglich Notfallzeiten reserviert. Buchen Sie bequem über <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Doctolib</Link> oder rufen Sie uns in Laubegast an.
+                  Ersttermine erhalten Sie meist innerhalb von 1-2 Wochen. Für Notfälle haben wir täglich Termine frei. Buchen Sie bequem online über <Link to="/appointment" className="text-dental-turquoise hover:text-dental-blue underline">Doctolib</Link> oder rufen Sie uns an.
                 </AccordionContent>
               </AccordionItem>
 
@@ -50,7 +50,7 @@ const HomepageFAQ = () => {
                   Für wen ist Invisalign geeignet?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Invisalign eignet sich für die meisten Zahnfehlstellungen bei Jugendlichen und Erwachsenen. In einem kostenlosen 3D-Scan prüfen wir, ob Invisalign für Sie geeignet ist und zeigen Ihnen das Endergebnis vorab.
+                  Invisalign eignet sich für die meisten Zahnfehlstellungen bei Jugendlichen und Erwachsenen. Als zertifizierte Invisalign-Anwender in Dresden beraten wir Sie gerne über Ihre Möglichkeiten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -59,7 +59,7 @@ const HomepageFAQ = () => {
                   Wie lange hält ein professionelles Bleaching?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Bei guter Pflege bleiben Ihre Zähne 2-3 Jahre deutlich heller. Mit unserem Take-Home-Bleaching können Sie das Ergebnis jederzeit auffrischen. Wir beraten Sie gerne zur optimalen Nachsorge.
+                  Ein professionelles Bleaching in unserer Praxis hält 2-3 Jahre. Mit der richtigen Nachpflege und gelegentlichen Auffrischungen können Sie das Ergebnis noch länger erhalten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -68,7 +68,7 @@ const HomepageFAQ = () => {
                   Was tun Sie für Angstpatienten?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Wir nehmen Ihre Ängste ernst! Ausführliche Aufklärung, sanfte Behandlungsmethoden und bei Bedarf Sedierung sorgen für eine entspannte Behandlung. Sprechen Sie uns einfach darauf an.
+                  Wir sind speziell geschult im Umgang mit Angstpatienten. Einfühlsame Beratung, schmerzarme Behandlungsmethoden und ausreichend Zeit schaffen Vertrauen.
                 </AccordionContent>
               </AccordionItem>
 
@@ -77,7 +77,7 @@ const HomepageFAQ = () => {
                   Welche Garantien geben Sie?
                 </AccordionTrigger>
                 <AccordionContent className="text-dental-gray text-sm lg:text-base leading-relaxed pb-4 lg:pb-6">
-                  Wir stehen zu unserer Arbeit! Auf Füllungen geben wir 2 Jahre, auf Kronen und Brücken 5 Jahre Garantie. Bei Implantaten gewähren wir sogar 10 Jahre Garantie bei regelmäßiger Prophylaxe.
+                  Auf Implantate gewähren wir 5 Jahre Garantie, auf Veneers und Kronen 2 Jahre. Ihr Vertrauen ist uns wichtig.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

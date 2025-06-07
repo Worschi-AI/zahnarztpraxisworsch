@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Star, Users, Shield, Sparkles, Target, Award, CheckCircle } from 'lucide-react';
+import { Heart, Star, Users, Shield, Sparkles, Target, Award, CheckCircle, Monitor, Zap, Scan, Laser } from 'lucide-react';
 
 const AboutPhilosophy = () => {
   const youngPatientFeatures = [
@@ -24,6 +24,53 @@ const AboutPhilosophy = () => {
       icon: <Heart className="w-6 h-6 text-dental-turquoise" />,
       title: "Angenehmes Ambiente",
       description: "Unsere Praxisräume in Dresden-Laubegast sind bewusst modern, hell und freundlich gestaltet, um Ihnen eine entspannte Atmosphäre zu bieten. Wir möchten, dass Sie sich von dem Moment an, in dem Sie eintreten, rundum wohlfühlen."
+    }
+  ];
+
+  const technologyFeatures = [
+    {
+      icon: <Monitor className="w-6 h-6 text-dental-turquoise" />,
+      title: "Digitale Volumentomographie (DVT) für präzise Implantologie",
+      description: "Unsere 3D-Diagnostik ermöglicht die exakte Planung von Zahnimplantaten in Dresden-Laubegast. Besonders bei komplexen Implantologie-Fällen bietet diese Technologie höchste Sicherheit und Präzision für Ihre Zahnimplantate."
+    },
+    {
+      icon: <Sparkles className="w-6 h-6 text-dental-turquoise" />,
+      title: "Digitale Smile Design für Veneers und ästhetische Zahnmedizin",
+      description: "Mit modernster Software planen wir Ihr perfektes Lächeln digital. Ob Veneers, Bleaching oder Invisalign in Dresden – Sie sehen das Ergebnis bereits vor der Behandlung."
+    },
+    {
+      icon: <Scan className="w-6 h-6 text-dental-turquoise" />,
+      title: "Intraoralscanner für Invisalign und Zahnersatz",
+      description: "Schluss mit unangenehmen Abdrücken! Unser digitaler Scanner erstellt präzise 3D-Modelle für Invisalign-Behandlungen und hochwertigen Zahnersatz in Dresden."
+    },
+    {
+      icon: <Laser className="w-6 h-6 text-dental-turquoise" />,
+      title: "Laserzahnheilkunde",
+      description: "Schonende Behandlung von Zahnfleischerkrankungen und unterstützend bei Implantologie. Der Laser arbeitet berührungslos, reduziert Schmerzen und beschleunigt die Heilung."
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-dental-turquoise" />,
+      title: "CAD/CAM-Technologie",
+      description: "Hochpräzise Fertigung von Kronen, Veneers und Zahnersatz direkt in unserer Praxis in Dresden-Laubegast. Weniger Termine, perfekte Passform."
+    }
+  ];
+
+  const specializations = [
+    {
+      title: "Implantologie Dresden – Fester Zahnersatz für ein Leben lang",
+      description: "Als DGI-zertifizierter Implantologe bietet Dr. Worsch in Dresden-Laubegast das komplette Spektrum der Implantologie: von Einzelzahnimplantaten bis zum All-on-4-Konzept. Modernste 3D-Planung garantiert präzise und sichere Zahnimplantate."
+    },
+    {
+      title: "Invisalign Dresden – Unsichtbare Zahnkorrektur",
+      description: "Gerade Zähne ohne sichtbare Spange: Als zertifizierte Invisalign-Anwender korrigieren wir Zahnfehlstellungen in Dresden diskret und komfortabel. Die transparenten Aligner sind nahezu unsichtbar."
+    },
+    {
+      title: "Veneers Dresden – Perfektion in Keramik",
+      description: "Hauchdünne Keramikschalen für Ihr Hollywood-Lächeln. Unsere Veneers in Dresden korrigieren Verfärbungen, Lücken und Formfehler für natürlich schöne Zähne."
+    },
+    {
+      title: "Bleaching Dresden – Strahlend weiße Zähne",
+      description: "Professionelle Zahnaufhellung in nur einer Sitzung. Unser schonendes Bleaching in Dresden-Laubegast hellt Ihre Zähne um bis zu 8 Nuancen auf."
     }
   ];
 
@@ -97,6 +144,67 @@ const AboutPhilosophy = () => {
                         </p>
                       </div>
                     </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Technology Section */}
+          <div className="mb-20 animate-on-scroll">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-semibold text-dental-blue mb-4">
+                Modernste Technologie für Ihre Zahngesundheit
+              </h3>
+              <p className="text-lg text-dental-gray max-w-3xl mx-auto">
+                Mit innovativer Technik und digitalen Verfahren bieten wir Ihnen Behandlungen auf höchstem Niveau für präzise und ästhetisch überzeugende Ergebnisse.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {technologyFeatures.map((feature, index) => (
+                <Card key={index} className="border border-dental-beige hover:shadow-lg transition-all duration-300 hover:border-dental-turquoise/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 p-3 bg-dental-beige rounded-lg">
+                        {feature.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-dental-blue mb-2 text-sm">
+                          {feature.title}
+                        </h4>
+                        <p className="text-dental-gray text-xs leading-relaxed">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Specializations */}
+          <div className="mb-20 animate-on-scroll">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-semibold text-dental-blue mb-4">
+                Unsere Spezialisierungen in Dresden-Laubegast
+              </h3>
+              <p className="text-lg text-dental-gray max-w-3xl mx-auto">
+                Als Experten für ästhetische Zahnmedizin und Implantologie bieten wir Ihnen das komplette Spektrum moderner Zahnheilkunde.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {specializations.map((spec, index) => (
+                <Card key={index} className="border border-dental-beige hover:shadow-lg transition-all duration-300 hover:border-dental-turquoise/20">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-dental-blue mb-3">
+                      {spec.title}
+                    </h4>
+                    <p className="text-dental-gray text-sm leading-relaxed">
+                      {spec.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
