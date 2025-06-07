@@ -7,12 +7,14 @@ import AppointmentHero from '@/components/appointment/AppointmentHero';
 import BookingOptions from '@/components/appointment/BookingOptions';
 import BookingInstructions from '@/components/appointment/BookingInstructions';
 import AdditionalInfo from '@/components/appointment/AdditionalInfo';
-import AppointmentSchemaData from '@/components/appointment/AppointmentSchemaData';
-import ScrollAnimation from '@/components/appointment/ScrollAnimation';
+import { AppointmentSchemaData } from '@/components/appointment/AppointmentSchemaData';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 import HomepageFAQ from '@/components/home/HomepageFAQ';
-import CallToActionPhone from '@/components/appointment/CallToActionPhone';
+import AppointmentCTA from '@/components/home/AppointmentCTA';
 
 const Appointment = () => {
+  useScrollAnimation();
+
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -22,7 +24,6 @@ const Appointment = () => {
       </Helmet>
       
       <AppointmentSchemaData />
-      <ScrollAnimation />
       <Navbar />
       <AppointmentHero />
       <BookingOptions />
@@ -32,8 +33,8 @@ const Appointment = () => {
       {/* FAQ Section - same as homepage */}
       <HomepageFAQ />
       
-      {/* CTA with phone - different style but same concept */}
-      <CallToActionPhone />
+      {/* CTA - same as homepage */}
+      <AppointmentCTA />
       
       <Footer />
     </div>
