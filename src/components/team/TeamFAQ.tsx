@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -72,12 +71,6 @@ const TeamFAQ = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-          </div>
-
-          <div className="text-center mt-8 lg:mt-12 animate-on-scroll">
-            <p className="text-lg font-medium text-dental-blue">
-              Ein eingespieltes Team ist die Basis für erfolgreiche Behandlungen. Lernen Sie uns kennen – wir freuen uns auf Sie!
-            </p>
           </div>
         </div>
       </div>
