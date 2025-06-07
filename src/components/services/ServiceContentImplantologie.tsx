@@ -2,289 +2,84 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import PhoneButton from '@/components/PhoneButton';
 
 const ServiceContentImplantologie = () => {
   return (
-    <div className="w-full">
-      <h2 className="mb-6 text-2xl md:text-3xl font-semibold text-dental-blue animate-slide-up">Zahnimplantate Dresden – Festsitzender Zahnersatz in der Zahnarztpraxis Worsch</h2>
+    <>
+      <h2 className="mb-6 text-dental-blue animate-slide-up">Zahnimplantate in Dresden – Die beste Lösung für fehlende Zähne</h2>
       <div className="prose prose-lg max-w-none text-dental-gray">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+          <div className="animate-slide-right">
+            <p className="animate-on-scroll">
+              Der Verlust eines oder mehrerer Zähne kann die Lebensqualität erheblich einschränken – sowohl funktionell als auch ästhetisch. <strong>Zahnimplantate</strong> bieten hier die modernste und komfortabelste Lösung, um Ihr Lächeln und Ihre Kaufunktion vollständig wiederherzustellen. In der <strong>Zahnarztpraxis Worsch in Dresden Laubegast</strong> sind wir auf Implantologie spezialisiert und verhelfen Ihnen mit hochwertigen Implantaten zu neuer Lebensfreude.
+            </p>
+            <p className="animate-on-scroll">
+              Ein <strong>Zahnimplantat in Dresden</strong> ist eine künstliche Zahnwurzel, meist aus biokompatiblem Titan, die schonend in den Kieferknochen eingesetzt wird. Dort verwächst es fest mit dem Knochen (Osseointegration) und bildet eine stabile Basis für den eigentlichen <strong>festsitzenden Zahnersatz in Dresden</strong> – sei es eine einzelne Krone, eine Brücke oder sogar eine Prothese. Das Ergebnis: Festsitzender Zahnersatz, der sich anfühlt und aussieht wie Ihre natürlichen Zähne.
+            </p>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-lg image-hover animate-slide-left">
+            <img 
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1770&auto=format&fit=crop"
+              alt="Zahnimplantat Modell - Zahnarztpraxis Worsch Dresden"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
         
-        {/* Einführungstext */}
-        <div className="mb-8 md:mb-12 animate-on-scroll">
-          <p className="text-base md:text-lg leading-relaxed">
-            Sie suchen nach hochwertigen <strong>Zahnimplantaten in Dresden</strong>? In unserer Zahnarztpraxis Worsch in Dresden-Laubegast erhalten Sie modernste Implantologie mit 3D-Planung und schonenden Verfahren. Dr. med. dent. Thomas Worsch, Spezialist für Implantologie und ästhetische Zahnmedizin, bietet Ihnen festsitzenden Zahnersatz, der sich anfühlt wie Ihre eigenen Zähne. Mit über 500 erfolgreich gesetzten Zahnimplantaten und jahrelanger Erfahrung sind Sie bei uns in den besten Händen.
-          </p>
+        <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue animate-slide-up">Warum Zahnimplantate von Ihrem Spezialisten in Dresden?</h3>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+          <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1 image-hover animate-slide-right">
+            <img 
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1780&auto=format&fit=crop"
+              alt="3D-Planung für Zahnimplantate - Zahnarztpraxis Worsch Dresden"
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="order-1 md:order-2 stagger-children">
+            <p className="mb-4 animate-on-scroll">
+              Als Ihr erfahrener <strong>Implantologe in Dresden</strong> legt Dr. Worsch größten Wert auf eine präzise Diagnostik und individuelle Planung. Mithilfe modernster 3D-Röntgentechnologie (DVT) können wir die Implantation exakt planen und auch komplexe Fälle sicher und vorhersagbar behandeln.
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="animate-slide-up hover-text-highlight"><strong>Natürliches Aussehen und Gefühl:</strong> Implantatgetragener Zahnersatz ist von echten Zähnen kaum zu unterscheiden.</li>
+              <li className="animate-slide-up hover-text-highlight"><strong>Fester Halt:</strong> Kein Verrutschen, kein Wackeln – Sie können wieder unbeschwert lachen, sprechen und essen.</li>
+              <li className="animate-slide-up hover-text-highlight"><strong>Schonung der Nachbarzähne:</strong> Anders als bei Brücken müssen gesunde Nachbarzähne nicht beschliffen werden.</li>
+              <li className="animate-slide-up hover-text-highlight"><strong>Erhalt des Kieferknochens:</strong> Implantate belasten den Knochen ähnlich wie natürliche Zahnwurzeln und beugen so Knochenschwund vor.</li>
+              <li className="animate-slide-up hover-text-highlight"><strong>Langlebigkeit:</strong> Bei guter Pflege können Zahnimplantate ein Leben lang halten.</li>
+              <li className="animate-slide-up hover-text-highlight"><strong>Verbesserte Lebensqualität:</strong> Gewinnen Sie Ihr selbstsicheres Auftreten zurück.</li>
+            </ul>
+          </div>
         </div>
 
-        {/* Die Vorteile von Zahnimplantaten */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Die Vorteile von Zahnimplantaten in unserer Dresdner Praxis</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6 card-hover">
-              <h4 className="text-lg md:text-xl font-medium mb-3 text-dental-blue">Biokompatible Titan-Implantate für maximale Verträglichkeit</h4>
-              <p className="text-sm md:text-base">Wir verwenden ausschließlich hochwertige Titan-Zahnimplantate, die sich optimal in Ihren Kieferknochen integrieren. Titan ist körperverträglich und bildet eine feste Verbindung mit dem Knochen (Osseointegration), wodurch Ihr Implantat eine Lebensdauer von 20 Jahren und mehr erreichen kann.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6 card-hover">
-              <h4 className="text-lg md:text-xl font-medium mb-3 text-dental-blue">Natürliches Kaugefühl und perfekte Ästhetik</h4>
-              <p className="text-sm md:text-base">Im Gegensatz zu herkömmlichen Prothesen bieten Zahnimplantate ein natürliches Kaugefühl ohne Druckstellen oder Wackeln. Die darauf befestigten Vollkeramikkronen sind von Ihren natürlichen Zähnen optisch nicht zu unterscheiden und sorgen für ein strahlendes, selbstbewusstes Lächeln.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6 card-hover">
-              <h4 className="text-lg md:text-xl font-medium mb-3 text-dental-blue">Schonung der Nachbarzähne</h4>
-              <p className="text-sm md:text-base">Anders als bei Brücken müssen für Zahnimplantate keine gesunden Nachbarzähne beschliffen werden. Ihr natürlicher Zahnbestand bleibt vollständig erhalten, was langfristig zu besserer Mundgesundheit führt.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6 card-hover">
-              <h4 className="text-lg md:text-xl font-medium mb-3 text-dental-blue">Knochenerhalt und Gesichtsästhetik</h4>
-              <p className="text-sm md:text-base">Zahnimplantate stimulieren den Kieferknochen wie natürliche Zahnwurzeln und verhindern so den Knochenabbau. Dies erhält Ihre Gesichtskonturen und verhindert das typische "eingefallene" Aussehen, das bei längerem Zahnverlust entstehen kann.</p>
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-dental-blue to-dental-turquoise rounded-lg p-4 md:p-6 text-white">
-            <h4 className="text-lg md:text-xl font-medium mb-3">Langfristige Wirtschaftlichkeit</h4>
-            <p className="mb-0 text-sm md:text-base">Obwohl die Anfangsinvestition höher ist als bei anderen Zahnersatz-Lösungen, amortisieren sich Zahnimplantate durch ihre Langlebigkeit. Bei guter Pflege können sie ein Leben lang halten und ersparen Ihnen kostspielige Reparaturen oder Neuanfertigungen.</p>
-          </div>
-        </section>
-
-        {/* Unser bewährter Implantologie-Prozess */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Unser bewährter Implantologie-Prozess in Dresden</h3>
-          
-          <div className="space-y-4 md:space-y-6">
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">1</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Erstberatung und 3D-Diagnostik</h4>
-                <p className="text-sm md:text-base">Ihr Weg zu neuen Zähnen beginnt mit einer ausführlichen Beratung in unserer Praxis in Dresden-Laubegast. Mittels digitaler Volumentomographie (DVT) erstellen wir dreidimensionale Aufnahmen Ihres Kiefers. Diese 3D-Diagnostik ermöglicht eine millimetergenaue Planung der Implantatposition und macht die Behandlung sicherer und vorhersagbarer.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">2</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Individuelle Behandlungsplanung</h4>
-                <p className="text-sm md:text-base">Basierend auf der 3D-Diagnostik erstellen wir einen detaillierten Behandlungsplan, der optimal auf Ihre anatomischen Gegebenheiten abgestimmt ist. Sie erhalten eine transparente Aufklärung über alle Behandlungsschritte und Kosten.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">3</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Schonende Implantation</h4>
-                <p className="text-sm md:text-base">Die Implantation erfolgt unter örtlicher Betäubung und ist in der Regel schmerzfrei. Dank modernster Techniken und langjähriger Erfahrung ist der Eingriff minimalinvasiv und schonend. Je nach Ausgangssituation können wir oft auch eine Sofortimplantation durchführen, bei der das Implantat direkt nach der Zahnentfernung eingesetzt wird.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">4</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Einheilungsphase und Nachsorge</h4>
-                <p className="text-sm md:text-base">Nach der Implantation folgt eine Einheilungsphase von 3-6 Monaten, in der das Implantat fest mit dem Kieferknochen verwächst. Während dieser Zeit erhalten Sie bei Bedarf einen hochwertigen Provisorium. Regelmäßige Kontrolltermine gewährleisten eine optimale Heilung.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">5</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Prothetische Versorgung</h4>
-                <p className="text-sm md:text-base">Nach erfolgreicher Einheilung wird Ihr individueller Zahnersatz angefertigt. Ob Einzelkrone, Brücke oder implantatgetragene Prothese – wir verwenden ausschließlich hochwertige Vollkeramik-Materialien für ein natürlich schönes Ergebnis.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-3 md:space-x-4">
-              <div className="flex-shrink-0 w-6 h-6 md:w-8 md:h-8 bg-dental-blue text-white rounded-full flex items-center justify-center font-bold text-sm md:text-base">6</div>
-              <div>
-                <h4 className="text-base md:text-lg font-medium mb-2 text-dental-blue">Langfristige Betreuung</h4>
-                <p className="text-sm md:text-base">Auch nach Abschluss der Behandlung sind wir für Sie da. Regelmäßige Recall-Termine und professionelle Implantatreinigungen sorgen für die Langlebigkeit Ihrer neuen Zähne.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Preise für Zahnimplantate */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Preise für Zahnimplantate in Dresden</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
-            <div>
-              <h4 className="text-lg md:text-xl font-medium mb-4 text-dental-blue">Transparente Kostenaufstellung</h4>
-              <p className="mb-4 text-sm md:text-base">Die Kosten für Zahnimplantate variieren je nach individueller Ausgangssituation und gewählter Versorgung. In unserer Dresdner Praxis erhalten Sie eine transparente Kostenaufstellung ohne versteckte Zusatzkosten.</p>
-              
-              <div className="bg-dental-beige rounded-lg p-4">
-                <h5 className="font-medium mb-3 text-dental-blue">Richtwerte für Zahnimplantate:</h5>
-                <ul className="space-y-2 text-sm md:text-base">
-                  <li>• Einzelzahnimplantat mit Vollkeramikkrone: ab 1.800 Euro</li>
-                  <li>• Implantatgetragene Brücke (3 Zähne): ab 4.500 Euro</li>
-                  <li>• Vollständige implantatgetragene Versorgung: ab 12.000 Euro</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg md:text-xl font-medium mb-4 text-dental-blue">Finanzierungsmöglichkeiten</h4>
-              <p className="mb-4 text-sm md:text-base">Wir bieten Ihnen flexible Finanzierungslösungen, um Ihre Wunschbehandlung zu ermöglichen. Sprechen Sie uns auf individuelle Ratenzahlungspläne an.</p>
-              
-              <h5 className="font-medium mb-2 text-dental-blue">Zuschüsse der Krankenkassen</h5>
-              <p className="text-sm md:text-base">Auch bei Zahnimplantaten erhalten Sie den befundbezogenen Festzuschuss Ihrer Krankenkasse. Private Zusatzversicherungen übernehmen oft einen größeren Anteil der Implantatkosten.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Einzugsbereich */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Unser Einzugsbereich für Zahnimplantate</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-lg md:text-xl font-medium mb-4 text-dental-blue">Dresden und Umgebung</h4>
-              <p className="mb-4 text-sm md:text-base">Als spezialisierte Zahnarztpraxis für Implantologie in Dresden-Laubegast betreuen wir Patienten aus dem gesamten Dresdner Raum:</p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <h5 className="font-medium mb-2 text-dental-blue">Stadtteile Dresden:</h5>
-                  <ul className="text-xs md:text-sm space-y-1">
-                    <li>• Dresden-Laubegast</li>
-                    <li>• Dresden-Striesen</li>
-                    <li>• Dresden-Blasewitz</li>
-                    <li>• Dresden-Loschwitz</li>
-                    <li>• Dresden-Neustadt</li>
-                    <li>• Dresden-Altstadt</li>
-                    <li>• Dresden-Prohlis</li>
-                    <li>• Dresden-Reick</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h5 className="font-medium mb-2 text-dental-blue">Umland Dresden:</h5>
-                  <ul className="text-xs md:text-sm space-y-1">
-                    <li>• Pirna</li>
-                    <li>• Freital</li>
-                    <li>• Radebeul</li>
-                    <li>• Coswig</li>
-                    <li>• Meißen</li>
-                    <li>• Radeberg</li>
-                    <li>• Heidenau</li>
-                    <li>• Dippoldiswalde</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-dental-blue to-dental-turquoise rounded-lg p-4 md:p-6 text-white">
-              <h4 className="text-lg md:text-xl font-medium mb-4">Optimale Verkehrsanbindung</h4>
-              <p className="text-sm md:text-base">Unsere Praxis in der Österreicher Straße 38 ist sowohl mit öffentlichen Verkehrsmitteln als auch mit dem Auto gut erreichbar. Kostenlose Parkplätze stehen direkt vor der Praxis zur Verfügung.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Warum Zahnimplantate bei Dr. Worsch */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Warum Zahnimplantate bei Dr. Worsch in Dresden?</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Spezialisierte Expertise</h4>
-              <p className="text-sm md:text-base">Dr. med. dent. Thomas Worsch ist Spezialist für Implantologie und ästhetische Zahnmedizin mit über 15 Jahren Berufserfahrung. Regelmäßige Fortbildungen und Zertifizierungen gewährleisten modernste Behandlungsmethoden.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Modernste Technologie</h4>
-              <p className="mb-3 text-sm md:text-base">Unsere Praxis verfügt über neueste Technologie:</p>
-              <ul className="text-xs md:text-sm space-y-1">
-                <li>• 3D-Röntgen (DVT) für präzise Planung</li>
-                <li>• Digitale Intraoralscanner</li>
-                <li>• Computergestützte Implantatplanung</li>
-                <li>• Minimalinvasive Operationstechniken</li>
-              </ul>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Persönliche Betreuung</h4>
-              <p className="text-sm md:text-base">Jeder Patient erhält eine individuelle Betreuung von der ersten Beratung bis zur Nachsorge. Unser eingespieltes Praxisteam sorgt für eine entspannte Atmosphäre und nimmt sich Zeit für Ihre Fragen und Sorgen.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Qualitätsgarantie</h4>
-              <p className="text-sm md:text-base">Wir gewähren eine Garantie auf unsere Implantat-Behandlungen und verwenden ausschließlich Implantatsysteme renommierter Hersteller mit langjähriger Bewährung.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Häufige Fragen */}
-        <section className="mb-12 md:mb-16 animate-on-scroll">
-          <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-dental-blue">Häufige Fragen zu Zahnimplantaten</h3>
-          
-          <div className="space-y-4 md:space-y-6">
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Sind Zahnimplantate schmerzhaft?</h4>
-              <p className="text-sm md:text-base">Die Implantation erfolgt unter örtlicher Betäubung und ist in der Regel schmerzfrei. Nach dem Eingriff können leichte Schwellungen und Beschwerden auftreten, die sich gut mit Schmerzmitteln behandeln lassen.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Wie lange halten Zahnimplantate?</h4>
-              <p className="text-sm md:text-base">Bei guter Pflege und regelmäßigen Kontrollen können Zahnimplantate 20 Jahre und länger halten. Studien zeigen Erfolgsraten von über 95% nach 10 Jahren.</p>
-            </div>
-            
-            <div className="bg-dental-beige rounded-lg p-4 md:p-6">
-              <h4 className="text-base md:text-lg font-medium mb-3 text-dental-blue">Bin ich für Zahnimplantate geeignet?</h4>
-              <p className="text-sm md:text-base">Die meisten Patienten sind für Zahnimplantate geeignet. Wichtig sind ausreichend Kieferknochen und eine gute Mundhygiene. Auch bei Knochenabbau können wir mit Knochenaufbau-Verfahren helfen.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Bereich */}
-        <section className="animate-on-scroll">
-          <div className="bg-gradient-to-r from-dental-blue to-dental-turquoise rounded-lg p-6 md:p-8 text-white text-center">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4">Vereinbaren Sie Ihren Beratungstermin für Zahnimplantate in Dresden</h3>
-            <p className="text-sm md:text-lg mb-6 leading-relaxed">
-              Träumen Sie von festsitzenden Zähnen, die sich anfühlen wie Ihre eigenen? Dr. med. dent. Thomas Worsch und sein erfahrenes Team in Dresden-Laubegast freuen sich darauf, Sie zu beraten und Ihnen zu einem neuen, selbstbewussten Lächeln zu verhelfen.
-            </p>
-            
-            <div className="mb-6">
-              <h4 className="text-lg md:text-xl font-medium mb-4">Kontaktieren Sie uns jetzt:</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="font-medium text-sm md:text-base">Online-Termin buchen:</p>
-                  <p className="text-xs md:text-sm">Rund um die Uhr über Doctolib</p>
-                </div>
-                <div>
-                  <p className="font-medium text-sm md:text-base">Telefonisch:</p>
-                  <PhoneButton 
-                    phoneNumber="0351 2522709"
-                    className="bg-white text-dental-blue hover:bg-gray-50 mt-2"
-                    size="sm"
-                  />
-                </div>
-                <div>
-                  <p className="font-medium text-sm md:text-base">Persönlich:</p>
-                  <p className="text-xs md:text-sm">Österreicher Str. 38, 01279 Dresden</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/appointment">
-                <Button size="lg" className="bg-white text-dental-blue hover:bg-gray-50 font-medium w-full sm:w-auto">
-                  Jetzt Termin vereinbaren
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-dental-blue w-full sm:w-auto">
-                  Kontakt aufnehmen
-                </Button>
-              </Link>
-            </div>
-            
-            <p className="mt-6 text-xs md:text-sm italic">
-              Ihre Zahngesundheit liegt uns am Herzen – vereinbaren Sie noch heute Ihren persönlichen Beratungstermin für Zahnimplantate in Dresden!
-            </p>
-          </div>
-        </section>
+        <h3 className="text-2xl font-medium mt-8 mb-4 text-dental-blue animate-slide-up">Der Behandlungsablauf für Ihre Zahnimplantate in Dresden Laubegast</h3>
+        
+        <div className="bg-dental-beige rounded-lg p-6 mb-8 card-hover animate-scale-in">
+          <ol className="list-decimal list-inside space-y-4 stagger-children">
+            <li className="font-medium text-dental-blue animate-slide-up">Ausführliche Beratung & Diagnostik
+              <p className="font-normal text-dental-gray mt-1">Wir analysieren Ihre individuelle Situation, besprechen Ihre Wünsche und klären alle Fragen rund um <strong>Zahnimplantate in Dresden</strong>. Eine digitale Volumentomographie (DVT) ermöglicht uns eine präzise 3D-Planung.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Implantation
+              <p className="font-normal text-dental-gray mt-1">Der Eingriff erfolgt in unserer Praxis in Dresden Laubegast ambulant und schmerzfrei unter lokaler Betäubung. Auf Wunsch sind auch Behandlungen in Sedierung (Dämmerschlaf) möglich.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Einheilphase
+              <p className="font-normal text-dental-gray mt-1">Das Implantat benötigt einige Wochen bis Monate, um fest mit dem Kieferknochen zu verwachsen. In dieser Zeit erhalten Sie bei Bedarf einen provisorischen Zahnersatz.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Freilegung & Abdrucknahme
+              <p className="font-normal text-dental-gray mt-1">Nach erfolgreicher Einheilung wird das Implantat freigelegt und ein präziser Abdruck für Ihren individuellen Zahnersatz genommen.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Anfertigung des Zahnersatzes
+              <p className="font-normal text-dental-gray mt-1">In unserem deutschen Meisterlabor wird Ihr hochwertiger <strong>festsitzender Zahnersatz in Dresden</strong> (Krone, Brücke, Prothese) passgenau gefertigt.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Eingliederung
+              <p className="font-normal text-dental-gray mt-1">Der fertige Zahnersatz wird auf dem Implantat befestigt. Sie verlassen unsere Praxis mit festen, schönen Zähnen.</p>
+            </li>
+            <li className="font-medium text-dental-blue animate-slide-up">Nachsorge
+              <p className="font-normal text-dental-gray mt-1">Regelmäßige Kontrollen und professionelle Zahnreinigungen sichern den langfristigen Erfolg Ihrer Implantate.</p>
+            </li>
+          </ol>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
