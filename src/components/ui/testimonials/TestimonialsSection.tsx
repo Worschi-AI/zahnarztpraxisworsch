@@ -17,6 +17,8 @@ export function TestimonialsSection({
   trustedCompanies = [],
   trustedCompaniesTitle = "Trusted by teams at these companies and more",
   className,
+  titleClassName,
+  subtitleClassName,
 }: TestimonialsSectionProps) {
   // Refs for scroll animations
   const sectionRef = useRef(null)
@@ -47,10 +49,10 @@ export function TestimonialsSection({
           variants={containerVariants}
           className="text-center mb-12 space-y-4"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+          <motion.h2 variants={itemVariants} className={cn("text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white", titleClassName)}>
             {title}
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-white max-w-[700px] mx-auto md:text-xl/relaxed">
+          <motion.p variants={itemVariants} className={cn("text-white max-w-[700px] mx-auto md:text-xl/relaxed", subtitleClassName)}>
             {subtitle}
           </motion.p>
         </motion.div>

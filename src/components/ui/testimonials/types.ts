@@ -18,4 +18,6 @@ export interface TestimonialsSectionProps {
   trustedCompanies?: string[]
   trustedCompaniesTitle?: string
   className?: string
+  titleClassName?: string
+  subtitleClassName?: string
 }
