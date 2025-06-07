@@ -41,7 +41,7 @@ const FloatingAppointmentButton = () => {
       <Button
         asChild
         size="icon"
-        className={`w-14 h-14 rounded-full shadow-lg bg-dental-turquoise hover:bg-dental-copper-light text-white transition-all duration-300 hover:scale-105 ${isPulsing ? 'animate-pulse-wave' : ''}`}
+        className={`w-14 h-14 rounded-full shadow-lg bg-dental-sage hover:bg-dental-sand text-white transition-all duration-300 hover:scale-105 ${isPulsing ? 'animate-pulse-wave' : ''}`}
       >
         <Link to="/appointment" className="flex items-center justify-center">
           <CalendarClock className="h-6 w-6" />

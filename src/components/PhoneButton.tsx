@@ -41,14 +41,14 @@ const PhoneButton = ({
     <a 
       href={`tel:+49${formattedPhoneNumber}`} 
       className={cn(
-        "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium",
+        "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium",
         "ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         "disabled:pointer-events-none disabled:opacity-50",
         sizeClasses[size],
-        "bg-white text-dental-turquoise border border-dental-turquoise/20",
-        "hover:bg-white hover:text-dental-turquoise hover:border-dental-turquoise/20 hover:scale-105",
-        "active:bg-white active:text-dental-turquoise active:border-dental-turquoise/20 active:scale-105",
-        "focus:bg-white focus:text-dental-turquoise focus:border-dental-turquoise/20",
+        "bg-white text-dental-sage border border-dental-sage/20",
+        "hover:bg-dental-sand hover:text-dental-olive-gray hover:border-dental-sand/30 hover:scale-105",
+        "active:bg-dental-sand active:text-dental-olive-gray active:border-dental-sand/30 active:scale-105",
+        "focus:bg-dental-sand focus:text-dental-olive-gray focus:border-dental-sand/30",
         "shadow-md hover:shadow-lg",
         "cursor-pointer",
         "no-underline",
