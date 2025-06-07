@@ -39,22 +39,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           aria-label="Zahnarztpraxis Worsch Dresden - moderne Behandlungsräume"
         />
       ) : (
-        <div className="absolute inset-0 z-0 bg-dental-olive-gray/90" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-dental-blue/90" aria-hidden="true" />
       )}
       
       {/* Only gradient overlay, no additional images */}
-      <div className="absolute inset-0 bg-gradient-to-r from-dental-olive-gray/80 to-transparent z-10" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dental-blue/80 to-transparent z-10" aria-hidden="true" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl text-white animate-fade-in">
-          <h1 className="mb-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading">
+          <h1 className="mb-4 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             {title}
           </h1>
           <p className="text-base md:text-lg lg:text-xl xl:text-2xl mb-6">{subtitle}</p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="bg-dental-sage hover:bg-dental-sand hover:scale-105 transform transition-all duration-300">
+            <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300">
               <Link to="/appointment">
                 <Calendar className="w-5 h-5 mr-2 icon-pulse" aria-hidden="true" />
                 {ctaText}

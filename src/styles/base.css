@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,9 +36,9 @@
  
     --radius: 0.5rem;
     
-    /* Updated color scheme */
-    --dental-cream-rgb: 253, 246, 236;
-    --dental-sage-rgb: 168, 189, 163;
+    /* Dental blue RGB values for animations */
+    --dental-blue-rgb: 34, 113, 185;
+    --dental-turquoise-rgb: 65, 182, 230;
   }
  
   .dark {
@@ -80,204 +78,173 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    background-color: #FDF6EC;
-    color: #3C3C3B;
   }
   
-  /* Typografische Hierarchie mit neuen Schriften */
+  /* Typografische Hierarchie mit Poppins */
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
-    font-family: 'Merriweather', serif;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.025em;
-    color: #3C3C3B;
   }
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold;
-    font-family: 'Merriweather', serif;
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.02em;
-    color: #3C3C3B;
   }
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl font-medium;
-    font-family: 'Merriweather', serif;
+    @apply text-xl md:text-2xl lg:text-3xl font-medium font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: -0.015em;
-    color: #3C3C3B;
   }
   h4 {
-    @apply text-lg md:text-xl font-medium;
-    font-family: 'Merriweather', serif;
+    @apply text-lg md:text-xl font-medium font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.4;
-    color: #3C3C3B;
   }
   h5 {
-    @apply text-base md:text-lg font-medium;
-    font-family: 'Merriweather', serif;
+    @apply text-base md:text-lg font-medium font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.5;
-    color: #3C3C3B;
   }
   h6 {
-    @apply text-sm md:text-base font-medium;
-    font-family: 'Merriweather', serif;
+    @apply text-sm md:text-base font-medium font-sans;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.5;
-    color: #3C3C3B;
   }
   
   /* Fließtext mit optimaler Lesbarkeit */
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.7;
     margin-bottom: 1rem;
-    color: #3C3C3B;
   }
   
   /* Liste mit besserer Lesbarkeit */
   ul, ol {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #3C3C3B;
   }
   
   /* Links */
   a {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: #A8BDA3;
   }
   
   /* Buttons - konsistente Typografie */
   button {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     letter-spacing: 0.025em;
   }
   
   /* Navigation */
   nav {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   /* Labels und Formulare */
   label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: #3C3C3B;
   }
   
   input, textarea, select {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    color: #3C3C3B;
   }
 }
 
-/* Updated custom colors for dental website */
+/* Custom colors for dental website */
 :root {
-  --dental-cream: #FDF6EC;
-  --dental-sage: #A8BDA3;
-  --dental-sand: #D6C6B8;
-  --dental-olive-gray: #3C3C3B;
-  --dental-sage-dark: #8FA48B;
+  --dental-blue: #2271b9;
+  --dental-turquoise: #41b6e6;
+  --dental-beige: #f5f2ed;
+  --dental-gray: #565656;
+  --dental-white: #ffffff;
 }
 
-.text-dental-cream {
-  color: var(--dental-cream);
+.text-dental-blue {
+  color: var(--dental-blue);
 }
 
-.text-dental-sage {
-  color: var(--dental-sage);
+.text-dental-turquoise {
+  color: var(--dental-turquoise);
 }
 
-.text-dental-sand {
-  color: var(--dental-sand);
+.text-dental-gray {
+  color: var(--dental-gray);
 }
 
-.text-dental-olive-gray {
-  color: var(--dental-olive-gray);
+.bg-dental-blue {
+  background-color: var(--dental-blue);
 }
 
-.bg-dental-cream {
-  background-color: var(--dental-cream);
+.bg-dental-turquoise {
+  background-color: var(--dental-turquoise);
 }
 
-.bg-dental-sage {
-  background-color: var(--dental-sage);
+.bg-dental-beige {
+  background-color: var(--dental-beige);
 }
 
-.bg-dental-sand {
-  background-color: var(--dental-sand);
-}
-
-.bg-dental-olive-gray {
-  background-color: var(--dental-olive-gray);
-}
-
-.bg-dental-sage-dark {
-  background-color: var(--dental-sage-dark);
-}
-
-.text-dental-sage-dark {
-  color: var(--dental-sage-dark);
+.bg-dental-white {
+  background-color: var(--dental-white);
 }
 
 /* Utility-Klassen für verbesserte Typografie */
 .text-hierarchy-1 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
-  color: #3C3C3B;
 }
 
 .text-hierarchy-2 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.02em;
-  color: #3C3C3B;
 }
 
 .text-hierarchy-3 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: -0.015em;
-  color: #3C3C3B;
 }
 
 .text-body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #3C3C3B;
 }
 
 .text-body-medium {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   line-height: 1.6;
-  color: #3C3C3B;
 }
 
 .text-emphasis {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   line-height: 1.5;
-  color: #3C3C3B;
 }
 
 /* Responsive Typografie */
