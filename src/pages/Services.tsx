@@ -9,9 +9,9 @@ import PremiumServiceSection from '@/components/services/PremiumServiceSection';
 import StandardServiceSection from '@/components/services/StandardServiceSection';
 import QualityPromiseSection from '@/components/services/QualityPromiseSection';
 import TestimonialSection from '@/components/services/TestimonialSection';
-import CallToActionSection from '@/components/services/CallToActionSection';
-import ServicesOverviewFAQ from '@/components/services/ServicesOverviewFAQ';
 import ServicesPageMeta from '@/components/services/ServicesPageMeta';
+import HomepageFAQ from '@/components/home/HomepageFAQ';
+import AppointmentCTA from '@/components/home/AppointmentCTA';
 
 const ServicesPage = () => {
   // Use the scroll animation hook
@@ -19,12 +19,12 @@ const ServicesPage = () => {
 
   // Filter premium services that have the highest margins
   const premiumServices = services.filter(service => 
-    ['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
+    ['aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
   );
 
   // Standard services
   const standardServices = services.filter(service => 
-    !['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
+    !['aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
   );
 
   return (
@@ -52,11 +52,11 @@ const ServicesPage = () => {
       {/* Testimonial Section */}
       <TestimonialSection />
 
-      {/* FAQ Section */}
-      <ServicesOverviewFAQ />
+      {/* FAQ Section - same as homepage */}
+      <HomepageFAQ />
 
-      {/* Call to Action Section */}
-      <CallToActionSection />
+      {/* Appointment CTA - same as homepage */}
+      <AppointmentCTA />
 
       <Footer />
     </div>

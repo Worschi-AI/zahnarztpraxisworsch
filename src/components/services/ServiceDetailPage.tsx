@@ -9,8 +9,9 @@ import ServiceDetailMeta from '@/components/services/ServiceDetailMeta';
 import ServiceDetailHero from '@/components/services/ServiceDetailHero';
 import ServiceDetailContent from '@/components/services/ServiceDetailContent';
 import RelatedServices from '@/components/services/RelatedServices';
-import ServiceMainCTA from '@/components/services/ServiceMainCTA';
 import ServiceNotFound from '@/components/services/ServiceNotFound';
+import HomepageFAQ from '@/components/home/HomepageFAQ';
+import AppointmentCTA from '@/components/home/AppointmentCTA';
 
 const ServiceDetailPage = () => {
   useScrollAnimation();
@@ -29,7 +30,13 @@ const ServiceDetailPage = () => {
       <ServiceDetailHero serviceId={id} service={service} />
       <ServiceDetailContent serviceId={id} service={service} />
       <RelatedServices currentServiceId={service.id} services={services} />
-      <ServiceMainCTA />
+      
+      {/* FAQ Section - same as homepage */}
+      <HomepageFAQ />
+
+      {/* Appointment CTA - same as homepage */}
+      <AppointmentCTA />
+      
       <Footer />
     </div>
   );
