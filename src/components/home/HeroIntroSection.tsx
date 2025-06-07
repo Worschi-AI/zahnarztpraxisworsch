@@ -17,10 +17,10 @@ const HeroIntroSection = () => {
     <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-dental-white to-dental-beige/30 relative overflow-hidden">
       {/* Dezente Eck-Dekorationen mit Animation */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-dental-turquoise/15 rounded-full blur-[80px] animate-float"></div>
-        <div className="absolute top-0 right-0 w-40 h-40 bg-dental-blue/12 rounded-full blur-[90px] animate-float animate-delay-300"></div>
-        <div className="absolute bottom-0 left-0 w-36 h-36 bg-dental-turquoise/10 rounded-full blur-[85px] animate-float animate-delay-200"></div>
-        <div className="absolute bottom-0 right-0 w-28 h-28 bg-dental-blue/15 rounded-full blur-[75px] animate-float animate-delay-400"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-dental-turquoise/10 rounded-full blur-[80px] animate-float"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-dental-copper-light/8 rounded-full blur-[90px] animate-float animate-delay-300"></div>
+        <div className="absolute bottom-0 left-0 w-36 h-36 bg-dental-turquoise/8 rounded-full blur-[85px] animate-float animate-delay-200"></div>
+        <div className="absolute bottom-0 right-0 w-28 h-28 bg-dental-copper-light/10 rounded-full blur-[75px] animate-float animate-delay-400"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -30,7 +30,7 @@ const HeroIntroSection = () => {
             <div className="relative flex gap-4">
               {/* Erstes Bild - größer */}
               <div className="relative flex-1">
-                <div className="absolute -inset-2 bg-dental-blue/20 rounded-2xl blur-lg"></div>
+                <div className="absolute -inset-2 bg-dental-turquoise/15 rounded-2xl blur-lg"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white">
                   <img 
                     src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1000&auto=format&fit=crop" 
@@ -42,7 +42,7 @@ const HeroIntroSection = () => {
               
               {/* Zweites Bild - etwas kleiner und versetzt */}
               <div className="relative flex-1 mt-8">
-                <div className="absolute -inset-2 bg-dental-blue/20 rounded-2xl blur-lg"></div>
+                <div className="absolute -inset-2 bg-dental-copper-light/15 rounded-2xl blur-lg"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-layered border-4 border-white">
                   <img 
                     src="https://images.unsplash.com/photo-1609840114035-3c981e9cd8e1?q=80&w=1000&auto=format&fit=crop" 
@@ -57,7 +57,7 @@ const HeroIntroSection = () => {
           {/* Content */}
           <div className="lg:w-1/2 animate-on-scroll">
             <div className="mb-6 lg:mb-8">
-              <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+              <h2 className="mb-6 lg:mb-8 text-dental-blue leading-tight text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-heading">
                 Herzlich willkommen bei Ihrem Zahnarzt in Dresden-Laubegast!
               </h2>
               
@@ -75,7 +75,7 @@ const HeroIntroSection = () => {
             </div>
             
             <div className="mt-8 lg:mt-10">
-              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-blue hover:scale-105 transform transition-all duration-300 px-8 py-3">
+              <Button asChild size="lg" className="bg-dental-turquoise hover:bg-dental-copper-light hover:scale-105 transform transition-all duration-300 px-8 py-3">
                 <Link to="/about">
                   Mehr über uns erfahren
                 </Link>

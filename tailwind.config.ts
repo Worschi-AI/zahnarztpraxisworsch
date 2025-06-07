@@ -64,11 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dental: {
-					'blue': '#2271b9',
-					'turquoise': '#41b6e6',
-					'beige': '#f5f2ed',
-					'gray': '#565656',
+					'blue': '#0A1F44',
+					'turquoise': '#B87333',
+					'beige': '#FDFBF9',
+					'gray': '#0A1F44',
 					'white': '#ffffff',
+					'copper-light': '#D18E5D',
 				},
 			},
 			borderRadius: {
@@ -131,9 +132,9 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 			},
 			fontFamily: {
-				'sans': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-				'heading': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-				'body': ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'sans': ['Lato', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				'heading': ['Playfair Display', 'serif'],
+				'body': ['Lato', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			fontSize: {
 				'hierarchy-1': ['3.5rem', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '700' }],
