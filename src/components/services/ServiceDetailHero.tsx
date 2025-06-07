@@ -9,6 +9,9 @@ interface ServiceDetailHeroProps {
 
 const ServiceDetailHero: React.FC<ServiceDetailHeroProps> = ({ serviceId, service }) => {
   const getHeroTitle = () => {
+    if (serviceId === 'implantologie') {
+      return "Zahnimplantate Dresden: Feste Zähne von Ihrem Spezialisten";
+    }
     if (serviceId === 'aesthetische-zahnheilkunde') {
       return "Ästhetische Zahnheilkunde in Dresden | Für Ihr perfektes Lächeln";
     }

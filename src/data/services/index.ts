@@ -3,6 +3,7 @@ import { Service } from './types';
 import { prophylaxe } from './prophylaxe';
 import { zahnerhaltung } from './zahnerhaltung';
 import { zahnersatz } from './zahnersatz';
+import { implantologie } from './implantologie';
 import { aesthetischeZahnheilkunde } from './aesthetische-zahnheilkunde';
 import { kinderzahnheilkunde } from './kinderzahnheilkunde';
 
@@ -43,6 +44,7 @@ export const services: Service[] = [
   prophylaxe,
   zahnerhaltung,
   zahnersatz,
+  implantologie,
   aesthetischeZahnheilkunde,
   kinderzahnheilkunde,
   parodontologie,

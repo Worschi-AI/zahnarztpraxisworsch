@@ -11,7 +11,6 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
-import Implantologie from "./pages/Implantologie";
 import Appointment from "./pages/Appointment";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -42,7 +41,6 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:id" element={<ServiceDetail />} />
-          <Route path="/implantologie" element={<Implantologie />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

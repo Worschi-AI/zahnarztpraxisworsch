@@ -19,12 +19,12 @@ const ServicesPage = () => {
 
   // Filter premium services that have the highest margins
   const premiumServices = services.filter(service => 
-    ['aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
+    ['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
   );
 
   // Standard services
   const standardServices = services.filter(service => 
-    !['aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
+    !['implantologie', 'aesthetische-zahnheilkunde', 'zahnersatz'].includes(service.id)
   );
 
   return (
@@ -36,7 +36,7 @@ const ServicesPage = () => {
       {/* Hero Section with dental-specific image */}
       <HeroSection 
         title="Zahnarztpraxis Worsch: Unser Leistungsspektrum für Ihr perfektes Lächeln in Dresden" 
-        subtitle="Von innovativer Ästhetik über hochwertigen Zahnersatz bis zur umfassenden Vorsorge – entdecken Sie unsere modernen Zahnbehandlungen in Dresden Laubegast"
+        subtitle="Von innovativer Ästhetik über hochwertige Implantate bis zur umfassenden Vorsorge – entdecken Sie unsere modernen Zahnbehandlungen in Dresden Laubegast"
         backgroundImage="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=1740&auto=format&fit=crop"
       />
 
